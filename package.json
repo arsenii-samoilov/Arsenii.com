@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/benhalverson/Arsenii.com#readme",
   "dependencies": {
-    "nodemailer": "^4.0.1",
-    "restify": "^5.0.1",
-    "restify-errors": "^4.3.0",
-    "restify-plugins": "^1.6.0"
+    "body-parser": "1.17.2",
+    "express": "4.15.4",
+    "mailgun-js": "*",
+    "morgan": "*"
   }
 }

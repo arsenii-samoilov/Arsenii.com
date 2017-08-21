@@ -1,10 +1,8 @@
 let config = {};
-config.host= 'smtp.gmail.com';
-config.port= 465;
-config.secure= true;
-config.service= 'Gmail';
-config.sendAddr= 'noreply@myapi.com' || process.env.noreply;
-config.username= 'test@gmail.com' || process.env.email;
-config.password= 'test' || process.env.password;
+config.host= 'smtp.mailgun.com';
+config.fromEmail= 'fortesting@test.com' || process.env.FROM_EMAIL;
+config.toEmail= 'test@gmail.com' || process.env.TO_EMAIL;
+config.mailgun= 'key-xxxx' || process.env.MAILGUN_API_KEY;
+config.domain= 'website.com' || process.env.DOMAIN;
 
 module.exports = config;

@@ -1,55 +1,72 @@
-const nodemailer = require('nodemailer');
-const restify = require('restify');
-const errors = require('restify-errors');
-// const bodyParser = require('body-parser');
-const config = require('./config');
-const smtpTransport = nodemailer.createTransport({
-  service: config.service,
-  auth: {
-    username: config.username,
-    pass: config.pass
-  }
-});
+const express = require('express')
+const Mailgun = require('mailgun-js');
+const bodyParser = require('body-parser');
+const logger = require('morgan')
+const config = require('./config')
+const app = express();
 
-const server = restify.createServer();
-server.use(restify.plugins.bodyParser({mapParams: true}));
-server.use(
-  function crossOrgin(req, res, next) {
+function crossOrgin(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'X-Requested-With');
     return next();
   }
-);
+
+app.use(logger('dev'));
+/**
+* API Status for mailgun endpoint
+*
+*/
+app.get('/apiTest', (req, res, next) => {
+  const mailgun = new Mailgun({apiKey: config.mailgun, domain: config.domain});
+    console.log(`Mailgun parameters: ${mailgun}`);
+    console.log(`================================`)
+    const data = {
+      from: 'test@test.com',
+      to: 'benhalverson@me.com',
+      subject: 'test',
+      text: 'test message'
+    };
+
+    mailgun.messages().send(data, (error, body) => {
+      console.log(`body ${body}`);
+      if(error) {
+        console.log(`Error: ${error}`)
+        res.send(`Mail not sent check the error log`);
+      } else {
+        res.send('Mail sent');
+      }
+    });
+});
 
 /**
 * API endpoint for sending emails
 *
-* @param {string} receipt The email address of the recepient
 * @param {string} subject The subject title of the email to send
 * @param {string} message The email message
 */
 
-server.post('/email', function create(req, res, next) {
-  if(!req.params.receipt === undefined ||
-    req.params.subject === undefined ||
-    req.params.message === undefined) {
-    return next(new errors.InvalidArgumentError('receipt, subject, message are required parameters!'));
-    }
-smtpTransport.sendMail({
-  from: config.sendAddr,
-  to: req.params.receipt,
-  subject: req.params.subject,
-  html: req.params.message
-}, (error, response) => {
-  if(error) {
-    console.log(`Error: ${error}`);
-  } else {
-    console.log(`Message send ${response.message}`);
-  }
-  });
-  res.send(201, req.params);
+
+app.post('/contact',(req, res, next) => {
+const mailgun = new Mailgun({apiKey: config.mailgun, domain: config.domain});
+
+ const data = {
+   from: config.fromEmail,
+   to: config.toEmail,
+   subject: req.body.subject,
+   text: req.body.message
+ };
+
+ mailgun.messages().send(data, (error, body) => {
+   console.log(`body ${body}`);
+   if(error) {
+     res.send(`Mail not sent check the error log`);
+     return next(new Error(`Error: ${error}`));
+   } else {
+     res.send('Mail sent');
+   }
+ });
 });
 const PORT = 8080 || process.env.PORT;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
