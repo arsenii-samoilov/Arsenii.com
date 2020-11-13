@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "build-dev": "npm run clean && webpack",
-    "clean": "rimraf dist/*"
+    "clean": "rimraf dist/*",
+    "build-dev": "npm run clean && webpack --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
