@@ -17,10 +17,8 @@ fi
 echo "Cloning repo..."
 echo ""
 
-cd /var/www/arsenii-dot-com/html
-
-# Grab the v2 branch for now
-git clone -b v2 https://github.com/arsenii-samoilov/Arsenii.com/ .
+git checkout v2
+git pull
 
 export NODE_ENV=production
 
