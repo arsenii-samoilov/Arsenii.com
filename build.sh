@@ -16,7 +16,7 @@ fi
 
 echo "Cloning repo..."
 echo ""
-i
+
 cd /var/www/arsenii-dot-com/html
 
 # Grab the v2 branch for now
@@ -30,7 +30,7 @@ npm run build:prod
 echo "Restarting PM2..."
 echo ""
 
-pm2 stop arsenii
+pm2 stop arsenii > /dev/null 2>&1
 pm2 start bin/www --name arsenii
 
 echo "PM2 restarted."
