@@ -1,8 +1,14 @@
 @import 'normalize.css';
 @import './painting.css';
 
+:root {
+  --mist: #f5f6f7;
+  --light-gray: #818892;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--mist);
 }
 
 h1,
@@ -14,6 +20,11 @@ h3 {
 main {
   max-width: 1200px;
   margin: auto;
+}
+
+a {
+  color: var(--light-gray);
+  text-decoration: none;
 }
 
 main header {
@@ -29,15 +40,37 @@ main header h1 {
 main footer {
   padding: 10em 0;
   text-align: center;
-  color: #818892;
+  color: var(--light-gray);
   font-size: 12px
 }
 
 #gallery {
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-items: center;
-  align-items: center;
   padding: 0 24px;
+  display: flow-root;
+}
+
+#gallery .grid-col {
+  width: calc(25% - 28px);
+  float: left;
+  margin: auto;
+  padding: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #gallery .grid-col {
+    width: calc(33% - 28px)
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #gallery .grid-col {
+    width: calc(50% - 28px)
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #gallery .grid-col {
+    width: 75vw;
+    float: none
+  }
 }

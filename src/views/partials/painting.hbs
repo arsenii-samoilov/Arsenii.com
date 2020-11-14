@@ -1,8 +1,10 @@
-<div class="painting">
-  <a href="#{{ image.path }}">
-    <img src="images/{{ image.path }}" alt="{{ image.title }}">
-  </a>
-  <div class="title">
+<div class="painting" itemscope itemtype="http://schema.org/ImageGallery" data-index="{{ @index }}">
+  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="#{{ image.path }}" itemprop="contentUrl">
+      <img itemprop="thumbnail" src="images/{{ image.path }}" alt="{{ image.title }}">
+    </a>
+  </figure>
+  <figcaption class="title" itemprop="caption description">
     <span>{{ image.title }} ({{ image.year }})</span>
-  </div>
+  </figcaption>
 </div>
