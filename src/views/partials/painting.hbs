@@ -1,5 +1,7 @@
 <div class="painting">
-  <img src="images/{{ image.path }}" alt="{{ image.title }}">
+  <a href="#{{ image.path }}">
+    <img src="images/{{ image.path }}" alt="{{ image.title }}">
+  </a>
   <div class="title">
     <span>{{ image.title }} ({{ image.year }})</span>
   </div>

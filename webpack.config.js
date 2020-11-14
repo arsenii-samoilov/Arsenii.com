@@ -39,7 +39,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
-        { from: 'src/views/error', to: path.resolve(__dirname, 'dist') },
+        { from: 'src/views/error.hbs', to: path.resolve(__dirname, 'dist') },
       ],
     }),
   ],
