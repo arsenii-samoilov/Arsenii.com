@@ -39,6 +39,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/views/error.ejs', to: path.resolve(__dirname, 'dist') },
+        { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
+        {
+          from: 'src/views/index-main.ejs',
+          to: path.resolve(__dirname, 'dist'),
+        },
       ],
     }),
   ],

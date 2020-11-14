@@ -14,6 +14,7 @@ admin.initializeApp({
 
 // Need to require routes _after_ firebase initialization
 const apiRoutes = require('./routes/api');
+const baseRoutes = require('./routes/main');
 
 var app = express();
 
@@ -31,11 +32,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(express.static(path.join(__dirname, 'dist')));
 }
 
-app.use('/', function (req, res, next) {
-  res.render('index', {
-    title: 'Arsenii.com',
-  });
-});
+app.use('/', baseRoutes);
 app.use('/api', apiRoutes);
 
 // catch 404 and forward to error handler
