@@ -1,7 +1,7 @@
 const env = require('dotenv').config();
 
 const createError = require('http-errors');
-const serviceAccount = require(process.env.FIRBASE_SERVICE_ACCOUNT);
+const serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT);
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -31,6 +31,11 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(express.static(path.join(__dirname, 'dist')));
 }
 
+app.use('/', function (req, res, next) {
+  res.render('index', {
+    title: 'Arsenii.com',
+  });
+});
 app.use('/api', apiRoutes);
 
 // catch 404 and forward to error handler
