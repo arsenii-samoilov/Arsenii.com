@@ -2,12 +2,26 @@
 <html>
   <head>
     <title><%= title %></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/salvattore/1.0.9/salvattore.min.js" integrity="sha512-RN0948EoGo15YyqYSUZt1Fumksvs3nzX7sGblhBnGjPC+tgXlH7idM8o5hQsrRgvJpDRyi6asP9OaZ1OHkHylw==" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <main>
+      <header>
+        <h1><%= title %></h1>
+      </header>
+
+      <section id="gallery">
+        <% imageData.images.forEach(function(image) { %>
+          <%- include('painting', { image: image }); %>
+        <% }); %>
+      </section>
+
+      <%- include('footer') %>
+    </main>
   </body>
 </html>

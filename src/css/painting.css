@@ -1,0 +1,43 @@
+.painting {
+  flex: 0 1 60vw;
+  margin: 24px 14px;
+  text-align: center;
+  align-self: center;
+  font-family: Roboto, sans-serif;
+  color: #818892;
+  font-size: 15px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, .05);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.painting:hover {
+  transform: scale(1.03) translateY(5px);
+  box-shadow: 1px 10px 12px rgba(0, 0, 0, .1);
+}
+
+.painting .title {
+  background: #fff;
+  padding: 15px 15px 18px;
+  text-align: left;
+}
+
+.painting img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .painting {
+    margin: 14px;
+    flex: 0 1 calc(50% - 50px)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .painting {
+    flex: 0 1 calc(30% - 20px);
+  }
+}
+

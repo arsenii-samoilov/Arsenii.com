@@ -8,7 +8,7 @@ module.exports = {
     main: ['./src/js/main.ts', './src/css/style.css'],
   },
   output: {
-    filename: 'js/main-[contenthash:12].js',
+    filename: 'js/main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -33,14 +33,15 @@ module.exports = {
       template: '!!raw-loader!src/views/index.ejs',
       minify: false,
     }),
-    new MiniCssExtractPlugin({
-      filename: 'css/style-[contenthash:12].css',
-    }),
     new CopyPlugin({
       patterns: [
-        { from: 'src/views/error.ejs', to: path.resolve(__dirname, 'dist') },
+        { from: 'src/views', to: path.resolve(__dirname, 'dist') },
+        { from: 'src/views/partials', to: path.resolve(__dirname, 'dist') },
         { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
       ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/style.css',
     }),
   ],
 };

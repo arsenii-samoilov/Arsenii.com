@@ -12,7 +12,7 @@ router.get('/', async function (req, res, next) {
   });
 
   res.render('index', {
-    title: 'Arsenii.com',
+    title: 'Arsenii',
     imageData: result,
   });
 });
