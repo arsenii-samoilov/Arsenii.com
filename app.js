@@ -1,12 +1,14 @@
-const env = require('dotenv').config();
+require('dotenv').config();
 
 const createError = require('http-errors');
 const serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT);
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const admin = require('firebase-admin');
+const cookieParser = require('cookie-parser');
+const express = require('express');
+const fs = require('fs');
+const hbs = require('hbs');
+const logger = require('morgan');
+const path = require('path');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -20,7 +22,21 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'dist'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
+
+// Register partials
+const partialsDir = path.resolve(__dirname, 'src/views/partials');
+const partials = fs.readdirSync(partialsDir);
+partials.forEach((filename) => {
+  const matches = /^([^.]+).hbs$/.exec(filename);
+  if (!matches) {
+    return;
+  }
+  const name = matches[1];
+  const template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
+  hbs.registerPartial(name, template);
+});
+// End partial registering
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -48,6 +64,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  console.log(err);
   res.render('error');
 });
 

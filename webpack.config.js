@@ -29,19 +29,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, 'dist/index.ejs'),
-      template: '!!raw-loader!src/views/index.ejs',
+      filename: path.resolve(__dirname, 'dist/index.hbs'),
       minify: false,
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'src/views', to: path.resolve(__dirname, 'dist') },
-        { from: 'src/views/partials', to: path.resolve(__dirname, 'dist') },
-        { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
-      ],
+      template: path.resolve('./src/views/index.hbs'),
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
+        { from: 'src/views/error', to: path.resolve(__dirname, 'dist') },
+      ],
     }),
   ],
 };

@@ -23,7 +23,7 @@ main header {
 }
 
 main header h1 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 main footer {
@@ -34,7 +34,5 @@ main footer {
 }
 
 #gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: auto
 }
