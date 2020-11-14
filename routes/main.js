@@ -17,4 +17,10 @@ router.get('/', async function (req, res, next) {
   });
 });
 
+router.get('/about', function (req, res) {
+  res.render('about', {
+    title: 'About Arsenii',
+  });
+});
+
 module.exports = router;

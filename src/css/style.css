@@ -41,7 +41,11 @@ main footer {
   padding: 10em 0;
   text-align: center;
   color: var(--light-gray);
-  font-size: 12px
+  font-size: 12px;
+}
+
+#contact {
+  font-size: 14px;
 }
 
 #gallery {
@@ -58,19 +62,19 @@ main footer {
 
 @media only screen and (max-width: 1024px) {
   #gallery .grid-col {
-    width: calc(33% - 28px)
+    width: calc(33% - 28px);
   }
 }
 
 @media only screen and (max-width: 768px) {
   #gallery .grid-col {
-    width: calc(50% - 28px)
+    width: calc(50% - 28px);
   }
 }
 
 @media only screen and (max-width: 500px) {
   #gallery .grid-col {
     width: 75vw;
-    float: none
+    float: none;
   }
 }

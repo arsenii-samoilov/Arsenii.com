@@ -35,6 +35,11 @@ module.exports = {
       minify: false,
       template: path.resolve('./src/views/index.hbs'),
     }),
+    new HtmlWebpackPlugin({
+      filename: path.resolve(__dirname, 'dist/about.hbs'),
+      minify: false,
+      template: path.resolve('./src/views/about.hbs'),
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css',
     }),
