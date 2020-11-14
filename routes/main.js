@@ -11,7 +11,7 @@ router.get('/', async function (req, res, next) {
     result.images.push({ ...doc.data() });
   });
 
-  res.render('index-main', {
+  res.render('index', {
     title: 'Arsenii.com',
     imageData: result,
   });

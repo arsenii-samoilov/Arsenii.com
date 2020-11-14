@@ -40,11 +40,6 @@ module.exports = {
       patterns: [
         { from: 'src/views/error.ejs', to: path.resolve(__dirname, 'dist') },
         { from: 'src/images', to: path.resolve(__dirname, 'dist/images') },
-        { from: 'src/js/vendor', to: path.resolve(__dirname, 'dist/js') },
-        {
-          from: 'src/views/index-main.ejs',
-          to: path.resolve(__dirname, 'dist'),
-        },
       ],
     }),
   ],
