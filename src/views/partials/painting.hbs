@@ -1,7 +1,7 @@
 <div class="painting" itemscope itemtype="http://schema.org/ImageGallery" data-index="{{ @index }}">
   <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a itemprop="contentUrl">
-      <img itemprop="thumbnail" src="images/{{ image.path }}" alt="{{ image.title }}">
+      <img itemprop="thumbnail" data-full-src="images/{{ image.path }}" src="images/thumbs/{{ image.path }}" alt="{{ image.title }}">
     </a>
   </figure>
   <figcaption class="title" itemprop="caption description">

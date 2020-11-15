@@ -17,9 +17,17 @@ h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 main {
   max-width: 1200px;
   margin: auto;
+}
+
+main#about {
+  max-width: 750px;
 }
 
 a {
@@ -58,6 +66,11 @@ main footer {
   float: left;
   margin: auto;
   padding: 14px;
+}
+
+#about h2 {
+  font-weight: 300;
+  margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 1024px) {

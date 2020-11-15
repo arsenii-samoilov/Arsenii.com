@@ -18,7 +18,7 @@ const psOptions = {
       getSize(image).then(([width, height]) => {
         image.dataset.size = `${width}x${height}`;
         return {
-          src: image.src,
+          src: image.dataset.fullSrc,
           w: width,
           h: height,
         };
@@ -46,9 +46,13 @@ const psOptions = {
 
   function getSize(img): Promise<[number, number]> {
     return new Promise((resolve) => {
-      img.addEventListener('load', () => {
-        resolve([img.naturalWidth, img.naturalHeight]);
+      const fullSizeImg = new Image();
+
+      fullSizeImg.addEventListener('load', () => {
+        resolve([fullSizeImg.naturalWidth, fullSizeImg.naturalHeight]);
       });
+
+      fullSizeImg.src = img.dataset.fullSrc;
     });
   }
 })();
