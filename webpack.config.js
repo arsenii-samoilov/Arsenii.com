@@ -6,9 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: {
     main: ['./src/js/main.ts', './src/css/style.css'],
+    about: ['./src/css/style.css'],
   },
   output: {
-    filename: 'js/main.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -39,9 +40,10 @@ module.exports = {
       filename: path.resolve(__dirname, 'dist/about.hbs'),
       minify: false,
       template: path.resolve('./src/views/about.hbs'),
+      excludeChunks: ['main'],
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/style.css',
+      filename: 'css/[name].css',
     }),
     new CopyPlugin({
       patterns: [

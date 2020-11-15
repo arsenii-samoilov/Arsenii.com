@@ -28,6 +28,7 @@ main {
 
 main#about {
   max-width: 750px;
+  padding: 24px;
 }
 
 a {
