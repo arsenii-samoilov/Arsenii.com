@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: arsenii-analytics
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true

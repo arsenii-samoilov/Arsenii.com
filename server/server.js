@@ -10,6 +10,16 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'arsenii2026';
 const DATA_FILE = path.join(__dirname, 'visits.json');
 const SESSION_SECRET = process.env.SESSION_SECRET || 'arsenii-session-secret-change-me';
 
+// CORS for cross-origin requests (when site is on GitHub Pages, API on Render/Railway)
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..')));
