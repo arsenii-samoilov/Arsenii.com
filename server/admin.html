@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Arsenii Samoilov</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { margin: 0 0 1rem 0; }
+    .login-box { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 320px; }
+    .login-box input { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px; }
+    .login-box button { width: 100%; padding: 0.75rem; background: #1e3a5f; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; }
+    .login-box button:hover { background: #0f172a; }
+    .error { color: #c00; font-size: 0.9rem; margin-top: 0.5rem; }
+    .dashboard { display: none; }
+    .dashboard.visible { display: block; }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+    .logout { color: #666; text-decoration: none; font-size: 0.9rem; }
+    .logout:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #eee; }
+    th { background: #f8f8f8; font-weight: 600; }
+    tr:hover { background: #fafafa; }
+    .empty { padding: 2rem; text-align: center; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="loginBox" class="login-box">
+      <h1>Admin Login</h1>
+      <form id="loginForm">
+        <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit">Log in</button>
+        <div id="loginError" class="error"></div>
+      </form>
+    </div>
+    <div id="dashboard" class="dashboard">
+      <div class="header">
+        <h1>Site Visitors</h1>
+        <a href="#" class="logout" id="logout">Log out</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Page</th>
+            <th>Location</th>
+            <th>Referrer</th>
+          </tr>
+        </thead>
+        <tbody id="visitsBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    const loginBox = document.getElementById('loginBox');
+    const dashboard = document.getElementById('dashboard');
+    const loginForm = document.getElementById('loginForm');
+    const loginError = document.getElementById('loginError');
+    const visitsBody = document.getElementById('visitsBody');
+    const logoutBtn = document.getElementById('logout');
+
+    function loadVisits() {
+      fetch('/api/visits', { credentials: 'include' })
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(visits => {
+          if (visits.length === 0) {
+            visitsBody.innerHTML = '<tr><td colspan="4" class="empty">No visits yet. Visit your site to see data.</td></tr>';
+          } else {
+            visitsBody.innerHTML = visits.map(v => `
+              <tr>
+                <td>${new Date(v.timestamp).toLocaleString()}</td>
+                <td>${escapeHtml(v.page)}</td>
+                <td>${escapeHtml(v.city + ', ' + v.country)}</td>
+                <td>${escapeHtml(v.referrer || '-')}</td>
+              </tr>
+            `).join('');
+          }
+        })
+        .catch(() => { visitsBody.innerHTML = '<tr><td colspan="4" class="empty">Failed to load visits.</td></tr>'; });
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    loginForm.onsubmit = async (e) => {
+      e.preventDefault();
+      loginError.textContent = '';
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: loginForm.password.value }),
+        credentials: 'include'
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        loginBox.style.display = 'none';
+        dashboard.classList.add('visible');
+        loadVisits();
+      } else {
+        loginError.textContent = 'Invalid password';
+      }
+    };
+
+    logoutBtn.onclick = async (e) => {
+      e.preventDefault();
+      await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+      loginBox.style.display = 'block';
+      dashboard.classList.remove('visible');
+    };
+
+    fetch('/api/visits', { credentials: 'include' }).then(r => {
+      if (r.ok) {
+        loginBox.style.display = 'none';
+        dashboard.classList.add('visible');
+        loadVisits();
+      }
+    }).catch(() => {});
+  </script>
+</body>
+</html>
