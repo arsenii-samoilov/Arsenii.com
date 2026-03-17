@@ -18,11 +18,13 @@ Then open the browser console (F12) when visiting your site.
 - Click your Web stream → copy the **Measurement ID** (starts with `G-`)
 - It must exactly match `G-LJE40VWDPW` in the code (case-sensitive)
 
-## 2. Data Stream URL
+## 2. Data Stream URL (critical for page counting)
 - In Data Streams → your stream → **Stream details**
-- Ensure the **Website URL** includes your live domain (e.g. `https://arsenii.com`)
-- If using GitHub Pages with custom domain, add `arsenii.com`
-- If using `*.github.io`, add that domain
+- **Website URL** must exactly match your live domain:
+  - If your site is `https://arsenii.com` → use `https://arsenii.com` (no www)
+  - If your site is `https://www.arsenii.com` → use `https://www.arsenii.com`
+- Mismatch (e.g. stream set to www but site is non-www) can cause data loss
+- If using GitHub Pages with custom domain, use `https://arsenii.com`
 
 ## 3. Test in Real-time
 - Visit your live site (arsenii.com)
@@ -42,3 +44,9 @@ gtag('config', 'G-LJE40VWDPW', { send_page_view: true, debug_mode: true });
 
 ## 6. Tag Assistant
 - Use [Tag Assistant](https://tagassistant.google.com) to verify the tag fires on your site
+
+## 7. Low active users / page count not increasing
+- **Data stream URL**: Verify step 2 above — URL mismatch is a common cause
+- **Pages with GA4**: index (home), about.html, career.html, contact.html, pricing.html — all use Measurement ID `G-LJE40VWDPW` with explicit `page_path` and `page_title`
+- **Engagement report**: Reports → Engagement → Pages and screens — verify each page appears
+- **Realtime**: Visit each page (/, /about.html, /career.html, /contact.html) and confirm events in Realtime

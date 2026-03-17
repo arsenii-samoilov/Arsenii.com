@@ -4,13 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <!-- Google Analytics GA4 - exact Google snippet -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW"></script>
+  <!-- Google Analytics GA4 - with retry if script fails to load -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-LJE40VWDPW');
+    gtag('config', 'G-LJE40VWDPW', { send_page_view: true, page_path: '/contact.html', page_title: 'Contact Arsenii Samoilov | TPM Opportunities | Bay Area' });
+    var gtagRetries = 0;
+    function loadGtag() {
+      if (gtagRetries++ >= 2) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW';
+      s.onerror = function() { setTimeout(loadGtag, 2000); };
+      document.head.appendChild(s);
+    }
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW';
+    g.onerror = loadGtag;
+    document.head.appendChild(g);
   </script>
   <title>Contact Arsenii Samoilov | TPM Opportunities | Bay Area</title>
   <script type="application/ld+json">
