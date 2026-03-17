@@ -2,9 +2,16 @@
 
 If GA4 isn't showing data or "does not come up", check these:
 
+## If GA4 keeps going down intermittently
+- **Measurement ID may be invalid**: Go to [analytics.google.com](https://analytics.google.com) → Admin → Data Streams. If the property was reset or the stream was deleted, create a new Web stream and copy the new Measurement ID (G-XXXXXXXXXX). Update all HTML files.
+- **Create a fresh GA4 property**: Admin → Create property → Add stream → Web → copy the new G- ID. Replace G-LJE40VWDPW in all files.
+
 ## Quick test: Debug mode
-Visit your site with `?ga_debug=1` (e.g. `https://arsenii.com/?ga_debug=1`).
-Open the browser console (F12 → Console). You should see GA4 debug messages if the tag is firing.
+In GA4 Admin → DebugView, or add `debug_mode: true` to the config:
+```js
+gtag('config', 'G-LJE40VWDPW', { debug_mode: true });
+```
+Then open the browser console (F12) when visiting your site.
 
 ## 1. Verify Measurement ID
 - Go to [analytics.google.com](https://analytics.google.com) → Admin → Data Streams
