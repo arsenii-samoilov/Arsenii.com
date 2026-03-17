@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Analytics GA4 - must load first -->
+  <!-- Google Analytics GA4 - add ?ga_debug=1 to URL to see events in console -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-LJE40VWDPW', { send_page_view: true });
+    var gaOpts = { send_page_view: true };
+    if (window.location.search.includes('ga_debug=1')) gaOpts.debug_mode = true;
+    gtag('config', 'G-LJE40VWDPW', gaOpts);
   </script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">

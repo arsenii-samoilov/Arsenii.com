@@ -210,8 +210,8 @@ main {
 
 .hero-headshot,
 .hero-initial {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
 }
 
@@ -678,8 +678,8 @@ main {
 
 .about-photo img,
 .about-initial {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
 }
 
@@ -883,16 +883,16 @@ main {
 }
 
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--accent-light);
 }
 
 .profile-initial {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: var(--accent-light);
   color: var(--accent-dark);
@@ -1129,6 +1129,12 @@ main {
     order: 1;
   }
 
+  .about-photo img,
+  .about-initial {
+    width: 160px;
+    height: 160px;
+  }
+
   .page-header-text {
     order: 2;
   }
@@ -1173,8 +1179,8 @@ main {
 
   .profile-photo,
   .profile-initial {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
   }
 
   .profile-initial {
@@ -1210,8 +1216,8 @@ main {
 
   .hero-headshot,
   .hero-initial {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
 
   .btn {
