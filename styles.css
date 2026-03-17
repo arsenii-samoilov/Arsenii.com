@@ -41,6 +41,7 @@ html {
 body {
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(185, 28, 28, 0.2);
   font-size: var(--text-sm);
   font-weight: var(--weight-regular);
   overflow-wrap: break-word;
@@ -128,8 +129,11 @@ main {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  width: 2rem;
-  height: 2rem;
+  min-width: 44px;
+  min-height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle span {
@@ -170,7 +174,9 @@ main {
 
 .nav-dropdown a {
   display: block;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  box-sizing: border-box;
   color: var(--text);
   text-decoration: none;
   font-size: var(--text-md);
@@ -495,6 +501,10 @@ main {
   color: var(--text);
   text-decoration: none;
   font-size: var(--text-md);
+  padding: 0.5rem 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .contact-row-link:hover {
@@ -582,6 +592,8 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.25rem 0;
   color: var(--text);
   font-weight: var(--weight-regular);
   text-decoration: none;
