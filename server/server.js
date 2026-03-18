@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'arsenii2026';
 const DATA_FILE = path.join(__dirname, 'visits.json');
 const SESSION_SECRET = process.env.SESSION_SECRET || 'arsenii-session-secret-change-me';
+const GA4_MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID || 'G-LJE40VWDPW';
+const GA4_API_SECRET = process.env.GA4_API_SECRET || '';
 
 // CORS for cross-origin requests (when site is on GitHub Pages, API on Render/Railway)
 app.use((req, res, next) => {
@@ -51,6 +53,34 @@ async function getGeo(ip) {
   }
 }
 
+async function sendToGA4(page, pageTitle, referrer, userAgent, ip) {
+  if (!GA4_API_SECRET) return;
+  try {
+    const clientId = crypto.createHash('sha256').update((ip || '') + (userAgent || '')).digest('hex').slice(0, 32);
+    const pageLocation = page.startsWith('http') ? page : `https://arsenii.com${page.startsWith('/') ? '' : '/'}${page}`;
+    const payload = {
+      client_id: clientId,
+      events: [{
+        name: 'page_view',
+        params: {
+          page_location: pageLocation,
+          page_title: pageTitle || 'Arsenii Samoilov',
+          page_referrer: referrer || '',
+          engagement_time_msec: 100
+        }
+      }]
+    };
+    const url = `https://www.google-analytics.com/mp/collect?measurement_id=${GA4_MEASUREMENT_ID}&api_secret=${GA4_API_SECRET}`;
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch (e) {
+    console.error('GA4 forward error:', e.message);
+  }
+}
+
 function createToken() {
   return crypto.randomBytes(32).toString('hex');
 }
@@ -67,18 +97,22 @@ app.post('/api/visit', async (req, res) => {
   try {
     const ip = getClientIp(req);
     const geo = await getGeo(ip);
+    const page = req.body?.page || req.url;
+    const referrer = req.body?.referrer || req.headers.referer || '';
+    const userAgent = req.body?.userAgent || req.headers['user-agent'] || '';
     const visits = loadVisits();
     visits.push({
-      page: req.body?.page || req.url,
-      referrer: req.body.referrer || req.headers.referer || '',
-      userAgent: req.body.userAgent || req.headers['user-agent'] || '',
+      page,
+      referrer,
+      userAgent,
       ip,
       city: geo.city,
       country: geo.country,
       region: geo.region,
-      timestamp: req.body.timestamp || new Date().toISOString()
+      timestamp: req.body?.timestamp || new Date().toISOString()
     });
     saveVisits(visits);
+    await sendToGA4(page, req.body?.page_title, referrer, userAgent, ip);
   } catch (e) {}
   res.status(204).end();
 });

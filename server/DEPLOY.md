@@ -14,6 +14,7 @@ Deploy the Node server to enable visit tracking and the admin analytics page.
 5. **Environment**:
    - `ADMIN_PASSWORD` — Set a strong password for admin login
    - `SESSION_SECRET` — Generate a random string (e.g. `openssl rand -hex 32`)
+   - `GA4_API_SECRET` — (Optional) For server-side GA4 tracking that bypasses Pi-hole/adblockers. Create in [analytics.google.com](https://analytics.google.com) → Admin → Data Streams → your stream → Measurement Protocol API secrets → Create
 6. Deploy. You'll get a URL like `https://arsenii-analytics.onrender.com`
 
 ## Option 2: Railway
@@ -36,6 +37,8 @@ Deploy the Node server to enable visit tracking and the admin analytics page.
 2. Commit and push. Your static site (GitHub Pages) will now send visits to the API.
 
 3. **Admin page**: Visit `https://your-app.onrender.com/admin` and log in with `ADMIN_PASSWORD`.
+
+4. **Server-side GA4** (bypasses Pi-hole/adblockers): If you set `GA4_API_SECRET`, visits are also forwarded to GA4 via Measurement Protocol. Works even when client-side gtag is blocked.
 
 ## Optional: Custom domain
 

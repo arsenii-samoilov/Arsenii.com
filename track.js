@@ -5,6 +5,7 @@
     var url = base + '/api/visit';
     var data = {
       page: window.location.pathname || window.location.href,
+      page_title: document.title || '',
       referrer: document.referrer || '',
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString()

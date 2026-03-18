@@ -10,3 +10,5 @@ services:
         generateValue: true
       - key: SESSION_SECRET
         generateValue: true
+      - key: GA4_API_SECRET
+        sync: false
