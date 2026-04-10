@@ -71,14 +71,7 @@
       margin: 0 auto;
       border-bottom: 1px solid #cbd5e1;
     }
-    .brand {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #0a0a0a;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
+    .brand { text-decoration: none; color: inherit; }
     .menu-wrapper { position: relative; }
     .menu-toggle {
       display: flex;
@@ -689,7 +682,9 @@
 
   <!-- Header -->
   <header class="site-header" style="background:#ffffff;">
-    <a href="index.html" class="brand">Arsenii Samoilov</a>
+    <a href="index.html" class="brand">
+      <span class="logo">Arsenii Samoilov</span>
+    </a>
     <div class="menu-wrapper">
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
       <nav class="nav-dropdown" aria-label="Main navigation">
