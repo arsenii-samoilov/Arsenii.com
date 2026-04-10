@@ -36,8 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream:   #faf8f3;
-      --parchment: #f2ede3;
+      --cream:   #fdfcfa;
+      --parchment: #f5f2ec;
       --gold:    #b8975a;
       --gold-light: #d4b47a;
       --gold-dark: #8c6d3a;
@@ -73,15 +73,15 @@
       padding: 1.25rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #cbd5e1;
     }
     .brand {
-      font-family: var(--serif);
-      font-size: 1.5rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 1.25rem;
       font-weight: 600;
-      color: var(--ink);
+      color: #0a0a0a;
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: 0;
     }
     .menu-wrapper { position: relative; }
     .menu-toggle {
@@ -100,7 +100,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--ink);
+      background: #0a0a0a;
       transition: background 0.2s;
     }
     .menu-toggle:hover span,
@@ -110,9 +110,9 @@
       top: calc(100% + 0.5rem);
       right: 0;
       min-width: 200px;
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.12);
       padding: 0.5rem;
       display: flex;
@@ -131,14 +131,18 @@
     .nav-dropdown a {
       display: block;
       padding: 0.75rem 1rem;
-      color: var(--ink);
+      min-height: 44px;
+      box-sizing: border-box;
+      color: #0a0a0a;
       text-decoration: none;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 1rem;
-      border-radius: 3px;
+      font-weight: 400;
+      border-radius: 4px;
       transition: color 0.2s, background 0.2s;
     }
-    .nav-dropdown a:hover { color: #b91c1c; background: var(--parchment); }
-    .nav-dropdown a[href="culinary.html"] { font-weight: 600; color: var(--gold-dark); }
+    .nav-dropdown a:hover { color: #b91c1c; background: #f8fafc; }
+    .nav-dropdown a[href="culinary.html"] { font-weight: 600; color: #1e3a5f; }
 
     /* ── Cover ── */
     .cover {
@@ -647,7 +651,7 @@
 <body>
 
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header" style="background:#ffffff;">
     <a href="index.html" class="brand">Arsenii Samoilov</a>
     <div class="menu-wrapper">
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
