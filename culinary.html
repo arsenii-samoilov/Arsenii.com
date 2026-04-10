@@ -1450,21 +1450,7 @@
       }
     }, { passive: true });
 
-    /* ── Hamburger menu ── */
-    const menuToggle   = document.querySelector('.menu-toggle');
-    const navDropdown  = document.querySelector('.nav-dropdown');
-    if (menuToggle && navDropdown) {
-      menuToggle.addEventListener('click', () => {
-        navDropdown.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', navDropdown.classList.contains('open'));
-      });
-      document.addEventListener('click', e => {
-        if (!menuToggle.contains(e.target) && !navDropdown.contains(e.target)) {
-          navDropdown.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
   </script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
