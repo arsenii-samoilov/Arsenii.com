@@ -154,8 +154,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
+      gap: 2rem;
+      margin-bottom: 1.75rem;
+      letter-spacing: 0.5em;
     }
     .cover h1 {
       font-family: var(--serif);
@@ -202,8 +203,7 @@
       align-items: center;
       gap: 2rem;
     }
-    .cover-icons-top  { margin-bottom: 1.5rem; }
-    .cover-icons-bottom { margin-top: 0.5rem; margin-bottom: 1.25rem; }
+    .cover-icons-bottom { margin-top: 0.25rem; margin-bottom: 1.25rem; }
     .cover-icon {
       width: 28px;
       height: 28px;
@@ -219,13 +219,12 @@
       color: var(--gold);
       flex-shrink: 0;
     }
-    /* Each icon gets its own distinct subtle motion */
-    .cover-icons-top  .cover-icon:nth-child(1) { animation: iconTilt   4s ease-in-out infinite; }
-    .cover-icons-top  .cover-icon:nth-child(2) { animation: iconSway   5s ease-in-out infinite 0.6s; }
-    .cover-icons-top  .cover-icon:nth-child(3) { animation: iconPulse  4.5s ease-in-out infinite 1.2s; }
-    .cover-icons-bottom .cover-icon:nth-child(1) { animation: iconBob     3.5s ease-in-out infinite 0.3s; }
-    .cover-icons-bottom .cover-icon:nth-child(2) { animation: iconFlicker 2.8s ease-in-out infinite 0.8s; }
-    .cover-icons-bottom .cover-icon:nth-child(3) { animation: iconSpin    12s linear infinite; }
+    /* 5 icons below Adventures — each its own motion */
+    .cover-icons-bottom .cover-icon:nth-child(1) { animation: iconTilt    4s   ease-in-out infinite 0s; }
+    .cover-icons-bottom .cover-icon:nth-child(2) { animation: iconBob     3.5s ease-in-out infinite 0.4s; }
+    .cover-icons-bottom .cover-icon:nth-child(3) { animation: iconFlicker 2.8s ease-in-out infinite 0.8s; }
+    .cover-icons-bottom .cover-icon:nth-child(4) { animation: iconSway    5s   ease-in-out infinite 1.2s; }
+    .cover-icons-bottom .cover-icon:nth-child(5) { animation: iconPulse   4.5s ease-in-out infinite 1.6s; }
 
     .cover-subtitle {
       font-family: var(--serif);
@@ -706,44 +705,29 @@
   <!-- Cover -->
   <section class="cover">
 
-    <!-- Top icons: knife · wine glass · herb sprig -->
-    <div class="cover-icons cover-icons-top">
+    <!-- Michelin stars — spread above title -->
+    <div class="cover-ornament">
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>Culinary<br><em>Adventures</em></h1>
+    <div class="cover-rule"><span>❧</span></div>
+
+    <!-- 5 icons below Adventures -->
+    <div class="cover-icons cover-icons-bottom">
       <!-- Chef's knife -->
       <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M6 2l12 10-8 2-2 8L2 6z"/>
         <line x1="6" y1="2" x2="2" y2="6"/>
       </svg>
-      <!-- Wine glass -->
-      <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M8 2h8l-2 8a4 4 0 0 1-4 0L8 2z"/>
-        <line x1="12" y1="10" x2="12" y2="20"/>
-        <line x1="8" y1="20" x2="16" y2="20"/>
-      </svg>
-      <!-- Herb / leaf sprig -->
-      <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 22V12"/>
-        <path d="M12 12C12 7 7 4 3 5c0 4 3 8 9 7z"/>
-        <path d="M12 12c0-5 5-8 9-7-1 4-4 8-9 7z"/>
-      </svg>
-    </div>
-
-    <div class="cover-ornament">
-      <!-- Michelin-style 5-pointed star -->
-      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
-        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
-      </svg>
-      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
-        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
-      </svg>
-      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
-        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <h1>Culinary<br><em>Adventures</em></h1>
-    <div class="cover-rule"><span>❧</span></div>
-
-    <!-- Bottom icons: fork · flame · citrus -->
-    <div class="cover-icons cover-icons-bottom">
       <!-- Fork -->
       <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <line x1="8" y1="2" x2="8" y2="10"/>
@@ -757,14 +741,17 @@
         <path d="M12 2c0 6-6 8-6 13a6 6 0 0 0 12 0c0-5-6-7-6-13z"/>
         <path d="M12 12c0 3-2 4-2 6a2 2 0 0 0 4 0c0-2-2-3-2-6z"/>
       </svg>
-      <!-- Citrus slice -->
+      <!-- Wine glass -->
       <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="9"/>
-        <circle cx="12" cy="12" r="4"/>
-        <line x1="12" y1="3" x2="12" y2="8"/>
-        <line x1="12" y1="16" x2="12" y2="21"/>
-        <line x1="3" y1="12" x2="8" y2="12"/>
-        <line x1="16" y1="12" x2="21" y2="12"/>
+        <path d="M8 2h8l-2 8a4 4 0 0 1-4 0L8 2z"/>
+        <line x1="12" y1="10" x2="12" y2="20"/>
+        <line x1="8" y1="20" x2="16" y2="20"/>
+      </svg>
+      <!-- Herb / leaf sprig -->
+      <svg class="cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22V12"/>
+        <path d="M12 12C12 7 7 4 3 5c0 4 3 8 9 7z"/>
+        <path d="M12 12c0-5 5-8 9-7-1 4-4 8-9 7z"/>
       </svg>
     </div>
 
