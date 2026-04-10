@@ -212,10 +212,11 @@
     /* Animate each ✦ star independently */
     .cover-star {
       display: inline-block;
-      animation: starFloat 3s ease-in-out infinite;
+      width: 22px;
+      height: 22px;
       color: var(--gold);
-      font-family: var(--serif);
-      font-size: 1.5rem;
+      animation: starFloat 3s ease-in-out infinite;
+      flex-shrink: 0;
     }
     .cover-star:nth-child(1) { animation-delay: 0s; }
     .cover-star:nth-child(2) { animation-delay: 0.5s; }
@@ -722,9 +723,16 @@
     </div>
 
     <div class="cover-ornament">
-      <span class="cover-star">✦</span>
-      <span class="cover-star">✦</span>
-      <span class="cover-star">✦</span>
+      <!-- Michelin-style 5-pointed star -->
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+      <svg class="cover-star" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
     </div>
     <h1>Culinary<br><em>Adventures</em></h1>
     <div class="cover-rule"><span>❧</span></div>
