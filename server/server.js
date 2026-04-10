@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const crypto = require('crypto');
 
 const app = express();
+// Use 3000 to avoid conflict with daily.jobs (serve_jobs.py) on 8000
 const PORT = process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'arsenii2026';
 const DATA_FILE = path.join(__dirname, 'visits.json');

@@ -70,3 +70,11 @@ When the analytics server is deployed with `GA4_API_SECRET`:
 3. Works even when client-side gtag is blocked
 
 **Setup**: analytics.google.com → Admin → Data Streams → your stream → Measurement Protocol API secrets → Create. Add the secret to Render/Railway as `GA4_API_SECRET`.
+
+## 9. Conversions: resume download & LinkedIn profile click
+
+The site fires these GA4 events:
+- `resume_download` — when someone downloads the resume (PDF)
+- `linkedin_profile_click` — when someone clicks a LinkedIn profile link
+
+**Mark as conversion in GA4**: Admin → Events → find `resume_download` and `linkedin_profile_click` → toggle **Mark as conversion**.

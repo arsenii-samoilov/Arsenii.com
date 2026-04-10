@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culinary Adventures — Arsenii Samoilov</title>
+  <meta name="description" content="A personal culinary journey through flavors, seasons, and memories — presented as a three-course tasting menu.">
+  <!-- Google Analytics GA4 - with retry if script fails to load -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LJE40VWDPW', { send_page_view: true, page_path: '/culinary.html', page_title: 'Culinary Adventures — Arsenii Samoilov' });
+    var gtagRetries = 0;
+    function loadGtag() {
+      if (gtagRetries++ >= 2) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW';
+      s.onerror = function() { setTimeout(loadGtag, 2000); };
+      document.head.appendChild(s);
+    }
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW';
+    g.onerror = loadGtag;
+    document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:   #faf8f3;
+      --parchment: #f2ede3;
+      --gold:    #b8975a;
+      --gold-light: #d4b47a;
+      --gold-dark: #8c6d3a;
+      --ink:     #1a1612;
+      --ink-mid: #3d3530;
+      --ink-muted: #7a6e65;
+      --border:  #d6cfc3;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Inter', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background-color: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(184,151,90,0.07), transparent),
+        radial-gradient(circle at 1px 1px, rgba(184,151,90,0.06) 1px, transparent 0);
+      background-size: 100% 100%, 28px 28px;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .menu-wrapper { position: relative; }
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      transition: background 0.2s;
+    }
+    .menu-toggle:hover span,
+    .menu-toggle[aria-expanded="true"] span { background: #b91c1c; }
+    .nav-dropdown {
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 0;
+      min-width: 200px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-6px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      z-index: 100;
+    }
+    .nav-dropdown.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .nav-dropdown a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 3px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-dropdown a:hover { color: #b91c1c; background: var(--parchment); }
+    .nav-dropdown a[href="culinary.html"] { font-weight: 600; color: var(--gold-dark); }
+
+    /* ── Cover ── */
+    .cover {
+      max-width: 680px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .cover-ornament {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      margin-bottom: 1.5rem;
+    }
+    .cover h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .cover h1 em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+    .cover-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.75rem 0;
+      color: var(--gold);
+    }
+    .cover-rule::before,
+    .cover-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .cover-rule span {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      letter-spacing: 0.2em;
+    }
+    .cover-subtitle {
+      font-family: var(--serif);
+      font-size: 1.125rem;
+      font-style: italic;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 0.75rem;
+    }
+    .cover-year {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ── Course header ── */
+    .course-header {
+      max-width: 680px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .course-label {
+      font-size: 0.6875rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .course-title {
+      font-family: var(--serif);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .course-title em { font-style: italic; color: var(--gold-dark); }
+    .course-desc {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--ink-muted);
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .course-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+      color: var(--gold);
+    }
+    .course-divider::before,
+    .course-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .course-divider span {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* ── Gallery grids ── */
+    .gallery {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 1rem;
+    }
+
+    /* ── Filmstrip ── */
+    .filmstrip-wrap {
+      max-width: 1200px;
+      margin: 2.5rem auto 0;
+      padding: 0 2rem;
+    }
+    .filmstrip-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      padding: 0.5rem 0;
+      color: var(--ink-muted);
+      font-family: var(--sans);
+      font-size: 0.8125rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .filmstrip-toggle::before,
+    .filmstrip-toggle::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .filmstrip-toggle:hover { color: var(--gold); }
+    .fs-chevron {
+      display: inline-block;
+      font-style: normal;
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+      line-height: 1;
+    }
+    .filmstrip-toggle[aria-expanded="true"] .fs-chevron { transform: rotate(180deg); }
+
+    .filmstrip-panel {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;
+    }
+    .filmstrip-panel.open {
+      max-height: 200px;
+      opacity: 1;
+    }
+    .filmstrip-track {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      overflow-y: visible;
+      padding: 0.75rem 0 1.5rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filmstrip-track::-webkit-scrollbar { display: none; }
+    .fs-item {
+      flex: 0 0 auto;
+      width: 72px;
+      scroll-snap-align: start;
+      cursor: zoom-in;
+      position: relative;
+      z-index: 0;
+      transition: z-index 0s 0.3s;
+    }
+    .fs-item img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 3px;
+      display: block;
+      opacity: 0.65;
+      transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+      border: 1.5px solid transparent;
+      will-change: transform;
+    }
+    .fs-item:hover,
+    .fs-item:focus-within {
+      z-index: 10;
+      transition: z-index 0s 0s;
+    }
+    .fs-item:hover img,
+    .fs-item:focus-within img {
+      opacity: 1;
+      transform: scale(1.45);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    /* Mobile: tap feedback via :active */
+    @media (hover: none) {
+      .fs-item img { opacity: 0.8; }
+      .fs-item:active img {
+        opacity: 1;
+        transform: scale(1.3);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+        border-color: var(--gold);
+      }
+      .filmstrip-track {
+        gap: 6px;
+        padding: 0.75rem 0 1.75rem;
+      }
+      .fs-item { width: 80px; }
+      .fs-item img { width: 80px; height: 80px; }
+    }
+    .fs-sep {
+      flex: 0 0 auto;
+      width: 1px;
+      height: 72px;
+      background: linear-gradient(to bottom, transparent, var(--gold-light), transparent);
+      margin: 0 4px;
+      align-self: flex-start;
+      margin-top: 0.75rem;
+    }
+
+    /* ── Filmstrip scroll arrows ── */
+    .filmstrip-scroller {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .fs-arrow {
+      flex: 0 0 auto;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink-muted);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      line-height: 1;
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+    .fs-arrow:hover {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+      opacity: 1;
+    }
+    .fs-arrow:disabled {
+      opacity: 0.2;
+      cursor: default;
+    }
+    @media (max-width: 600px) {
+      .fs-arrow { width: 1.75rem; height: 1.75rem; font-size: 0.9rem; }
+    }
+
+    /* Appetizers: centered for small counts */
+    .gallery-appetizers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .gallery-appetizers .dish {
+      width: calc((100% - 6 * 0.5rem) / 7);
+      min-width: 90px;
+      max-width: 140px;
+    }
+
+    /* Mains: 7-col uniform grid */
+    .gallery-mains {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+    }
+    .gallery-mains .dish-hero {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    .gallery-mains .dish-hero .dish-img {
+      aspect-ratio: 1/1;
+    }
+
+    /* Desserts: 7-col uniform grid */
+    .gallery-desserts {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+    }
+    .gallery-desserts .dish:nth-child(2),
+    .gallery-desserts .dish:nth-child(4) {
+      margin-top: 0;
+    }
+
+    /* ── Dish card ── */
+    .dish {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .dish-img-wrap {
+      overflow: hidden;
+      border-radius: 2px;
+      position: relative;
+      background: var(--parchment);
+      border: 1px solid rgba(139, 109, 56, 0.25);
+    }
+    .dish-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: zoom-in;
+    }
+    .dish-img:hover { transform: scale(1.05); }
+    .dish-caption {
+      padding: 0.5rem 0.25rem 0;
+    }
+    .dish-name {
+      font-family: var(--serif);
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+    .dish-detail {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 8, 6, 0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(90vw, 1100px);
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 2px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.1); }
+    .lightbox-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 1.25rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.1); }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+
+    /* ── Footer ── */
+    .menu-footer {
+      max-width: 680px;
+      margin: 5rem auto 0;
+      padding: 3rem 2rem 4rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .menu-footer-ornament {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      margin-bottom: 1rem;
+    }
+    .menu-footer p {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--ink-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .menu-footer .footer-year {
+      font-size: 0.6875rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--border);
+      margin-top: 1.5rem;
+    }
+
+    /* Café: centered flex like appetizers */
+    .gallery-cafe {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .gallery-cafe .dish {
+      width: calc((100% - 6 * 0.5rem) / 7);
+      min-width: 90px;
+      max-width: 140px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .gallery-mains { grid-template-columns: repeat(5, 1fr); }
+      .gallery-desserts { grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (max-width: 800px) {
+      .gallery-mains { grid-template-columns: repeat(4, 1fr); }
+      .gallery-desserts { grid-template-columns: repeat(4, 1fr); }
+      .gallery-appetizers .dish { min-width: 80px; max-width: 120px; }
+      .gallery-cafe .dish { min-width: 80px; max-width: 120px; }
+    }
+    @media (max-width: 600px) {
+      .gallery-mains { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+      .gallery-desserts { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+      .gallery-appetizers .dish { min-width: 70px; max-width: 110px; }
+      .gallery-cafe .dish { min-width: 70px; max-width: 110px; }
+    }
+    @media (max-width: 768px) {
+      .cover { margin-top: 2.5rem; padding: 0 1.25rem; }
+      .cover h1 { font-size: clamp(2rem, 8vw, 3rem); }
+      .cover-subtitle { font-size: 1rem; }
+      .course-header { padding: 0 1.25rem; }
+      .filmstrip-wrap { padding: 0 1.25rem; }
+      .filmstrip-panel.open { max-height: 160px; }
+      .gallery { padding: 0 1.25rem 1rem; }
+    }
+    @media (max-width: 480px) {
+      .site-header { padding: 1rem 1rem; }
+      .cover { margin-top: 2rem; padding: 0 1rem; }
+      .cover h1 { font-size: clamp(1.75rem, 9vw, 2.5rem); }
+      .gallery { padding: 0 0.75rem 1rem; }
+      .gallery-appetizers,
+      .gallery-mains,
+      .gallery-desserts,
+      .gallery-cafe { gap: 0.35rem; }
+      .course-header { padding: 0 1rem; }
+      .course-divider { padding: 0 1rem; }
+      .filmstrip-wrap { padding: 0 0.75rem; }
+      .menu-footer { padding: 2.5rem 1rem 3rem; }
+      .dish-caption { padding: 0.35rem 0.1rem 0; }
+      .dish-name { font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="brand">Arsenii Samoilov</a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary Adventures</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cover -->
+  <section class="cover">
+    <span class="cover-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+    <h1>Culinary<br><em>Adventures</em></h1>
+    <div class="cover-rule"><span>❧</span></div>
+    <p class="cover-subtitle">A curated tasting menu of flavor, season, and memory — tracing the path from early kitchen experiments to the signature dishes served today.</p>
+  </section>
+
+  <!-- ════════════════════════════════
+       FILMSTRIP — click to expand
+  ════════════════════════════════ -->
+  <div class="filmstrip-wrap">
+    <button class="filmstrip-toggle" id="fsToggle" aria-expanded="false" aria-controls="fsPanel">
+      <span>All Dishes</span>
+      <i class="fs-chevron" aria-hidden="true">▾</i>
+    </button>
+    <div class="filmstrip-panel" id="fsPanel" role="region" aria-label="All dishes filmstrip">
+      <div class="filmstrip-scroller">
+        <button class="fs-arrow" id="fsArrowLeft" aria-label="Scroll left">‹</button>
+        <div class="filmstrip-track" id="fsTrack">
+        <!-- populated by JS from gallery dishes -->
+        </div><!-- /filmstrip-track -->
+        <button class="fs-arrow" id="fsArrowRight" aria-label="Scroll right">›</button>
+      </div><!-- /filmstrip-scroller -->
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       COURSE I — APPETIZERS
+  ════════════════════════════════ -->
+  <section class="course-header" style="margin-top:3.5rem;">
+    <p class="course-label">First Course</p>
+    <h2 class="course-title"><em>Amuse-Bouche</em> &amp; Appetizers</h2>
+    <p class="course-desc">Small bites that open the palate — grilled peppers off the flame, fresh-baked bread, a bowl of soup to warm the soul, hand-rolled pasta, and little tastes that set the stage.</p>
+  </section>
+  <div class="course-divider"><span>· · ·</span></div>
+
+  <div class="gallery">
+    <div class="gallery-appetizers" id="gallery-appetizers">
+
+      <div class="dish" data-index="1">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20231030_172125267.MP~2.jpg" alt="Freshly baked bread loaf" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">House-Baked Herb Loaf</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="2">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20171109_225255-edited.jpg" alt="Crispy fried bacon bits in a bowl" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crispy Bacon Lardons</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="3">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20171109_224901-edited.jpg" alt="Split pea soup with crispy bacon" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Split Pea Velouté, Crispy Lardons</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="4">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20200905_153012.jpg" alt="Bell peppers on the grill" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Fire-Roasted Bell Peppers</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       COURSE II — MAIN COURSE
+  ════════════════════════════════ -->
+  <section class="course-header" style="margin-top:3.5rem;">
+    <p class="course-label">Second Course</p>
+    <h2 class="course-title">The <em>Main Course</em></h2>
+    <p class="course-desc">The heart of the table — roasted birds, herb-wrapped roulades, lasagna straight from the oven, beef tournedos, lobster tails, braised meats, smoked meatloaf, pommes fondantes, and slow-glazed cuts with the patience they deserve.</p>
+  </section>
+  <div class="course-divider"><span>· · ·</span></div>
+
+  <div class="gallery">
+    <div class="gallery-mains" id="gallery-mains">
+
+      <!-- Row 1: pasta, baked, seafood, non-meat variety -->
+      <div class="dish" data-index="5">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/original_000c85d5-2be7-46b1-948e-fa501133e80b_P.jpg" alt="Freshly made spaghetti drying on a board" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Hand-Rolled Fresh Pasta</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="6">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20230903_015045702.MP~2.jpg" alt="Lasagna with meat and béchamel" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Lasagna Bolognese</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="7">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20181117_200312-edited.jpg" alt="Grilled lobster tails with green beans" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Grilled Lobster Tail, Haricots Verts</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="8">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20231126_032124283.MP~2.jpg" alt="Homemade pizza with salami and peppers" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Homemade Pizza, Salami &amp; Roasted Peppers</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="9">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20210120_031643774.MP.jpg" alt="Halved roasted spaghetti squash on a baking sheet" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Oven-Roasted Spaghetti Squash</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="10">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20250512_000033058.MP.jpg" alt="Pommes fondantes — potato cylinders melting in butter" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Pommes Fondantes</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="11">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20251128_024801329.MP.jpg" alt="Sautéed French green beans with shallots" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Haricots Verts, Crispy Shallots</div>
+        </div>
+      </div>
+
+      <!-- Row 2: beef & pork -->
+      <div class="dish" data-index="12">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20171023_184110-edited.jpg" alt="Grilled pork ribs with rotini pasta and mushroom cream sauce" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Grilled Pork Ribs, Mushroom Rotini</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="13">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20230910_015851168.MP~2.jpg" alt="Bacon-wrapped beef roulades on grill" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Bacon-Wrapped Beef Roulades</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="14">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20240721_014451582.MP.jpg" alt="Beef shashlik skewers on a tray ready for the grill" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Beef Shashlik, Skewered &amp; Rested</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="15">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/645445348_10163605635599827_4824392121592498930_n.jpg" alt="Beef tournedos with red wine reduction and asparagus gratin" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Beef Tournedos, Red Wine Reduction &amp; Asparagus Gratin</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="16">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/645928668_10163605635849827_8868464653862091933_n.jpg" alt="Bacon-wrapped beef tournedos with red wine reduction" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Tournedos Rossini, Bordelaise</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="17">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20210101_041200282.MP.jpg" alt="Braised beef with mushrooms over mashed potato" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Braised Beef &amp; Mushroom Fricassée, Pomme Purée</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="18">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20251206_183829776.MP.jpg" alt="Meatloaf on smoker with smoke rising" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Smoked Meatloaf, Live Fire</div>
+        </div>
+      </div>
+
+      <!-- Row 3: pork -->
+      <div class="dish" data-index="19">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20241021_022744058.MP.jpg" alt="Spice-rubbed pork roast" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Spice-Rubbed Pork Roast</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="20">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20200526_194031.jpg" alt="Sliced prosciutto-wrapped pork loin on a baking sheet" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Prosciutto-Wrapped Pork Loin, Rested</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="21">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20200905_131749(1).jpg" alt="Prosciutto-wrapped pork tenderloin roulades on a rack before roasting" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Pork Tenderloin en Croûte de Jambon</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="22">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/original_04dfbc81-b0ca-487d-85b1-2c018b323a47_M(1).jpg" alt="Pork loin topped with roasted pear slices" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Pork Loin, Roasted Pear Crust</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="23">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/original_faf1e27f-0639-4336-90bc-ba5ae18b6924_P(1).jpg" alt="Baked meatballs on rack" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Oven-Baked Meatballs</div>
+        </div>
+      </div>
+
+      <!-- Row 4: chicken variety -->
+      <div class="dish" data-index="24">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20230128_030654531.MP~2.jpg" alt="Grilled chicken with tomato and melted cheese" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Grilled Chicken, Tomato &amp; Mozzarella</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="25">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20231028_022535299.MP~3.jpg" alt="Grilled chicken breast caprese style" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Chicken Caprese, Open Flame</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="26">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20240302_031536441.MP~2.jpg" alt="Glazed charred chicken thighs" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Char-Glazed Chicken Thighs</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="27">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20250310_014808409.MP.jpg" alt="Chicken shashlik skewers on grill" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Chicken Shashlik, Open Grill</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="28">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20251110_032743320.MP.jpg" alt="Glazed chicken drumsticks on a rack" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Lacquered Chicken Drumsticks</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="29">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20221218_031915952.MP~2.jpg" alt="Roasted chicken quarters" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Oven-Roasted Chicken Quarters</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="30">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20230923_211719027.MP.jpg" alt="Sliced herb chicken with shaved Parmesan" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Herb Chicken, Shaved Parmesan</div>
+        </div>
+      </div>
+
+      <!-- Row 5: more chicken -->
+      <div class="dish" data-index="31">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/644098888_10163605845314827_2863079225951673598_n.jpg" alt="Chicken breast with mango chutney on jewelled couscous" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Chicken, Mango Chutney &amp; Jewelled Couscous</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="32">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/644242732_10163605845264827_612329180930196038_n.jpg" alt="Sliced herb chicken roulade with mango sauce on couscous" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Herb-Rolled Chicken, Mango &amp; Sage</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="33">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/646349238_10163605845174827_6111819117994439642_n.jpg" alt="Stuffed chicken roulade with mango on couscous topped with sage" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Chicken en Ballotine, Tropical Jus</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="34">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/IMG_20160609_191342.jpg" alt="Sautéed chicken pieces with garlic and parsley" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Poulet Sauté, Garlic &amp; Persillade</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="35">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/IMG_20160804_211718.jpg" alt="Chicken or turkey cutlets frying golden in a cast iron pan" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Golden Pan Cutlets</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="36">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20200524_210615.jpg" alt="Braised chicken leg with mushrooms and baby carrots" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Braised Chicken, Forest Mushrooms &amp; Carrots</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="37">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/original_89ae0bbc-bbc2-41ce-9ffd-3a480d0ae797_M(1).jpg" alt="Prosciutto-wrapped chicken breasts" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Prosciutto-Wrapped Chicken</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="38">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/original_8d84f9fa-f5cf-412a-bafa-560e61fa8c26_M(1).jpg" alt="Roasted chicken leg with mushrooms and carrots" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Braised Chicken, Mushrooms &amp; Carrots</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="39">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20201216_174440420.MP.jpg" alt="Jar of homemade bacon bourbon infusion" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Bacon Bourbon, House-Infused</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       COURSE III — DESSERT
+  ════════════════════════════════ -->
+  <section class="course-header" style="margin-top:3.5rem;">
+    <p class="course-label">Third Course</p>
+    <h2 class="course-title"><em>Dessert</em> &amp; Mignardises</h2>
+    <p class="course-desc">The sweet finish — syrniki straight from the pan, an apple rose tart, poached pears, silky crème caramel with a spun-sugar arch, blueberry bundt cake, crème brûlée, walnut cake, chocolate truffles, and dark chocolate.</p>
+  </section>
+  <div class="course-divider"><span>· · ·</span></div>
+
+  <div class="gallery">
+    <div class="gallery-desserts" id="gallery-desserts">
+
+      <div class="dish" data-index="40">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20171207_151031.jpg" alt="Apple rose tart" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Apple Rose Tart</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="41">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20190105_194714-edited.jpg" alt="Poached pears with ice cream" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Poached Pears, Vanilla Ice Cream</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="42">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20190104_190011-edited.jpg" alt="Poached pears" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Poached Pears</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="43">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20200829_202313.jpg" alt="Crème caramel flan" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crème Caramel</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="44">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20211030_222943022~2.jpg" alt="Blueberry bundt cake with powdered sugar" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Blueberry Bundt Cake</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="45">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20240905_193854138.PORTRAIT~2.jpg" alt="Dark chocolate truffle cubes with mint" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Dark Chocolate Truffles, Fresh Mint</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="46">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20250713_050553764.MP.jpg" alt="Chopped dark chocolate" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Single-Origin Dark Chocolate</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="47">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/IMG_20160918_100127.jpg" alt="Cottage cheese pancakes" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Syrniki — Cottage Cheese Pancakes</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="48">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/00100lrPORTRAIT_00100_BURST20200905211413517_CO.jpg" alt="Crème caramel with spun sugar arch" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crème Caramel, Spun Sugar Arch</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="49">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/20131128_193946.jpg" alt="Walnut cake slice with whipped cream and strawberry" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Walnut Cake, Chantilly &amp; Strawberry</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="50">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/648277798_10163623104794827_5765547761393359162_n.jpg" alt="Crème brûlée in a red ramekin with fresh mint" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crème Brûlée, Fresh Mint</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="51">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20201211_043113689.MP.jpg" alt="Crème brûlée with torched caramel crust" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crème Brûlée, Torched Caramel</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="52">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20180417_201349.jpg" alt="Fresh blackberries simmering in cream" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Blackberries &amp; Cream</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       COURSE IV — LE CAFÉ
+  ════════════════════════════════ -->
+  <section class="course-header" style="margin-top:3.5rem;">
+    <p class="course-label">To Close</p>
+    <h2 class="course-title"><em>Le Café</em></h2>
+    <p class="course-desc">The final ritual — a cappuccino, a single espresso, crème brûlée beside its coffee, and a house-infused bourbon to linger over.</p>
+  </section>
+  <div class="course-divider"><span>· · ·</span></div>
+
+  <div class="gallery">
+    <div class="gallery-cafe" id="gallery-cafe">
+
+      <div class="dish" data-index="53">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20210224_195112460.MP.jpg" alt="Cappuccino" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Cappuccino</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="54">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20251004_163523346.MP.jpg" alt="Espresso in a glass Bialetti cup" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Single-Shot Espresso</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="55">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20240506_200132741.MP~2.jpg" alt="Crème brûlée with strawberry and espresso" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Crème Brûlée &amp; Espresso</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="56">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/MVIMG_20180416_203435.jpg" alt="Homemade jam jar — blackberry or berry preserve" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Artisan Preserve, Sealed &amp; Rested</div>
+        </div>
+      </div>
+
+      <div class="dish" data-index="57">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="food/PXL_20230517_145329093.MP.jpg" alt="Espresso pulling on a Breville with precision scale" loading="lazy">
+        </div>
+        <div class="dish-caption">
+          <div class="dish-name">Espresso Pull, Dialed In</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="menu-footer">
+    <div class="menu-footer-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <p>Every dish tells a story of curiosity, patience, and the pleasure of feeding the people you love.<br>The kitchen remains open.</p>
+    <p class="footer-year">Arsenii Samoilov &nbsp;·&nbsp; Bay Area, California &nbsp;·&nbsp; 2016 – present</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <script>
+    /* ── Build filmstrip from gallery images ── */
+    (function buildFilmstrip() {
+      const track = document.getElementById('fsTrack');
+      if (!track) return;
+      const sections = [
+        { id: 'gallery-appetizers', label: 'Appetizers' },
+        { id: 'gallery-mains',      label: 'Mains' },
+        { id: 'gallery-desserts',   label: 'Desserts' },
+        { id: 'gallery-cafe',       label: 'Le Café' },
+      ];
+      sections.forEach((sec, si) => {
+        if (si > 0) {
+          const sep = document.createElement('div');
+          sep.className = 'fs-sep';
+          track.appendChild(sep);
+        }
+        const gallery = document.getElementById(sec.id);
+        if (!gallery) return;
+        gallery.querySelectorAll('.dish-img').forEach(img => {
+          const item = document.createElement('div');
+          item.className = 'fs-item';
+          const clone = document.createElement('img');
+          clone.src = img.src;
+          clone.alt = img.alt;
+          clone.loading = 'lazy';
+          item.appendChild(clone);
+          track.appendChild(item);
+        });
+      });
+    })();
+
+    /* ── Filmstrip toggle ── */
+    const fsToggle = document.getElementById('fsToggle');
+    const fsPanel  = document.getElementById('fsPanel');
+    fsToggle.addEventListener('click', () => {
+      const open = fsPanel.classList.toggle('open');
+      fsToggle.setAttribute('aria-expanded', open);
+      if (open) updateArrows();
+    });
+
+    /* ── Filmstrip scroll arrows ── */
+    const fsTrack      = document.getElementById('fsTrack');
+    const fsArrowLeft  = document.getElementById('fsArrowLeft');
+    const fsArrowRight = document.getElementById('fsArrowRight');
+    const SCROLL_STEP  = 280;
+
+    function updateArrows() {
+      if (!fsTrack) return;
+      fsArrowLeft.disabled  = fsTrack.scrollLeft <= 2;
+      fsArrowRight.disabled = fsTrack.scrollLeft + fsTrack.clientWidth >= fsTrack.scrollWidth - 2;
+    }
+
+    if (fsTrack) {
+      fsTrack.addEventListener('scroll', updateArrows, { passive: true });
+      fsArrowLeft.addEventListener('click',  () => fsTrack.scrollBy({ left: -SCROLL_STEP, behavior: 'smooth' }));
+      fsArrowRight.addEventListener('click', () => fsTrack.scrollBy({ left:  SCROLL_STEP, behavior: 'smooth' }));
+      setTimeout(updateArrows, 80);
+    }
+
+    /* ── Lightbox ── */
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    let lbList = [], lbIdx = 0;
+
+    function openLightbox(list, idx) {
+      lbList = list; lbIdx = idx;
+      lbImg.src = list[idx].src;
+      lbImg.alt = list[idx].alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function navigate(dir) {
+      lbIdx = (lbIdx + dir + lbList.length) % lbList.length;
+      lbImg.src = lbList[lbIdx].src;
+      lbImg.alt = lbList[lbIdx].alt;
+    }
+
+    /* Gallery dish clicks */
+    const allDishes = [...document.querySelectorAll('.dish')];
+    const dishImages = allDishes.map(d => { const i = d.querySelector('.dish-img'); return { src: i.src, alt: i.alt }; });
+    allDishes.forEach((d, i) => d.querySelector('.dish-img').addEventListener('click', () => openLightbox(dishImages, i)));
+
+    /* Filmstrip item clicks — built after DOM population above */
+    document.querySelectorAll('.fs-item').forEach((el, i) => {
+      const fsImgs = [...document.querySelectorAll('.fs-item img')].map(im => ({ src: im.src, alt: im.alt }));
+      el.addEventListener('click', () => openLightbox(fsImgs, i));
+    });
+
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); navigate(-1); });
+    document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); navigate(1); });
+    lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+
+    /* ── Hamburger menu ── */
+    const menuToggle   = document.querySelector('.menu-toggle');
+    const navDropdown  = document.querySelector('.nav-dropdown');
+    if (menuToggle && navDropdown) {
+      menuToggle.addEventListener('click', () => {
+        navDropdown.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', navDropdown.classList.contains('open'));
+      });
+      document.addEventListener('click', e => {
+        if (!menuToggle.contains(e.target) && !navDropdown.contains(e.target)) {
+          navDropdown.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
