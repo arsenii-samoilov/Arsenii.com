@@ -73,11 +73,11 @@
     }
     .brand {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: #0a0a0a;
       text-decoration: none;
-      letter-spacing: 0;
+      letter-spacing: 0.02em;
     }
     .menu-wrapper { position: relative; }
     .menu-toggle {
@@ -91,15 +91,19 @@
       padding: 0.5rem;
       min-width: 44px;
       min-height: 44px;
+      width: 2.75rem;
+      height: 2.75rem;
+      -webkit-tap-highlight-color: transparent;
     }
     .menu-toggle span {
       display: block;
-      width: 22px;
+      width: 100%;
       height: 2px;
       background: #0a0a0a;
       transition: background 0.2s;
     }
-    .menu-toggle:hover span,
+    .menu-wrapper:hover .menu-toggle span,
+    .menu-toggle:hover span { background: #b91c1c; }
     .menu-toggle[aria-expanded="true"] span { background: #b91c1c; }
     .nav-dropdown {
       position: absolute;
@@ -132,13 +136,13 @@
       color: #0a0a0a;
       text-decoration: none;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 400;
       border-radius: 4px;
       transition: color 0.2s, background 0.2s;
     }
     .nav-dropdown a:hover { color: #b91c1c; background: #f8fafc; }
-    .nav-dropdown a[href="culinary.html"] { font-weight: 600; color: #1e3a5f; }
+    .nav-dropdown a[href="culinary.html"] { font-weight: 600; color: #0a0a0a; }
 
     /* ── Cover ── */
     .cover {
@@ -654,7 +658,7 @@
       <nav class="nav-dropdown" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="career.html">Career</a>
-        <a href="culinary.html">Culinary Adventures</a>
+        <a href="culinary.html">Culinary</a>
         <a href="about.html">About Me</a>
         <a href="contact.html">Contact</a>
       </nav>
