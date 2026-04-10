@@ -1326,6 +1326,10 @@
       const open = fsPanel.classList.toggle('open');
       fsToggle.setAttribute('aria-expanded', open);
       if (open) updateArrows();
+      gaEvent('filmstrip_toggle', {
+        event_category: 'Culinary',
+        event_label: open ? 'open' : 'close'
+      });
     });
 
     /* ── Filmstrip scroll arrows ── */
@@ -1352,12 +1356,21 @@
     const lbImg = document.getElementById('lbImg');
     let lbList = [], lbIdx = 0;
 
+    function gaEvent(name, params) {
+      if (typeof gtag === 'function') gtag('event', name, params);
+    }
+
     function openLightbox(list, idx) {
       lbList = list; lbIdx = idx;
       lbImg.src = list[idx].src;
       lbImg.alt = list[idx].alt;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
+      gaEvent('photo_view', {
+        event_category: 'Culinary',
+        event_label: list[idx].alt,
+        photo_src: list[idx].src.split('/').pop()
+      });
     }
     function closeLightbox() {
       lb.classList.remove('open');
@@ -1367,17 +1380,40 @@
       lbIdx = (lbIdx + dir + lbList.length) % lbList.length;
       lbImg.src = lbList[lbIdx].src;
       lbImg.alt = lbList[lbIdx].alt;
+      gaEvent('photo_navigate', {
+        event_category: 'Culinary',
+        event_label: lbList[lbIdx].alt,
+        direction: dir === 1 ? 'next' : 'prev'
+      });
     }
 
     /* Gallery dish clicks */
     const allDishes = [...document.querySelectorAll('.dish')];
     const dishImages = allDishes.map(d => { const i = d.querySelector('.dish-img'); return { src: i.src, alt: i.alt }; });
-    allDishes.forEach((d, i) => d.querySelector('.dish-img').addEventListener('click', () => openLightbox(dishImages, i)));
+    allDishes.forEach((d, i) => {
+      const section = d.closest('[id]') ? d.closest('[id]').id.replace('gallery-', '') : 'unknown';
+      const name = d.querySelector('.dish-name') ? d.querySelector('.dish-name').innerText : '';
+      d.querySelector('.dish-img').addEventListener('click', () => {
+        gaEvent('dish_click', {
+          event_category: 'Culinary',
+          event_label: name,
+          course_section: section
+        });
+        openLightbox(dishImages, i);
+      });
+    });
 
     /* Filmstrip item clicks — built after DOM population above */
     document.querySelectorAll('.fs-item').forEach((el, i) => {
       const fsImgs = [...document.querySelectorAll('.fs-item img')].map(im => ({ src: im.src, alt: im.alt }));
-      el.addEventListener('click', () => openLightbox(fsImgs, i));
+      el.addEventListener('click', () => {
+        gaEvent('filmstrip_click', {
+          event_category: 'Culinary',
+          event_label: fsImgs[i] ? fsImgs[i].alt : '',
+          filmstrip_index: i
+        });
+        openLightbox(fsImgs, i);
+      });
     });
 
     document.getElementById('lbClose').addEventListener('click', closeLightbox);

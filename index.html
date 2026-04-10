@@ -184,5 +184,32 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    /* GA4 — tile and CTA click tracking */
+    function gaEvent(name, params) {
+      if (typeof gtag === 'function') gtag('event', name, params);
+    }
+    document.querySelectorAll('a[href="career.html"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Career' }));
+    });
+    document.querySelectorAll('a[href="culinary.html"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Culinary Adventures' }));
+    });
+    document.querySelectorAll('a[href="about.html"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'About Me' }));
+    });
+    document.querySelectorAll('a[href="contact.html"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));
+    });
+    document.querySelectorAll('a[href*="linkedin.com"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('social_click', { event_category: 'Home', event_label: 'LinkedIn' }));
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('contact_click', { event_category: 'Home', event_label: 'Email' }));
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('contact_click', { event_category: 'Home', event_label: 'Phone' }));
+    });
+  </script>
 </body>
 </html>
