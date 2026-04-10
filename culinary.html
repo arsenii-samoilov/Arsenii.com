@@ -151,11 +151,10 @@
       text-align: center;
     }
     .cover-ornament {
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      color: var(--gold);
-      letter-spacing: 0.3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
       margin-bottom: 1.5rem;
     }
     .cover h1 {
@@ -191,9 +190,9 @@
       letter-spacing: 0.2em;
     }
     /* ── Cover icons ── */
-    @keyframes iconFloat {
+    @keyframes starFloat {
       0%, 100% { transform: translateY(0px); }
-      50%       { transform: translateY(-6px); }
+      50%       { transform: translateY(-5px); }
     }
     .cover-icons {
       display: flex;
@@ -208,12 +207,19 @@
       height: 28px;
       color: var(--gold);
       opacity: 0.85;
-      animation: iconFloat 3.2s ease-in-out infinite;
       flex-shrink: 0;
     }
-    .cover-icon:nth-child(1) { animation-delay: 0s; }
-    .cover-icon:nth-child(2) { animation-delay: 0.5s; }
-    .cover-icon:nth-child(3) { animation-delay: 1s; }
+    /* Animate each ✦ star independently */
+    .cover-star {
+      display: inline-block;
+      animation: starFloat 3s ease-in-out infinite;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.5rem;
+    }
+    .cover-star:nth-child(1) { animation-delay: 0s; }
+    .cover-star:nth-child(2) { animation-delay: 0.5s; }
+    .cover-star:nth-child(3) { animation-delay: 1s; }
 
     .cover-subtitle {
       font-family: var(--serif);
@@ -715,7 +721,11 @@
       </svg>
     </div>
 
-    <span class="cover-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+    <div class="cover-ornament">
+      <span class="cover-star">✦</span>
+      <span class="cover-star">✦</span>
+      <span class="cover-star">✦</span>
+    </div>
     <h1>Culinary<br><em>Adventures</em></h1>
     <div class="cover-rule"><span>❧</span></div>
 
