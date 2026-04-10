@@ -190,10 +190,12 @@
       letter-spacing: 0.2em;
     }
     /* ── Cover icons ── */
-    @keyframes starFloat {
-      0%, 100% { transform: translateY(0px); }
-      50%       { transform: translateY(-5px); }
-    }
+    @keyframes iconBob      { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-4px)} }
+    @keyframes iconSway     { 0%,100%{transform:rotate(0deg)}   40%{transform:rotate(-6deg)} 80%{transform:rotate(5deg)} }
+    @keyframes iconPulse    { 0%,100%{opacity:0.85;transform:scale(1)} 50%{opacity:1;transform:scale(1.12)} }
+    @keyframes iconFlicker  { 0%,100%{transform:scaleY(1) scaleX(1)} 30%{transform:scaleY(1.1) scaleX(0.93)} 60%{transform:scaleY(0.95) scaleX(1.05)} }
+    @keyframes iconSpin     { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+    @keyframes iconTilt     { 0%,100%{transform:rotate(-8deg)} 50%{transform:rotate(8deg)} }
     .cover-icons {
       display: flex;
       justify-content: center;
@@ -215,12 +217,15 @@
       width: 22px;
       height: 22px;
       color: var(--gold);
-      animation: starFloat 3s ease-in-out infinite;
       flex-shrink: 0;
     }
-    .cover-star:nth-child(1) { animation-delay: 0s; }
-    .cover-star:nth-child(2) { animation-delay: 0.5s; }
-    .cover-star:nth-child(3) { animation-delay: 1s; }
+    /* Each icon gets its own distinct subtle motion */
+    .cover-icons-top  .cover-icon:nth-child(1) { animation: iconTilt   4s ease-in-out infinite; }
+    .cover-icons-top  .cover-icon:nth-child(2) { animation: iconSway   5s ease-in-out infinite 0.6s; }
+    .cover-icons-top  .cover-icon:nth-child(3) { animation: iconPulse  4.5s ease-in-out infinite 1.2s; }
+    .cover-icons-bottom .cover-icon:nth-child(1) { animation: iconBob     3.5s ease-in-out infinite 0.3s; }
+    .cover-icons-bottom .cover-icon:nth-child(2) { animation: iconFlicker 2.8s ease-in-out infinite 0.8s; }
+    .cover-icons-bottom .cover-icon:nth-child(3) { animation: iconSpin    12s linear infinite; }
 
     .cover-subtitle {
       font-family: var(--serif);
