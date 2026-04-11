@@ -418,7 +418,7 @@ main {
 .career-tile-banner {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(160deg, #e8e8e8 0%, #c8c8c8 100%);
+  background: linear-gradient(160deg, #6b6b6b 0%, #4a4a4a 100%);
   border-radius: var(--radius) var(--radius) 0 0;
   display: flex;
   flex-direction: column;
@@ -428,11 +428,11 @@ main {
   flex-shrink: 0;
 }
 .career-tile-initials {
-  font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   font-weight: 600;
-  color: rgba(15, 23, 42, 0.85);
-  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.02em;
   text-align: center;
   padding: 0 1.25rem;
   user-select: none;
