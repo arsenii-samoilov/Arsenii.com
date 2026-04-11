@@ -537,8 +537,10 @@
 
     /* ── Tone-aware arrangement ──
        First 5 photos are always pinned (top row stays static).
-       The rest are randomly shuffled on each page load, then
+       The rest are randomly shuffled ONCE at page load, then
        tone-arranged so no two adjacent photos share the same tone.
+       The shuffled order is cached in ARRANGED_PHOTOS and never
+       re-randomized — filters/search operate on this stable order.
     */
     const COLS = 5;
     const PINNED = 5; // number of photos locked to the top row
@@ -551,36 +553,30 @@
       return arr;
     }
 
-    function arrangeTones(photos) {
+    function buildArrangedOrder(photos) {
       if (photos.length === 0) return [];
 
-      // Split: keep first PINNED locked, shuffle the rest
       const pinned = photos.slice(0, Math.min(PINNED, photos.length));
       const rest   = shuffleArray(photos.slice(pinned.length));
 
-      // Group rest by tone
       const buckets = {};
       rest.forEach(p => {
         const t = p.tone || 'light';
         (buckets[t] = buckets[t] || []).push(p);
       });
 
-      // Build tone-aware order for the rest, row-by-row (5 cols)
       const arranged = [];
       const toneKeys = Object.keys(buckets);
       const used = {};
       toneKeys.forEach(k => used[k] = 0);
       const total = rest.length;
 
-      // Seed context from the last row of pinned photos so the
-      // first shuffled row doesn't clash with the pinned row above it.
       while (arranged.length < total) {
         const available = toneKeys.filter(k => used[k] < buckets[k].length);
         if (!available.length) break;
 
         const col = arranged.length % COLS;
         const leftTone  = col > 0 ? arranged[arranged.length - 1].tone : null;
-        // Above: either within arranged block, or last row of pinned
         const aboveIdx  = arranged.length - COLS;
         const aboveTone = aboveIdx >= 0
           ? arranged[aboveIdx].tone
@@ -600,10 +596,15 @@
       return [...pinned, ...arranged];
     }
 
+    // Build the display order once — stays fixed for the entire session.
+    const ARRANGED_PHOTOS = buildArrangedOrder(PHOTOS);
+
     /* ── Render ── */
     function getVisible() {
       const q = activeSearch.toLowerCase();
-      return PHOTOS.filter(p => {
+      // Filter against the already-stable arranged order so the grid
+      // never re-shuffles when the user searches or changes a filter.
+      return ARRANGED_PHOTOS.filter(p => {
         const filterMatch = activeFilter === 'all' || p.tags.includes(activeFilter);
         const searchMatch = !q || p.title.toLowerCase().includes(q) || p.keywords.toLowerCase().includes(q) || p.tags.some(t => t.includes(q));
         return filterMatch && searchMatch;
@@ -611,8 +612,7 @@
     }
 
     function renderGrid() {
-      const raw = getVisible();
-      visiblePhotos = arrangeTones(raw);
+      visiblePhotos = getVisible();
       const grid = document.getElementById('photoGrid');
       const noRes = document.getElementById('noResults');
       const count = document.getElementById('photoCount');
