@@ -121,43 +121,12 @@
       margin: 0 auto 2rem;
     }
 
-    /* Search & filter */
+    /* Filter */
     .photo-controls {
       max-width: 1100px;
       margin: 0 auto 2rem;
       padding: 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
     }
-    .photo-search-wrap {
-      flex: 1;
-      min-width: 200px;
-      position: relative;
-    }
-    .photo-search-wrap svg {
-      position: absolute;
-      left: 0.85rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      pointer-events: none;
-    }
-    .photo-search {
-      width: 100%;
-      padding: 0.65rem 1rem 0.65rem 2.5rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-family: var(--font-sans);
-      font-size: var(--text-sm);
-      color: var(--text);
-      background: #fff;
-      outline: none;
-      transition: border-color 0.2s;
-      box-sizing: border-box;
-    }
-    .photo-search:focus { border-color: #0a0a0a; }
 
     .filter-tags {
       display: flex;
@@ -322,12 +291,8 @@
 
     @media (max-width: 768px) {
       .photo-controls {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.65rem;
         padding: 0 1rem;
       }
-      .photo-search-wrap { min-width: unset; }
       .filter-tags { gap: 0.4rem; }
       .filter-tag { padding: 0.45rem 0.85rem; font-size: 0.8rem; }
       .photo-count { padding: 0 1rem; }
@@ -337,7 +302,6 @@
       .photo-cover { padding: 2.5rem 1.25rem 1.75rem; }
       .photo-cover h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
       .photo-cover p { font-size: 0.85rem; }
-      .photo-search { font-size: 1rem; } /* prevent iOS zoom on focus */
       .filter-tag { padding: 0.5rem 0.9rem; font-size: 0.78rem; }
       .photo-item-caption { opacity: 1; background: linear-gradient(transparent, rgba(0,0,0,0.5)); padding: 1rem 0.6rem 0.5rem; }
       .lb-nav { display: none; }
@@ -374,10 +338,6 @@
     </div>
 
     <div class="photo-controls">
-      <div class="photo-search-wrap">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" class="photo-search" id="photoSearch" placeholder="Search photos…" aria-label="Search photos">
-      </div>
       <div class="filter-tags" id="filterTags">
         <button class="filter-tag active" data-filter="all">All</button>
         <button class="filter-tag" data-filter="cars">Cars</button>
@@ -391,7 +351,7 @@
     <p class="photo-count" id="photoCount"></p>
 
     <div class="photo-grid" id="photoGrid"></div>
-    <p class="no-results" id="noResults">No photos match your search.</p>
+    <p class="no-results" id="noResults">No photos match this filter.</p>
   </main>
 
   <!-- Lightbox -->
@@ -531,7 +491,6 @@
 
     /* ── State ── */
     let activeFilter = 'all';
-    let activeSearch = '';
     let lbIndex = 0;
     let visiblePhotos = [];
 
@@ -601,14 +560,9 @@
 
     /* ── Render ── */
     function getVisible() {
-      const q = activeSearch.toLowerCase();
-      // Filter against the already-stable arranged order so the grid
-      // never re-shuffles when the user searches or changes a filter.
-      return ARRANGED_PHOTOS.filter(p => {
-        const filterMatch = activeFilter === 'all' || p.tags.includes(activeFilter);
-        const searchMatch = !q || p.title.toLowerCase().includes(q) || p.keywords.toLowerCase().includes(q) || p.tags.some(t => t.includes(q));
-        return filterMatch && searchMatch;
-      });
+      return ARRANGED_PHOTOS.filter(p =>
+        activeFilter === 'all' || p.tags.includes(activeFilter)
+      );
     }
 
     function renderGrid() {
@@ -709,12 +663,6 @@
       document.querySelectorAll('.filter-tag').forEach(b => b.classList.toggle('active', b === btn));
       renderGrid();
       if (typeof gtag === 'function') gtag('event', 'photo_filter', { event_category: 'Photography', event_label: activeFilter });
-    });
-
-    /* ── Search ── */
-    document.getElementById('photoSearch').addEventListener('input', e => {
-      activeSearch = e.target.value;
-      renderGrid();
     });
 
     /* ── Init ── */
