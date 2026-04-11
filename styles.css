@@ -28,6 +28,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 *:focus-visible {
   outline: 2px solid var(--accent-red);
   outline-offset: 2px;
@@ -402,6 +407,13 @@ main {
   flex-direction: column;
 }
 
+.preview-card-inner {
+  padding: 1.25rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .preview-card h2 {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
@@ -456,6 +468,8 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .profile-icon:hover {
@@ -899,6 +913,8 @@ main {
 
 .no-wrap {
   white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .profile-section {
@@ -1147,6 +1163,10 @@ main {
     padding: 1.5rem;
   }
 
+  .preview-card-inner {
+    padding: 1rem 1.5rem 1.25rem;
+  }
+
   .preview-card h2 {
     font-size: 1.25rem;
     white-space: normal;
@@ -1315,6 +1335,10 @@ main {
 
   .preview-card {
     padding: 1.25rem;
+  }
+
+  .preview-card-inner {
+    padding: 0.875rem 1.25rem 1rem;
   }
 
   .preview-card h2 {

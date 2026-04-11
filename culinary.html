@@ -92,19 +92,21 @@
       --ink-mid: #3d3530;
       --ink-muted: #7a6e65;
       --border:  #d6cfc3;
+      --surface: #ffffff;
       --serif: 'Cormorant Garamond', Georgia, serif;
       --sans:  'Inter', -apple-system, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: var(--sans);
       background-color: #ffffff;
       color: var(--ink);
       min-height: 100vh;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -474,8 +476,8 @@
     }
     .fs-arrow {
       flex: 0 0 auto;
-      width: 2rem;
-      height: 2rem;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       border: 1px solid var(--border);
       background: var(--surface);
@@ -502,7 +504,7 @@
       cursor: default;
     }
     @media (max-width: 600px) {
-      .fs-arrow { width: 1.75rem; height: 1.75rem; font-size: 0.9rem; }
+      .fs-arrow { width: 44px; height: 44px; font-size: 0.9rem; }
     }
 
     /* Appetizers: centered for small counts */
@@ -612,8 +614,8 @@
       border: 1px solid rgba(255,255,255,0.3);
       color: #fff;
       font-size: 1.25rem;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       cursor: pointer;
       display: flex;
@@ -630,8 +632,8 @@
       border: 1px solid rgba(255,255,255,0.25);
       color: #fff;
       font-size: 1.25rem;
-      width: 2.75rem;
-      height: 2.75rem;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       cursor: pointer;
       display: flex;
