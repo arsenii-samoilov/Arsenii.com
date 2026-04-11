@@ -25,8 +25,8 @@
     g.onerror = loadGtag;
     document.head.appendChild(g);
   </script>
-  <title>Arsenii Samoilov | Career Profile | Senior TPM | Intuit, Atlassian, Apple</title>
-  <meta name="description" content="Career profile of Arsenii Samoilov - Senior Technical Program Manager. 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple. AI integration, compliance governance, monetization. Download resume.">
+  <title>Arsenii Samoilov | Career Profile | Senior TPM</title>
+  <meta name="description" content="Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. AI, compliance, monetization. Download resume.">
   <meta name="keywords" content="Technical Program Manager, TPM, Arsenii Samoilov, career, resume, Intuit, Atlassian, Adobe, Salesforce, Roku, Apple, program management, AI, compliance, Bay Area">
   <meta name="author" content="Arsenii Samoilov">
   <meta name="robots" content="index, follow">
@@ -36,7 +36,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arsenii.com/career.html">
-  <meta property="og:title" content="Arsenii Samoilov | Career Profile | Senior Technical Program Manager">
+  <meta property="og:title" content="Arsenii Samoilov | Career Profile | Senior TPM">
   <meta property="og:description" content="19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple. AI integration, compliance governance, monetization strategy. Download resume.">
   <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
   <meta property="og:image:width" content="1200">
@@ -48,7 +48,7 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arsenii Samoilov | Career Profile | Senior TPM | Intuit, Atlassian, Apple">
+  <meta name="twitter:title" content="Arsenii Samoilov | Career Profile | Senior TPM">
   <meta name="twitter:description" content="Senior TPM with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple. AI, compliance, monetization.">
   <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
   <meta name="twitter:image:alt" content="Arsenii Samoilov - Senior Technical Program Manager">
@@ -284,5 +284,12 @@
   </footer>
 
   <script src="main.js?v=2"></script>
+  <script>
+    document.querySelectorAll('.career-actions a').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'cta_click', { event_category: 'career', event_label: el.textContent.trim() });
+      });
+    });
+  </script>
 </body>
 </html>

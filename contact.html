@@ -54,7 +54,7 @@
     ]
   }
   </script>
-  <meta name="description" content="Contact Arsenii Samoilov for Technical Program Manager and senior program leadership opportunities. Open to recruiters and hiring managers. Bay Area.">
+  <meta name="description" content="Contact Arsenii Samoilov for Senior TPM and program leadership roles. Open to recruiters and hiring managers in the Bay Area.">
   <meta name="keywords" content="contact Arsenii Samoilov, TPM hiring, Technical Program Manager jobs, recruiters, Bay Area, LinkedIn, email">
   <meta name="author" content="Arsenii Samoilov">
   <meta name="robots" content="index, follow">
@@ -144,5 +144,17 @@
   </footer>
 
   <script src="main.js?v=2"></script>
+  <script>
+    document.querySelectorAll('.contact-row-link').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'contact_click', { event_category: 'contact', event_label: el.getAttribute('href') });
+      });
+    });
+    document.querySelectorAll('.connect-link').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'social_click', { event_category: 'contact', event_label: el.textContent.trim() });
+      });
+    });
+  </script>
 </body>
 </html>

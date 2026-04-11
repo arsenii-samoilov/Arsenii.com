@@ -25,8 +25,8 @@
     g.onerror = loadGtag;
     document.head.appendChild(g);
   </script>
-  <title>About Arsenii Samoilov | Senior TPM | Education, Certifications, Community</title>
-  <meta name="description" content="About Arsenii Samoilov - Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple. Education, certifications, community & volunteering.">
+  <title>About Arsenii Samoilov | Senior TPM | Bay Area</title>
+  <meta name="description" content="About Arsenii Samoilov — Senior TPM with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Education, certifications, and community.">
   <meta name="keywords" content="Arsenii Samoilov, about, Technical Program Manager, TPM, education, certifications, PMP, Scrum Master, Bay Area, volunteer, community">
   <meta name="author" content="Arsenii Samoilov">
   <meta name="robots" content="index, follow">
@@ -140,5 +140,12 @@
   </footer>
 
   <script src="main.js?v=2"></script>
+  <script>
+    document.querySelectorAll('.profile-icon').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'social_click', { event_category: 'about', event_label: el.getAttribute('aria-label') || el.getAttribute('href') });
+      });
+    });
+  </script>
 </body>
 </html>
