@@ -122,14 +122,20 @@
       gap: 1.25rem;
       margin-bottom: 1rem;
     }
-    .photo-cover-portrait {
+    .photo-cover-portrait-wrap {
       width: 72px;
       height: 72px;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: center 55%;
+      overflow: hidden;
       box-shadow: 0 0 0 3px rgba(30,58,95,0.12), 0 0 0 5px rgba(185,28,28,0.06);
       flex-shrink: 0;
+    }
+    .photo-cover-portrait {
+      width: 130%;
+      height: 130%;
+      margin: -15% 0 0 -15%;
+      object-fit: cover;
+      object-position: center 35%;
       overflow: hidden;
     }
     .photo-cover-title h1 { margin: 0; }
@@ -384,7 +390,7 @@
       .photo-cover { padding: 2.5rem 1.25rem 1.75rem; }
       .photo-cover h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
       .photo-cover p { font-size: 0.85rem; }
-      .photo-cover-portrait { width: 56px; height: 56px; }
+      .photo-cover-portrait-wrap { width: 56px; height: 56px; }
       .filter-tag { width: 44px; height: 44px; }
       .filter-tag::after { display: none; } /* no tooltips on touch */
       .photo-item-caption { opacity: 1; background: linear-gradient(transparent, rgba(0,0,0,0.5)); padding: 1rem 0.6rem 0.5rem; }
@@ -418,7 +424,9 @@
     <div class="photo-cover">
       <p class="photo-cover-label">Shutter Moments</p>
       <div class="photo-cover-title">
-        <img src="photos/photography-share-cover.jpg" alt="Arsenii Samoilov with Canon camera" class="photo-cover-portrait">
+        <div class="photo-cover-portrait-wrap">
+          <img src="photos/photography-share-cover.jpg" alt="Arsenii Samoilov with Canon camera" class="photo-cover-portrait">
+        </div>
         <h1>Photography</h1>
       </div>
       <p>A curated collection of moments captured in time.</p>
