@@ -113,7 +113,6 @@
         <a href="career.html">Career</a>
         <a href="culinary.html">Culinary</a>
         <a href="photography.html">Photography</a>
-        <a href="about.html">About Me</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -218,9 +217,6 @@
     });
     document.querySelectorAll('a[href="photography.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Photography' }));
-    });
-    document.querySelectorAll('a[href="about.html"]').forEach(el => {
-      el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'About Me' }));
     });
     document.querySelectorAll('a[href="contact.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));
