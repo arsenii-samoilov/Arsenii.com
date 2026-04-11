@@ -297,6 +297,43 @@
     }
     .lb-close:hover { opacity: 1; }
 
+    .lb-share {
+      position: fixed;
+      top: 1.25rem; right: 4.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+      z-index: 10000;
+    }
+    .lb-share:hover { background: rgba(255,255,255,0.25); }
+
+    /* Toast notification */
+    .share-toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(1rem);
+      background: rgba(10,10,10,0.88);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 10001;
+    }
+    .share-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
     .lb-nav {
       position: fixed;
       top: 50%; transform: translateY(-50%);
@@ -401,6 +438,9 @@
   <!-- Lightbox -->
   <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
     <button class="lb-close" id="lbClose" aria-label="Close">&#x2715;</button>
+    <button class="lb-share" id="lbShare" aria-label="Share photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </button>
     <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#x2039;</button>
     <div class="lb-img-wrap">
       <img id="lbImg" src="" alt="">
@@ -408,6 +448,8 @@
     </div>
     <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#x203A;</button>
   </div>
+  <!-- Share toast -->
+  <div class="share-toast" id="shareToast">Link copied</div>
 
   <footer class="site-footer">
     <p>© 2026 Arsenii Samoilov. Bay Area, California.</p>
@@ -698,6 +740,40 @@
         closeLb();
       }
     }, { passive: true });
+
+    /* ── Share ── */
+    function showToast(msg) {
+      const t = document.getElementById('shareToast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    document.getElementById('lbShare').addEventListener('click', async e => {
+      e.stopPropagation();
+      const p = visiblePhotos[lbIndex];
+      if (!p) return;
+      const url = `https://arsenii.com/photos/${p.src.split('/').pop()}`;
+      const shareData = {
+        title: `Photography — ${p.title}`,
+        text: `${p.title} · Photography by Arsenii Samoilov`,
+        url
+      };
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        try {
+          await navigator.share(shareData);
+          if (typeof gtag === 'function') gtag('event', 'photo_share', { event_category: 'Photography', event_label: p.title, method: 'native' });
+        } catch (err) { /* user cancelled */ }
+      } else {
+        try {
+          await navigator.clipboard.writeText(url);
+          showToast('Link copied');
+          if (typeof gtag === 'function') gtag('event', 'photo_share', { event_category: 'Photography', event_label: p.title, method: 'clipboard' });
+        } catch {
+          showToast('Copy: ' + url);
+        }
+      }
+    });
 
     /* ── Filters ── */
     document.getElementById('filterTags').addEventListener('click', e => {
