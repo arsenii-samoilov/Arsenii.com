@@ -29,28 +29,54 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico">
   <title>Photography — Arsenii Samoilov</title>
-  <meta name="description" content="Photography by Arsenii Samoilov — a personal collection of cars, architecture, nature, and street scenes captured over the years.">
+  <meta name="description" content="Photography by Arsenii Samoilov — cars, architecture, nature, and the quiet details others walk past, shot over years across California and beyond.">
+  <meta name="keywords" content="Arsenii Samoilov photography, car photography, Ferrari, Lamborghini, Porsche, automotive photography, Bay Area, California, architecture, nature, street photography">
   <meta name="author" content="Arsenii Samoilov">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://arsenii.com/photography.html">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ImageGallery",
+        "name": "Photography — Arsenii Samoilov",
+        "description": "Cars, architecture, nature, and the quiet details others walk past — shot over years across California and beyond.",
+        "url": "https://arsenii.com/photography.html",
+        "author": { "@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com" },
+        "isPartOf": { "@type": "WebSite", "url": "https://arsenii.com" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arsenii.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Photography", "item": "https://arsenii.com/photography.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arsenii.com/photography.html">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Photography — Arsenii Samoilov">
-  <meta property="og:description" content="A personal collection of cars, architecture, nature, and street scenes captured over the years.">
+  <meta property="og:description" content="Cars, architecture, nature, and the quiet details others walk past — shot over years across California and beyond.">
   <meta property="og:image" content="https://arsenii.com/photos/Photography profile photo.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="800">
-  <meta property="og:image:alt" content="Photography by Arsenii Samoilov">
+  <meta property="og:image:alt" content="Ferrari Enzo with doors open — Photography by Arsenii Samoilov">
   <meta property="og:site_name" content="Arsenii Samoilov">
   <meta property="fb:app_id" content="1518395903185508">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Photography — Arsenii Samoilov">
-  <meta name="twitter:description" content="A personal collection of cars, architecture, nature, and street scenes.">
+  <meta name="twitter:description" content="Cars, architecture, nature, and the quiet details others walk past — shot across California and beyond.">
   <meta name="twitter:image" content="https://arsenii.com/photos/Photography profile photo.jpg">
+  <meta name="twitter:image:alt" content="Ferrari Enzo with doors open — Photography by Arsenii Samoilov">
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -603,7 +629,7 @@
         div.className = 'photo-item';
         div.dataset.index = i;
         div.innerHTML = `
-          <img src="${p.src}" alt="${p.title}" loading="${i < 9 ? 'eager' : 'lazy'}"${i === 0 ? ' fetchpriority="high"' : ''}>
+          <img src="${p.src}" alt="${p.keywords ? p.keywords.split(' ').slice(0,5).join(' ') + ' — ' + p.title : p.title}" loading="${i < 9 ? 'eager' : 'lazy'}"${i === 0 ? ' fetchpriority="high"' : ''}>
           <div class="photo-item-caption"><strong>${p.title}</strong></div>
         `;
         div.addEventListener('click', () => openLb(i));
@@ -627,7 +653,7 @@
       const p = visiblePhotos[lbIndex];
       if (!p) return;
       document.getElementById('lbImg').src = p.src;
-      document.getElementById('lbImg').alt = p.title;
+      document.getElementById('lbImg').alt = p.keywords ? p.keywords.split(' ').slice(0,5).join(' ') + ' — ' + p.title : p.title;
       document.getElementById('lbMeta').textContent = `${p.title}  ·  ${lbIndex + 1} / ${visiblePhotos.length}`;
     }
 
