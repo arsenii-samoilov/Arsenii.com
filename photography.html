@@ -213,7 +213,7 @@
       transition: opacity 0.25s;
     }
     .photo-item:hover .photo-item-caption { opacity: 1; }
-    .photo-item-caption strong { display: block; font-size: 0.825rem; margin-bottom: 0.1rem; }
+    .photo-item-caption strong { display: block; font-size: 0.825rem; }
 
     .photo-item.hidden { display: none; }
 
@@ -563,7 +563,7 @@
         div.dataset.index = i;
         div.innerHTML = `
           <img src="${p.src}" alt="${p.title}" loading="${i < 9 ? 'eager' : 'lazy'}"${i === 0 ? ' fetchpriority="high"' : ''}>
-          <div class="photo-item-caption"><strong>${p.title}</strong>${p.tags.map(t => t.charAt(0).toUpperCase()+t.slice(1)).join(' · ')}</div>
+          <div class="photo-item-caption"><strong>${p.title}</strong></div>
         `;
         div.addEventListener('click', () => openLb(i));
         grid.appendChild(div);
