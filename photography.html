@@ -388,7 +388,7 @@
       { src: 'photos/IMG_0772~2.JPG', title: 'CA, 2014', tags: ['cars'], keywords: 'car racing track sport supercar', tone: 'dark' },
       { src: 'photos/PXL_20210410_161754109.MP.jpg', title: 'CA, 2021', tags: ['cars'], keywords: 'car hood front angle classic', tone: 'cool' },
       { src: 'photos/PXL_20210529_150440899.MP.jpg', title: 'CA, 2021', tags: ['cars','nature'], keywords: 'car road sunny california landscape', tone: 'golden' },
-      { src: 'photos/PXL_20220413_175421107~2.jpg', title: 'CA, 2022', tags: ['cars'], keywords: 'cars spring meet parking lot show', tone: 'green' },
+      { src: 'photos/PXL_20220413_175421107~2.jpg', title: 'CA, 2022', tags: ['cars'], keywords: 'lamborghini exotic car green supercar show meet parking lot', tone: 'green' },
       { src: 'photos/PXL_20220605_163652604~2.jpg', title: 'CA, 2022', tags: ['cars'], keywords: 'exotic car summer show lot', tone: 'golden' },
       { src: 'photos/PXL_20220904_152550783.jpg', title: 'CA, 2022', tags: ['cars'], keywords: 'classic car posed show parking chrome', tone: 'cool' },
       { src: 'photos/PXL_20220904_153610437~2.jpg', title: 'CA, 2022', tags: ['cars'], keywords: 'hot rod custom classic chrome exhaust', tone: 'warm' },
@@ -485,53 +485,68 @@
     let visiblePhotos = [];
 
     /* ── Tone-aware arrangement ──
-       Groups photos by tone, then interleaves them so no two
-       adjacent photos in the same row of 5 share the same tone.
+       First 5 photos are always pinned (top row stays static).
+       The rest are randomly shuffled on each page load, then
+       tone-arranged so no two adjacent photos share the same tone.
     */
     const COLS = 5;
+    const PINNED = 5; // number of photos locked to the top row
+
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
 
     function arrangeTones(photos) {
-      // Group by tone
+      if (photos.length === 0) return [];
+
+      // Split: keep first PINNED locked, shuffle the rest
+      const pinned = photos.slice(0, Math.min(PINNED, photos.length));
+      const rest   = shuffleArray(photos.slice(pinned.length));
+
+      // Group rest by tone
       const buckets = {};
-      photos.forEach(p => {
+      rest.forEach(p => {
         const t = p.tone || 'light';
         (buckets[t] = buckets[t] || []).push(p);
       });
 
-      // Build result row-by-row (5 cols), picking tones that differ
-      // from their left neighbour and from the cell directly above.
-      const result = [];
+      // Build tone-aware order for the rest, row-by-row (5 cols)
+      const arranged = [];
       const toneKeys = Object.keys(buckets);
-      const used = {}; // track how many we've taken from each bucket
+      const used = {};
       toneKeys.forEach(k => used[k] = 0);
+      const total = rest.length;
 
-      const total = photos.length;
-
-      while (result.length < total) {
-        // Which tones still have photos left?
+      // Seed context from the last row of pinned photos so the
+      // first shuffled row doesn't clash with the pinned row above it.
+      while (arranged.length < total) {
         const available = toneKeys.filter(k => used[k] < buckets[k].length);
         if (!available.length) break;
 
-        const col = result.length % COLS;
-        const leftTone  = col > 0 ? result[result.length - 1].tone : null;
-        const aboveTone = result.length >= COLS ? result[result.length - COLS].tone : null;
+        const col = arranged.length % COLS;
+        const leftTone  = col > 0 ? arranged[arranged.length - 1].tone : null;
+        // Above: either within arranged block, or last row of pinned
+        const aboveIdx  = arranged.length - COLS;
+        const aboveTone = aboveIdx >= 0
+          ? arranged[aboveIdx].tone
+          : (pinned.length >= COLS ? pinned[pinned.length - COLS + (arranged.length % COLS)]?.tone : null);
 
-        // Prefer a tone that doesn't match left or above
         let preferred = available.filter(k => k !== leftTone && k !== aboveTone);
-        // Fall back to just not-left
         if (!preferred.length) preferred = available.filter(k => k !== leftTone);
-        // Last resort: any available
         if (!preferred.length) preferred = available;
 
-        // Pick the tone with the most remaining photos (greedy fill)
         preferred.sort((a, b) => (buckets[b].length - used[b]) - (buckets[a].length - used[a]));
         const chosenTone = preferred[0];
 
-        result.push(buckets[chosenTone][used[chosenTone]]);
+        arranged.push(buckets[chosenTone][used[chosenTone]]);
         used[chosenTone]++;
       }
 
-      return result;
+      return [...pinned, ...arranged];
     }
 
     /* ── Render ── */
