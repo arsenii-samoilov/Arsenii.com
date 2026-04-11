@@ -940,7 +940,6 @@ main {
 }
 
 .no-wrap {
-  white-space: nowrap;
   overflow-wrap: break-word;
   word-break: break-word;
 }
