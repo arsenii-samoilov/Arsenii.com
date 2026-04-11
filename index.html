@@ -112,6 +112,7 @@
         <a href="index.html">Home</a>
         <a href="career.html">Career</a>
         <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
         <a href="about.html">About Me</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -161,6 +162,17 @@
           </div>
         </a>
       </article>
+      <article class="preview-card preview-photography" style="padding:0;overflow:hidden;">
+        <a href="photography.html" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
+          <img src="photos/Photography profile photo.jpg" alt="Photography by Arsenii Samoilov"
+            style="width:100%;display:block;border-radius:var(--radius) var(--radius) 0 0;aspect-ratio:16/9;object-fit:cover;object-position:center;flex-shrink:0;" loading="lazy">
+          <div style="padding:1.25rem 2rem 1.5rem;display:flex;flex-direction:column;flex:1;">
+            <h2 style="font-family:var(--font-serif);font-size:var(--text-lg);margin:0 0 0.75rem;font-weight:600;text-align:center;">Photography</h2>
+            <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Cars, open roads, city lines, and the details others walk past.</p>
+            <div style="text-align:center;font-size:var(--text-md);margin-top:auto;">View the collection →</div>
+          </div>
+        </a>
+      </article>
     </section>
 
     <section class="connect">
@@ -197,6 +209,9 @@
     });
     document.querySelectorAll('a[href="culinary.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Culinary Adventures' }));
+    });
+    document.querySelectorAll('a[href="photography.html"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Photography' }));
     });
     document.querySelectorAll('a[href="about.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'About Me' }));
