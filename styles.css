@@ -418,7 +418,11 @@ main {
 .career-tile-banner {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(160deg, #707070 0%, #4a4a4a 100%);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 58, 95, 0.06), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(185, 28, 28, 0.03), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 70%, rgba(30, 58, 95, 0.04), transparent);
+  background-color: #ffffff;
   border-radius: var(--radius) var(--radius) 0 0;
   display: flex;
   flex-direction: column;
@@ -431,7 +435,7 @@ main {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 2vw, 1.15rem);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(15, 23, 42, 0.85);
   letter-spacing: 0.02em;
   text-align: center;
   padding: 0 1.25rem;
