@@ -414,6 +414,26 @@ main {
   flex: 1;
 }
 
+/* Career tile top banner — matches image area height on culinary/photography tiles */
+.career-tile-banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #2d5a8e 100%);
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.career-tile-initials {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.15em;
+  user-select: none;
+}
+
 .preview-card h2 {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
