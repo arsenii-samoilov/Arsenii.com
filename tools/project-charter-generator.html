@@ -241,10 +241,11 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "project_charter_v1";
     var LISTS = ["objectives", "scopeIn", "scopeOut", "stakeholders", "milestones", "metrics", "risks"];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -488,6 +489,18 @@
     });
 
     renderAll();
+
+    TK.setup({
+      toolName: "Project Charter Generator",
+      getState: function () { return state; },
+      word: {
+        filename: "project-charter",
+        build: function () {
+          renderPreview();
+          return document.getElementById("preview").innerHTML;
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

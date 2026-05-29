@@ -180,9 +180,10 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "okr_tracker_v1";
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -397,6 +398,26 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "OKR Tracker",
+      getState: function () { return state; },
+      excel: {
+        filename: "okr-tracker",
+        build: function () {
+          var header = ["Objective", "Objective %", "Key Result", "Current", "Target", "KR %"];
+          var rows = [];
+          state.objectives.forEach(function (obj) {
+            var op = objPct(obj);
+            if (!obj.krs.length) { rows.push([obj.name, op + "%", "", "", "", ""]); return; }
+            obj.krs.forEach(function (kr, ki) {
+              rows.push([ki === 0 ? obj.name : "", ki === 0 ? op + "%" : "", kr.name, kr.current, kr.target, krPct(kr) + "%"]);
+            });
+          });
+          return { header: header, rows: rows };
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

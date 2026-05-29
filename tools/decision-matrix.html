@@ -182,9 +182,10 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "decision_matrix_v1";
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -378,6 +379,24 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "Weighted Decision Matrix",
+      getState: function () { return state; },
+      excel: {
+        filename: "decision-matrix",
+        build: function () {
+          normalizeScores();
+          var header = ["Option"];
+          state.criteria.forEach(function (c) { header.push(c.name + " (w" + c.weight + ")"); });
+          header.push("Weighted total");
+          var rows = state.options.map(function (o) {
+            return [o.name].concat(o.scores).concat([totalOf(o)]);
+          });
+          return { header: header, rows: rows };
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

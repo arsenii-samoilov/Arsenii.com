@@ -46,6 +46,13 @@ CORE_PAGES = [
     ("/tools/project-charter-generator.html", "0.8", "monthly"),
     ("/tools/pre-mortem-worksheet.html", "0.8", "monthly"),
     ("/tools/okr-tracker.html", "0.8", "monthly"),
+    ("/tools/meeting-cost-calculator.html", "0.8", "monthly"),
+    ("/tools/roadmap-builder.html", "0.8", "monthly"),
+    ("/tools/retrospective-board.html", "0.8", "monthly"),
+    ("/tools/wsjf-calculator.html", "0.8", "monthly"),
+    ("/salary-guide.html", "0.85", "monthly"),
+    ("/interview-questions.html", "0.85", "monthly"),
+    ("/glossary.html", "0.8", "monthly"),
     ("/contact.html", "0.85", "monthly"),
     ("/photography.html", "0.7", "monthly"),
     ("/culinary.html", "0.7", "monthly"),
@@ -304,7 +311,8 @@ def build_index(published):
         '    </div>\n'
         '    <div style="max-width:760px;margin:0 auto;padding:3rem 1.5rem 1rem;border-top:2px solid var(--accent-light);">\n'
         '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Free Tools</p>\n'
-        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 2rem;">A small set of <a href="tools/index.html" style="color:var(--accent);font-weight:500;">free program management tools</a> that run in your browser with no signup: the RACI Matrix Generator for who owns what, the Program Risk Register for scoring and tracking risk, and the Stakeholder Power/Interest Grid for deciding who to keep close. Each one exports to CSV or print.</p>\n'
+        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">A small set of <a href="tools/index.html" style="color:var(--accent);font-weight:500;">free program management tools</a> that run in your browser with no signup: the RACI Matrix Generator for who owns what, the Program Risk Register for scoring and tracking risk, and the Stakeholder Power/Interest Grid for deciding who to keep close. Each one exports to CSV or print.</p>\n'
+        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 2rem;">For the TPM career path, see the <a href="salary-guide.html" style="color:var(--accent);font-weight:500;">Technical Program Manager salary guide</a>, a set of real <a href="interview-questions.html" style="color:var(--accent);font-weight:500;">TPM interview questions</a>, and a plain-English <a href="glossary.html" style="color:var(--accent);font-weight:500;">program management glossary</a>.</p>\n'
         '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Advisory &amp; Consulting</p>\n'
         '      <h2 style="font-family:var(--font-serif);font-size:clamp(1.3rem,3vw,1.7rem);font-weight:600;color:var(--accent-dark);margin:0 0 1rem;">Available for TPM Advisory Engagements</h2>\n'
         '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">Beyond full-time roles, I take selective advisory engagements where a senior technical program manager can accelerate a specific outcome: standing up a compliance framework, unblocking an AI adoption initiative, or restructuring a growth program that has stalled.</p>\n'

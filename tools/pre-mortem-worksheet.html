@@ -217,10 +217,11 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "pre_mortem_v1";
     var SCORES = [1, 2, 3, 4, 5];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -400,6 +401,27 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "Pre-Mortem Worksheet",
+      getState: function () { return state; },
+      word: {
+        filename: "pre-mortem-worksheet",
+        build: function () {
+          var h = '<h1>Pre-Mortem Worksheet</h1>';
+          h += '<p><b>Program:</b> ' + TK.esc(state.program || "Untitled") + '</p>';
+          h += '<p><b>Imagined failure date:</b> ' + TK.esc(state.date || "") + '</p>';
+          h += '<p style="font-style:italic;">Imagine ' + TK.esc(state.program || "this program") + ' has failed. These are the reasons why.</p>';
+          h += '<table><tr><th>What failed and why</th><th>Likelihood</th><th>Impact</th><th>Score</th><th>Prevention / mitigation</th><th>Owner</th></tr>';
+          state.modes.forEach(function (m) {
+            h += '<tr><td>' + TK.esc(m.desc) + '</td><td>' + m.likelihood + '</td><td>' + m.impact +
+              '</td><td>' + scoreOf(m) + '</td><td>' + TK.esc(m.prevention) + '</td><td>' + TK.esc(m.owner) + '</td></tr>';
+          });
+          h += '</table>';
+          return h;
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

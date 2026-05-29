@@ -202,12 +202,13 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "risk_register_v1";
     var CATEGORIES = ["Technical", "Schedule", "Resource", "External", "Compliance", "Other"];
     var STATUSES = ["Open", "Mitigating", "Closed"];
     var SCORES = [1, 2, 3, 4, 5];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -388,6 +389,23 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "Program Risk Register",
+      getState: function () { return state; },
+      excel: {
+        filename: "risk-register",
+        build: function () {
+          var header = ["Risk", "Category", "Likelihood", "Impact", "Score", "Owner", "Mitigation", "Status"];
+          var rows = [];
+          orderedRisks().forEach(function (entry) {
+            var r = entry.r;
+            rows.push([r.desc, r.category, r.likelihood, r.impact, scoreOf(r), r.owner, r.mitigation, r.status]);
+          });
+          return { header: header, rows: rows };
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

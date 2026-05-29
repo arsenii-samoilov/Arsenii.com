@@ -221,9 +221,10 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "prioritization_matrix_v1";
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -332,6 +333,11 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "Effort/Impact Prioritization Matrix",
+      getState: function () { return state; }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

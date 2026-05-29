@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free Roadmap & Timeline Builder | Simple Gantt Chart Maker</title>
+  <meta name="description" content="A free roadmap and timeline builder for program and product managers. Add items with a track, start period, and duration, and see a simple Gantt-style timeline. Export to CSV or print. No signup.">
+  <meta name="keywords" content="roadmap template, product roadmap builder, timeline generator, gantt chart maker free, project timeline tool, roadmap planner, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/roadmap-builder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/roadmap-builder.html">
+  <meta property="og:title" content="Free Roadmap &amp; Timeline Builder | Simple Gantt Chart Maker">
+  <meta property="og:description" content="Add items with a track, start period, and duration, and see a simple Gantt-style timeline. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Roadmap &amp; Timeline Builder">
+  <meta name="twitter:description" content="Build a simple Gantt-style roadmap in the browser. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Roadmap and Timeline Builder",
+    "url": "https://arsenii.com/tools/roadmap-builder.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free roadmap and timeline builder. Add items with a track, start period, and duration and see a simple Gantt-style timeline. Export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a product roadmap?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A roadmap is a time-ordered view of the work a program intends to do and roughly when. It groups items into tracks or swimlanes and shows each one as a bar across a timeline. It is a communication tool first, meant to align stakeholders on sequence and rough timing, not a precise schedule down to the day."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a roadmap and a Gantt chart?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A Gantt chart is a detailed schedule with tasks, dependencies, and exact dates, usually for execution. A roadmap is the higher-level, coarser view used to communicate direction and rough timing to stakeholders. This tool sits in between: simple bars across periods that read like a roadmap but lay out like a light Gantt."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should a period represent on a roadmap?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Whatever unit fits your planning horizon. Each column here is one period, which you can read as a week, a sprint, a month, or a quarter. Keep the unit consistent across the whole roadmap so the bars stay comparable, and pick a horizon coarse enough that you are not pretending to precision you do not have."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is this roadmap builder free?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is completely free with no signup. Your roadmap saves in your browser, you can share a link to a filled roadmap, and you can export to CSV or print it for a planning review at any time."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .rm-addform { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; align-items: center; margin: 0 0 2rem; }
+    .rm-addform input, .rm-addform select { font-family: var(--font-sans); font-size: 0.88rem; padding: 0.5rem 0.6rem; border: 1px solid var(--accent-light); border-radius: 6px; background: var(--bg); color: var(--text); }
+    .rm-addform input.name { min-width: 200px; }
+    .rm-addform input.num { width: 5.5rem; }
+    .rm-addform input:focus, .rm-addform select:focus { outline: 2px solid var(--accent); }
+    .timeline-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 10px; padding: 0.5rem; }
+    .timeline { min-width: 760px; }
+    .tl-row { display: grid; grid-template-columns: 170px repeat(12, 1fr); align-items: center; gap: 0; }
+    .tl-head .tl-cell { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); text-align: center; padding: 0.4rem 0; border-left: 1px solid var(--accent-light); }
+    .tl-head .tl-label { border-left: none; }
+    .tl-track { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-dark); padding: 0.9rem 0.4rem 0.3rem; grid-column: 1 / -1; }
+    .tl-bar-row { position: relative; margin: 0 0 0.4rem; }
+    .tl-bar-row .tl-label { font-family: var(--font-sans); font-size: 0.85rem; color: var(--text); padding: 0.3rem 0.5rem 0.3rem 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .tl-lane { grid-column: 2 / -1; display: grid; grid-template-columns: repeat(12, 1fr); position: relative; height: 100%; }
+    .tl-gridline { border-left: 1px solid #eef1f5; min-height: 1.9rem; }
+    .tl-bar { position: absolute; top: 50%; transform: translateY(-50%); height: 1.5rem; border-radius: 999px; background: var(--accent); color: #fff; font-family: var(--font-sans); font-size: 0.72rem; line-height: 1.5rem; padding: 0 0.6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
+    .tl-bar.c0 { background: #1e40af; } .tl-bar.c1 { background: #166534; } .tl-bar.c2 { background: #854d0e; }
+    .tl-bar.c3 { background: #6b21a8; } .tl-bar.c4 { background: #9a3412; } .tl-bar.c5 { background: #0e7490; }
+    .rm-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.86rem; margin: 1.5rem 0 0; }
+    .rm-table th, .rm-table td { border: 1px solid var(--accent-light); padding: 0.4rem 0.5rem; text-align: left; }
+    .rm-table thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; font-size: 0.78rem; }
+    .rm-table input, .rm-table select { width: 100%; font-family: var(--font-sans); font-size: 0.84rem; border: none; background: transparent; color: var(--text); padding: 0.2rem; box-sizing: border-box; }
+    .rm-table input.num { text-align: center; }
+    .rm-table input:focus, .rm-table select:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; }
+    .row-del:hover { color: var(--accent-red); }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .rm-addform, .rm-table, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>Roadmap / Timeline Builder</h1>
+        <p>Lay out a simple roadmap in seconds. Add items with a track, a start period, and a duration, and see them render as Gantt-style bars across a twelve-period timeline. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <form class="rm-addform" id="addForm">
+        <input type="text" class="name" id="nameInput" placeholder="Item name" aria-label="Item name" required>
+        <input type="text" id="trackInput" placeholder="Track" aria-label="Track" style="min-width:130px;">
+        <input type="number" class="num" id="startInput" min="1" max="12" value="1" aria-label="Start period">
+        <input type="number" class="num" id="durInput" min="1" max="12" value="2" aria-label="Duration">
+        <button type="submit" class="tool-btn primary">+ Add Item</button>
+      </form>
+
+      <div class="timeline-scroll">
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <table class="rm-table" id="rmTable">
+        <thead>
+          <tr><th>Item</th><th>Track</th><th style="width:90px;">Start</th><th style="width:90px;">Duration</th><th style="width:40px;"></th></tr>
+        </thead>
+        <tbody id="rmBody"></tbody>
+      </table>
+
+      <div class="tool-explainer">
+        <h2>How to use the roadmap builder</h2>
+        <p>A roadmap is a communication tool before it is a schedule. Its job is to align stakeholders on what is happening, in what order, and roughly when, without pretending to a precision you do not have this far out. Group related work into tracks, give each item a start period and a duration, and let the bars tell the story at a glance.</p>
+        <p>Each column is one period. Read it as a week, a sprint, a month, or a quarter, whatever matches your horizon, but keep the unit consistent so the bars stay comparable. Resist the urge to pack every track full. A roadmap that shows a few clear bets reads better and survives contact with reality longer than one crammed with everything anyone asked for.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>Treating it as a commitment to exact dates. Coarse and honest beats precise and wrong this far out.</li>
+          <li>One giant track. Group work into a handful of tracks so the shape of the plan is legible.</li>
+          <li>Overlapping everything in the same period. If every bar starts now, you have a wish list, not a sequence.</li>
+          <li>Never updating it. A roadmap is a living view. Re-baseline it when the plan changes shape.</li>
+        </ul>
+        <p>For more on sequencing and planning across teams, see the <a href="../insights.html">Insights</a>, or prioritize what goes on the roadmap with the <a href="wsjf-calculator.html">WSJF calculator</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "roadmap_builder_v1";
+    var PERIODS = 12;
+    var state = TK.decodeState() || load() || sampleData();
+
+    function sampleData() {
+      return {
+        items: [
+          { name: "Discovery and design", track: "Platform", start: 1, duration: 2 },
+          { name: "Build core services", track: "Platform", start: 3, duration: 4 },
+          { name: "Production cutover", track: "Platform", start: 7, duration: 1 },
+          { name: "Compliance review", track: "Governance", start: 4, duration: 2 },
+          { name: "Launch readiness", track: "Governance", start: 7, duration: 1 },
+          { name: "Beta with partners", track: "Go to market", start: 6, duration: 3 },
+          { name: "General availability", track: "Go to market", start: 9, duration: 2 }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function clampInt(v, min, max, fallback) {
+      var n = parseInt(v, 10);
+      if (isNaN(n)) n = fallback;
+      if (n < min) n = min;
+      if (n > max) n = max;
+      return n;
+    }
+
+    function trackList() {
+      var seen = {};
+      var order = [];
+      state.items.forEach(function (it) {
+        var t = it.track || "Untracked";
+        if (!seen[t]) { seen[t] = true; order.push(t); }
+      });
+      return order;
+    }
+
+    function headRow() {
+      var row = document.createElement("div");
+      row.className = "tl-row tl-head";
+      var label = document.createElement("div");
+      label.className = "tl-cell tl-label";
+      label.textContent = "";
+      row.appendChild(label);
+      var i;
+      for (i = 1; i <= PERIODS; i++) {
+        var c = document.createElement("div");
+        c.className = "tl-cell";
+        c.textContent = "P" + i;
+        row.appendChild(c);
+      }
+      return row;
+    }
+
+    function renderTimeline() {
+      var tl = document.getElementById("timeline");
+      tl.innerHTML = "";
+      tl.appendChild(headRow());
+      var tracks = trackList();
+      var colorIdx = 0;
+      tracks.forEach(function (track) {
+        var th = document.createElement("div");
+        th.className = "tl-row";
+        var thLabel = document.createElement("div");
+        thLabel.className = "tl-track";
+        thLabel.textContent = track;
+        th.appendChild(thLabel);
+        tl.appendChild(th);
+
+        state.items.forEach(function (it) {
+          if ((it.track || "Untracked") !== track) return;
+          var row = document.createElement("div");
+          row.className = "tl-row tl-bar-row";
+
+          var label = document.createElement("div");
+          label.className = "tl-label";
+          label.textContent = it.name;
+          label.title = it.name;
+          row.appendChild(label);
+
+          var lane = document.createElement("div");
+          lane.className = "tl-lane";
+          var i;
+          for (i = 0; i < PERIODS; i++) {
+            var gl = document.createElement("div");
+            gl.className = "tl-gridline";
+            lane.appendChild(gl);
+          }
+          var start = clampInt(it.start, 1, PERIODS, 1);
+          var dur = clampInt(it.duration, 1, PERIODS, 1);
+          if (start + dur - 1 > PERIODS) dur = PERIODS - start + 1;
+          var bar = document.createElement("div");
+          bar.className = "tl-bar c" + (colorIdx % 6);
+          bar.style.left = ((start - 1) / PERIODS * 100) + "%";
+          bar.style.width = (dur / PERIODS * 100) + "%";
+          bar.textContent = it.name;
+          bar.title = it.name + " (P" + start + " for " + dur + ")";
+          lane.appendChild(bar);
+          row.appendChild(lane);
+          tl.appendChild(row);
+        });
+        colorIdx++;
+      });
+    }
+
+    function renderTable() {
+      var body = document.getElementById("rmBody");
+      body.innerHTML = "";
+      state.items.forEach(function (it, i) {
+        var tr = document.createElement("tr");
+
+        var tdName = document.createElement("td");
+        var nm = document.createElement("input");
+        nm.type = "text"; nm.value = it.name;
+        nm.setAttribute("aria-label", "Item name");
+        nm.addEventListener("input", function () { state.items[i].name = nm.value; save(); renderTimeline(); });
+        tdName.appendChild(nm); tr.appendChild(tdName);
+
+        var tdTrack = document.createElement("td");
+        var tk = document.createElement("input");
+        tk.type = "text"; tk.value = it.track;
+        tk.setAttribute("aria-label", "Track");
+        tk.addEventListener("input", function () { state.items[i].track = tk.value; save(); renderTimeline(); });
+        tdTrack.appendChild(tk); tr.appendChild(tdTrack);
+
+        var tdStart = document.createElement("td");
+        var st = document.createElement("input");
+        st.type = "number"; st.className = "num"; st.min = "1"; st.max = String(PERIODS); st.value = it.start;
+        st.setAttribute("aria-label", "Start period");
+        st.addEventListener("input", function () { state.items[i].start = clampInt(st.value, 1, PERIODS, 1); save(); renderTimeline(); });
+        tdStart.appendChild(st); tr.appendChild(tdStart);
+
+        var tdDur = document.createElement("td");
+        var du = document.createElement("input");
+        du.type = "number"; du.className = "num"; du.min = "1"; du.max = String(PERIODS); du.value = it.duration;
+        du.setAttribute("aria-label", "Duration");
+        du.addEventListener("input", function () { state.items[i].duration = clampInt(du.value, 1, PERIODS, 1); save(); renderTimeline(); });
+        tdDur.appendChild(du); tr.appendChild(tdDur);
+
+        var tdDel = document.createElement("td");
+        var del = document.createElement("button");
+        del.className = "row-del"; del.innerHTML = "&times;"; del.title = "Remove item";
+        del.addEventListener("click", function () { state.items.splice(i, 1); save(); render(); });
+        tdDel.appendChild(del); tr.appendChild(tdDel);
+
+        body.appendChild(tr);
+      });
+    }
+
+    function render() { renderTimeline(); renderTable(); }
+
+    document.getElementById("addForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("nameInput").value.replace(/^\s+|\s+$/g, "");
+      if (!name) return;
+      state.items.push({
+        name: name,
+        track: document.getElementById("trackInput").value.replace(/^\s+|\s+$/g, "") || "Untracked",
+        start: clampInt(document.getElementById("startInput").value, 1, PERIODS, 1),
+        duration: clampInt(document.getElementById("durInput").value, 1, PERIODS, 1)
+      });
+      save(); render();
+      document.getElementById("nameInput").value = "";
+      document.getElementById("nameInput").focus();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the whole roadmap and start blank?")) {
+        state = { items: [] }; save(); render();
+      }
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [["Item", "Track", "Start period", "Duration"]];
+      state.items.forEach(function (it) { rows.push([it.name, it.track, it.start, it.duration]); });
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "roadmap.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "Roadmap and Timeline Builder",
+      getState: function () { return state; }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

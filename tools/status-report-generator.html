@@ -229,10 +229,11 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "status_report_v1";
     var LISTS = ["accomplishments", "nextSteps", "risks", "decisions"];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -425,6 +426,18 @@
     });
 
     initFields();
+
+    TK.setup({
+      toolName: "Project Status Report Generator",
+      getState: function () { return state; },
+      word: {
+        filename: "status-report",
+        build: function () {
+          renderPreview();
+          return document.getElementById("preview").innerHTML;
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

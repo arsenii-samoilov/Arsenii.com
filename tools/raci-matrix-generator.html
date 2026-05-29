@@ -188,10 +188,11 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "raci_matrix_v1";
     var OPTIONS = ["", "R", "A", "C", "I"];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -337,6 +338,20 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "RACI Matrix Generator",
+      getState: function () { return state; },
+      excel: {
+        filename: "raci-matrix",
+        build: function () {
+          normalizeCells();
+          var header = ["Task / Deliverable"].concat(state.roles);
+          var rows = state.tasks.map(function (t) { return [t.name].concat(t.cells); });
+          return { header: header, rows: rows };
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

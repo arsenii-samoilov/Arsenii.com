@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free WSJF Calculator | Weighted Shortest Job First Prioritization</title>
+  <meta name="description" content="A free WSJF calculator for SAFe and agile prioritization. Score each item on value, time criticality, and risk reduction over job size, and auto-rank by Weighted Shortest Job First. No signup.">
+  <meta name="keywords" content="WSJF calculator, weighted shortest job first, SAFe prioritization, WSJF formula, cost of delay prioritization, agile prioritization tool, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/wsjf-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/wsjf-calculator.html">
+  <meta property="og:title" content="Free WSJF Calculator | Weighted Shortest Job First Prioritization">
+  <meta property="og:description" content="Score value, time criticality, and risk reduction over job size, and auto-rank by WSJF. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free WSJF Calculator">
+  <meta name="twitter:description" content="Auto-rank a backlog by Weighted Shortest Job First. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WSJF Prioritization Calculator",
+    "url": "https://arsenii.com/tools/wsjf-calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free WSJF calculator. Score each item on value, time criticality, and risk reduction over job size, and auto-rank by Weighted Shortest Job First.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is WSJF?",
+        "acceptedAnswer": {"@type": "Answer", "text": "WSJF stands for Weighted Shortest Job First, a prioritization model from the Scaled Agile Framework. It ranks work by cost of delay divided by job size, so the most valuable, smallest jobs rise to the top. The idea is to maximize the value delivered per unit of effort and time."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the WSJF formula?",
+        "acceptedAnswer": {"@type": "Answer", "text": "WSJF equals cost of delay divided by job size. Cost of delay is the sum of three factors: user or business value, time criticality, and risk reduction or opportunity enablement. So WSJF equals (value + time criticality + risk reduction) divided by job size. The higher the score, the sooner the item should be done."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you score WSJF?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Score each of the three cost-of-delay factors and the job size on a relative scale, often a modified Fibonacci sequence or a simple 1 to 10. Scores are comparative, not absolute, so rank items against each other rather than trying to find a true value. Then let the formula sort the backlog by WSJF descending."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 640px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .matrix-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 8px; }
+    table.wsjf { border-collapse: collapse; width: 100%; min-width: 760px; font-family: var(--font-sans); font-size: 0.9rem; }
+    table.wsjf th, table.wsjf td { border: 1px solid var(--accent-light); padding: 0.5rem 0.55rem; text-align: center; vertical-align: middle; }
+    table.wsjf thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.wsjf th.item-col, table.wsjf td.item-col { text-align: left; min-width: 220px; }
+    .rank-cell { font-weight: 700; color: var(--accent-dark); width: 3rem; }
+    .item-input { font-family: var(--font-sans); font-size: 0.9rem; border: none; background: transparent; width: 100%; text-align: left; color: var(--text); padding: 0.35rem 0.2rem; }
+    .item-input:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .num-input { width: 3.6rem; font-family: var(--font-sans); font-size: 0.9rem; text-align: center; border: 1px solid var(--accent-light); border-radius: 4px; padding: 0.3rem 0.2rem; color: var(--text); }
+    .num-input:focus { outline: 2px solid var(--accent); }
+    .wsjf-cell { font-weight: 700; font-size: 1rem; color: #166534; background: #f0fdf4; }
+    tr.top-rank .wsjf-cell { background: #dcfce7; }
+    .cod-cell { color: var(--text-muted); }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .row-del:hover { color: var(--accent-red); background: #fef2f2; }
+    .formula { text-align: center; font-family: var(--font-sans); font-size: 0.84rem; color: var(--text-muted); margin: 1.25rem 0 0; line-height: 1.6; }
+    .formula code { background: var(--bg-warm); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--accent-dark); font-weight: 600; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>WSJF Prioritization Calculator</h1>
+        <p>Rank a backlog the SAFe way. Score each item on user/business value, time criticality, and risk reduction over its job size, and the calculator computes Weighted Shortest Job First and sorts the highest-priority work to the top. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary" id="addItem">+ Add Item</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="matrix-scroll">
+        <table class="wsjf" id="wsjfTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th class="item-col">Item</th>
+              <th>Business Value</th>
+              <th>Time Criticality</th>
+              <th>Risk Reduction</th>
+              <th>Cost of Delay</th>
+              <th>Job Size</th>
+              <th>WSJF</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <p class="formula">WSJF = <code>(Business Value + Time Criticality + Risk Reduction) &divide; Job Size</code>. Score each factor 1 to 10. Higher WSJF means do it sooner.</p>
+
+      <div class="tool-explainer">
+        <h2>How to use the WSJF calculator</h2>
+        <p>Weighted Shortest Job First is the Scaled Agile Framework's answer to a crowded backlog. It ranks work by cost of delay divided by job size, which captures a simple truth: the best things to do first are the ones that deliver the most value for the least effort and that hurt the most to postpone. Score each item on the three cost-of-delay factors and on size, and the math does the sequencing.</p>
+        <p>Score relatively, not absolutely. The numbers only matter compared to each other, so rank items against the rest of the list rather than agonizing over whether something is a true 7 or 8. Business value is the upside to users or the business, time criticality is how fast that value decays if you wait, and risk reduction is how much the work de-risks or unlocks future work. Job size is your effort estimate. A small, high-value, time-sensitive item will float to the top, which is exactly where it belongs.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>Treating the scores as precise. WSJF is a relative ranking tool, not an exact valuation.</li>
+          <li>Inflating job size estimates for work you want to defer, or shrinking them for work you like.</li>
+          <li>Ignoring time criticality. A modest item that loses all its value next quarter can rightly beat a bigger one that can wait.</li>
+          <li>Never revisiting the list. Re-score as you learn, because both value and size estimates change.</li>
+        </ul>
+        <p>For a different lens on the same problem, try the <a href="prioritization-matrix.html">effort/impact prioritization matrix</a> or the <a href="decision-matrix.html">weighted decision matrix</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "wsjf_calculator_v1";
+    var state = TK.decodeState() || load() || sampleData();
+
+    function sampleData() {
+      return {
+        items: [
+          { name: "Add SSO to the admin console", value: 8, time: 6, risk: 7, size: 3 },
+          { name: "Re-platform the billing service", value: 9, time: 4, risk: 8, size: 13 },
+          { name: "Automate weekly release notes", value: 4, time: 3, risk: 2, size: 2 },
+          { name: "Launch the new onboarding flow", value: 8, time: 7, risk: 4, size: 8 },
+          { name: "Migrate the legacy logging pipeline", value: 3, time: 2, risk: 5, size: 8 }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function num(v) { var n = parseFloat(v); return isNaN(n) ? 0 : n; }
+    function codOf(it) { return num(it.value) + num(it.time) + num(it.risk); }
+    function wsjfOf(it) {
+      var size = num(it.size);
+      if (size <= 0) return 0;
+      return codOf(it) / size;
+    }
+
+    function ordered() {
+      var idx = state.items.map(function (it, i) { return { it: it, i: i }; });
+      idx.sort(function (a, b) { return wsjfOf(b.it) - wsjfOf(a.it); });
+      return idx;
+    }
+
+    function numInput(val, onChange, label) {
+      var inp = document.createElement("input");
+      inp.type = "number";
+      inp.className = "num-input";
+      inp.min = "0";
+      inp.value = val;
+      inp.setAttribute("aria-label", label);
+      inp.addEventListener("input", function () { onChange(inp.value); save(); render(); });
+      return inp;
+    }
+
+    function render() {
+      var body = document.getElementById("bodyRows");
+      body.innerHTML = "";
+      ordered().forEach(function (entry, rank) {
+        var it = entry.it;
+        var ri = entry.i;
+        var tr = document.createElement("tr");
+        if (rank === 0 && wsjfOf(it) > 0) tr.className = "top-rank";
+
+        var tdRank = document.createElement("td");
+        tdRank.className = "rank-cell";
+        tdRank.textContent = rank + 1;
+        tr.appendChild(tdRank);
+
+        var tdName = document.createElement("td");
+        tdName.className = "item-col";
+        var nm = document.createElement("input");
+        nm.className = "item-input";
+        nm.value = it.name;
+        nm.setAttribute("aria-label", "Item name");
+        nm.addEventListener("input", function () { state.items[ri].name = nm.value; save(); });
+        tdName.appendChild(nm);
+        tr.appendChild(tdName);
+
+        var tdVal = document.createElement("td");
+        tdVal.appendChild(numInput(it.value, function (v) { state.items[ri].value = num(v); }, "Business value"));
+        tr.appendChild(tdVal);
+
+        var tdTime = document.createElement("td");
+        tdTime.appendChild(numInput(it.time, function (v) { state.items[ri].time = num(v); }, "Time criticality"));
+        tr.appendChild(tdTime);
+
+        var tdRisk = document.createElement("td");
+        tdRisk.appendChild(numInput(it.risk, function (v) { state.items[ri].risk = num(v); }, "Risk reduction"));
+        tr.appendChild(tdRisk);
+
+        var tdCod = document.createElement("td");
+        tdCod.className = "cod-cell";
+        tdCod.textContent = codOf(it);
+        tr.appendChild(tdCod);
+
+        var tdSize = document.createElement("td");
+        tdSize.appendChild(numInput(it.size, function (v) { state.items[ri].size = num(v); }, "Job size"));
+        tr.appendChild(tdSize);
+
+        var tdW = document.createElement("td");
+        tdW.className = "wsjf-cell";
+        tdW.textContent = wsjfOf(it).toFixed(2);
+        tr.appendChild(tdW);
+
+        var tdDel = document.createElement("td");
+        var del = document.createElement("button");
+        del.className = "row-del"; del.innerHTML = "&times;"; del.title = "Remove item";
+        del.addEventListener("click", function () { state.items.splice(ri, 1); save(); render(); });
+        tdDel.appendChild(del);
+        tr.appendChild(tdDel);
+
+        body.appendChild(tr);
+      });
+    }
+
+    function buildExport() {
+      var header = ["Rank", "Item", "Business Value", "Time Criticality", "Risk Reduction", "Cost of Delay", "Job Size", "WSJF"];
+      var rows = [];
+      ordered().forEach(function (entry, rank) {
+        var it = entry.it;
+        rows.push([rank + 1, it.name, it.value, it.time, it.risk, codOf(it), it.size, wsjfOf(it).toFixed(2)]);
+      });
+      return { header: header, rows: rows };
+    }
+
+    document.getElementById("addItem").addEventListener("click", function () {
+      state.items.push({ name: "New item", value: 5, time: 5, risk: 5, size: 5 });
+      save(); render();
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear all items and start blank?")) {
+        state = { items: [{ name: "New item", value: 5, time: 5, risk: 5, size: 5 }] };
+        save(); render();
+      }
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var d = buildExport();
+      var rows = [d.header].concat(d.rows);
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      TK.download("wsjf-prioritization.csv", csv, "text/csv;charset=utf-8;");
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "WSJF Prioritization Calculator",
+      getState: function () { return state; },
+      excel: { filename: "wsjf-prioritization", build: buildExport }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

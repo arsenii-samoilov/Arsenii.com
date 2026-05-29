@@ -198,11 +198,12 @@
 
   <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
 
+  <script src="tool-kit.js"></script>
   <script>
     var STORAGE_KEY = "raid_log_v1";
     var TYPES = ["Risk", "Assumption", "Issue", "Dependency"];
     var STATUSES = ["Open", "In Progress", "Closed"];
-    var state = load() || sampleData();
+    var state = TK.decodeState() || load() || sampleData();
 
     function sampleData() {
       return {
@@ -346,6 +347,21 @@
     });
 
     render();
+
+    TK.setup({
+      toolName: "RAID Log",
+      getState: function () { return state; },
+      excel: {
+        filename: "raid-log",
+        build: function () {
+          var header = ["Type", "Description", "Owner", "Due", "Status"];
+          var rows = state.entries.map(function (e) {
+            return [e.type, e.desc, e.owner, e.due, e.status];
+          });
+          return { header: header, rows: rows };
+        }
+      }
+    });
   </script>
   <script src="../main.js?v=2"></script>
 </body>

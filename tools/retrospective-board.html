@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free Retrospective Board | Start, Stop, Continue Retro Template</title>
+  <meta name="description" content="A free retrospective board for sprint retros. Add cards to Start, Stop, Continue, and Action Items, then export to CSV or print. Run a clean team retrospective online. No signup.">
+  <meta name="keywords" content="retrospective template, start stop continue, sprint retro board, retrospective board online, team retrospective tool, agile retro template, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/retrospective-board.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/retrospective-board.html">
+  <meta property="og:title" content="Free Retrospective Board | Start, Stop, Continue Retro Template">
+  <meta property="og:description" content="Add cards to Start, Stop, Continue, and Action Items, then export to CSV or print. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Retrospective Board">
+  <meta name="twitter:description" content="Run a Start/Stop/Continue retro online, then export to CSV or print. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Retrospective Board",
+    "url": "https://arsenii.com/tools/retrospective-board.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free Start/Stop/Continue retrospective board. Add cards to each column and Action Items, then export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Start, Stop, Continue retrospective?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Start, Stop, Continue is a retrospective format where the team names things to start doing, things to stop doing, and things that are working and should continue. It is fast, concrete, and action-oriented, which is why it is one of the most widely used retro formats for sprint teams."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you run a sprint retrospective?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Gather the team in a safe, blameless space, collect input across the columns, group similar cards, discuss the themes, and commit to a small number of action items with owners. The goal is one or two improvements the team will actually make, not a long list that gets forgotten by the next sprint."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why add action items to a retro?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Without action items, a retrospective is just venting. The action items column turns the discussion into commitments. Keep it short, assign an owner to each, and review them at the start of the next retro so the team sees that retros lead to real change."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .retro-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1040px; margin: 0 auto; }
+    @media (max-width: 900px) { .retro-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .retro-grid { grid-template-columns: 1fr; } }
+    .retro-col { border: 1px solid var(--accent-light); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; min-height: 220px; }
+    .col-start { background: #f0fdf4; }
+    .col-stop { background: #fef2f2; }
+    .col-continue { background: #eef5ff; }
+    .col-actions { background: #fff7ed; }
+    .retro-col h2 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--accent-dark); margin: 0 0 0.15rem; }
+    .retro-col .col-sub { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .cards { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+    .card { display: flex; gap: 0.3rem; align-items: flex-start; }
+    .card textarea { flex: 1; font-family: var(--font-sans); font-size: 0.85rem; line-height: 1.45; border: 1px solid var(--accent-light); border-radius: 6px; padding: 0.5rem 0.6rem; background: #fff; color: var(--text); resize: vertical; min-height: 2.4rem; box-sizing: border-box; width: 100%; }
+    .card textarea:focus { outline: 2px solid var(--accent); }
+    .card-del { cursor: pointer; color: var(--text-muted); border: 1px solid var(--accent-light); background: #fff; font-size: 0.95rem; line-height: 1; padding: 0.35rem 0.45rem; border-radius: 6px; }
+    .card-del:hover { color: var(--accent-red); border-color: var(--accent-red); }
+    .add-card { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; cursor: pointer; border: 1px dashed var(--accent-light); background: transparent; color: var(--accent); padding: 0.45rem 0.7rem; border-radius: 6px; margin-top: 0.6rem; }
+    .add-card:hover { border-color: var(--accent); background: rgba(255,255,255,0.6); }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .card-del, .add-card { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>Retrospective Board</h1>
+        <p>Run a clean Start, Stop, Continue retro in your browser. Add cards to each column, capture the action items the team commits to, then export to CSV or print. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="retro-grid" id="board"></div>
+
+      <div class="tool-explainer">
+        <h2>How to run a Start, Stop, Continue retrospective</h2>
+        <p>The Start, Stop, Continue format keeps a retro fast and action-oriented. Start collects the things the team should begin doing, Stop names what is getting in the way, and Continue protects what is already working so it does not quietly disappear. The fourth column, Action Items, is where the discussion becomes commitment, because a retro without actions is just a vent session.</p>
+        <p>Run it in a blameless spirit. Collect cards, group the duplicates, talk through the themes, and then pick a small number of action items with a clear owner on each. One or two improvements the team genuinely makes beats a long list nobody touches. Open the next retro by reviewing those actions, so the team learns that retros actually change how they work.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>No action items. If nothing changes, people stop bringing honest input.</li>
+          <li>Too many actions. Pick the few that matter and finish them before adding more.</li>
+          <li>Skipping Continue. Naming what works keeps a team from accidentally dropping good habits under pressure.</li>
+          <li>Letting it become blame. Focus on the system and the process, not on individuals.</li>
+        </ul>
+        <p>Feed the action items straight into a <a href="raid-log.html">RAID log</a> so they get tracked to closure.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "retro_board_v1";
+    var COLUMNS = [
+      { key: "start", title: "Start", sub: "Begin doing", cls: "col-start" },
+      { key: "stop", title: "Stop", sub: "Stop doing", cls: "col-stop" },
+      { key: "continue", title: "Continue", sub: "Keep doing", cls: "col-continue" },
+      { key: "actions", title: "Action Items", sub: "Commit to do", cls: "col-actions" }
+    ];
+    var state = TK.decodeState() || load() || sampleData();
+
+    function sampleData() {
+      return {
+        start: [
+          "Write a one-line summary at the top of every status update",
+          "Pair on the payments service to remove the single-owner risk"
+        ],
+        stop: [
+          "Holding the hour-long status meeting that could be a written note",
+          "Pulling work into the sprint mid-cycle without re-planning"
+        ],
+        "continue": [
+          "The Monday dependency review, it caught two blockers early",
+          "Demoing to stakeholders at the end of each sprint"
+        ],
+        actions: [
+          "Owner: PM - replace the Thursday sync with a written update by next sprint",
+          "Owner: Eng Lead - document the payments runbook before the cutover"
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function renderColumn(col) {
+      var cards = document.getElementById("cards-" + col.key);
+      cards.innerHTML = "";
+      (state[col.key] || []).forEach(function (text, i) {
+        var card = document.createElement("div");
+        card.className = "card";
+        var ta = document.createElement("textarea");
+        ta.rows = 2;
+        ta.value = text;
+        ta.setAttribute("aria-label", col.title + " card");
+        ta.addEventListener("input", function () { state[col.key][i] = ta.value; save(); });
+        card.appendChild(ta);
+        var del = document.createElement("button");
+        del.className = "card-del"; del.innerHTML = "&times;"; del.title = "Remove card";
+        del.addEventListener("click", function () { state[col.key].splice(i, 1); save(); renderColumn(col); });
+        card.appendChild(del);
+        cards.appendChild(card);
+      });
+    }
+
+    function render() {
+      var board = document.getElementById("board");
+      board.innerHTML = "";
+      COLUMNS.forEach(function (col) {
+        if (!state[col.key]) state[col.key] = [];
+        var el = document.createElement("div");
+        el.className = "retro-col " + col.cls;
+        el.innerHTML = '<h2>' + col.title + '</h2><p class="col-sub">' + col.sub + '</p>' +
+          '<div class="cards" id="cards-' + col.key + '"></div>';
+        var add = document.createElement("button");
+        add.className = "add-card";
+        add.textContent = "+ Add card";
+        add.addEventListener("click", function () {
+          state[col.key].push("");
+          save(); renderColumn(col);
+          var cards = document.getElementById("cards-" + col.key);
+          var last = cards.lastChild;
+          if (last) { var ta = last.querySelector("textarea"); if (ta) ta.focus(); }
+        });
+        el.appendChild(add);
+        board.appendChild(el);
+        renderColumn(col);
+      });
+    }
+
+    function buildRows() {
+      var rows = [];
+      COLUMNS.forEach(function (col) {
+        (state[col.key] || []).forEach(function (text) {
+          if (text && text.replace(/^\s+|\s+$/g, "")) rows.push([col.title, text]);
+        });
+      });
+      return rows;
+    }
+
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the board and start blank?")) {
+        state = { start: [], stop: [], "continue": [], actions: [] };
+        save(); render();
+      }
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [["Column", "Item"]].concat(buildRows());
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      TK.download("retrospective.csv", csv, "text/csv;charset=utf-8;");
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "Retrospective Board",
+      getState: function () { return state; },
+      excel: {
+        filename: "retrospective",
+        build: function () { return { header: ["Column", "Item"], rows: buildRows() }; }
+      }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>
