@@ -1,3 +1,22 @@
+/* Category icons (inline monoline SVG) */
+.cat-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  flex: none;
+  color: #1e3a5f;
+}
+.index-row h2 .cat-icon,
+.article-page h1 .cat-icon {
+  vertical-align: -0.08em;
+}
+.index-row .index-meta .cat-icon,
+.article-page .eyebrow .cat-icon {
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: -0.16em;
+}
+
 /* Insights hub + article pages */
 .insights-hero {
   padding: 4rem 1.5rem 2rem;

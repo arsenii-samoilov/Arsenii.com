@@ -13,23 +13,41 @@ DATA_FILE = os.path.join(BASE_DIR, "insights-data.json")
 ARTICLES_DIR = os.path.join(BASE_DIR, "insights")
 SITE = "https://arsenii.com"
 
-CATEGORY_ICONS = {
-    "AI Program Management": "🤖",
-    "Compliance": "📋",
-    "Compliance Program Manager": "📋",
-    "Growth": "🚀",
-    "Growth Program Manager": "🚀",
-    "Governance": "🏛",
-    "Operations": "⚙️",
-    "Communication": "💬",
-    "Strategy": "🎯",
-    "Risk": "🛡",
-    "Data": "📊",
-    "Career": "🗂",
-    "Engineering": "🔧",
-    "Monetization": "💰",
-    "Program Management": "📌",
+# Cohesive monoline icon set. Each value is the inner markup of a 24x24 SVG
+# (stroke="currentColor", fill="none"). category_icon() wraps it. Color is set
+# to the navy brand accent via the .cat-icon CSS class in insights.css.
+CATEGORY_ICON_PATHS = {
+    # cpu / chip
+    "AI Program Management": '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>',
+    # clipboard with check
+    "Compliance": '<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/>',
+    "Compliance Program Manager": '<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/>',
+    # trending-up arrow
+    "Growth": '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+    "Growth Program Manager": '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+    # classical building / columns
+    "Governance": '<path d="M3 9l9-5 9 5"/><path d="M4 9h16"/><path d="M5.5 9v9M9.5 9v9M14.5 9v9M18.5 9v9"/><path d="M3 21h18"/>',
+    # gear
+    "Operations": '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+    # speech bubble
+    "Communication": '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/>',
+    # target / bullseye
+    "Strategy": '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/>',
+    # shield
+    "Risk": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    # bar chart
+    "Data": '<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/>',
+    # briefcase
+    "Career": '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M2 13h20"/>',
+    # wrench
+    "Engineering": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+    # dollar sign
+    "Monetization": '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+    # clipboard (default)
+    "Program Management": '<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M8 11h8M8 15h5"/>',
 }
+
+_ICON_DEFAULT = CATEGORY_ICON_PATHS["Program Management"]
 
 CORE_PAGES = [
     ("/", "1.0", "weekly"),
@@ -100,7 +118,12 @@ def esc(text):
 
 
 def category_icon(category):
-    return CATEGORY_ICONS.get(category, "📌")
+    inner = CATEGORY_ICON_PATHS.get(category, _ICON_DEFAULT)
+    return (
+        '<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" '
+        'aria-hidden="true" focusable="false">' + inner + '</svg>'
+    )
 
 
 def fmt_date(d):
@@ -124,7 +147,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
         '  <meta charset="UTF-8">\n'
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-        '  <meta name="theme-color" content="#ffffff">\n'
+        '  <meta name="theme-color" content="#1e3a5f">\n'
         '  <script>\n'
         '    window.dataLayer = window.dataLayer || [];\n'
         '    function gtag(){dataLayer.push(arguments);}\n'
@@ -134,8 +157,12 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         'g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";'
         'document.head.appendChild(g);\n'
         '  </script>\n'
-        '  <link rel="icon" type="image/png" href="' + css_prefix + 'favicon.png">\n'
+        '  <link rel="icon" type="image/svg+xml" href="' + css_prefix + 'favicon.svg">\n'
+        '  <link rel="icon" type="image/png" sizes="32x32" href="' + css_prefix + 'favicon-32.png">\n'
+        '  <link rel="icon" type="image/png" sizes="16x16" href="' + css_prefix + 'favicon-16.png">\n'
         '  <link rel="icon" type="image/x-icon" href="' + css_prefix + 'favicon.ico">\n'
+        '  <link rel="apple-touch-icon" href="' + css_prefix + 'apple-touch-icon.png">\n'
+        '  <link rel="manifest" href="' + css_prefix + 'site.webmanifest">\n'
         '  <title>' + esc(title) + '</title>\n'
         '  <meta name="description" content="' + esc(description) + '">\n'
         + kw_tag +
@@ -158,7 +185,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n'
         '  <link rel="stylesheet" href="' + css_prefix + 'styles.css?v=34">\n'
-        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=3">\n'
+        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=4">\n'
         '</head>\n<body>\n  '
     )
 
