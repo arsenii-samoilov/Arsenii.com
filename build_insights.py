@@ -148,6 +148,22 @@ def build_article_page(a, published):
             {"@type": "ListItem", "position": 3, "name": a["title"], "item": canonical},
         ],
     }
+    howto_ld = ""
+    if "howto" in a:
+        hw = a["howto"]
+        howto_schema = {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": hw["name"],
+            "description": hw["description"],
+            "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": SITE},
+            "step": [
+                {"@type": "HowToStep", "name": s["name"], "text": s["text"]}
+                for s in hw["steps"]
+            ]
+        }
+        howto_ld = '  <script type="application/ld+json">' + json.dumps(howto_schema) + '</script>\n'
+
     extra_ld = (
         '  <meta property="article:published_time" content="' + a["date"] + '">\n'
         '  <meta property="article:modified_time" content="' + modified + '">\n'
@@ -155,7 +171,8 @@ def build_article_page(a, published):
         '  <meta property="article:section" content="' + esc(a["category"]) + '">\n'
         + "".join('  <meta property="article:tag" content="' + esc(t) + '">\n' for t in a["tags"]) +
         '  <script type="application/ld+json">' + json.dumps(ld) + '</script>\n'
-        '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
+        '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n'
+        + howto_ld)
 
     tags_html = "".join('<span class="insight-tag">' + esc(t) + '</span>' for t in a["tags"])
 
