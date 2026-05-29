@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Stakeholder Power/Interest Grid",
+        "item": "https://arsenii.com/tools/stakeholder-matrix.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Stakeholder Power/Interest Grid",
+    "description": "Map stakeholders by power and interest so communication time goes where it changes outcomes.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "List the stakeholders",
+        "text": "List everyone who can affect or is affected by the program."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Judge power and interest",
+        "text": "Judge each person on how much power they hold over the program and how much interest they have in it."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Place each in a quadrant",
+        "text": "Place each stakeholder in the matching quadrant of the grid."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Apply the strategy",
+        "text": "Apply the strategy for each quadrant: manage closely, keep satisfied, keep informed, or monitor."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Re-map at phase changes",
+        "text": "Re-map at major phase changes, since power and interest shift as the program moves."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -123,6 +189,9 @@
     @media print {
       .site-header, .tool-controls, .sh-add, .tool-explainer, .tool-cta, .site-footer, .chip-del { display: none !important; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -144,6 +213,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Stakeholder Power/Interest Grid</span></nav>
       <div class="tool-hero">
         <h1>Stakeholder Power/Interest Grid</h1>
         <p>Map every stakeholder by how much power they hold and how much they care, then see the engagement strategy for each. Add people below and watch them land in the right quadrant. Everything saves in your browser. No signup.</p>

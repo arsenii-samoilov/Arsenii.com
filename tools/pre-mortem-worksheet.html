@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pre-Mortem Worksheet",
+        "item": "https://arsenii.com/tools/pre-mortem-worksheet.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Pre-Mortem Worksheet",
+    "description": "Imagine the program already failed and surface the real risks before they happen.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Declare the program failed",
+        "text": "Set a date in the future and declare the program a failure."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Write reasons silently",
+        "text": "Have each person write down the reasons it failed before anyone speaks."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Group and score",
+        "text": "Group the answers and score each failure mode by likelihood and impact."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Assign prevention and owner",
+        "text": "Assign a prevention and an owner to the failure modes that score high."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Feed the actions forward",
+        "text": "Feed the resulting actions into your risk register or RAID log."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -124,6 +190,9 @@
       .site-header, .tool-controls, .pm-setup, .tool-explainer, .tool-cta, .site-footer, .row-del, .add-row-btn { display: none !important; }
       .pm-select { -webkit-appearance: none; appearance: none; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -145,6 +214,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Pre-Mortem Worksheet</span></nav>
       <div class="tool-hero">
         <h1>Pre-Mortem Worksheet</h1>
         <p>Assume the program already failed and work backward to find out why, while there is still time to prevent it. List the failure modes, score each by likelihood and impact, and assign a prevention and an owner. Everything saves in your browser. No signup.</p>

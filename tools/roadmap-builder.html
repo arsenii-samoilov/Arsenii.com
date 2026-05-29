@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Roadmap / Timeline Builder",
+        "item": "https://arsenii.com/tools/roadmap-builder.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Roadmap Builder",
+    "description": "Lay work out across tracks on a shared timeline so overlaps and gaps become obvious.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Group work into tracks",
+        "text": "Group related work into a handful of tracks."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set start and duration",
+        "text": "Give each item a start period and a duration."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Keep the unit consistent",
+        "text": "Keep the period unit consistent, whether a week, sprint, month, or quarter."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Read the bars",
+        "text": "Read the Gantt-style bars to see overlaps and gaps in the plan."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Re-baseline as needed",
+        "text": "Re-baseline the roadmap when the plan changes shape."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -121,6 +187,9 @@
     @media print {
       .site-header, .tool-controls, .rm-addform, .rm-table, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -142,6 +211,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Roadmap / Timeline Builder</span></nav>
       <div class="tool-hero">
         <h1>Roadmap / Timeline Builder</h1>
         <p>Lay out a simple roadmap in seconds. Add items with a track, a start period, and a duration, and see them render as Gantt-style bars across a twelve-period timeline. Everything saves in your browser. No signup.</p>

@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "RAID Log",
+        "item": "https://arsenii.com/tools/raid-log.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the RAID Log",
+    "description": "Track risks, assumptions, issues, and dependencies in one place so nothing important lives only in someone's head.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Tag each entry by type",
+        "text": "Start the log at kickoff and tag each entry as a Risk, Assumption, Issue, or Dependency."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Describe the entry",
+        "text": "Write a clear description for each entry so it does not live only in someone's head."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Assign one owner",
+        "text": "Assign one owner per line, never a team."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set a due date and status",
+        "text": "Set a due date and a status on each entry, especially dependencies."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Review every status meeting",
+        "text": "Review the log at every status meeting, close what no longer applies, and add new entries as they surface."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -118,6 +184,9 @@
       .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
       .raid-select, .status-pill { -webkit-appearance: none; appearance: none; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -139,6 +208,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>RAID Log</span></nav>
       <div class="tool-hero">
         <h1>RAID Log</h1>
         <p>Track Risks, Assumptions, Issues, and Dependencies in one place. Tag each entry by type, assign an owner and a due date, and set a status. Everything saves in your browser. No signup.</p>

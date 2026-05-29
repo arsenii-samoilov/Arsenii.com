@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Project Charter Generator",
+        "item": "https://arsenii.com/tools/project-charter-generator.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Project Charter Generator",
+    "description": "Write the document that authorizes a program and aligns everyone before the first line of work.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Write the problem statement",
+        "text": "Write a problem statement that makes the cost of doing nothing obvious."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set measurable objectives",
+        "text": "Set a few measurable objectives."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Define in and out of scope",
+        "text": "Define what is in scope and, with equal care, what is out of scope."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Name the sponsor and stakeholders",
+        "text": "Name the accountable sponsor and the key stakeholders."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Get sponsor approval",
+        "text": "Get the sponsor to approve it, then revisit the charter at major phase gates."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -124,6 +190,9 @@
       .gen-layout { grid-template-columns: 1fr; }
       .charter-preview { border: none; padding: 0; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -145,6 +214,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Project Charter Generator</span></nav>
       <div class="tool-hero">
         <h1>Project Charter Generator</h1>
         <p>Draft the document that authorizes your program and aligns everyone before the work starts. Fill in the form on the left and the charter builds on the right, then copy it or print to PDF. Everything saves in your browser. No signup.</p>

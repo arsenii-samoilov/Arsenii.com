@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Weighted Decision Matrix",
+        "item": "https://arsenii.com/tools/decision-matrix.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Weighted Decision Matrix",
+    "description": "Score options against weighted criteria so a group debate becomes something you can point at.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "List options and criteria",
+        "text": "List the real options down the left and the criteria that matter across the top."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set the weights first",
+        "text": "Give each criterion a weight before you score anything, since not everything counts equally."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Score one criterion at a time",
+        "text": "Score each option on a 1 to 5 scale, working one criterion across all options at a time."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Read the weighted totals",
+        "text": "Read the weighted totals to see which option wins on the numbers."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Treat a close result as a prompt",
+        "text": "Treat a close result as a signal to talk, not to defer to a rounding error."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -117,6 +183,9 @@
     @media print {
       .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del, .col-del { display: none !important; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -138,6 +207,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Weighted Decision Matrix</span></nav>
       <div class="tool-hero">
         <h1>Weighted Decision Matrix</h1>
         <p>Choose between options when several things matter at once. Set a weight on each criterion, score each option 1 to 5, and the matrix computes the weighted total and highlights the winner. Everything saves in your browser. No signup.</p>

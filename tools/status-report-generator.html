@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Status Report Generator",
+        "item": "https://arsenii.com/tools/status-report-generator.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Status Report Generator",
+    "description": "Turn a quick form into a status report executives actually read.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Set the health color",
+        "text": "Set a health color the reader can see at a glance: green, yellow, or red."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Write one summary line",
+        "text": "Write a single summary line that tells the reader whether to relax or lean in."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Fill the short lists",
+        "text": "Fill the short lists for accomplishments, next steps, and risks."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Name the decisions needed",
+        "text": "Name the decisions you need made and by when, the section executives scan for."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Keep the format identical",
+        "text": "Keep the format identical every period so readers learn where to look."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -125,6 +191,9 @@
       .gen-layout { grid-template-columns: 1fr; }
       .preview-panel { border: none; padding: 0; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -146,6 +215,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Status Report Generator</span></nav>
       <div class="tool-hero">
         <h1>Project Status Report Generator</h1>
         <p>Fill in the left, get a clean status report on the right. Set the health color, write a one-line summary, and list accomplishments, next steps, risks, and decisions needed. Copy, export, or print. Everything saves in your browser. No signup.</p>

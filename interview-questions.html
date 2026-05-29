@@ -100,6 +100,26 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Technical Program Manager Interview Questions",
+        "item": "https://arsenii.com/interview-questions.html"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -131,6 +151,9 @@
     .outro p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
     .outro p:last-child { margin: 0; }
     .outro a { color: var(--accent); font-weight: 500; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -152,6 +175,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Technical Program Manager Interview Questions</span></nav>
       <div class="tool-hero">
         <h1>Technical Program Manager Interview Questions (2026)</h1>
         <p>Real questions a technical program manager is asked, grouped by category. Each one includes a short note on what the interviewer is really assessing, so you can prepare the substance instead of memorizing a script. Tap a category to expand it.</p>

@@ -77,6 +77,26 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Program Management Glossary",
+        "item": "https://arsenii.com/glossary.html"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -105,6 +125,9 @@
     .glossary-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
     .glossary-cta p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0; }
     .glossary-cta a { color: var(--accent); font-weight: 500; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -126,6 +149,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Program Management Glossary</span></nav>
       <div class="tool-hero">
         <h1>Program Management Glossary</h1>
         <p>Plain-language definitions of the terms a technical program manager uses every day. Where a term maps to a working tool, there is a link to it. For the tools themselves, see the <a href="tools/index.html">free program management tools</a>, and for how these ideas play out on real programs, read the <a href="insights.html">Insights</a>.</p>

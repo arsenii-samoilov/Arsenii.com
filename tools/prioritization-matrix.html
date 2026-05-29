@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Prioritization Matrix",
+        "item": "https://arsenii.com/tools/prioritization-matrix.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Prioritization Matrix",
+    "description": "Sort initiatives on an effort/impact grid so the sequence picks itself.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Judge effort and impact",
+        "text": "Judge each initiative on the effort to deliver it and the impact if you do."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Plot each into a quadrant",
+        "text": "Plot each item into one of the four quadrants on the effort/impact grid."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Do the quick wins first",
+        "text": "Do the quick wins first to build momentum cheaply."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Plan the major projects",
+        "text": "Plan the major projects deliberately and fund them properly."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Defer the thankless tasks",
+        "text": "Defer or drop the thankless tasks, high effort for low impact."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -122,6 +188,9 @@
     @media print {
       .site-header, .tool-controls, .sh-add, .tool-explainer, .tool-cta, .site-footer, .chip-del { display: none !important; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -143,6 +212,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Prioritization Matrix</span></nav>
       <div class="tool-hero">
         <h1>Effort/Impact Prioritization Matrix</h1>
         <p>Turn a crowded backlog into a sequence. Add each initiative, set its effort and impact, and watch it land in the right quadrant: quick wins, major projects, fill-ins, or thankless tasks. Everything saves in your browser. No signup.</p>

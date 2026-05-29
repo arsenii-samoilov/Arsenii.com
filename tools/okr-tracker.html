@@ -70,6 +70,72 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "OKR Tracker",
+        "item": "https://arsenii.com/tools/okr-tracker.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the OKR Tracker",
+    "description": "Pair an ambitious objective with measurable key results and watch progress compute.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Write the objective",
+        "text": "Write an ambitious, qualitative objective that says where the team is headed."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add measurable key results",
+        "text": "Add two to five key results, each a number with a target."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set target and current values",
+        "text": "Set a target and a current value for each key result so the tool computes progress."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Read the score as a prompt",
+        "text": "Read the objective-level score as a prompt, not a grade, aiming around 70 percent on a stretch OKR."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Update at the check-in",
+        "text": "Update the current values at the weekly or biweekly check-in."
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -121,6 +187,9 @@
     @media print {
       .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .kr-del, .obj-del, .add-kr { display: none !important; }
     }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -142,6 +211,7 @@
 
   <main>
     <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>OKR Tracker</span></nav>
       <div class="tool-hero">
         <h1>OKR Tracker</h1>
         <p>Track objectives and their key results with live progress bars. Add an objective, give it a few measurable key results with a target and a current value, and watch each one and the objective fill in. Everything saves in your browser. No signup.</p>
