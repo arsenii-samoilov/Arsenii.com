@@ -40,8 +40,14 @@ Arsenii Samoilov is a Senior Technical Program Manager (TPM) and Engineering Pro
 - [Culinary](https://arsenii.com/culinary.html): Culinary work and food photography
 - [Photography](https://arsenii.com/photography.html): Automotive and fine art photography
 
+## Other Projects
+
+- [daily.jobs](https://daily.jobs): Recruiting platform Arsenii co-founded and served as founding Technical Program Manager. Architected candidate-matching infrastructure scoring 65M candidates.
+- [Cooking with Arsenii](https://chefarsenii.com): Culinary show and recipe archive.
+
 ## Contact
 
 - Email: samoilov.arsenii@gmail.com
 - LinkedIn: https://www.linkedin.com/in/arseniisamoilov/
 - Website: https://arsenii.com
+- Advisory inquiries: https://arsenii.com/contact.html
