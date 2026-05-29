@@ -13,6 +13,24 @@ DATA_FILE = os.path.join(BASE_DIR, "insights-data.json")
 ARTICLES_DIR = os.path.join(BASE_DIR, "insights")
 SITE = "https://arsenii.com"
 
+CATEGORY_ICONS = {
+    "AI Program Management": "🤖",
+    "Compliance": "📋",
+    "Compliance Program Manager": "📋",
+    "Growth": "🚀",
+    "Growth Program Manager": "🚀",
+    "Governance": "🏛",
+    "Operations": "⚙️",
+    "Communication": "💬",
+    "Strategy": "🎯",
+    "Risk": "🛡",
+    "Data": "📊",
+    "Career": "🗂",
+    "Engineering": "🔧",
+    "Monetization": "💰",
+    "Program Management": "📌",
+}
+
 CORE_PAGES = [
     ("/", "1.0", "weekly"),
     ("/career.html", "0.95", "monthly"),
@@ -53,6 +71,10 @@ FOOTER_NAV = (
 def esc(text):
     return (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
             .replace('"', "&quot;"))
+
+
+def category_icon(category):
+    return CATEGORY_ICONS.get(category, "📌")
 
 
 def fmt_date(d):
@@ -110,7 +132,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n'
         '  <link rel="stylesheet" href="' + css_prefix + 'styles.css?v=34">\n'
-        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=2">\n'
+        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=3">\n'
         '</head>\n<body>\n  '
     )
 
@@ -195,14 +217,15 @@ def build_article_page(a, published):
         )
 
     article_kw = ", ".join(a["tags"]) + ", Technical Program Manager, Arsenii Samoilov"
+    icon = category_icon(a["category"])
     html = page_head(a["title"] + " | Arsenii Samoilov", a["description"], canonical,
                      "../", "../", extra_ld, article_kw)
     html += NAV.format(home="../")
     html += (
         '\n  <main>\n'
         '    <article class="article-page">\n'
-        '      <p class="eyebrow"><a href="../insights.html" style="color:inherit;">Insights</a> &middot; ' + esc(a["category"]) + ' &middot; ' + fmt_date(a["_date"]) + '</p>\n'
-        '      <h1>' + esc(a["title"]) + '</h1>\n'
+        '      <p class="eyebrow"><a href="../insights.html" style="color:inherit;">Insights</a> &middot; ' + icon + ' ' + esc(a["category"]) + ' &middot; ' + fmt_date(a["_date"]) + '</p>\n'
+        '      <h1>' + icon + ' ' + esc(a["title"]) + '</h1>\n'
         '      <div class="article-body">' + a["body"] + '\n'
         '        <p class="article-author-note">Arsenii Samoilov is a <a href="../career.html" style="color:var(--accent);font-weight:500;">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.</p>\n'
         '      </div>\n'
@@ -252,11 +275,17 @@ def build_index(published):
     )
     for a in published:
         url = "insights/" + a["slug"] + ".html"
+        icon = category_icon(a["category"])
+        pills = "".join(
+            '<span class="index-tag">' + esc(t) + '</span>'
+            for t in a["tags"][:3]
+        )
         html += (
             '      <a class="index-row" href="' + url + '">\n'
-            '        <span class="index-meta">' + esc(a["category"]) + ' &middot; ' + fmt_date(a["_date"]) + '</span>\n'
-            '        <h2>' + esc(a["title"]) + '</h2>\n'
+            '        <span class="index-meta">' + icon + ' ' + esc(a["category"]) + ' &middot; ' + fmt_date(a["_date"]) + '</span>\n'
+            '        <h2>' + icon + ' ' + esc(a["title"]) + '</h2>\n'
             '        <p>' + esc(a["description"]) + '</p>\n'
+            '        <div class="index-tags">' + pills + '</div>\n'
             '      </a>\n'
         )
     html += (
