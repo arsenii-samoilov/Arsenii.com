@@ -564,6 +564,426 @@
         "Program Management"
       ],
       "body": "<p>I've run programs at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple, and a startup I helped build from nothing. Different scales, different cultures, different stakes. A few things held true at every single one.</p><p>The first is that the hard problem is almost never the technology. It's getting people who don't report to each other, who have different goals, to converge on one outcome. The companies that did this well had nothing to do with how good their engineers were. They had clear ownership and short feedback loops. The ones that struggled had neither, no matter how strong the talent.</p><p>The second is that clarity beats process. The teams that shipped didn't have the most elaborate frameworks. They had the clearest answers to who owns this, what breaks without it, and what we decided and why. Process is just a way to produce that clarity, and most orgs have far more process than clarity.</p><p>The surprise, after nineteen years: the fundamentals don't change with scale. A startup and Apple are wildly different in size and stakes, but the actual job is the same. Find the constraint, name the owners, sequence the work, tell the truth early. Everything else is local detail layered on top of those four.</p>"
+    },
+    {
+      "slug": "program-kickoff-that-works",
+      "title": "How to Run a Program Kickoff That Actually Works",
+      "date": "2027-03-24",
+      "category": "Program Management",
+      "description": "Most program kickoffs produce a shared calendar invite and little else. Here is how to run one that produces shared understanding.",
+      "tags": [
+        "Program Management",
+        "Technical Program Manager",
+        "Kickoff",
+        "Execution"
+      ],
+      "body": "<p>Most program kickoffs are performed rather than run. People show up, someone reads slides, everyone nods, and two weeks later the disagreements the kickoff was supposed to prevent are still there, just harder to surface.</p><p>The thing a kickoff has to produce is shared understanding of three things: what success looks like, who owns what, and what the first decision point is. Everything else is secondary. If the room leaves aligned on those three, the kickoff worked.</p><p>I run the scope conversation first, before the timeline, before anything else. Every kickoff I have ever attended that started with the Gantt chart ended with people arguing about scope three weeks in. If you cannot agree on what the program is, the dates are fiction.</p><p>Ownership is harder than it looks. Teams will nod at a RACI and then operate as if it doesn't exist. I name owners out loud in the room and ask each person to confirm. Public confirmation changes the dynamic in a way that a spreadsheet column does not.</p><p>The kickoff should end with a single next action and a date, not a list of follow-ups. One concrete thing, one owner, one date. That is the test of whether the kickoff was real or ceremonial.</p>"
+    },
+    {
+      "slug": "workback-plan-done-right",
+      "title": "The Workback Plan Done Right",
+      "date": "2027-04-05",
+      "category": "Program Management",
+      "description": "A workback plan built from a launch date backward tells you whether the date is real. Most TPMs build them forward and miss what the plan is trying to tell them.",
+      "tags": [
+        "Program Management",
+        "Planning",
+        "Technical Program Manager",
+        "Execution"
+      ],
+      "body": "<p>A workback plan built forward from today is a wish. Built backward from the launch date, it is a diagnostic. Those are different tools with different outputs.</p><p>Start with the date and work left. What has to be true the week before launch? The week before that? Keep going until you hit today. If you run out of weeks before you run out of work, the date is not real. That is what the plan is trying to tell you, and most teams ignore it because they built the plan in the other direction.</p><p>At Roku, the payment gateway migration had a hard contract deadline. I built the workback and it came up six weeks short. We had two choices: reduce scope or tell the partner early. We reduced scope and told the partner about the reduction early. Both conversations were uncomfortable. Neither was as bad as missing the deadline would have been.</p><p>The other thing workback plans do is expose dependencies you didn't know you had. When you map backwards, you find the work that has to finish before the work that everyone thinks is the bottleneck. Those upstream dependencies are where programs actually die.</p><p>Update the workback every week. Not because the dates change, but because the gaps do. A weekly update forces you to look at the distance between where you are and where the plan said you would be, which is information you need before it becomes a problem.</p>"
+    },
+    {
+      "slug": "building-a-tiger-team",
+      "title": "Building a Tiger Team",
+      "date": "2027-04-17",
+      "category": "Program Management",
+      "description": "A tiger team is not a task force. It is a small, named group with a specific problem, a deadline, and authority to decide. Here is how to stand one up and wind it down.",
+      "tags": [
+        "Program Management",
+        "Technical Program Manager",
+        "Execution",
+        "Leadership"
+      ],
+      "body": "<p>The word tiger team gets used for any group of people pulled together under pressure. Most of them are not tiger teams. They are committees with urgency, which is a different thing and produces different results.</p><p>A real tiger team has three properties. It is small, five or fewer people. It has a specific, bounded problem with a clear done condition. And it has authority: the team can make decisions, not just recommendations. Strip any one of those three and you have a working group, not a tiger team.</p><p>At Roku, we stood up a tiger team to resolve a reconciliation gap that was blocking Finance sign-off on the migration. Three people, ten days, one deliverable: a working reconciliation report and a sign-off. We did not need approval to pick the approach. We needed to show Finance the output was accurate. That clarity of scope was what made it work.</p><p>Wind-down matters as much as stand-up. When the tiger team finishes, name what was decided, document why, and hand the output to whoever owns it long-term. Teams that dissolve without a handoff leave problems that resurface in the next quarter under a different name.</p><p>The most common failure is letting a tiger team run past its deadline. When the scope expands or the deadline slips, the team is no longer a tiger team. It has become a small program, and it needs to be managed like one.</p>"
+    },
+    {
+      "slug": "writing-executive-brief",
+      "title": "How to Write an Executive Brief",
+      "date": "2027-04-29",
+      "category": "Communication",
+      "description": "An executive brief is not a summary. It is a decision document. The distinction changes how you write it and what it produces.",
+      "tags": [
+        "Communication",
+        "Executive",
+        "Technical Program Manager",
+        "Program Management"
+      ],
+      "body": "<p>Most executive briefs are summaries dressed up as decision documents. They tell leadership what happened and why, then end with a recommendation they already knew was coming. That is a status report, not a brief.</p><p>A brief starts with what you need. Not background, not context, not the story of how you got here. What decision is required, from whom, and by when. That goes first. If the executive reads nothing else, they know what they are being asked to do.</p><p>Background comes second, but only the background that changes the decision. If removing a sentence does not affect what the reader should decide, remove it. Most briefs are twice as long as they need to be because writers add context to demonstrate they understand the problem. Executives do not need your demonstration. They need the decision.</p><p>Options with trade-offs come third. Not all the options, not the exhaustive list. Two or three with the material differences between them clearly stated. If you only have one option, say that directly and say why. Pretending there are choices when there aren't wastes everyone's time.</p><p>The brief ends with your recommendation and what happens if no decision is made by the deadline. That last part is important. Inaction is a choice, and its cost should be visible.</p>"
+    },
+    {
+      "slug": "cross-functional-alignment-without-authority",
+      "title": "Cross-Functional Alignment Without Authority",
+      "date": "2027-05-11",
+      "category": "Program Management",
+      "description": "TPMs get things done through people they do not manage. The influence toolkit that actually works looks nothing like what they teach in leadership courses.",
+      "tags": [
+        "Technical Program Manager",
+        "Leadership",
+        "Stakeholders",
+        "Program Management"
+      ],
+      "body": "<p>The most common advice for operating without authority is to build relationships and align incentives. That is true and almost useless as practical guidance. Here is what it actually looks like.</p><p>You align without authority by making the cost of misalignment visible earlier than anyone else does. When team A's plan conflicts with team B's timeline, most people notice when the collision happens. Your job is to surface it before either team commits to something they cannot deliver. Whoever surfaces the problem first owns the solution, and that is where influence lives.</p><p>At Salesforce, I ran a portfolio where I had no authority over any of the eight teams I depended on. What I had was the dependency map, which meant I was the first person to see conflicts. I made that map visible to everyone, which meant the teams started coming to me before conflicts hardened into commitments. That is a position of influence. I did not earn it through relationships. I earned it through information.</p><p>The other thing that works is being consistent about what you will and will not absorb. If you take on problems that are not yours to solve, you train teams to bring you their problems. If you are clear about what belongs to the program versus what belongs to a team, you train them to solve the right things themselves.</p><p>Influence without authority is mostly about information and consistency. The relationships matter, but they follow from those two things, not the other way around.</p>"
+    },
+    {
+      "slug": "tpm-and-the-rfc-process",
+      "title": "How a TPM Uses the RFC Process",
+      "date": "2027-05-23",
+      "category": "Program Management",
+      "description": "Most TPMs sit outside the RFC process and wait for the output. The ones who influence technical direction are inside it, asking the right questions at the right time.",
+      "tags": [
+        "Technical Program Manager",
+        "Engineering",
+        "RFC",
+        "Program Management"
+      ],
+      "body": "<p>An RFC, request for comment, is where engineers make technical decisions. A TPM who waits for the RFC to close before engaging is reading a decision that has already been made. By then, the interesting options are gone.</p><p>I read RFCs for two things: assumptions about timeline and assumptions about dependencies. Engineers writing RFCs are often optimistic about both, not because they are careless but because they are thinking about the technical problem, not the coordination problem. That coordination view is what a TPM brings.</p><p>The useful questions in an RFC review are not about the technology. They are about the interfaces. What does this design require from other teams? When does it require it? Is that a safe assumption given what those teams are committed to? Those questions change designs more than technical objections do, because they connect the RFC to the reality of the program.</p><p>The other thing TPMs can do in RFC reviews is name the trade-off the author is avoiding. Most RFCs have a hard choice somewhere in them that the author is not ready to make. Naming it is uncomfortable. It is also the most useful thing you can do, because the choice does not go away. It just gets made later, under more pressure, with less time.</p><p>If you are not reading the RFCs in your program area, you are finding out about technical decisions after the fact. That is a manageable position but not a strong one.</p>"
+    },
+    {
+      "slug": "managing-program-through-reorg",
+      "title": "Managing a Program Through a Reorg",
+      "date": "2027-06-04",
+      "category": "Program Management",
+      "description": "A reorg mid-program is not an exception. It is a recurring condition. The programs that survive them have a few things in common.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Leadership",
+        "Execution"
+      ],
+      "body": "<p>In ten years of running enterprise programs, I have never worked at a company that did not reorg. Most of them reorged during active programs. The programs that came through intact shared a few traits that the ones that didn't lacked.</p><p>The first is written scope. A program with its scope in someone's head survives as long as that person's role survives. A program with its scope in a document survives the reorg because the new leadership can read what it is. Write everything down before you think you need to.</p><p>The second is stakeholder clarity. Reorgs change who owns what. The programs that stall are the ones where the TPM has to spend three weeks figuring out who the new sponsor is and whether the new sponsor cares. Map your stakeholders and their successors while the org is stable. It sounds paranoid. It is practical.</p><p>The third is a clean milestone record. When new leadership inherits a program, they are making a fast decision about whether to continue, modify, or kill it. A clear record of what was decided and why, what was accomplished and what remains, makes that decision faster and usually more favorable. A program that looks confusing from the outside gets canceled.</p><p>Reorgs also create opportunities. When structures change, priorities get re-examined. A program that was underfunded under the old structure sometimes gets the resources it needed under the new one. That only happens if the TPM is ready to make the case quickly. Know your ask before the reorg happens.</p>"
+    },
+    {
+      "slug": "retrospectives-that-drive-change",
+      "title": "Retrospectives That Actually Drive Change",
+      "date": "2027-06-16",
+      "category": "Program Management",
+      "description": "Most retrospectives produce a list of things to do differently and change nothing. The format is not the problem. The follow-through is.",
+      "tags": [
+        "Program Management",
+        "Technical Program Manager",
+        "Execution",
+        "Communication"
+      ],
+      "body": "<p>I have run a lot of retrospectives and I have facilitated a lot of lists. What went well, what didn't, what we'll change. The lists are almost always accurate and almost never acted on. That is a follow-through problem, not a facilitation problem.</p><p>The retrospective format that works is shorter on diagnosis and longer on commitment. You do not need to spend an hour cataloging what went wrong. You need to spend most of the time on one or two things that are worth changing and who specifically is changing them by when.</p><p>The question I find most useful is not what would you do differently but what would you not start this way again. The second question gets at structural problems rather than execution problems. Execution problems fix themselves eventually. Structural ones repeat.</p><p>Every retro should end with three things: the one decision the team wishes had been made earlier, the one thing that went better than expected and why, and one named commitment with an owner and a date. Not a list. One. Lists get forgotten. One commitment with a name attached to it has a chance.</p><p>Read the retro notes from your last program before you kick off the next one. If the same items appear, you didn't change anything. That is useful information too, but only if you are honest about it.</p>"
+    },
+    {
+      "slug": "vendor-management-for-tpms",
+      "title": "Vendor Management for Technical Programs",
+      "date": "2027-06-28",
+      "category": "Program Management",
+      "description": "Vendors are not internal teams and cannot be managed the same way. The patterns that work for internal dependencies fail with external partners for structural reasons.",
+      "tags": [
+        "Program Management",
+        "Technical Program Manager",
+        "Vendor Management",
+        "Execution"
+      ],
+      "body": "<p>The most common mistake I see TPMs make with vendors is treating them like a slow internal team. The interventions are the same, the escalation paths are the same, the expectations are the same. The results are not, because the incentives are not.</p><p>An internal team's incentives are roughly aligned with the program's success. A vendor's incentives are aligned with the contract. Those are not the same thing. The vendor delivers what the contract specifies. If the contract specified the wrong thing, you get the wrong thing, on time and in budget.</p><p>At Roku, we worked with a payment processor whose API documentation did not match the actual API behavior. The vendor was not being difficult. They were delivering what they had built, which was not what we had scoped. The contract said integration support. It did not say documentation accuracy. That gap cost us four weeks.</p><p>The things I do differently now: scope the contract around outcomes, not deliverables, wherever possible. Build a weekly sync that is about risks, not status. Name your escalation path inside the vendor before you need it. And treat the contract review as a program risk review. If you have not read the contract, you do not know what your vendor is actually committed to.</p><p>Vendors can be excellent partners. The relationship works when both sides understand what was actually agreed to.</p>"
+    },
+    {
+      "slug": "multi-region-launch-management",
+      "title": "Multi-Region Launch Management",
+      "date": "2027-07-10",
+      "category": "Execution",
+      "description": "Launching in multiple regions is not launching once and repeating. The complexity is in the differences, and the differences are almost never obvious until you're in them.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Launch",
+        "Execution"
+      ],
+      "body": "<p>A multi-region launch is not the same program run more than once. It is a set of programs with shared components and divergent requirements, and treating it as the first thing is how you underestimate it.</p><p>The divergence lives in regulation, payment method, data residency, and support language. Those are not engineering decisions. They are program inputs that determine what the engineering decisions can be. Discovering them late means rework. Discovering them in the planning phase means design choices.</p><p>At Roku, expanding the payment platform internationally meant that what worked with Adyen in North America required different settlement logic, different reconciliation windows, and different fraud rules by region. None of that was in the original scope. All of it had been discoverable with earlier stakeholder engagement. We found it six weeks into build, which is the most expensive place to find it.</p><p>The planning tool that works for multi-region is a requirements matrix: one row per region, one column per requirement category. Regulation, payment, data, language, support. Cells that are identical across regions become shared work. Cells that differ become separate tracks. That matrix is what shows you what you actually have to build.</p><p>Launch sequencing matters more than launch simultaneity. A phased regional rollout with a real feedback loop between regions is almost always better than a simultaneous global launch. The first region to go live teaches you what the others need before they go live.</p>"
+    },
+    {
+      "slug": "handling-a-missed-deadline",
+      "title": "How to Handle a Missed Deadline",
+      "date": "2027-07-22",
+      "category": "Communication",
+      "description": "Missing a deadline is a recoverable event. How you handle it in the first 48 hours determines whether it stays recoverable.",
+      "tags": [
+        "Communication",
+        "Technical Program Manager",
+        "Program Management",
+        "Execution"
+      ],
+      "body": "<p>The worst response to a missed deadline is to manage the news rather than the situation. Leaders who try to soften the communication before they have diagnosed the cause end up having two conversations: the miss, and then the explanation for why the first explanation was wrong.</p><p>The first 48 hours need one thing: a clear account of what happened, what it means for the rest of the program, and what you are doing about it. Not a root cause analysis, that comes later. A factual description of the gap and the immediate response. Be specific about what you know and honest about what you do not.</p><p>At Intuit, a compliance reporting milestone slipped because a dependency from a partner team came in incomplete. The initial communication to leadership said the team was assessing options. That was accurate and useless. What leadership needed was: here is what came in, here is what is missing, here is who is fixing it and by when, and here is the downstream impact. I rewrote it and sent that instead. The conversation shifted from frustration about the miss to focus on the recovery.</p><p>After the immediate response, run a short root cause review. Not to assign blame, but to find the structural issue. Deadlines that slip because of last-minute surprises usually had early warning signals nobody was tracking. The root cause review finds those signals so the next program tracks them.</p><p>A missed deadline handled well is recoverable. The same deadline handled badly, with delayed communication or defensive framing, damages something harder to recover: credibility.</p>"
+    },
+    {
+      "slug": "building-trust-with-engineering-leads",
+      "title": "Building Trust With Engineering Leads",
+      "date": "2027-08-03",
+      "category": "Leadership",
+      "description": "Engineering leads extend trust to TPMs who understand the technical constraints and protect the team from noise. Everything else is secondary.",
+      "tags": [
+        "Technical Program Manager",
+        "Engineering",
+        "Leadership",
+        "Program Management"
+      ],
+      "body": "<p>Engineers trust TPMs who make their jobs easier. That sounds obvious. The ways it plays out in practice are specific enough to be worth naming.</p><p>The first is protecting engineering time. Every meeting that does not need an engineer in it, every status request that can be answered without pulling someone out of heads-down work, every decision that can be made without a technical opinion is a gift. TPMs who protect engineering time get trusted. TPMs who schedule engineers into everything get routed around.</p><p>The second is understanding the technical constraints well enough to advocate for them upstream. When leadership asks for a date that is not possible, the engineer should not have to explain why. The TPM should already know why and should have surfaced it before the ask became a commitment. That is a specific kind of competence engineers notice and remember.</p><p>The third is honesty about trade-offs. Engineers are used to being told what the deadline is and asked to make it work. The TPM who instead says here is the deadline, here is what fits in it, and here is what moves if we add more is treating the engineering lead as a partner in the decision. That is different, and most engineers feel the difference immediately.</p><p>Trust takes time and specific behaviors. It does not come from announcing that you are technical or from asking about the technology in meetings. It comes from consistently doing the things that make engineers' work easier and their judgment respected.</p>"
+    },
+    {
+      "slug": "program-office-setup-from-scratch",
+      "title": "Setting Up a Program Office From Scratch",
+      "date": "2027-08-15",
+      "category": "Program Management",
+      "description": "A new program office is a blank sheet and a political minefield simultaneously. The first 90 days determine whether it becomes infrastructure or overhead.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Leadership",
+        "Execution"
+      ],
+      "body": "<p>Every time I have set up or helped set up a program management function, the first question from leadership is: what will this cost. The second question, usually unasked, is: what will this interrupt. Both deserve direct answers before you start designing anything.</p><p>The cost question is easy. Headcount plus tooling. Be specific and tie it to specific programs or outcomes. A program office justified by general value is approved and then quietly defunded.</p><p>The interrupt question is harder and more important. A new program office, if it is not careful, becomes a reporting layer that slows decisions rather than supporting them. The teams it touches will resist it not because they dislike program management but because most of what they have seen called program management is overhead dressed up as governance.</p><p>The first 90 days should demonstrate value before they impose process. Pick one or two programs that are visibly struggling and make them less painful. Do not build the methodology first. Build the trust first, then introduce the methodology as the thing that produced the result people already saw.</p><p>The tools follow the process, not the other way around. I have seen program offices spend six months selecting a portfolio tool before running a single program review. By the time the tool is live, nobody trusts the function.</p><p>A program office that engineering and product leaders use voluntarily is a program office that will survive the next reorg. Build that before you build anything else.</p>"
+    },
+    {
+      "slug": "data-driven-program-reporting",
+      "title": "Data-Driven Program Reporting",
+      "date": "2027-08-27",
+      "category": "Communication",
+      "description": "Status reporting based on vibes and verbal updates tells leadership what the team believes. Reporting anchored in data tells them what is actually happening.",
+      "tags": [
+        "Technical Program Manager",
+        "Communication",
+        "Metrics",
+        "Program Management"
+      ],
+      "body": "<p>The difference between a status report and a data-driven status report is not the presence of numbers. It is the relationship between the numbers and the conclusion. Numbers that appear after the conclusion are decoration. Numbers that produce the conclusion are reporting.</p><p>At Intuit, I built compliance dashboards for TurboTax and Credit Karma that ran on actual issue data: volume, age, severity, closure rate. Leadership could see whether the program was improving without asking me to interpret it. That is the target. A report that requires the author to explain what the numbers mean is a report the author controls. A report the reader can interpret independently is one the author has built correctly.</p><p>The metrics that belong in a program report are the ones that lead the outcome, not the ones that describe it after the fact. Burndown rate, dependency closure rate, open risk count with aging, decision latency. Those tell you where the program will be in four weeks. Completed tasks and milestones met tell you where it was.</p><p>The hardest part of data-driven reporting is committing to the metric before you know what it will say. Teams that define their success metrics after the work is done select metrics that make the work look good. Define the metrics at the start, report them consistently, and resist the urge to swap them when they are unfavorable.</p><p>Good program data is not about surveillance. It is about giving everyone the same view of reality so the conversations about what to do are about the program, not about competing interpretations of how the program is going.</p>"
+    },
+    {
+      "slug": "portfolio-review-leadership-decisions",
+      "title": "The Portfolio Review That Helps Leadership Decide",
+      "date": "2027-09-08",
+      "category": "Communication",
+      "description": "Most portfolio reviews are program status reports stacked on top of each other. A review that helps leadership decide something looks completely different.",
+      "tags": [
+        "Technical Program Manager",
+        "Communication",
+        "Executive",
+        "Program Management"
+      ],
+      "body": "<p>The portfolio review that leadership dreads is the one where twelve program managers each present their program for ten minutes. By the end, the room knows a lot of things and has decided nothing. That is a status meeting with a longer agenda.</p><p>A portfolio review that produces decisions starts by surfacing trade-offs, not status. What are we doing that we should stop. What are we not funding that we should start. What is blocked in a way that requires leadership to unblock it. Those are the agenda items. Status is the pre-read, not the discussion.</p><p>The format I use is a one-page portfolio view before the meeting: each program, its health, its top risk, and whether it needs a leadership decision. Anything green with no decision needed is not discussed in the room. Time goes to the things that are not green or that need something only leadership can give.</p><p>At Atlassian, I ran quarterly business reviews that followed this format. The first time, leadership expected the standard parade of presentations. When we spent the first thirty minutes on three specific trade-off decisions instead, the room was quieter than usual in a way that meant they were thinking, not waiting for their turn to speak. Two of those decisions led to real program changes within the week.</p><p>The goal of a portfolio review is not to demonstrate that programs are being managed. It is to improve the portfolio. Those are different goals and they produce different meeting designs.</p>"
+    },
+    {
+      "slug": "privacy-engineering-programs",
+      "title": "Running a Privacy Engineering Program",
+      "date": "2027-09-20",
+      "category": "Compliance Program Manager",
+      "description": "Privacy engineering is not a legal exercise. It is a program management problem: getting engineering teams to design for data minimization before the feature is built, not after the audit.",
+      "tags": [
+        "Compliance Program Manager",
+        "Technical Program Manager",
+        "Privacy",
+        "Program Management"
+      ],
+      "body": "<p>Privacy programs that live inside legal are privacy programs that react to problems. Privacy programs that live inside engineering are the ones that prevent them. The difference is when in the product cycle the privacy review happens.</p><p>The failure mode I have seen most often is a privacy review process that runs after design is complete. By then, the cost of changes is high and the appetite for them is low. Privacy review at that stage is damage control. The ask is always: can you make this change without touching the existing design. The answer is usually: not really, but we will try.</p><p>The intervention that works is getting privacy questions into the design review. Not a checkbox, not a form filed after the review. Actual questions in the room: what data does this feature collect, does it need to, where does it go, who can see it, and how does it get deleted. Those questions change designs when they are asked early. They are resented when asked late.</p><p>At Intuit, compliance dashboards for TurboTax required clear data lineage: where the data came from, how it was transformed, and what happened to it at the end of its retention window. Building that lineage into the program architecture from the start cost less than auditing it after the fact by a significant margin.</p><p>Privacy by design is a program management outcome, not a privacy team outcome. The privacy team sets the standard. The TPM is what makes engineering teams hit it before the audit, not after.</p>"
+    },
+    {
+      "slug": "security-program-management",
+      "title": "Security Program Management",
+      "date": "2027-10-02",
+      "category": "Compliance Program Manager",
+      "description": "Security programs fail not because the security requirements are wrong but because they are treated as a track separate from the engineering program. Integration is the job.",
+      "tags": [
+        "Compliance Program Manager",
+        "Technical Program Manager",
+        "Security",
+        "Program Management"
+      ],
+      "body": "<p>The security team and the engineering team are usually running two programs with the same deadline and no shared plan. The security team is tracking vulnerabilities, patch windows, and audit findings. The engineering team is tracking features, dependencies, and launch criteria. When those two programs collide at the end, everyone is surprised, which means nobody was managing the intersection.</p><p>That intersection is the TPM's job. Not to own security, but to own the integration of security requirements into the engineering timeline before the requirements become blockers.</p><p>The specific thing this requires is early and repeated conversations with the security team about what is gating the launch. Not whether there are findings, there are always findings, but which findings are blocking and what the remediation timeline is. Those become fixed points in the engineering schedule, not surprises at the end.</p><p>At Intuit, the compliance program included SOC2 audit readiness. The audit timeline was fixed. The engineering work to support it was not. I built a workback from the audit date that showed engineering exactly when their controls work had to be complete. It was not a comfortable conversation. The alternative, engineering finding out six weeks before the audit that they had three months of work left, would have been worse.</p><p>Security programs delivered on time are almost always the result of early integration. Security programs that slip are almost always the result of treating security as a parallel track until it isn't.</p>"
+    },
+    {
+      "slug": "onboarding-team-mid-program",
+      "title": "Onboarding a New Team Mid-Program",
+      "date": "2027-10-14",
+      "category": "Program Management",
+      "description": "Adding a new team to an active program is one of the more disruptive things that can happen to a timeline. Done well, it accelerates. Done poorly, it costs more than the capacity it adds.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Execution",
+        "Leadership"
+      ],
+      "body": "<p>Brooks's Law says adding people to a late project makes it later. The mechanism is not the new people, it is the cost of bringing them up to speed while the existing team absorbs the onboarding. The law holds for teams too, and it has a corollary: the faster you onboard the new team, the faster the productivity recovery.</p><p>The onboarding documents that matter most are the ones the new team cannot find themselves: the decisions that were made and why, the dependencies that are already committed, the risks that are being tracked, and the things the team tried that did not work. That knowledge lives in the heads of the existing team and the decision log, nowhere else.</p><p>I have added teams mid-program twice at significant scale. The pattern that worked both times was a dedicated two-day onboarding that covered scope, decisions, dependencies, and current risks in that order. Not a reading assignment. A facilitated session where the new team could ask questions while the existing team was in the room. Questions answered in that session stay answered. Questions answered in separate emails get answered differently by different people.</p><p>Set the new team's first milestone for two weeks out, not immediately. The first two weeks are orientation, even if the team is senior and experienced. Fighting that buys you nothing and costs you a rocky start.</p><p>A new team added cleanly is a genuine multiplier. A new team added sloppily costs the program a month before it contributes a week.</p>"
+    },
+    {
+      "slug": "scoping-multi-year-roadmap",
+      "title": "How to Scope a Multi-Year Roadmap",
+      "date": "2027-10-26",
+      "category": "Strategy",
+      "description": "A multi-year roadmap is not a twelve-month plan extended. The further out the horizon, the more the document is about principles and bets, not milestones.",
+      "tags": [
+        "Technical Program Manager",
+        "Strategy",
+        "Program Management",
+        "Planning"
+      ],
+      "body": "<p>The mistake in multi-year planning is applying the same rigor to year three that you apply to the next quarter. Detailed milestones two years out are not planning, they are fiction written in a planning format. They give the appearance of commitment while consuming the time that should go to the near-term work that actually determines the trajectory.</p><p>A useful multi-year roadmap has three layers. Near term, twelve months or less, is detailed: named deliverables, dependencies, owners. Medium term, twelve to twenty-four months, is directional: the capabilities you are building toward, the bets you are making, the things you are deliberately not doing. Long term, beyond twenty-four months, is principles: the outcomes you are optimizing for and the constraints you will not violate.</p><p>The medium and long-term layers are where strategy lives. What you choose to commit to in year two is a signal about what you believe will be true about the market, the technology, and the organization. Making those bets explicit, rather than hiding them in milestone dates, makes them legible to the leadership that has to approve them and the teams that have to execute them.</p><p>Review the multi-year roadmap quarterly, not annually. Not to update every milestone, but to test whether the bets you made still hold. Markets move, technology moves, priorities shift. A roadmap that is only reviewed annually is a document, not a plan.</p><p>The value of multi-year planning is not the plan. It is the thinking the plan forces. Done well, it surfaces the decisions that need to be made before the work starts rather than in the middle of it.</p>"
+    },
+    {
+      "slug": "technical-debt-as-program",
+      "title": "Managing Technical Debt as a Program",
+      "date": "2027-11-07",
+      "category": "Program Management",
+      "description": "Technical debt managed as a list of tickets goes nowhere. Technical debt managed as a program with scope, milestones, and executive visibility gets funded and resolved.",
+      "tags": [
+        "Technical Program Manager",
+        "Engineering",
+        "Program Management",
+        "Strategy"
+      ],
+      "body": "<p>Technical debt is the most undermanaged cost in most engineering organizations. It appears in backlogs, in engineering estimates, in the slow tail of every release cycle. It does not appear in the portfolio review, which is why it is never funded until it becomes a crisis.</p><p>The intervention is straightforward: treat technical debt reduction as a program. Name it. Scope it. Assign it an owner and a milestone. Put it in the portfolio review next to the feature work. That is the only way it gets the resource conversations it deserves.</p><p>The business case is not technical. Engineering leaders already know the debt is real. The audience for the business case is the product and business leadership that controls the roadmap. For them, the argument is: this debt is adding N weeks to every feature we ship in this area. Reducing it buys back N weeks per quarter, which is worth more than the features we delay to do it.</p><p>Quantify the debt in units leadership understands. Not lines of code or test coverage percentages. Weeks of engineering time lost to workarounds and incident response. Cost of the incidents themselves. Velocity compared to teams without the debt. Those are the numbers that produce budget conversations.</p><p>At Roku, I made the case for three months of focused payment infrastructure work as a program, not as backlog. It was approved because the framing was correct: the alternative was not shipping the debt fix, it was continuing to pay the debt tax on every quarter that followed. Framed that way, the investment was obvious.</p>"
+    },
+    {
+      "slug": "running-pilot-before-rollout",
+      "title": "Running a Pilot Before Full Rollout",
+      "date": "2027-11-19",
+      "category": "Execution",
+      "description": "A pilot is not a soft launch. It is a structured experiment designed to answer specific questions before the answers become expensive to change.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Execution",
+        "Strategy"
+      ],
+      "body": "<p>The purpose of a pilot is to generate information you do not have, in a context where acting on that information is still cheap. A soft launch is about risk management. A pilot is about learning. Those are different goals and they produce different designs.</p><p>Start with the questions. What do you not know about this program that would change how you run the full rollout? The pilot is designed to answer those questions. If you cannot name the questions before the pilot starts, you are not running a pilot. You are launching with a smaller audience.</p><p>The questions that matter most are usually about adoption and integration, not about the technology. Does the process work for the people it is supposed to serve? What does the support load look like? What breaks when this interacts with systems that were not in the design spec? Those are the things you find in a pilot and fix before they are multiplied across the full rollout.</p><p>Define the pilot success criteria before you start. Not success as in nothing went wrong, success as in you have answers to the questions you designed the pilot to answer. A pilot that surfaced three significant issues and produced clear fixes is a successful pilot. A pilot that produced no findings is either a sign of a clean program or a sign that you were not looking hard enough.</p><p>Time-box the pilot and resist the urge to extend it. Extension usually means the team found something uncomfortable and needs more time before committing to the finding. Name the finding and move on. The pilot is not supposed to be perfect. It is supposed to be informative.</p>"
+    },
+    {
+      "slug": "program-charter-document",
+      "title": "The Program Charter: What Belongs In It",
+      "date": "2027-12-01",
+      "category": "Program Management",
+      "description": "A program charter is not a scope document or a project plan. It is the contract between the program and its stakeholders about what is being built, why, and how success is defined.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Planning",
+        "Execution"
+      ],
+      "body": "<p>I have read hundreds of program charters. The ones that work share a structure that the ones that don't lack. The difference is not format. It is specificity about the things that are hardest to get specific about before the work starts.</p><p>The first thing that belongs in a charter is the problem, not the solution. Most charters open with what the program will deliver. The ones that open with why it exists, and what breaks if it doesn't, are harder to write and far easier to use when priorities shift and scope gets contested.</p><p>Second is scope, stated in both directions. What is in scope and what is explicitly out of scope. The out-of-scope list is the more useful one. Things that are not listed as out of scope will be brought to the program at some point and will be harder to reject without the document.</p><p>Third is the definition of done. Not the milestone dates, the conditions under which the program is complete. What does success look like in measurable terms? What does the handoff look like? A program without a clear done condition does not end, it fades.</p><p>Fourth is the decision-making structure. Who can make what decisions without escalating, who needs to be consulted, and who needs to approve. That map prevents the two most common failure modes: decisions that never get made because nobody knows who owns them, and decisions that get unmade because the wrong person made them.</p><p>A charter written clearly enough to be held accountable to is a charter that will be used. One written loosely enough to be comfortable is a document that will be ignored when it matters.</p>"
+    },
+    {
+      "slug": "tpm-career-growth-to-staff",
+      "title": "Growing From Senior to Staff TPM",
+      "date": "2027-12-13",
+      "category": "Career",
+      "description": "The jump from senior to staff is not about doing more of the same work faster. It is about a fundamentally different relationship to scope, ambiguity, and organizational influence.",
+      "tags": [
+        "Career",
+        "Technical Program Manager",
+        "Leadership",
+        "Program Management"
+      ],
+      "body": "<p>Senior TPMs execute programs well. Staff TPMs define what programs should exist. That is the simplest version of the difference, and it understates how different the day-to-day actually is.</p><p>At the senior level, you receive scope. The program is defined, the stakeholders are named, and your job is to drive it to completion. You are excellent at this. The promotion to staff is not a reward for being excellent at it. It is a signal that the organization believes you can do something different.</p><p>What staff requires is the ability to look at an organization's work and identify the program that is missing. Not the program that someone asked for, the program that the business needs but has not yet articulated. That requires understanding the business deeply enough to have opinions about where the risk is, what the next constraint will be, and what needs to be built before the build that everyone is already planning.</p><p>The other thing staff requires is a different relationship to ambiguity. Senior TPMs work in ambiguous situations. Staff TPMs are comfortable being the person who makes them less ambiguous for others. That is a leadership posture, not a project management skill. It means writing the framing document before anyone asked for one, running the alignment meeting that nobody scheduled, and making the decision that was waiting for someone to make it.</p><p>The path is specific. Find the program your organization needs but has not named. Name it, scope it, and drive it without being asked to. Do that once and it is an accomplishment. Do it repeatedly and it is a pattern. That pattern is what gets you to staff.</p>"
+    },
+    {
+      "slug": "building-institutional-knowledge",
+      "title": "Building Institutional Knowledge as a TPM",
+      "date": "2027-12-25",
+      "category": "Program Management",
+      "description": "The programs that survive turnover have their knowledge written down. The ones that don't restart from scratch every time someone leaves.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Leadership",
+        "Communication"
+      ],
+      "body": "<p>The most expensive thing in most engineering organizations is re-learning what was already learned. Teams that have to rediscover why a decision was made, or what was tried and didn't work, pay the cost of the original investigation twice. The TPM who writes these things down while they are fresh reduces that cost systematically.</p><p>The four things worth capturing are decisions, failures, the current state of constraints, and the people map. Decisions are the most obvious. Failures are the most neglected. The current state of constraints, what is technically possible and what isn't, given the existing system, is what engineers need when they start something new. The people map, who knows what and who you need to talk to before you change something, is what prevents the most painful kinds of surprises.</p><p>The format that gets used is the simplest one. A decision log with four columns. A lessons-learned doc that gets updated at each milestone, not just at the retrospective. A constraints doc that lives with the architecture documentation. A stakeholder map that is treated as a living document and not a one-time artifact.</p><p>The discipline to keep these updated is the discipline that separates programs that scale from programs that depend on one or two people being present to function. When a key person leaves a program with good documentation, the program loses the person and keeps the knowledge. That is the asset.</p><p>Write it while you remember it. The institutional knowledge that lives in the TPM's head is not institutional knowledge. It is personal knowledge with an organization-wide cost.</p>"
+    },
+    {
+      "slug": "influencing-without-authority-senior-levels",
+      "title": "Influencing Without Authority at Senior Levels",
+      "date": "2028-01-06",
+      "category": "Leadership",
+      "description": "Influencing a VP or a C-level sponsor without a direct reporting relationship requires a different toolkit than influencing a peer team. The stakes and the dynamics are different.",
+      "tags": [
+        "Leadership",
+        "Technical Program Manager",
+        "Executive",
+        "Program Management"
+      ],
+      "body": "<p>Influence at senior levels is not louder or more frequent communication. It is sharper framing of trade-offs, faster access to the information executives do not have time to gather, and the credibility that comes from being consistently right about what matters.</p><p>Executives do not have time to evaluate process. They have time to evaluate outcomes and risks. The TPM who comes to a senior leader with a clear statement of the decision that needs to be made, the options, and the cost of inaction is useful. The TPM who comes with a status update is schedulable.</p><p>The relationship builds differently at senior levels. Peer relationships build through collaboration over time. Relationships with senior stakeholders build through demonstrated judgment in high-stakes situations. The first time you tell a VP that their timeline assumption is wrong and you are right, the relationship changes. That kind of directness, done once and proven correct, is more powerful than a year of agreeable check-ins.</p><p>The risk that comes with senior influence is also different. A wrong read of a senior stakeholder's priorities costs more than a wrong read of a peer's. The investment in understanding what a VP or executive actually cares about, not what they say they care about but what they judge by when things go right or wrong, is the most important research a TPM can do before trying to influence that person.</p><p>Senior influence is not about access. Most senior leaders are accessible if the reason for the conversation is clear and the ask is specific. It is about having something worth saying when the access is there.</p>"
+    },
+    {
+      "slug": "payment-systems-program-lessons",
+      "title": "What Running a Payment System Migration Taught Me",
+      "date": "2028-01-18",
+      "category": "Execution",
+      "description": "The Roku payment gateway migration to Adyen was the hardest program I have run. The lessons are specific enough to be useful beyond payments.",
+      "tags": [
+        "Technical Program Manager",
+        "Roku",
+        "Execution",
+        "Program Management"
+      ],
+      "body": "<p>The Roku migration was forty million subscribers, seven months, eight organizations, and a contract deadline that could not move. Everything went wrong at some point. The program delivered on time. Here is what I learned.</p><p>The first lesson is that financial reconciliation is the hardest integration problem in a payment migration. Not the API, not the settlement, the reconciliation. Connecting what went through the payment processor to what landed in the financial ledger requires a level of data integrity that neither system was designed to provide independently. Build the reconciliation system before you build the migration. If you build it after, you are reconciling a moving target.</p><p>The second lesson is that Finance sign-off is a launch criterion, not a post-launch check. We gated our go-live on a signed reconciliation report from Finance. That forced the reconciliation work to be done and verified before we moved subscribers. It also forced Finance to engage with the technical implementation earlier than they wanted to, which was uncomfortable and exactly right.</p><p>The third lesson is about scope. We cut ZipRecruiter from the initial scope when it became clear the integration would take longer than the timeline allowed. That decision was painful because the business wanted it. It was correct because a delayed launch would have cost more than the missing feature. Scope control at the end of a program is harder than scope control at the beginning. Practice it at the beginning so you have the muscle when you need it at the end.</p><p>The fourth is that a tiger team for a specific, bounded integration problem works better than adding the problem to the general program. We stood up a three-person team to resolve the reconciliation gap with Finance. Two weeks, one deliverable. That team moved faster than the broader program could have, because the problem was theirs alone.</p>"
+    },
+    {
+      "slug": "responsible-ai-governance-programs",
+      "title": "Running a Responsible AI Governance Program",
+      "date": "2028-01-30",
+      "category": "AI Program Management",
+      "description": "Responsible AI is not an ethics exercise. It is a program management problem: getting AI products through internal review, external audit, and regulatory scrutiny without slowing the teams building them.",
+      "tags": [
+        "AI Program Management",
+        "Compliance Program Manager",
+        "Technical Program Manager",
+        "Governance"
+      ],
+      "body": "<p>Responsible AI governance programs that live in policy teams produce documents. Programs that live in the product and engineering organization produce controls. The difference is whether the guidance is written for the team that will be audited or the team that will be reading and following it.</p><p>The AI governance work I did at Atlassian on the Rovo integration touched model selection, output auditing, and data handling. None of those were policy questions. They were engineering questions that required policy inputs. The governance program's job was to translate the policy into requirements engineering could implement, not to review the policy with engineering and call that compliance.</p><p>The practical structure that works is a review gate at the design phase, not the deployment phase. When an AI feature passes through design review, the governance questions get asked: what data is the model trained on, what is the output distribution, what are the failure modes, and what is the monitoring plan. Asking these at design changes the design. Asking them at deployment changes the launch date.</p><p>The regulatory landscape for AI is moving faster than most product organizations can track. The TPM's job is not to know all the regulations but to know which ones apply to which products and to have a relationship with the legal and policy teams who do know them. That relationship is what gets regulations translated into actionable engineering requirements before they become compliance findings.</p><p>Responsible AI done well is competitive advantage. Products that pass external audits without surprises and that have documented evidence of governance controls are more deployable in enterprise accounts than products that do not. Frame it that way and the engineering investment becomes easier to justify.</p>"
+    },
+    {
+      "slug": "working-with-legal-on-technical-programs",
+      "title": "Working With Legal on Technical Programs",
+      "date": "2028-02-11",
+      "category": "Compliance Program Manager",
+      "description": "Legal reviews that happen at the end of a program are a tax on bad planning. The TPMs who get clean launches involve legal at the right points earlier in the process.",
+      "tags": [
+        "Compliance Program Manager",
+        "Technical Program Manager",
+        "Program Management",
+        "Governance"
+      ],
+      "body": "<p>The relationship between TPMs and legal teams tends to follow a pattern: TPM is moving fast, legal is slowing things down, frustration accumulates on both sides, and the launch is delayed anyway. The thing that changes this pattern is earlier engagement, not better negotiation at the end.</p><p>Legal reviews at the end of a program are slow for a structural reason: the reviewers are seeing the design for the first time while the engineers who built it are ready to ship. The questions legal asks, about data handling, liability, contract terms, and compliance, are the same questions they would have asked six months earlier. The difference is that earlier, the answers could change the design. At launch, they can only delay it.</p><p>The engagement model that works is identifying the legal questions that the program is likely to produce and bringing them to legal before they are blocked on an answer. What data will this system collect and how will it be used? What are the contract implications of this API dependency? What are the retention and deletion requirements for this data type? Those questions answered in month one cost a conversation. Answered in month six, they cost a delay.</p><p>The other thing worth doing is building a relationship with the specific legal counsel who covers your product area before you need them on a deadline. A lawyer who knows the program context can review faster and can flag the things that actually matter rather than giving maximum caution on everything. That relationship is built in the low-pressure moments, not the launch crunch.</p>"
+    },
+    {
+      "slug": "program-health-vs-project-health",
+      "title": "Program Health Versus Project Health",
+      "date": "2028-02-23",
+      "category": "Program Management",
+      "description": "A program can be on time and still be unhealthy. The difference is in what you are measuring and at what level.",
+      "tags": [
+        "Technical Program Manager",
+        "Program Management",
+        "Metrics",
+        "Communication"
+      ],
+      "body": "<p>Project health asks: are we hitting our milestones. Program health asks: are the milestones the right ones and is the trajectory sustainable. Those are different questions that require different data and produce different interventions.</p><p>A program where every project is green but the team is overloaded, the scope keeps expanding, and the stakeholders are misaligned on what success looks like is a program with unhealthy fundamentals dressed in green status. Project management tracks the projects. Program management tracks the health of the whole.</p><p>The indicators I watch at the program level are things that do not appear on a Gantt chart. Decision latency: how long does it take the program to make a decision after it needs one. Escalation rate: how many issues are surfacing above the program level that should be resolved within it. Team sentiment: are the people on this program energized or exhausted. Stakeholder alignment: do the people who need to agree on success still agree on it.</p><p>Those indicators are harder to quantify than milestone completion, which is why most reporting ignores them. But they are leading indicators. A program with rising decision latency and dropping team sentiment will miss its dates. A program that is two weeks behind schedule but has clear decisions, aligned stakeholders, and a team that understands the recovery plan is often in better shape than its status report suggests.</p><p>Report both layers. The project-level view tells you what is happening. The program-level view tells you what will happen next.</p>"
+    },
+    {
+      "slug": "what-good-looks-like-staff-tpm",
+      "title": "What Good Looks Like at the Staff TPM Level",
+      "date": "2028-03-06",
+      "category": "Career",
+      "description": "Staff TPM is not a title. It is a set of behaviors that are visible before the promotion happens and that continue to compound afterward.",
+      "tags": [
+        "Career",
+        "Technical Program Manager",
+        "Leadership",
+        "Program Management"
+      ],
+      "body": "<p>I have been asked what good looks like at the staff level often enough that I have a reasonably clear answer. The honest version is not a list of skills. It is a description of how a staff TPM occupies a room, makes a decision, and handles a situation that has no clear playbook.</p><p>A staff TPM walks into a room with a point of view. Not an agenda, a perspective informed by real knowledge of the business, the technical constraints, and the organizational dynamics. They offer that perspective directly and update it when they hear something that changes it. They do not wait for consensus to form before contributing, and they do not hold their position when the evidence changes.</p><p>A staff TPM makes decisions that are not theirs to make, because nobody else is making them and the program needs them made. They document the decision, name who was consulted, and hold it. That kind of initiative at scale, repeated across programs and over time, is the thing that gets noticed before a promotion is discussed.</p><p>A staff TPM also knows what they do not know and says so specifically. Vague uncertainty is a senior behavior. Staff-level uncertainty is named: I do not know the regulatory timeline for this market and I need to find out before we commit to a date. That specificity makes the unknown workable rather than uncomfortable.</p><p>The last thing, which is also the hardest to articulate, is presence. A staff TPM makes the organization feel more capable when they are engaged with a problem. Teams feel clearer. Decisions feel closer. The path forward feels more navigable. That quality is the compound result of all the others, and it is what people mean when they say someone is ready for the next level.</p>"
     }
   ]
 }
