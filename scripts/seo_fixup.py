@@ -49,12 +49,27 @@ DESCRIPTIONS = {
 }
 
 TITLES = {
-    "contact.html": "Hire a Senior Technical Program Manager | Arsenii Samoilov",
+    "index.html": "Arsenii Samoilov | Senior Technical Program Manager",
+    "career.html": "Senior TPM Resume | Arsenii Samoilov | Intuit, Apple",
+    "insights.html": "TPM Insights | Arsenii Samoilov",
+    "contact.html": "Hire a Senior TPM | Arsenii Samoilov",
+    "interview-questions.html": "TPM Interview Questions (2026) | Arsenii Samoilov",
+    "salary-guide.html": "TPM Salary Guide & Calculator (2026) | Arsenii",
+    "scrum-master-vs-tpm.html": "Scrum Master vs TPM: What's the Difference?",
     "tpm-vs-project-manager.html": "TPM vs Project Manager: What's the Difference?",
     "tpm-vs-product-manager.html": "TPM vs Product Manager: What's the Difference?",
-    "tools/raid-log.html": "Free RAID Log Template | Risks, Assumptions, Issues",
-    "tools/status-report-generator.html": "Free Status Report Generator | Weekly Template",
-    "interview-questions.html": "TPM Interview Questions (2026) | Arsenii Samoilov",
+    "tools/index.html": "Free TPM Tools | RACI, Risk Register, RAID",
+    "tools/raci-matrix-generator.html": "Free RACI Matrix Generator | Build Online",
+    "tools/risk-register.html": "Free Program Risk Register | Export Online",
+    "tools/stakeholder-matrix.html": "Free Stakeholder Matrix | Power/Interest Grid",
+    "tools/decision-matrix.html": "Free Weighted Decision Matrix | Score Options",
+    "tools/prioritization-matrix.html": "Free Effort/Impact Prioritization Matrix",
+    "tools/wsjf-calculator.html": "Free WSJF Calculator | Prioritization Tool",
+    "insights/project-manager-vs-technical-program-manager.html": "PM to TPM: What Actually Changes | Arsenii",
+    "insights/compliance-playbook.html": "Compliance PM Playbook | Arsenii Samoilov",
+    "insights/ai-adoption.html": "Enterprise AI Adoption at Scale | Arsenii",
+    "insights/growth-pm.html": "Growth PM in Practice | Arsenii Samoilov",
+    "insights/managing-dependencies-eight-teams.html": "Dependencies Across Eight Teams | Arsenii",
 }
 
 

@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "ai-adoption",
-      "title": "Enterprise AI Adoption at 60% Scale",
+      "title": "Enterprise AI Adoption at Scale",
       "date": "2026-01-15",
       "category": "AI Program Management",
       "description": "What it actually takes to move AI adoption numbers at enterprise scale, from instrumenting telemetry to navigating the politics of feature rollouts.",
@@ -16,7 +16,7 @@
     },
     {
       "slug": "compliance-playbook",
-      "title": "Compliance PM Playbook: Closing Regulatory Issues",
+      "title": "Compliance PM Playbook",
       "date": "2026-02-10",
       "category": "Compliance",
       "description": "How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.",
@@ -30,7 +30,7 @@
     },
     {
       "slug": "growth-pm",
-      "title": "Growth PM: $3M to $13M in Practice",
+      "title": "Growth PM in Practice",
       "date": "2026-03-05",
       "category": "Growth",
       "description": "The mechanics behind scaling a funded account portfolio 4x: what changed, what broke, and what a TPM actually controls in a growth motion.",
@@ -44,7 +44,7 @@
     },
     {
       "slug": "project-manager-vs-technical-program-manager",
-      "title": "From Project Manager to TPM: What Actually Changes",
+      "title": "PM to TPM: What Actually Changes",
       "date": "2025-07-15",
       "category": "Program Management",
       "description": "Moving from project manager to technical program manager? Scope, skills, and day-to-day work shift more than the title. A practitioner's view.",

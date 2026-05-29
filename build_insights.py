@@ -340,7 +340,7 @@ def build_index(published):
                 '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
 
     html = page_head(
-        "TPM Insights | Arsenii Samoilov | Senior Technical Program Manager",
+        "TPM Insights | Arsenii Samoilov",
         "TPM insights from a Senior Technical Program Manager: AI adoption, compliance, growth programs, and enterprise delivery after 19+ years in tech.",
         canonical, "", "", extra_ld,
         "Technical Program Manager, Senior TPM, AI Program Management, Compliance Program Manager, Engineering Program Manager, program management insights, TPM blog, Arsenii Samoilov, enterprise program management, Bay Area")

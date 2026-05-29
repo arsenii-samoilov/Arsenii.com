@@ -6,7 +6,7 @@
     <atom:link href="https://arsenii.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 07:12:47 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 07:18:54 -0800</lastBuildDate>
     <item>
       <title>Dependencies Across Eight Engineering Teams</title>
       <link>https://arsenii.com/insights/managing-dependencies-eight-teams.html</link>
@@ -15,7 +15,7 @@
       <description>Lessons from running the Einstein AI portfolio at Salesforce across eight research and engineering teams on different clocks.</description>
     </item>
     <item>
-      <title>Growth PM: $3M to $13M in Practice</title>
+      <title>Growth PM in Practice</title>
       <link>https://arsenii.com/insights/growth-pm.html</link>
       <guid isPermaLink="true">https://arsenii.com/insights/growth-pm.html</guid>
       <pubDate>Thu, 05 Mar 2026 09:00:00 -0800</pubDate>
@@ -29,14 +29,14 @@
       <description>Half the meetings on a program re-litigate decisions that were already made. A decision log ends that for almost no cost.</description>
     </item>
     <item>
-      <title>Compliance PM Playbook: Closing Regulatory Issues</title>
+      <title>Compliance PM Playbook</title>
       <link>https://arsenii.com/insights/compliance-playbook.html</link>
       <guid isPermaLink="true">https://arsenii.com/insights/compliance-playbook.html</guid>
       <pubDate>Tue, 10 Feb 2026 09:00:00 -0800</pubDate>
       <description>How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.</description>
     </item>
     <item>
-      <title>Enterprise AI Adoption at 60% Scale</title>
+      <title>Enterprise AI Adoption at Scale</title>
       <link>https://arsenii.com/insights/ai-adoption.html</link>
       <guid isPermaLink="true">https://arsenii.com/insights/ai-adoption.html</guid>
       <pubDate>Thu, 15 Jan 2026 09:00:00 -0800</pubDate>
@@ -64,7 +64,7 @@
       <description>A field guide to the first month on an unfamiliar program: what to map, who to meet, and the trap most people fall into.</description>
     </item>
     <item>
-      <title>From Project Manager to TPM: What Actually Changes</title>
+      <title>PM to TPM: What Actually Changes</title>
       <link>https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</link>
       <guid isPermaLink="true">https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</guid>
       <pubDate>Tue, 15 Jul 2025 09:00:00 -0800</pubDate>
