@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /images/
+Allow: /food/
+Allow: /photos/
 
+# Block archive and server config files
+Disallow: /archive/
+Disallow: /sass/
+Disallow: /server/
+
+# Sitemaps
 Sitemap: https://arsenii.com/sitemap.xml
+Sitemap: https://arsenii.com/sitemap-pages.xml
+Sitemap: https://arsenii.com/sitemap-images.xml

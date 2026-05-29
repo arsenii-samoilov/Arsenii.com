@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://arsenii.com/</loc>
+    <image:image>
+      <image:loc>https://arsenii.com/images/headshot.png</image:loc>
+      <image:title>Arsenii Samoilov — Senior Technical Program Manager, Bay Area</image:title>
+      <image:caption>Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/photos/photography-share-cover.jpg</image:loc>
+      <image:title>Photography by Arsenii Samoilov, Technical Program Manager</image:title>
+      <image:caption>Fine art and automotive photography by Arsenii Samoilov</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Career page -->
+  <url>
+    <loc>https://arsenii.com/career.html</loc>
+    <image:image>
+      <image:loc>https://arsenii.com/images/headshot-share.jpg</image:loc>
+      <image:title>Arsenii Samoilov — Senior Technical Program Manager Resume</image:title>
+      <image:caption>Arsenii Samoilov, Engineering Program Manager and Senior TPM available for program leadership roles</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Culinary page — all food images -->
+  <url>
+    <loc>https://arsenii.com/culinary.html</loc>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20231030_172125267.MP~2.jpg</image:loc>
+      <image:title>Freshly baked bread loaf — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Freshly baked bread loaf, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20171109_225255-edited.jpg</image:loc>
+      <image:title>Crispy fried bacon bits in a bowl — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crispy fried bacon bits in a bowl, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20171109_224901-edited.jpg</image:loc>
+      <image:title>Split pea soup with crispy bacon — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Split pea soup with crispy bacon, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20200905_153012.jpg</image:loc>
+      <image:title>Bell peppers on the grill — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Bell peppers on the grill, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/IMG_20160918_100127.jpg</image:loc>
+      <image:title>Cottage cheese pancakes — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Cottage cheese pancakes, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/original_000c85d5-2be7-46b1-948e-fa501133e80b_P.jpg</image:loc>
+      <image:title>Freshly made spaghetti drying on a board — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Freshly made spaghetti drying on a board, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20230903_015045702.MP~2.jpg</image:loc>
+      <image:title>Lasagna with meat and béchamel — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Lasagna with meat and béchamel, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20181117_200312-edited.jpg</image:loc>
+      <image:title>Grilled lobster tails with green beans — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Grilled lobster tails with green beans, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20231126_032124283.MP~2.jpg</image:loc>
+      <image:title>Homemade pizza with salami and peppers — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Homemade pizza with salami and peppers, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20210120_031643774.MP.jpg</image:loc>
+      <image:title>Halved roasted spaghetti squash on a baking sheet — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Halved roasted spaghetti squash on a baking sheet, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20250512_000033058.MP.jpg</image:loc>
+      <image:title>Pommes fondantes — potato cylinders melting in butter — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Pommes fondantes — potato cylinders melting in butter, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20251128_024801329.MP.jpg</image:loc>
+      <image:title>Sautéed French green beans with shallots — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Sautéed French green beans with shallots, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20171023_184110-edited.jpg</image:loc>
+      <image:title>Grilled pork ribs with rotini pasta and mushroom cream sauce — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Grilled pork ribs with rotini pasta and mushroom cream sauce, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20230910_015851168.MP~2.jpg</image:loc>
+      <image:title>Bacon-wrapped beef roulades on grill — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Bacon-wrapped beef roulades on grill, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20240721_014451582.MP.jpg</image:loc>
+      <image:title>Beef shashlik skewers on a tray ready for the grill — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Beef shashlik skewers on a tray ready for the grill, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/645445348_10163605635599827_4824392121592498930_n.jpg</image:loc>
+      <image:title>Beef tournedos with red wine reduction and asparagus gratin — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Beef tournedos with red wine reduction and asparagus gratin, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/645928668_10163605635849827_8868464653862091933_n.jpg</image:loc>
+      <image:title>Bacon-wrapped beef tournedos with red wine reduction — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Bacon-wrapped beef tournedos with red wine reduction, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20210101_041200282.MP.jpg</image:loc>
+      <image:title>Braised beef with mushrooms over mashed potato — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Braised beef with mushrooms over mashed potato, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20251206_183829776.MP.jpg</image:loc>
+      <image:title>Meatloaf on smoker with smoke rising — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Meatloaf on smoker with smoke rising, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20241021_022744058.MP.jpg</image:loc>
+      <image:title>Spice-rubbed pork roast — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Spice-rubbed pork roast, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20200526_194031.jpg</image:loc>
+      <image:title>Sliced prosciutto-wrapped pork loin on a baking sheet — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Sliced prosciutto-wrapped pork loin on a baking sheet, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20200905_131749(1).jpg</image:loc>
+      <image:title>Prosciutto-wrapped pork tenderloin roulades on a rack before roasting — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Prosciutto-wrapped pork tenderloin roulades on a rack before roasting, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/original_04dfbc81-b0ca-487d-85b1-2c018b323a47_M(1).jpg</image:loc>
+      <image:title>Pork loin topped with roasted pear slices — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Pork loin topped with roasted pear slices, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/original_faf1e27f-0639-4336-90bc-ba5ae18b6924_P(1).jpg</image:loc>
+      <image:title>Baked meatballs on rack — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Baked meatballs on rack, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20230128_030654531.MP~2.jpg</image:loc>
+      <image:title>Grilled chicken with tomato and melted cheese — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Grilled chicken with tomato and melted cheese, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20231028_022535299.MP~3.jpg</image:loc>
+      <image:title>Grilled chicken breast caprese style — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Grilled chicken breast caprese style, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20240302_031536441.MP~2.jpg</image:loc>
+      <image:title>Glazed charred chicken thighs — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Glazed charred chicken thighs, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20250310_014808409.MP.jpg</image:loc>
+      <image:title>Chicken shashlik skewers on grill — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Chicken shashlik skewers on grill, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20251110_032743320.MP.jpg</image:loc>
+      <image:title>Glazed chicken drumsticks on a rack — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Glazed chicken drumsticks on a rack, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20221218_031915952.MP~2.jpg</image:loc>
+      <image:title>Roasted chicken quarters — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Roasted chicken quarters, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20230923_211719027.MP.jpg</image:loc>
+      <image:title>Sliced herb chicken with shaved Parmesan — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Sliced herb chicken with shaved Parmesan, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/644098888_10163605845314827_2863079225951673598_n.jpg</image:loc>
+      <image:title>Chicken breast with mango chutney on jewelled couscous — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Chicken breast with mango chutney on jewelled couscous, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/644242732_10163605845264827_612329180930196038_n.jpg</image:loc>
+      <image:title>Sliced herb chicken roulade with mango sauce on couscous — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Sliced herb chicken roulade with mango sauce on couscous, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/646349238_10163605845174827_6111819117994439642_n.jpg</image:loc>
+      <image:title>Stuffed chicken roulade with mango on couscous topped with sage — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Stuffed chicken roulade with mango on couscous topped with sage, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/IMG_20160609_191342.jpg</image:loc>
+      <image:title>Sautéed chicken pieces with garlic and parsley — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Sautéed chicken pieces with garlic and parsley, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/IMG_20160804_211718.jpg</image:loc>
+      <image:title>Chicken or turkey cutlets frying golden in a cast iron pan — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Chicken or turkey cutlets frying golden in a cast iron pan, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20200524_210615.jpg</image:loc>
+      <image:title>Braised chicken leg with mushrooms and baby carrots — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Braised chicken leg with mushrooms and baby carrots, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/original_89ae0bbc-bbc2-41ce-9ffd-3a480d0ae797_M(1).jpg</image:loc>
+      <image:title>Prosciutto-wrapped chicken breasts — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Prosciutto-wrapped chicken breasts, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/original_8d84f9fa-f5cf-412a-bafa-560e61fa8c26_M(1).jpg</image:loc>
+      <image:title>Roasted chicken leg with mushrooms and carrots — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Roasted chicken leg with mushrooms and carrots, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20201216_174440420.MP.jpg</image:loc>
+      <image:title>Jar of homemade bacon bourbon infusion — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Jar of homemade bacon bourbon infusion, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20171207_151031.jpg</image:loc>
+      <image:title>Apple rose tart — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Apple rose tart, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20190105_194714-edited.jpg</image:loc>
+      <image:title>Poached pears with ice cream — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Poached pears with ice cream, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20190104_190011-edited.jpg</image:loc>
+      <image:title>Poached pears — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Poached pears, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20200829_202313.jpg</image:loc>
+      <image:title>Crème caramel flan — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crème caramel flan, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20211030_222943022~2.jpg</image:loc>
+      <image:title>Blueberry bundt cake with powdered sugar — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Blueberry bundt cake with powdered sugar, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20240905_193854138.PORTRAIT~2.jpg</image:loc>
+      <image:title>Dark chocolate truffle cubes with mint — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Dark chocolate truffle cubes with mint, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20250713_050553764.MP.jpg</image:loc>
+      <image:title>Chopped dark chocolate — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Chopped dark chocolate, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/00100lrPORTRAIT_00100_BURST20200905211413517_CO.jpg</image:loc>
+      <image:title>Crème caramel with spun sugar arch — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crème caramel with spun sugar arch, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/20131128_193946.jpg</image:loc>
+      <image:title>Walnut cake slice with whipped cream and strawberry — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Walnut cake slice with whipped cream and strawberry, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/648277798_10163623104794827_5765547761393359162_n.jpg</image:loc>
+      <image:title>Crème brûlée in a red ramekin with fresh mint — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crème brûlée in a red ramekin with fresh mint, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20201211_043113689.MP.jpg</image:loc>
+      <image:title>Crème brûlée with torched caramel crust — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crème brûlée with torched caramel crust, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20180417_201349.jpg</image:loc>
+      <image:title>Fresh blackberries simmering in cream — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Fresh blackberries simmering in cream, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20210224_195112460.MP.jpg</image:loc>
+      <image:title>Cappuccino — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Cappuccino, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20251004_163523346.MP.jpg</image:loc>
+      <image:title>Espresso in a glass Bialetti cup — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Espresso in a glass Bialetti cup, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20240506_200132741.MP~2.jpg</image:loc>
+      <image:title>Crème brûlée with strawberry and espresso — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Crème brûlée with strawberry and espresso, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/MVIMG_20180416_203435.jpg</image:loc>
+      <image:title>Homemade jam jar — blackberry or berry preserve — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Homemade jam jar — blackberry or berry preserve, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arsenii.com/food/PXL_20230517_145329093.MP.jpg</image:loc>
+      <image:title>Espresso pulling on a Breville with precision scale — Cooking by Arsenii Samoilov</image:title>
+      <image:caption>Espresso pulling on a Breville with precision scale, culinary photography by Arsenii Samoilov, Senior Technical Program Manager</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
