@@ -120,7 +120,10 @@
   <main>
     <section class="hero">
       <div class="hero-photo">
-        <img src="images/headshot.png" alt="Arsenii Samoilov" class="hero-headshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <picture>
+          <source srcset="images/headshot.webp" type="image/webp">
+          <img src="images/headshot.png" alt="Arsenii Samoilov — Senior Technical Program Manager, Bay Area" class="hero-headshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </picture>
         <span class="hero-initial" style="display:none">A</span>
       </div>
       <h1>Senior Technical Program Manager</h1>
@@ -168,8 +171,11 @@
       </article>
       <article class="preview-card preview-photography" style="padding:0;overflow:hidden;">
         <a href="photography.html" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
-          <img src="photos/photography-share-cover.jpg" alt="Photography by Arsenii Samoilov"
+          <picture>
+            <source srcset="photos/photography-share-cover.webp" type="image/webp">
+            <img src="photos/photography-share-cover.jpg" alt="Photography by Arsenii Samoilov — Technical Program Manager and photographer"
             style="width:100%;display:block;border-radius:var(--radius) var(--radius) 0 0;aspect-ratio:16/9;object-fit:cover;object-position:center;flex-shrink:0;" loading="lazy">
+          </picture>
           <div class="preview-card-inner">
             <h2 style="font-family:var(--font-serif);font-size:var(--text-lg);margin:0 0 0.75rem;font-weight:600;text-align:center;display:none;">Photography</h2>
             <p style="color:var(--text);margin:auto 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Capturing the Moment</p>
