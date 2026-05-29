@@ -154,7 +154,7 @@ def build_article_page(a, published):
         "description": a["description"],
         "datePublished": a["date"],
         "dateModified": modified,
-        "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": SITE, "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269"]},
+        "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": SITE, "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]},
         "publisher": {"@type": "Person", "name": "Arsenii Samoilov"},
         "mainEntityOfPage": canonical,
         "url": canonical,
@@ -249,7 +249,7 @@ def build_index(published):
         "name": "TPM Insights by Arsenii Samoilov",
         "url": canonical,
         "description": "Program management insights from a Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.",
-        "author": {"@type": "Person", "name": "Arsenii Samoilov", "jobTitle": "Senior Technical Program Manager", "url": SITE, "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269"]},
+        "author": {"@type": "Person", "name": "Arsenii Samoilov", "jobTitle": "Senior Technical Program Manager", "url": SITE, "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]},
         "blogPost": [
             {"@type": "BlogPosting", "headline": a["title"],
              "url": SITE + "/insights/" + a["slug"] + ".html",
