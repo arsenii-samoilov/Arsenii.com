@@ -120,12 +120,13 @@
         "publisher": {"@id": "https://arsenii.com/#person"}
       },
       {
-        "@type": "WebPage",
+        "@type": "ProfilePage",
         "@id": "https://arsenii.com/#webpage",
         "name": "Arsenii Samoilov | Senior Technical Program Manager | Bay Area",
         "description": "Enterprise leader with 19+ years of experience across Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Drove $50M+ in revenue by advancing AI-enabled growth and monetization strategies.",
         "url": "https://arsenii.com/",
-        "isPartOf": {"@id": "https://arsenii.com/#website"}
+        "isPartOf": {"@id": "https://arsenii.com/#website"},
+        "mainEntity": {"@id": "https://arsenii.com/#person"}
       },
       {
         "@type": "Person",
@@ -145,8 +146,10 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=33">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov — TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
   <script src="api-config.js"></script>
   <script src="track.js?v=2"></script>
 </head>

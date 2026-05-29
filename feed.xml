@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arsenii Samoilov — TPM Insights</title>
+    <link>https://arsenii.com/insights.html</link>
+    <atom:link href="https://arsenii.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.</description>
+    <language>en-us</language>
+    <managingEditor>samoilov.arsenii@gmail.com (Arsenii Samoilov)</managingEditor>
+    <webMaster>samoilov.arsenii@gmail.com (Arsenii Samoilov)</webMaster>
+    <lastBuildDate>Thu, 28 May 2026 20:00:00 -0700</lastBuildDate>
+
+    <item>
+      <title>How I Scaled AI Feature Adoption to 60% Across an Enterprise Platform</title>
+      <link>https://arsenii.com/insights.html#ai-adoption</link>
+      <guid isPermaLink="true">https://arsenii.com/insights.html#ai-adoption</guid>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 -0800</pubDate>
+      <description>What it actually takes to move AI adoption numbers at enterprise scale — from instrumenting telemetry to navigating the internal politics of feature rollouts.</description>
+    </item>
+
+    <item>
+      <title>The Compliance Program Manager Playbook: Closing Regulatory Issues at Scale</title>
+      <link>https://arsenii.com/insights.html#compliance-playbook</link>
+      <guid isPermaLink="true">https://arsenii.com/insights.html#compliance-playbook</guid>
+      <pubDate>Tue, 10 Feb 2026 09:00:00 -0800</pubDate>
+      <description>How to build a regulatory issue lifecycle framework that actually sticks — from triage to CCO reporting to 96%+ on-time closure.</description>
+    </item>
+
+    <item>
+      <title>From $3M to $13M: What Growth Program Management Actually Looks Like</title>
+      <link>https://arsenii.com/insights.html#growth-pm</link>
+      <guid isPermaLink="true">https://arsenii.com/insights.html#growth-pm</guid>
+      <pubDate>Thu, 05 Mar 2026 09:00:00 -0800</pubDate>
+      <description>The mechanics behind scaling a funded account portfolio 4x — what changed, what broke, and what a Technical Program Manager actually controls in a growth motion.</description>
+    </item>
+
+  </channel>
+</rss>

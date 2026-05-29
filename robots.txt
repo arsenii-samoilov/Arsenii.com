@@ -13,3 +13,6 @@ Disallow: /server/
 Sitemap: https://arsenii.com/sitemap.xml
 Sitemap: https://arsenii.com/sitemap-pages.xml
 Sitemap: https://arsenii.com/sitemap-images.xml
+
+# RSS feed
+# https://arsenii.com/feed.xml
