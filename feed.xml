@@ -1,38 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arsenii Samoilov — TPM Insights</title>
+    <title>Arsenii Samoilov - TPM Insights</title>
     <link>https://arsenii.com/insights.html</link>
     <atom:link href="https://arsenii.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.</description>
+    <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager.</description>
     <language>en-us</language>
-    <managingEditor>samoilov.arsenii@gmail.com (Arsenii Samoilov)</managingEditor>
-    <webMaster>samoilov.arsenii@gmail.com (Arsenii Samoilov)</webMaster>
-    <lastBuildDate>Thu, 28 May 2026 20:00:00 -0700</lastBuildDate>
-
+    <lastBuildDate>Thu, 28 May 2026 20:47:38 -0800</lastBuildDate>
     <item>
-      <title>How I Scaled AI Feature Adoption to 60% Across an Enterprise Platform</title>
-      <link>https://arsenii.com/insights.html#ai-adoption</link>
-      <guid isPermaLink="true">https://arsenii.com/insights.html#ai-adoption</guid>
-      <pubDate>Thu, 15 Jan 2026 09:00:00 -0800</pubDate>
-      <description>What it actually takes to move AI adoption numbers at enterprise scale — from instrumenting telemetry to navigating the internal politics of feature rollouts.</description>
+      <title>Managing Dependencies Across Eight Engineering Teams</title>
+      <link>https://arsenii.com/insights/managing-dependencies-eight-teams.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/managing-dependencies-eight-teams.html</guid>
+      <pubDate>Tue, 28 Apr 2026 09:00:00 -0800</pubDate>
+      <description>Lessons from running the Einstein AI portfolio at Salesforce across eight research and engineering teams on different clocks.</description>
     </item>
-
-    <item>
-      <title>The Compliance Program Manager Playbook: Closing Regulatory Issues at Scale</title>
-      <link>https://arsenii.com/insights.html#compliance-playbook</link>
-      <guid isPermaLink="true">https://arsenii.com/insights.html#compliance-playbook</guid>
-      <pubDate>Tue, 10 Feb 2026 09:00:00 -0800</pubDate>
-      <description>How to build a regulatory issue lifecycle framework that actually sticks — from triage to CCO reporting to 96%+ on-time closure.</description>
-    </item>
-
     <item>
       <title>From $3M to $13M: What Growth Program Management Actually Looks Like</title>
-      <link>https://arsenii.com/insights.html#growth-pm</link>
-      <guid isPermaLink="true">https://arsenii.com/insights.html#growth-pm</guid>
+      <link>https://arsenii.com/insights/growth-pm.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/growth-pm.html</guid>
       <pubDate>Thu, 05 Mar 2026 09:00:00 -0800</pubDate>
-      <description>The mechanics behind scaling a funded account portfolio 4x — what changed, what broke, and what a Technical Program Manager actually controls in a growth motion.</description>
+      <description>The mechanics behind scaling a funded account portfolio 4x: what changed, what broke, and what a TPM actually controls in a growth motion.</description>
     </item>
-
+    <item>
+      <title>Decision Logs: The Most Underrated Tool in Program Management</title>
+      <link>https://arsenii.com/insights/decision-logs-underrated-tpm-tool.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/decision-logs-underrated-tpm-tool.html</guid>
+      <pubDate>Tue, 17 Feb 2026 09:00:00 -0800</pubDate>
+      <description>Half the meetings on a program re-litigate decisions that were already made. A decision log ends that for almost no cost.</description>
+    </item>
+    <item>
+      <title>The Compliance Program Manager Playbook: Closing Regulatory Issues at Scale</title>
+      <link>https://arsenii.com/insights/compliance-playbook.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/compliance-playbook.html</guid>
+      <pubDate>Tue, 10 Feb 2026 09:00:00 -0800</pubDate>
+      <description>How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.</description>
+    </item>
+    <item>
+      <title>How I Scaled AI Feature Adoption to 60% Across an Enterprise Platform</title>
+      <link>https://arsenii.com/insights/ai-adoption.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/ai-adoption.html</guid>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 -0800</pubDate>
+      <description>What it actually takes to move AI adoption numbers at enterprise scale, from instrumenting telemetry to navigating the politics of feature rollouts.</description>
+    </item>
+    <item>
+      <title>Building Escalation Paths With Teeth</title>
+      <link>https://arsenii.com/insights/escalation-paths-with-teeth.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/escalation-paths-with-teeth.html</guid>
+      <pubDate>Tue, 09 Dec 2025 09:00:00 -0800</pubDate>
+      <description>An escalation path nobody fears is decoration. Here is how to design one teams actually respond to.</description>
+    </item>
+    <item>
+      <title>How to Write a Status Report Executives Actually Read</title>
+      <link>https://arsenii.com/insights/status-report-executives-actually-read.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/status-report-executives-actually-read.html</guid>
+      <pubDate>Tue, 21 Oct 2025 09:00:00 -0800</pubDate>
+      <description>Most status updates are written to cover the writer, not inform the reader. Flip that, and a VP will actually read your update.</description>
+    </item>
+    <item>
+      <title>My First 30 Days on a New Program</title>
+      <link>https://arsenii.com/insights/first-30-days-on-a-new-program.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/first-30-days-on-a-new-program.html</guid>
+      <pubDate>Tue, 02 Sep 2025 09:00:00 -0800</pubDate>
+      <description>A field guide to the first month on an unfamiliar program: what to map, who to meet, and the trap most people fall into.</description>
+    </item>
+    <item>
+      <title>Project Manager vs. Technical Program Manager: The Difference That Actually Matters</title>
+      <link>https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</guid>
+      <pubDate>Tue, 15 Jul 2025 09:00:00 -0800</pubDate>
+      <description>A project manager owns a plan. A technical program manager owns an outcome that crosses teams, systems, and quarters. Here is where the line really falls.</description>
+    </item>
   </channel>
 </rss>

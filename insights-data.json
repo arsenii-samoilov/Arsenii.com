@@ -1,0 +1,301 @@
+{
+  "articles": [
+    {
+      "slug": "ai-adoption",
+      "title": "How I Scaled AI Feature Adoption to 60% Across an Enterprise Platform",
+      "date": "2026-01-15",
+      "category": "AI Program Management",
+      "description": "What it actually takes to move AI adoption numbers at enterprise scale, from instrumenting telemetry to navigating the politics of feature rollouts.",
+      "tags": ["AI Program Management", "Enterprise TPM", "Atlassian", "Adoption Strategy"],
+      "body": "<p>When I joined the Atlassian Growth team, Atlassian Intelligence had a telemetry problem. Not a product problem. The features were solid. The problem was that nobody really knew who was using what, or why the numbers had plateaued. That's where a technical program manager either earns their keep or doesn't.</p><p>The first thing I did wasn't a roadmap review. It was a data audit. I spent two weeks mapping what signals actually existed, what was being tracked versus what was being reported to leadership, and where the gaps were. Adoption numbers that look flat are usually a measurement problem before they're a product problem. In this case we were counting sessions that touched the feature, not sessions where someone got value from it. Very different number.</p><p>Once we had accurate instrumentation, the adoption story changed fast. We'd been undercounting by about 30 percent. But even the corrected number needed to grow, so we moved to the real work: getting the feature into workflows people were already in. For Atlassian Intelligence in Jira that meant the Slack integration. Same surface engineers already lived in all day. The integration was real engineering effort, but the program challenge was getting three teams to sequence their work so none of them ended up blocked.</p><p>That sequencing problem is where enterprise AI program management actually lives. The model works. The gap is cross-functional coordination at the pace AI cycles demand, which is faster than most legacy program structures were built for. I restructured the cross-team cadence: cut the weekly all-hands in favor of async updates and two tighter working sessions, one on blockers and one on dependencies.</p><p>We hit 60 percent-plus adoption on the integrated surface and lifted Confluence document engagement 277 percent through a parallel Slack strategy. The lesson that stuck: AI adoption is a program management problem wearing a technology costume. Alignment, sequencing, and measurement move the number. The model doesn't.</p>"
+    },
+    {
+      "slug": "compliance-playbook",
+      "title": "The Compliance Program Manager Playbook: Closing Regulatory Issues at Scale",
+      "date": "2026-02-10",
+      "category": "Compliance",
+      "description": "How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.",
+      "tags": ["Compliance Program Manager", "Regulatory Governance", "Intuit", "Enterprise Risk"],
+      "body": "<p>Most engineering teams treat compliance issues the way they treat tech debt: acknowledge, defer, revisit when there's bandwidth. There's rarely bandwidth. So the backlog grows, commitments slip, and by the time CCO leadership asks for a status update, nobody has a clean answer. I've walked into that more than once.</p><p>At Intuit my mandate was to build a regulatory issue lifecycle framework from scratch. One that could handle volume, give real-time visibility to VP and CCO leadership, and actually close things on time. The first version had three parts: a triage protocol, an aging and severity taxonomy, and an escalation ladder with teeth.</p><p>Triage sounds obvious and most teams skip it. Every new issue got scored within 48 hours on two axes: risk severity and resolution complexity. High severity, low complexity moved straight to a dedicated slot. High severity, high complexity got its own workstream and an executive owner. The mistake most compliance programs make is treating every issue as equally urgent, which means none of them are.</p><p>The aging taxonomy was the second piece. Four buckets, current, at-risk, overdue, and critical, each tied to a reporting threshold published upfront. Teams knew exactly when something would escalate, which created its own accountability. No surprises.</p><p>Within two quarters we hit 96 percent-plus on-time closure and cut the backlog 31 percent. What actually mattered was that CCO-level reporting went from a scramble to a 15-minute dashboard pull. Good compliance program management isn't about controls. It's about getting the right information to the right person at the right time, by default.</p>"
+    },
+    {
+      "slug": "growth-pm",
+      "title": "From $3M to $13M: What Growth Program Management Actually Looks Like",
+      "date": "2026-03-05",
+      "category": "Growth",
+      "description": "The mechanics behind scaling a funded account portfolio 4x: what changed, what broke, and what a TPM actually controls in a growth motion.",
+      "tags": ["Growth Program Manager", "Monetization", "Intuit", "Enterprise Data"],
+      "body": "<p>When people hear technical program manager on a growth team they picture someone running ceremonies and updating tickets. That's not it. At Intuit's TurboTax growth portfolio, the TPM held together a machine spanning data engineering, product, marketing, and analytics, all moving at different speeds toward one number. The number was funded accounts.</p><p>We started at 300,000. The target was 1.3 million. The gap wasn't the product. TurboTax was strong. The gap was infrastructure. The system that matched customer segments to offers couldn't process data fast enough to run the personalization at the scale we needed. We were leaving conversions on the table because the pipeline couldn't keep up.</p><p>The decision that unlocked everything was an enterprise data bridge. A technical architecture change that let us process real-time tax attributes instead of batching them overnight. I didn't build it. I owned the program: scope, sequencing, risk, and the executive alignment that kept the engineering investment funded through two competing planning cycles. That's the part that doesn't show up in an architecture diagram but decides whether the project ships or stalls.</p><p>Once the bridge was live, the offer engine could personalize at scale. We went from blunt bundle offers to targeted strategies by segment and filing type. Funded accounts hit 1.3M. Revenue grew from $3M to $13M in the portfolio period, and 2.6M net new customers came through the data modernization downstream.</p><p>The short version: growth program management at scale isn't about process. It's about knowing which technical constraint is the real ceiling, then doing whatever it takes to remove it. The ceremonies come second. The constraint comes first.</p>"
+    },
+    {
+      "slug": "project-manager-vs-technical-program-manager",
+      "title": "Project Manager vs. Technical Program Manager: The Difference That Actually Matters",
+      "date": "2025-07-15",
+      "category": "Program Management",
+      "description": "A project manager owns a plan. A technical program manager owns an outcome that crosses teams, systems, and quarters. Here is where the line really falls.",
+      "tags": ["Technical Program Manager", "Career", "Program Management"],
+      "body": "<p>People use the two titles like they mean the same thing. They don't. The gap shows up the first time something breaks across a team boundary.</p><p>A project manager owns a plan: scope, schedule, the status of known tasks. That work matters. But it assumes the work is already defined and lives mostly in one place. A technical program manager owns an outcome that no single team controls. The plan is an input, not the job.</p><p>Here's the test I use. If the hardest part of the work is keeping a known set of tasks on track, that's project management. If the hardest part is getting three teams with different roadmaps, different incentives, and different definitions of \"done\" to converge on one result, that's a program. The second one is where I spend my time.</p><p>The technical part isn't optional either. You can't sequence work you don't understand. When the data pipeline team says a change takes two sprints, I need to know whether that's real or padding, and the only way to know is to understand the system. A TPM who can't read the architecture is just relaying messages.</p><p>So when a recruiter asks what I do, the short version is this: I'm the person accountable for the outcome when no one team can deliver it alone. The plan is the easy part.</p>"
+    },
+    {
+      "slug": "first-30-days-on-a-new-program",
+      "title": "My First 30 Days on a New Program",
+      "date": "2025-09-02",
+      "category": "Program Management",
+      "description": "A field guide to the first month on an unfamiliar program: what to map, who to meet, and the trap most people fall into.",
+      "tags": ["Technical Program Manager", "Onboarding", "Program Management"],
+      "body": "<p>The first month sets the ceiling for everything after it. Move too fast and you build on a wrong map. Move too slow and you lose the window where people expect you to ask basic questions.</p><p>Week one is listening. I meet every team lead the program touches and ask the same three things: what are you on the hook for, what's blocking you, and what would you fix if you could. The patterns in those answers tell you more than any planning doc.</p><p>Week two I map the system. Not the org chart, the actual flow of work and data. Where does a change start, who has to touch it, where does it stall. The stalls are usually the program.</p><p>Weeks three and four I write the operating picture down and circulate it. Owners, dependencies, the real critical path, the risks no one had named out loud. This is the deliverable. If by day 30 the team agrees on what the program actually is, the job got easier. If they don't, that disagreement was the hidden problem all along.</p><p>The trap is the urge to show value by shipping something fast in week one. Resist it. The fastest way to lose credibility is to solve a problem nobody had while missing the one everybody felt.</p>"
+    },
+    {
+      "slug": "status-report-executives-actually-read",
+      "title": "How to Write a Status Report Executives Actually Read",
+      "date": "2025-10-21",
+      "category": "Communication",
+      "description": "Most status updates are written to cover the writer, not inform the reader. Flip that, and a VP will actually read your update.",
+      "tags": ["Communication", "Executive Reporting", "Technical Program Manager"],
+      "body": "<p>Most status reports are written defensively. The author lists everything they did so that, if something goes wrong, there's a record they flagged it. The reader learns nothing and stops reading by the second bullet.</p><p>An executive has thirty seconds. Give them the answer first: are we going to hit the date, yes or no, and if no, what changed. Everything else is support for that one line.</p><p>I keep the format brutally consistent. One line on overall health. A short list of decisions I need from the reader, with a date. Then risks, written as risk plus consequence plus what I'm doing about it, in one sentence each. No \"on track\" without a number behind it.</p><p>The decisions section is the part people skip and it's the most valuable. A status report that only reports status wastes the one moment you have a senior person's attention. Ask for the thing you need while you have them.</p><p>The honest test: if your update could have been sent last week with the date changed, it isn't a status report. It's noise with a timestamp.</p>"
+    },
+    {
+      "slug": "escalation-paths-with-teeth",
+      "title": "Building Escalation Paths With Teeth",
+      "date": "2025-12-09",
+      "category": "Governance",
+      "description": "An escalation path nobody fears is decoration. Here is how to design one teams actually respond to.",
+      "tags": ["Governance", "Escalation", "Compliance Program Manager"],
+      "body": "<p>Every program has an escalation path on paper. Most of them do nothing, because escalating costs the person raising the flag more than staying quiet costs them. Fix that math and escalation starts working.</p><p>The first rule: publish the thresholds before anything goes wrong. If an issue sits overdue for five days, it escalates automatically. Not at someone's discretion. Automatically. When the rule is mechanical, raising it isn't a political act, it's just the process running.</p><p>Second, escalation has to reach someone who can actually unblock the thing. Routing a stuck dependency to a manager who also can't move it just adds a layer. Map each escalation type to the person with the authority to clear it, and name them.</p><p>Third, close the loop in public. When an escalation gets resolved, the resolution goes back to everyone who saw the flag. That does two things: it shows the path works, and it makes the next person more willing to use it.</p><p>At Intuit I tied aging thresholds to named reporting tiers, and overdue items hit a structured escalation with a date and a directly responsible owner. On-time closure went past 96 percent. The framework didn't add pressure. It just made the right thing the default thing.</p>"
+    },
+    {
+      "slug": "decision-logs-underrated-tpm-tool",
+      "title": "Decision Logs: The Most Underrated Tool in Program Management",
+      "date": "2026-02-17",
+      "category": "Governance",
+      "description": "Half the meetings on a program re-litigate decisions that were already made. A decision log ends that for almost no cost.",
+      "tags": ["Governance", "Decision Records", "Program Management"],
+      "body": "<p>Here's a pattern you'll recognize: a decision gets made, three weeks pass, someone new joins or someone forgets, and the team spends another hour re-arguing it. Multiply that across a program and you lose days a month to settled questions.</p><p>A decision log fixes it for almost nothing. One row per decision: the date, the call, who made it, and the one or two reasons that mattered. That's it. No prose, no minutes.</p><p>The value isn't the record. It's what the record prevents. When someone reopens a decision, the answer is a link, not a meeting. And when the context genuinely changes, you can see exactly what you assumed at the time and decide on purpose to revisit it.</p><p>It also protects the team in an audit or a postmortem. \"Why did we do it this way\" has a dated, attributed answer instead of a shrug. In a compliance program that difference is the whole game.</p><p>Most teams skip it because it feels like overhead in the moment. It isn't. It's the cheapest insurance a program can buy.</p>"
+    },
+    {
+      "slug": "managing-dependencies-eight-teams",
+      "title": "Managing Dependencies Across Eight Engineering Teams",
+      "date": "2026-04-28",
+      "category": "Program Management",
+      "description": "Lessons from running the Einstein AI portfolio at Salesforce across eight research and engineering teams on different clocks.",
+      "tags": ["Technical Program Manager", "Salesforce", "Dependencies"],
+      "body": "<p>At Salesforce I ran a portfolio that spanned eight research and engineering teams across multiple clouds. Eight teams means eight roadmaps, eight backlogs, and eight different ideas about what was urgent. The work wasn't technical. It was sequencing.</p><p>The first move was making dependencies visible as a single picture. Each team could see its own plan. None of them could see how their plan collided with the other seven. I built one view of who needed what from whom and by when, and most of the early conflicts resolved themselves once people could see the collision coming.</p><p>The second move was protecting the critical path. On any program a few dependencies decide the whole timeline and the rest are noise. I spent my attention on the handful that gated everything else and let the teams self-manage the rest. Trying to track all of it equally is how a TPM burns out and still misses the date.</p><p>The hard part was compliance readiness layered on top: ISO, SOC2, and HIPAA gates that couldn't slip. Those became fixed points in the sequence that everything else planned around, not afterthoughts bolted on at the end.</p><p>The lesson that stuck: with many teams, your job isn't to coordinate everything. It's to find the few links that decide the outcome and guard them.</p>"
+    },
+    {
+      "slug": "ma-integration-governance-adobe-pmo",
+      "title": "M&A Integration Governance: What I Learned in Adobe's PMO",
+      "date": "2026-06-09",
+      "category": "Governance",
+      "description": "Acquisitions don't fail at the deal. They fail at integration. Notes from running a reconciliation track inside Adobe's M&A PMO.",
+      "tags": ["Governance", "Adobe", "M&A", "Program Management"],
+      "body": "<p>The deal gets the headlines. The integration decides whether the deal was worth it. In Adobe's M&A PMO I ran a reconciliation track across engineering teams, and the work was almost entirely about reconciling things two companies did differently and had no reason to think about until now.</p><p>The first surprise is how much is implicit. Each side has systems, access models, and assumptions that were never written down because everyone internal already knew them. Integration forces all of it into the open, fast, under a clock.</p><p>I learned to run integration as a set of explicit reconciliation decisions, not a vague \"align the teams.\" For each area: whose system wins, what migrates, what gets retired, who owns the cutover. Vague ownership is where integrations quietly rot.</p><p>The other lesson was sequencing under uncertainty. You rarely have full information when the clock starts. You decide anyway, you record what you assumed, and you revisit when better data shows up. Waiting for certainty just means missing the integration window with nothing to show.</p>"
+    },
+    {
+      "slug": "why-okrs-fail-and-the-fix",
+      "title": "Why Most OKRs Fail, and the Fix",
+      "date": "2026-06-21",
+      "category": "Strategy",
+      "description": "OKRs don't fail because the framework is bad. They fail because teams write aspirations and call them outcomes.",
+      "tags": ["Strategy", "OKRs", "Program Management"],
+      "body": "<p>OKRs get blamed a lot. The framework is fine. The problem is what teams put in it.</p><p>The most common failure is writing activities as key results. \"Launch the new pipeline\" is not a result. It's a task. A result is what changes because you launched it: latency down by half, adoption past a threshold, cost per run cut. If a key result doesn't have a number and a direction, it's a to-do list wearing a strategy costume.</p><p>The second failure is too many. A team with nine objectives has none. The point of the exercise is to force a choice about what matters this quarter. Nine objectives dodges the choice, which is the one thing the framework was supposed to make you do.</p><p>The third is setting them and never looking again until the quarter ends. OKRs are a steering instrument, not a report card. I check them in the weekly rhythm: are we moving the number, and if not, what changes this week.</p><p>The fix for all three is the same discipline. Fewer objectives. Every key result is a measurable outcome with a date. And you revisit them often enough to actually steer.</p>"
+    },
+    {
+      "slug": "pre-mortem-find-the-failure-first",
+      "title": "The Pre-Mortem: Finding the Failure Before It Finds You",
+      "date": "2026-07-03",
+      "category": "Risk",
+      "description": "A postmortem explains a failure after it costs you. A pre-mortem catches it while it's still cheap. The format takes one hour.",
+      "tags": ["Risk", "Program Management", "Planning"],
+      "body": "<p>A postmortem is honest and useful and always too late. The failure already happened, already cost something. A pre-mortem moves that same honesty to before the work starts, when the failure is still hypothetical and cheap to prevent.</p><p>The format is simple. Get the team in a room and say: it's six months from now and this program failed. Not \"might fail.\" Failed. Now write down why. The framing matters. Asking \"what could go wrong\" gets you polite, hedged answers. Asserting it already failed gives people permission to name the thing they were quietly worried about.</p><p>You'll get a list of failure modes in about twenty minutes that no risk template would have surfaced, because they come from the people closest to the work. Then you sort them: which are likely, which are fatal, which are both. The both pile is your real risk register.</p><p>The whole thing takes an hour. I've never run one that didn't change the plan. Optimism bias is real and it's strongest at kickoff, exactly when the stakes of a wrong plan are highest. A pre-mortem is the cheapest counterweight I know.</p>"
+    },
+    {
+      "slug": "cutting-partner-inbound-90-percent-roku",
+      "title": "Cutting Partner Inbound by 90 Percent: Process Design at Roku Pay",
+      "date": "2026-07-15",
+      "category": "Operations",
+      "description": "When partners flood you with the same requests, the volume isn't the problem. The process that generates it is.",
+      "tags": ["Operations", "Roku", "Process Design"],
+      "body": "<p>At Roku Pay the partner support queue was drowning. The instinct in that situation is to add people to answer faster. That treats the symptom. The volume was the signal, and the signal said the process was making people ask.</p><p>I looked at what the inbound actually was. Most of it clustered into a handful of question types, and almost all of those questions existed because information partners needed wasn't where they'd look for it, or a step that could be self-serve required a human. The queue wasn't a staffing gap. It was a design defect, repeated thousands of times.</p><p>So I redesigned the points where partners got stuck. Put the answers where the questions happened. Made the self-serve steps actually self-serve. Removed the human from loops that didn't need one. Inbound dropped by about 90 percent, and the requests that remained were the real ones that needed judgment.</p><p>The general lesson: when you're flooded with the same request over and over, don't get faster at answering it. Find the thing upstream that keeps generating it and remove that.</p>"
+    },
+    {
+      "slug": "six-hour-migration-fifteen-minutes-apple",
+      "title": "A Six-Hour Migration in Fifteen Minutes",
+      "date": "2026-07-27",
+      "category": "Operations",
+      "description": "Modernizing a forecast system at Apple turned a six-hour migration into fifteen minutes. The win wasn't speed. It was what speed unlocked.",
+      "tags": ["Operations", "Apple", "Automation"],
+      "body": "<p>At Apple I led a forecast system modernization in global gift card operations. The headline number is that a migration that took six hours dropped to fifteen minutes. The number is nice. What it unlocked is the actual story.</p><p>When a process takes six hours, you run it as rarely as you can get away with. That means the forecast is always somewhat stale, and planning happens on old data because fresh data is too expensive to get. The six hours wasn't just slow. It was shaping every decision downstream by forcing them onto a slow clock.</p><p>Cutting it to fifteen minutes changed the clock. Now the forecast could refresh often enough to plan in something close to real time. The speed wasn't the prize. The prize was decisions made on current information instead of last week's.</p><p>This is a pattern worth internalizing. A slow step doesn't just cost the time it takes. It quietly bends everything that depends on it to its pace. When you speed it up, you're not saving hours, you're removing a constraint on how the whole system can operate.</p>"
+    },
+    {
+      "slug": "experiment-program-that-doesnt-lie",
+      "title": "How to Run an Experiment Program That Doesn't Lie to You",
+      "date": "2026-08-08",
+      "category": "Growth",
+      "description": "Most experimentation programs generate confident, wrong conclusions. Here's how to build one whose results you can trust.",
+      "tags": ["Growth", "Experimentation", "Data"],
+      "body": "<p>A bad experiment program is worse than none. None leaves you uncertain. A bad one makes you confident and wrong, and you ship the wrong thing fast.</p><p>The first source of lies is calling a test before it's done. You watch the numbers, they look good on day two, you ship. But early results swing wildly and the temptation to stop on a good swing is enormous. Set the sample size and duration before you start, and don't peek for a decision until you hit them.</p><p>The second is measuring the wrong thing. A test can move a surface metric while the metric that pays the bills sits flat or drops. Decide upfront which number actually decides the call, and hold to it even when a friendlier number looks better.</p><p>The third is ignoring the tests that fail. A program that only remembers its wins learns nothing. The failures are where the real information is, because they tell you something you believed was wrong.</p><p>At Atlassian I institutionalized the statistical discipline behind this so the conclusions held up. Boring rigor beats clever analysis. The goal isn't to win every test. It's to actually know which ones you won.</p>"
+    },
+    {
+      "slug": "stakeholder-mapping-cross-functional-programs",
+      "title": "Stakeholder Mapping for Cross-Functional Programs",
+      "date": "2026-08-20",
+      "category": "Program Management",
+      "description": "Knowing the org chart isn't knowing your stakeholders. The map that matters tracks influence, interest, and who can kill your program.",
+      "tags": ["Program Management", "Stakeholders", "Technical Program Manager"],
+      "body": "<p>New TPMs confuse the org chart with the stakeholder map. They're different documents. The org chart tells you who reports to whom. The stakeholder map tells you who can move your program and who can stop it, which often has little to do with title.</p><p>I sort stakeholders on two axes: how much the outcome affects them, and how much power they have over it. The four corners need different handling. High power and high interest are your partners, and you spend real time with them. High power and low interest can kill you on a whim, so you keep them informed enough that they never get surprised, because surprised powerful people say no.</p><p>The corner people miss is high interest and low power. These are the teams doing the actual work who don't sit in the steering meetings. Ignore them and you'll learn about problems too late, because the people who saw it coming had no channel to tell you.</p><p>The map isn't static either. A reorg, a budget cycle, a new VP, and the power axis shifts under you. I redraw it whenever the org moves. A stakeholder map from last quarter is a guess.</p>"
+    },
+    {
+      "slug": "ai-governance-iso-soc2-hipaa",
+      "title": "AI Governance: Making Compliance Real for ISO, SOC2, and HIPAA",
+      "date": "2026-09-01",
+      "category": "Compliance",
+      "description": "AI features ship fast. Compliance frameworks move slow. The TPM's job is to make them move together without faking either one.",
+      "tags": ["Compliance Program Manager", "AI Program Management", "Governance"],
+      "body": "<p>AI product cycles are fast. ISO, SOC2, and HIPAA were not built for fast. The friction between them is real, and pretending it isn't is how teams ship something that fails an audit six months later.</p><p>The mistake is treating compliance as a gate at the end. By then the design choices that create the risk are already locked, and the team faces a bad trade: rework or ship something exposed. Neither is good and both were avoidable.</p><p>What works is moving the compliance questions to the design stage, where they're cheap to answer. Where does the data live, who can see it, what's logged, what's the retention. Asked at design, these shape the architecture for almost no cost. Asked at launch, they're a crisis.</p><p>On the Einstein AI work at Salesforce I made compliance readiness a fixed point in the sequence, not a final inspection. The gates were known from the start and everything planned around them. The teams moved fast because the compliance work was built in, not bolted on.</p><p>Governance done right doesn't slow AI down. Governance done late does. The difference is entirely about when you ask the questions.</p>"
+    },
+    {
+      "slug": "managing-200m-discount-allocation",
+      "title": "Managing $200M in Discount Allocation",
+      "date": "2026-09-13",
+      "category": "Monetization",
+      "description": "A large discount budget is a system with leverage points. Manage it like one and small changes move large numbers.",
+      "tags": ["Monetization", "Intuit", "Strategy"],
+      "body": "<p>At Intuit I managed over $200M a year in discount allocation across bundling and offer strategies. At that size a discount budget isn't a line item, it's a system, and small changes in how you allocate it move very large numbers.</p><p>The first principle is that not all discount dollars do equal work. A dollar that converts a customer who would have left is worth far more than a dollar handed to a customer who'd have paid full price anyway. Most of the work was telling those two cases apart and shifting dollars toward the first.</p><p>That meant segmenting hard and targeting offers by behavior, not spraying a blanket discount across everyone. Blanket discounts feel fair and they quietly burn the budget on people who never needed the nudge.</p><p>The second principle is that you measure incrementality, not redemption. A high redemption rate just means people took free money. The question is whether the offer changed what they did. Those are different numbers and only one of them matters.</p><p>The work delivered $50M-plus in annualized revenue across these strategies. The lever wasn't spending more. It was spending the same budget where it actually changed an outcome.</p>"
+    },
+    {
+      "slug": "when-to-kill-a-program",
+      "title": "When to Kill a Program",
+      "date": "2026-09-25",
+      "category": "Strategy",
+      "description": "Knowing when to stop is a core program management skill and almost nobody trains for it. Here's how I make the call.",
+      "tags": ["Strategy", "Program Management", "Decision Making"],
+      "body": "<p>Everyone trains to start and run programs. Almost nobody trains to stop one, which is strange, because killing the right program on time is one of the highest-value things a TPM does.</p><p>The hardest part is sunk cost. A program with two years and a big budget behind it builds its own gravity. People argue to continue because of what's been spent, which is exactly backwards. What's spent is gone either way. The only question is whether the next dollar and the next quarter are worth more here than somewhere else.</p><p>I look for a few signals. The original reason for the program no longer holds. The cost to finish keeps growing while the expected value keeps shrinking. The team has lost belief, which they'll show before they'll say. Any one of these is a yellow flag. Two or more and I start the conversation.</p><p>Killing well matters as much as the decision. Name why, capture what was learned, redeploy the people with a clear story so it reads as a smart reallocation and not a failure. Done right, a clean kill builds trust. It tells everyone that programs here are judged on value, not momentum.</p>"
+    },
+    {
+      "slug": "bundling-strategy-program-lens",
+      "title": "Bundling Strategy Through a Program Lens",
+      "date": "2026-10-07",
+      "category": "Monetization",
+      "description": "A bundle looks like a pricing decision. Delivering one is a cross-functional program that touches engineering, billing, and GTM at once.",
+      "tags": ["Monetization", "Intuit", "Program Management"],
+      "body": "<p>From the outside a bundle is a pricing choice: put these together, charge that. From the inside it's one of the more demanding cross-functional programs you can run, because it touches engineering, billing, packaging, marketing, and analytics at the same time, and they all have to land together.</p><p>The coordination problem is that a bundle isn't real until every piece works. The billing system has to handle the combined SKU. The product has to enforce the entitlements. Marketing has to position it. Analytics has to measure it. If any one slips, the bundle either can't ship or ships broken, and a broken bundle erodes trust fast.</p><p>So I run bundles as a tightly sequenced program with one launch date that everything plans backward from. The dependency that scares me most is billing, because it's usually the least flexible and the most expensive to get wrong, so it sets the pace.</p><p>At Intuit this work drove a large share of the $50M-plus in annualized revenue from bundling and targeted offers. The pricing idea was the easy part. Making five teams land one thing on one day was the program.</p>"
+    },
+    {
+      "slug": "metrics-that-matter-vs-vanity",
+      "title": "Metrics That Matter Versus Vanity Metrics",
+      "date": "2026-10-19",
+      "category": "Data",
+      "description": "A number that always goes up and never forces a decision is decoration. Here's how to tell a real metric from a comfortable one.",
+      "tags": ["Data", "Metrics", "Program Management"],
+      "body": "<p>The test for whether a metric matters is simple: would a bad reading change what you do? If the number can only go up and never triggers an action, it's there to make people feel good, not to run the program.</p><p>Total registered users is the classic example. It only grows, it never drops, and it tells you nothing about whether the product works. Active users who came back this week is harder and more honest, because it can fall, and when it falls you have to do something.</p><p>I push teams toward metrics that can deliver bad news. Conversion that can drop. Latency that can spike. Adoption measured as people getting value, not people who touched a feature once. A metric that can hurt you is a metric you'll actually watch.</p><p>There's a subtler trap too: measuring what's easy instead of what's true. At Atlassian the easy AI adoption number counted any session that touched the feature. The true number counted sessions where someone got something out of it. Those were very different, and only the true one was worth steering by.</p><p>Pick the numbers that can ruin your week. Those are the ones telling you the truth.</p>"
+    },
+    {
+      "slug": "real-time-data-off-the-nightly-batch",
+      "title": "Real-Time Data: Moving 100+ Attributes Off the Nightly Batch",
+      "date": "2026-10-31",
+      "category": "Operations",
+      "description": "Batch processing quietly caps what a product can do. Moving tax attributes to real-time publishing at Intuit removed that cap.",
+      "tags": ["Operations", "Intuit", "Data"],
+      "body": "<p>A lot of products run on a nightly batch and nobody questions it because it's always been that way. At Intuit I led the move of more than 100 tax attributes from overnight batch to real-time publishing, and the interesting part was everything that became possible only after the batch was gone.</p><p>Batch has a hidden cost. Every decision the product makes is based on data that's up to a day old. You can't personalize on what a customer did an hour ago if you won't know about it until tomorrow. The batch wasn't just slow, it was a ceiling on how responsive the product could ever be.</p><p>Moving to real-time publishing meant the offer and personalization logic could act on current behavior. That's what fed the growth work downstream, where the portfolio went from 300K to 1.3M funded accounts and the data modernization enabled 2.6M net new customers.</p><p>The pattern, again: an old slow step doesn't just cost time. It silently limits what everything downstream is allowed to do. Remove it and you don't get a faster version of the same thing. You get options that didn't exist before.</p>"
+    },
+    {
+      "slug": "scaling-candidate-matching-platform",
+      "title": "Scaling a Candidate-Matching Platform to 65 Million Records",
+      "date": "2026-11-12",
+      "category": "Engineering",
+      "description": "Founding TPM lessons from building a recruiting platform that scored 65M candidates in under ten seconds across 50,000 clients.",
+      "tags": ["Technical Program Manager", "daily.jobs", "Scaling"],
+      "body": "<p>At <a href=\"https://daily.jobs\">daily.jobs</a> I was the founding technical program manager, which meant building the program management practice at the same time as the platform. The system had to score 65 million candidates in under ten seconds and serve data across 50,000 clients. At that scale, architecture decisions and program decisions stop being separate things.</p><p>The first lesson of founding-stage TPM work is that there's no process to inherit. You're not optimizing an existing rhythm, you're deciding what the rhythm is. I kept it minimal on purpose. Just enough structure to keep engineering, product, and data moving together, and not an ounce more, because process you don't need is just drag on a small team.</p><p>The second lesson is that performance at scale is a sequencing problem as much as an engineering one. Scoring 65 million records fast wasn't one clever trick. It was a chain of decisions that had to land in the right order, and my job was holding that order while the team built.</p><p>I also ran the A/B experimentation that lifted engagement by 35 percent. Founding work teaches you what's essential, because you have to build it from nothing and you feel the cost of every extra step.</p>"
+    },
+    {
+      "slug": "aligning-two-ai-roadmaps-rovo-gemini",
+      "title": "Aligning Two AI Roadmaps: Rovo and Gemini",
+      "date": "2026-11-24",
+      "category": "AI Program Management",
+      "description": "Integrating with another company's AI framework is a program problem wearing a technical disguise. Notes from aligning Rovo with Gemini.",
+      "tags": ["AI Program Management", "Atlassian", "Partnerships"],
+      "body": "<p>At Atlassian part of my work was aligning Rovo with Google's Gemini framework. Integrating your AI roadmap with another company's is one of the harder program problems, because you control half the variables and have to influence the other half across an org boundary you don't sit inside.</p><p>The first reality is that the partner has their own roadmap, their own priorities, and their own clock, none of which bend to your deadline by default. You can't manage their teams. You can only make it easy for them to say yes and hard for a dependency to silently slip.</p><p>So the work becomes interface management. Define exactly what each side owns, what each side needs from the other, and by when, in terms both orgs accept. Ambiguity at the boundary is where partner programs die, because each side assumes the other has it.</p><p>The second reality is that frameworks move under you. An AI platform on the other side ships changes on its own schedule, and your integration has to absorb that without breaking. I planned for the interface to change, not to hold still, which is the only safe assumption when half the system isn't yours.</p>"
+    },
+    {
+      "slug": "onboarding-compliance-portfolio-fast",
+      "title": "Onboarding Onto a Compliance Portfolio Without Slowing Engineering",
+      "date": "2026-12-06",
+      "category": "Compliance",
+      "description": "Taking over a regulatory portfolio means getting fluent fast without becoming the bottleneck you were hired to remove.",
+      "tags": ["Compliance Program Manager", "Intuit", "Onboarding"],
+      "body": "<p>Taking over a compliance portfolio has a specific trap. You need to get fluent in the regulatory detail fast, but if you slow engineering down while you ramp, you've become the exact bottleneck you were brought in to clear.</p><p>I separate the two jobs in the first weeks. Job one is learning the regulatory landscape, the commitments, the deadlines, the real exposure. Job two is keeping the existing work moving. I protect job two by not inserting myself into flows that already function. New owner does not mean new approval step.</p><p>For job one I go straight to the issues, not the policy documents. The open regulatory items show you where the real risk and the real friction live, far faster than reading the framework top to bottom. The policy makes sense once you've seen what it's actually catching.</p><p>At Intuit this approach let me build the issue lifecycle framework while the portfolio kept running, and we hit 96-plus percent on-time closure with a 31 percent backlog cut. The framework helped because it aligned regulatory commitments with the product and engineering roadmaps instead of fighting them. Compliance that fights delivery loses. Compliance that sequences with it wins.</p>"
+    },
+    {
+      "slug": "weekly-operating-rhythm-that-scales",
+      "title": "The Weekly Operating Rhythm That Scales",
+      "date": "2026-12-18",
+      "category": "Operations",
+      "description": "Programs don't fall apart in the planning. They fall apart in the weeks between. Here's the cadence that holds them together.",
+      "tags": ["Operations", "Program Management", "Cadence"],
+      "body": "<p>Programs rarely fail at kickoff. The plan is usually fine. They fail in the ordinary weeks between, where small slips compound quietly until the date is suddenly at risk. The weekly rhythm is what catches that early.</p><p>My default rhythm is light. One short session on blockers, focused only on what's stuck and who can clear it. One on dependencies, focused only on what's about to hand off and whether the receiving side is ready. Everything else moves async, because a meeting that could have been a written update costs the team more than it returns.</p><p>The discipline is keeping the meetings about decisions, not status. Status can be read. The live time is for the things that need a human to unblock or a group to decide. When a sync turns into a round of updates, I cut it.</p><p>At Atlassian I traded a heavy weekly all-hands for this tighter cadence and decisions got faster, not slower. Fewer people in fewer rooms making more calls. The rhythm isn't about meeting more. It's about putting the live time only where live time is the only thing that works.</p>"
+    },
+    {
+      "slug": "managing-up-c-level-sponsor",
+      "title": "Managing Up: How to Partner With a C-Level Sponsor",
+      "date": "2026-12-30",
+      "category": "Communication",
+      "description": "A senior sponsor is the most powerful lever a program has, and the most commonly wasted. Here's how to use one well.",
+      "tags": ["Communication", "Executive", "Program Management"],
+      "body": "<p>A C-level sponsor is the strongest lever a program has. Most TPMs waste it, either by hiding problems to look competent or by escalating everything and becoming noise. Both burn the relationship.</p><p>The thing a sponsor wants is no surprises. They can absorb almost any bad news if they hear it from you early and with a plan attached. What they can't forgive is finding out about a slip from someone else, or learning a risk became a crisis while you sat on it. Early and honest beats late and polished every time.</p><p>I bring a sponsor two things and nothing else: the decisions only they can make, and the risks only they can clear. I don't bring status, they can read status. I don't bring problems I can solve myself, that just trains them to think I can't. I bring the things that genuinely need their altitude.</p><p>The other half is doing the homework before the ask. A good sponsor will move fast if you hand them a clear decision with the options and a recommendation. Hand them a vague problem and you've made your problem their problem, which is exactly how you lose their time and their trust.</p>"
+    },
+    {
+      "slug": "risk-registers-people-actually-use",
+      "title": "Risk Registers People Actually Use",
+      "date": "2027-01-11",
+      "category": "Risk",
+      "description": "Most risk registers are written once and never opened again. A living one looks different and does real work.",
+      "tags": ["Risk", "Governance", "Program Management"],
+      "body": "<p>Most risk registers are theater. Someone fills one out at kickoff because the template demands it, everyone nods, and nobody opens it again until the postmortem asks whether the risk was logged. A register like that protects no one. It just documents that you saw the cliff before you drove off it.</p><p>A living register looks different. It's short, because a list of forty risks is a list of zero risks, nobody can hold forty things. I keep the handful that are both likely and serious, and I cut the rest. A risk that's neither likely nor serious is clutter wearing a warning label.</p><p>Each entry has an owner, not a team. \"Engineering owns this risk\" means no one owns it. A name owns it, and that person reports on it in the weekly rhythm. Ownership without a name is the most common defect I see.</p><p>And it changes. Risks get retired when they pass, new ones get added as the program reveals them, and severity gets re-rated as conditions shift. A register that looks identical to its kickoff version isn't being used. It's being stored.</p>"
+    },
+    {
+      "slug": "scoping-an-ambiguous-executive-ask",
+      "title": "How to Scope an Ambiguous Executive Ask",
+      "date": "2027-01-23",
+      "category": "Strategy",
+      "description": "\"Make us faster\" isn't a program. Turning a vague executive ask into something deliverable is half the job.",
+      "tags": ["Strategy", "Executive", "Program Management"],
+      "body": "<p>Senior asks arrive vague on purpose. \"Make us faster.\" \"Get AI into the product.\" \"Fix compliance.\" The executive is naming a direction and trusting someone to turn it into a thing that can actually be built. That translation is a big part of the job.</p><p>The first move is not to start working. It's to find out what success looks like to the person who asked. \"Faster\" for whom, measured how, by when, and what does it unlock. The same three words can mean five different programs, and building the wrong one fast is worse than building the right one a week later.</p><p>I write my interpretation down and play it back: here's what I think you mean, here's what I'd measure, here's what I'd explicitly not do. The not-doing part is where ambiguity hides. Naming what's out of scope forces the real boundaries into the open, and that's usually where the executive corrects you, which is exactly what you want before you've spent anything.</p><p>Then I size it honestly, including the parts they didn't ask about but will need. The goal of scoping isn't to make the ask sound easy. It's to make sure the thing you deliver is the thing they actually wanted.</p>"
+    },
+    {
+      "slug": "program-health-dashboards",
+      "title": "Program Health Dashboards: What Belongs on Them",
+      "date": "2027-02-04",
+      "category": "Communication",
+      "description": "A dashboard that shows everything shows nothing. Here's what earns a spot and what should be cut.",
+      "tags": ["Communication", "Metrics", "Program Management"],
+      "body": "<p>A program dashboard fails in one of two ways. Either it shows so much that no one can find the signal, or it shows so little that no one trusts it. Most fail the first way, because adding a chart feels safe and cutting one feels risky.</p><p>The discipline is to start from the decisions the dashboard should drive, then work backward to the few numbers that drive them. If a chart doesn't change a decision, it doesn't earn the space. Pretty and irrelevant is still irrelevant.</p><p>I want three things visible at a glance. Are we on track for the date, with a real basis and not a gut feel. What's blocked and who owns clearing it. What's the top risk right now. A senior person should get the program's state in ten seconds and know what, if anything, they need to do.</p><p>The hardest part is keeping it honest under pressure. There's a constant pull to color something green that's really yellow, because green is comfortable and yellow invites questions. A dashboard that's always green is worthless. The whole point is to surface the yellow while it's still cheap to fix.</p>"
+    },
+    {
+      "slug": "critical-path-is-a-people-problem",
+      "title": "The Critical Path Is a People Problem",
+      "date": "2027-02-16",
+      "category": "Program Management",
+      "description": "The textbook critical path is about task sequencing. The real one runs through which people can actually decide and deliver.",
+      "tags": ["Program Management", "Technical Program Manager", "Execution"],
+      "body": "<p>The textbook teaches the critical path as a sequencing exercise: lay out the tasks, find the chain that decides the end date, protect it. That's correct and incomplete. In practice the critical path almost always runs through people, not tasks.</p><p>The task that gates everything is usually waiting on a decision only one person can make, or on a team that has three other things ranked above yours, or on an approval that sits in a queue. The Gantt chart shows a clean dependency. The real delay is a person who hasn't said yes yet.</p><p>So I track the critical path as people, not boxes. Who has to decide, who has to deliver, and what else is competing for their attention. That last part is the one the chart never shows and the one that actually slips dates. A dependency you're sure of can evaporate when the team behind it gets pulled onto a fire.</p><p>The practical move is to know your gating people by name, keep your work visible to them, and surface a stall the day it starts instead of the week it's discovered. The critical path doesn't break in the diagram. It breaks in someone's overloaded week.</p>"
+    },
+    {
+      "slug": "saying-no-scope-control",
+      "title": "Saying No: Scope Control as a Core Skill",
+      "date": "2027-02-28",
+      "category": "Program Management",
+      "description": "Every program accumulates scope it never agreed to. Protecting the outcome means saying no well, and often.",
+      "tags": ["Program Management", "Scope", "Technical Program Manager"],
+      "body": "<p>Scope creep rarely arrives as a big decision. It arrives as a series of small, reasonable additions, each one easy to say yes to, that together quietly move the date no one agreed to move. Protecting the outcome means saying no, and saying it well.</p><p>The wrong way is to say no by reflex or by authority. That just makes you the obstacle, and people start routing around you. The right way is to make the cost visible and let the math do the arguing. \"Yes, we can add that, and here's what it pushes and by how much.\" Most requests withdraw themselves once the trade-off is on the table.</p><p>The key is that the no is really a trade, not a wall. The program has a fixed amount of capacity. Every addition spends some of it, which means something else gives. My job is to make that exchange explicit so the person asking can decide whether it's worth it, with full information.</p><p>Done consistently, this changes how people approach you. They stop bringing casual additions because they know you'll show the cost, and they start bringing only the ones that are genuinely worth the trade. That's scope control working. It isn't about refusing. It's about pricing.</p>"
+    },
+    {
+      "slug": "19-years-seven-companies-lessons",
+      "title": "What 19 Years Across Seven Companies Taught Me About Programs",
+      "date": "2027-03-12",
+      "category": "Career",
+      "description": "Intuit, Atlassian, Adobe, Salesforce, Roku, Apple, and a startup. The patterns that held true everywhere, and the one that surprised me.",
+      "tags": ["Career", "Technical Program Manager", "Program Management"],
+      "body": "<p>I've run programs at Intuit, Atlassian, Adobe, Salesforce, Roku, Apple, and a startup I helped build from nothing. Different scales, different cultures, different stakes. A few things held true at every single one.</p><p>The first is that the hard problem is almost never the technology. It's getting people who don't report to each other, who have different goals, to converge on one outcome. The companies that did this well had nothing to do with how good their engineers were. They had clear ownership and short feedback loops. The ones that struggled had neither, no matter how strong the talent.</p><p>The second is that clarity beats process. The teams that shipped didn't have the most elaborate frameworks. They had the clearest answers to who owns this, what breaks without it, and what we decided and why. Process is just a way to produce that clarity, and most orgs have far more process than clarity.</p><p>The surprise, after nineteen years: the fundamentals don't change with scale. A startup and Apple are wildly different in size and stakes, but the actual job is the same. Find the constraint, name the owners, sequence the work, tell the truth early. Everything else is local detail layered on top of those four.</p>"
+    }
+  ]
+}
