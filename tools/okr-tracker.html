@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free OKR Tracker | Objectives and Key Results Template Online</title>
+  <meta name="description" content="A free OKR tracker for program and project managers. Add objectives and key results, set targets and current values, and watch progress bars update. Export to CSV or print. No signup.">
+  <meta name="keywords" content="OKR template, OKR tracker free, objectives and key results template, OKR tracking tool, OKR spreadsheet, OKR progress tracker, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/okr-tracker.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/okr-tracker.html">
+  <meta property="og:title" content="Free OKR Tracker | Objectives and Key Results Template Online">
+  <meta property="og:description" content="Add objectives and key results, set targets and current values, and watch progress bars update. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free OKR Tracker">
+  <meta name="twitter:description" content="Track objectives and key results with live progress bars. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "OKR Tracker",
+    "url": "https://arsenii.com/tools/okr-tracker.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free OKR tracker. Add objectives and key results, set targets and current values, and see per-key-result and per-objective progress with color-coded bars. Export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are OKRs?",
+        "acceptedAnswer": {"@type": "Answer", "text": "OKRs are Objectives and Key Results, a goal-setting method that pairs a qualitative objective with two to five measurable key results. The objective is the direction, stated in plain language that motivates. The key results are the numbers that prove you got there. Together they answer two questions: where are we going, and how will we know we have arrived."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between an objective and a key result?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An objective is the ambitious, qualitative goal, for example 'become the default payments option for partners.' A key result is a specific, measurable outcome that signals progress toward it, for example 'increase partner adoption from 20 to 60 percent.' Objectives inspire, key results measure. If a key result is not a number you can track, it is just another objective in disguise."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you score OKRs?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Score each key result as current progress toward its target, usually on a 0 to 100 percent scale, then average the key results to score the objective. Many teams treat 70 percent as success for a stretch OKR, because hitting 100 every time means the goals were too easy. The score is a conversation starter about what to do next, not a performance grade to optimize."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many OKRs should you have per quarter?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Keep it small. Most teams do best with two to four objectives per quarter, each with two to five key results. More than that and focus dissolves, since OKRs are meant to name the few things that matter most, not catalog everything you are doing. If everything is an OKR, nothing is."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 2rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .okr-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+    .objective { border: 1px solid var(--accent-light); border-radius: 12px; padding: 1.5rem; background: var(--bg); }
+    .obj-head { display: flex; align-items: center; gap: 0.75rem; margin: 0 0 0.25rem; }
+    .obj-input { flex: 1; font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--accent-dark); border: none; background: transparent; padding: 0.2rem 0.3rem; border-radius: 6px; }
+    .obj-input:focus { outline: 2px solid var(--accent); background: #fff; }
+    .obj-score { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 700; white-space: nowrap; }
+    .obj-bar { height: 8px; border-radius: 999px; background: #eef1f5; overflow: hidden; margin: 0 0 1.25rem; }
+    .obj-bar .fill { height: 100%; border-radius: 999px; transition: width 0.2s ease; }
+    .kr { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 0.6rem; align-items: center; margin: 0 0 0.7rem; }
+    @media (max-width: 640px) { .kr { grid-template-columns: 1fr; } }
+    .kr-name { font-family: var(--font-sans); font-size: 0.9rem; border: 1px solid var(--accent-light); background: var(--bg); color: var(--text); padding: 0.45rem 0.6rem; border-radius: 6px; width: 100%; box-sizing: border-box; }
+    .kr-name:focus, .kr-num:focus { outline: 2px solid var(--accent); }
+    .kr-numwrap { display: flex; align-items: center; gap: 0.3rem; font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-muted); }
+    .kr-num { font-family: var(--font-sans); font-size: 0.88rem; width: 4.4rem; text-align: right; border: 1px solid var(--accent-light); background: var(--bg); color: var(--text); padding: 0.4rem 0.5rem; border-radius: 6px; }
+    .kr-pct { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; min-width: 3rem; text-align: right; }
+    .kr-bar-wrap { display: flex; align-items: center; gap: 0.6rem; }
+    .kr-bar { flex: 1; height: 6px; border-radius: 999px; background: #eef1f5; overflow: hidden; }
+    .kr-bar .fill { height: 100%; border-radius: 999px; }
+    .pct-green { color: #166534; } .fill.bg-green { background: #16a34a; }
+    .pct-yellow { color: #854d0e; } .fill.bg-yellow { background: #ca8a04; }
+    .pct-red { color: #991b1b; } .fill.bg-red { background: #dc2626; }
+    .kr-row-wrap { margin: 0 0 0.9rem; }
+    .kr-del, .obj-del { cursor: pointer; color: var(--text-muted); border: 1px solid var(--accent-light); background: var(--bg); font-size: 1rem; line-height: 1; padding: 0.3rem 0.55rem; border-radius: 6px; }
+    .kr-del:hover, .obj-del:hover { color: var(--accent-red); border-color: var(--accent-red); }
+    .add-kr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; cursor: pointer; border: 1px dashed var(--accent-light); background: transparent; color: var(--accent); padding: 0.4rem 0.7rem; border-radius: 6px; margin-top: 0.3rem; }
+    .add-kr:hover { border-color: var(--accent); background: var(--bg-warm); }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .kr-del, .obj-del, .add-kr { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>OKR Tracker</h1>
+        <p>Track objectives and their key results with live progress bars. Add an objective, give it a few measurable key results with a target and a current value, and watch each one and the objective fill in. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary" id="addObjective">+ Add Objective</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="okr-list" id="okrList"></div>
+
+      <div class="tool-explainer">
+        <h2>How to use an OKR tracker</h2>
+        <p>OKRs pair a direction with proof. The objective is the ambitious, qualitative goal that tells the team where they are headed. The key results are the two to five numbers that prove they got there. This tracker keeps the math out of your way: set a target and a current value for each key result, and it computes the percentage and rolls the key results up into an objective-level score.</p>
+        <p>Treat the score as a prompt, not a grade. For a stretch OKR, landing around 70 percent is often a healthy result, because objectives you hit at 100 every time were set too low. Read the color the way a status flag works: green is on pace, yellow needs attention, red needs a decision. The point of tracking is to have the right conversation at the check-in, not to make every bar green.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>Key results that are not numbers. "Improve onboarding" is an objective, not a key result. If you cannot put a target on it, it does not belong in the key results.</li>
+          <li>Too many OKRs. Two to four objectives a quarter keeps focus. A long list is a to-do list wearing an OKR costume.</li>
+          <li>Setting and forgetting. OKRs earn their value at the weekly or biweekly check-in. Update the current values and talk about what the bars are telling you.</li>
+          <li>Punishing a yellow. If every miss is treated as failure, people set safe goals. Keep the targets ambitious and the conversation honest.</li>
+        </ul>
+        <p>For more on goals, metrics, and running programs at scale, see the <a href="../insights.html">Insights</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script>
+    var STORAGE_KEY = "okr_tracker_v1";
+    var state = load() || sampleData();
+
+    function sampleData() {
+      return {
+        objectives: [
+          {
+            name: "Make the new payments platform the default for partners",
+            krs: [
+              { name: "Partner adoption rate (%)", target: 60, current: 38 },
+              { name: "Median payment latency (ms, lower is better target met)", target: 100, current: 72 },
+              { name: "Partners migrated off legacy", target: 25, current: 19 }
+            ]
+          },
+          {
+            name: "Earn executive trust through reliable delivery",
+            krs: [
+              { name: "On-time milestones hit", target: 8, current: 6 },
+              { name: "Status reports sent on cadence", target: 12, current: 12 },
+              { name: "P1 incidents during launch window", target: 0, current: 0 }
+            ]
+          }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function krPct(kr) {
+      var t = parseFloat(kr.target);
+      var c = parseFloat(kr.current);
+      if (isNaN(t) || isNaN(c)) return 0;
+      if (t === 0) { return c === 0 ? 100 : 0; }
+      var p = (c / t) * 100;
+      if (p < 0) p = 0;
+      if (p > 100) p = 100;
+      return Math.round(p);
+    }
+
+    function objPct(obj) {
+      if (!obj.krs.length) return 0;
+      var sum = 0;
+      obj.krs.forEach(function (kr) { sum += krPct(kr); });
+      return Math.round(sum / obj.krs.length);
+    }
+
+    function colorFor(p) {
+      if (p >= 70) return "green";
+      if (p >= 40) return "yellow";
+      return "red";
+    }
+
+    function render() {
+      var list = document.getElementById("okrList");
+      list.innerHTML = "";
+      state.objectives.forEach(function (obj, oi) {
+        var card = document.createElement("div");
+        card.className = "objective";
+
+        var head = document.createElement("div");
+        head.className = "obj-head";
+        var name = document.createElement("input");
+        name.className = "obj-input";
+        name.value = obj.name;
+        name.placeholder = "Objective";
+        name.setAttribute("aria-label", "Objective name");
+        name.addEventListener("input", function () { state.objectives[oi].name = name.value; save(); });
+        head.appendChild(name);
+        var op = objPct(obj);
+        var score = document.createElement("span");
+        score.className = "obj-score pct-" + colorFor(op);
+        score.textContent = op + "%";
+        head.appendChild(score);
+        var objDel = document.createElement("button");
+        objDel.className = "obj-del";
+        objDel.innerHTML = "&times;";
+        objDel.title = "Remove objective";
+        objDel.addEventListener("click", function () { state.objectives.splice(oi, 1); save(); render(); });
+        head.appendChild(objDel);
+        card.appendChild(head);
+
+        var bar = document.createElement("div");
+        bar.className = "obj-bar";
+        var fill = document.createElement("div");
+        fill.className = "fill bg-" + colorFor(op);
+        fill.style.width = op + "%";
+        bar.appendChild(fill);
+        card.appendChild(bar);
+
+        obj.krs.forEach(function (kr, ki) {
+          var wrap = document.createElement("div");
+          wrap.className = "kr-row-wrap";
+          var row = document.createElement("div");
+          row.className = "kr";
+
+          var krName = document.createElement("input");
+          krName.className = "kr-name";
+          krName.value = kr.name;
+          krName.placeholder = "Key result";
+          krName.setAttribute("aria-label", "Key result name");
+          krName.addEventListener("input", function () { state.objectives[oi].krs[ki].name = krName.value; save(); });
+          row.appendChild(krName);
+
+          var curWrap = document.createElement("span");
+          curWrap.className = "kr-numwrap";
+          curWrap.appendChild(document.createTextNode("Current"));
+          var cur = document.createElement("input");
+          cur.className = "kr-num"; cur.type = "number"; cur.step = "any";
+          cur.value = kr.current;
+          cur.setAttribute("aria-label", "Current value");
+          cur.addEventListener("input", function () { state.objectives[oi].krs[ki].current = cur.value === "" ? 0 : parseFloat(cur.value); save(); render(); });
+          curWrap.appendChild(cur);
+          row.appendChild(curWrap);
+
+          var tgtWrap = document.createElement("span");
+          tgtWrap.className = "kr-numwrap";
+          tgtWrap.appendChild(document.createTextNode("Target"));
+          var tgt = document.createElement("input");
+          tgt.className = "kr-num"; tgt.type = "number"; tgt.step = "any";
+          tgt.value = kr.target;
+          tgt.setAttribute("aria-label", "Target value");
+          tgt.addEventListener("input", function () { state.objectives[oi].krs[ki].target = tgt.value === "" ? 0 : parseFloat(tgt.value); save(); render(); });
+          tgtWrap.appendChild(tgt);
+          row.appendChild(tgtWrap);
+
+          var p = krPct(kr);
+          var pct = document.createElement("span");
+          pct.className = "kr-pct pct-" + colorFor(p);
+          pct.textContent = p + "%";
+          row.appendChild(pct);
+
+          var krDel = document.createElement("button");
+          krDel.className = "kr-del";
+          krDel.innerHTML = "&times;";
+          krDel.title = "Remove key result";
+          krDel.addEventListener("click", function () { state.objectives[oi].krs.splice(ki, 1); save(); render(); });
+          row.appendChild(krDel);
+
+          wrap.appendChild(row);
+
+          var krBarWrap = document.createElement("div");
+          krBarWrap.className = "kr-bar-wrap";
+          var krBar = document.createElement("div");
+          krBar.className = "kr-bar";
+          var krFill = document.createElement("div");
+          krFill.className = "fill bg-" + colorFor(p);
+          krFill.style.width = p + "%";
+          krBar.appendChild(krFill);
+          krBarWrap.appendChild(krBar);
+          wrap.appendChild(krBarWrap);
+
+          card.appendChild(wrap);
+        });
+
+        var addKr = document.createElement("button");
+        addKr.className = "add-kr";
+        addKr.textContent = "+ Add Key Result";
+        addKr.addEventListener("click", function () {
+          state.objectives[oi].krs.push({ name: "New key result", target: 100, current: 0 });
+          save(); render();
+        });
+        card.appendChild(addKr);
+
+        list.appendChild(card);
+      });
+    }
+
+    document.getElementById("addObjective").addEventListener("click", function () {
+      state.objectives.push({ name: "New objective", krs: [{ name: "New key result", target: 100, current: 0 }] });
+      save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear all objectives and start blank?")) {
+        state = { objectives: [{ name: "New objective", krs: [{ name: "New key result", target: 100, current: 0 }] }] };
+        save(); render();
+      }
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [];
+      rows.push(["Objective", "Objective %", "Key Result", "Current", "Target", "KR %"]);
+      state.objectives.forEach(function (obj) {
+        var op = objPct(obj);
+        if (!obj.krs.length) {
+          rows.push([obj.name, op + "%", "", "", "", ""]);
+          return;
+        }
+        obj.krs.forEach(function (kr, ki) {
+          rows.push([ki === 0 ? obj.name : "", ki === 0 ? op + "%" : "", kr.name, kr.current, kr.target, krPct(kr) + "%"]);
+        });
+      });
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "okr-tracker.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    render();
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

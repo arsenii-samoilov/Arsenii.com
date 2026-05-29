@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free Project Status Report Generator | Weekly Status Report Template</title>
+  <meta name="description" content="A free project status report generator for program and project managers. Fill in health, summary, accomplishments, next steps, risks, and decisions, then copy, export, or print a clean report. No signup.">
+  <meta name="keywords" content="project status report template, status report generator, weekly status report template, program status report, RAG status report, executive status update, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/status-report-generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/status-report-generator.html">
+  <meta property="og:title" content="Free Project Status Report Generator | Weekly Status Report Template">
+  <meta property="og:description" content="Fill in health, summary, accomplishments, next steps, risks, and decisions, then copy, export, or print a clean report. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Project Status Report Generator">
+  <meta name="twitter:description" content="Generate a clean weekly status report, then copy, export, or print. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Project Status Report Generator",
+    "url": "https://arsenii.com/tools/status-report-generator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free project status report generator. Fill in health, summary, accomplishments, next steps, risks, and decisions, then copy, export, or print a clean report.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What goes in a project status report?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A useful status report has an overall health signal, a one-line summary of where things stand, what was accomplished this period, what is planned next, the risks and blockers in play, and any decisions you need from the reader. The decisions section is the one most reports forget, and it is the reason executives open the email."}
+      },
+      {
+        "@type": "Question",
+        "name": "How long should a status report be?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Short enough to read on a phone. One screen is the target. A health color, a single summary line, and a handful of bullets under each section is plenty for a weekly update. If the reader has to scroll twice, the signal is buried. Detail lives in the linked plan, not in the status email."}
+      },
+      {
+        "@type": "Question",
+        "name": "What do Green, Yellow, and Red mean in a RAG status report?",
+        "acceptedAnswer": {"@type": "Answer", "text": "RAG stands for Red, Amber, Green, the health colors. Green means on track to hit scope, schedule, and budget with no help needed. Yellow means at risk, with a specific concern and a plan to recover. Red means a commitment will be missed without intervention, and it names what you need. Honest yellow early beats surprise red late."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should you send a status report?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Match the cadence to the audience. Weekly works for a working team and most program stakeholders. Executives often want biweekly or monthly with only the exceptions. The rule that matters more than frequency is consistency: same day, same format, every time, so readers know when to expect it and where to look."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .gen-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    @media (max-width: 820px) { .gen-layout { grid-template-columns: 1fr; } }
+    .form-panel { font-family: var(--font-sans); }
+    .field { margin: 0 0 1.1rem; }
+    .field label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.35rem; }
+    .field input[type=text], .field select, .field textarea { width: 100%; font-family: var(--font-sans); font-size: 0.9rem; padding: 0.5rem 0.6rem; border: 1px solid var(--accent-light); border-radius: 6px; background: var(--bg); color: var(--text); box-sizing: border-box; }
+    .field textarea { resize: vertical; line-height: 1.5; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); }
+    .list-row { display: flex; gap: 0.4rem; margin: 0 0 0.45rem; }
+    .list-row input { flex: 1; }
+    .list-del { cursor: pointer; color: var(--text-muted); border: 1px solid var(--accent-light); background: var(--bg); border-radius: 6px; font-size: 1rem; line-height: 1; padding: 0 0.6rem; }
+    .list-del:hover { color: var(--accent-red); border-color: var(--accent-red); }
+    .list-add { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; cursor: pointer; border: 1px dashed var(--accent-light); background: transparent; color: var(--accent); padding: 0.35rem 0.7rem; border-radius: 6px; }
+    .list-add:hover { border-color: var(--accent); background: var(--bg-warm); }
+    .preview-panel { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.75rem; background: #fff; font-family: var(--font-sans); }
+    .rep-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin: 0 0 0.2rem; }
+    .rep-head h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--accent-dark); margin: 0; }
+    .health-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 999px; }
+    .health-Green { background: #dcfce7; color: #166534; }
+    .health-Yellow { background: #fef9c3; color: #854d0e; }
+    .health-Red { background: #fee2e2; color: #991b1b; }
+    .rep-period { font-size: 0.82rem; color: var(--text-muted); margin: 0 0 1.1rem; }
+    .rep-summary { font-size: 0.95rem; line-height: 1.6; color: var(--text); margin: 0 0 1.4rem; padding: 0.8rem 1rem; background: var(--bg-warm); border-radius: 8px; border-left: 3px solid var(--accent); }
+    .rep-section { margin: 0 0 1.2rem; }
+    .rep-section h3 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.45rem; }
+    .rep-section ul { margin: 0; padding-left: 1.2rem; }
+    .rep-section li { font-size: 0.9rem; line-height: 1.6; color: var(--text); margin: 0 0 0.3rem; }
+    .rep-empty { font-size: 0.85rem; color: #b8c0cc; font-style: italic; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .form-panel, .tool-explainer, .tool-cta, .site-footer { display: none !important; }
+      .gen-layout { grid-template-columns: 1fr; }
+      .preview-panel { border: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>Project Status Report Generator</h1>
+        <p>Fill in the left, get a clean status report on the right. Set the health color, write a one-line summary, and list accomplishments, next steps, risks, and decisions needed. Copy, export, or print. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary" id="copyBtn">Copy Report</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="gen-layout">
+        <div class="form-panel">
+          <div class="field">
+            <label for="progName">Program name</label>
+            <input type="text" id="progName" placeholder="e.g. Payments Platform Migration">
+          </div>
+          <div class="field">
+            <label for="period">Reporting period</label>
+            <input type="text" id="period" placeholder="e.g. Week of June 8, 2026">
+          </div>
+          <div class="field">
+            <label for="health">Overall health</label>
+            <select id="health">
+              <option value="Green">Green - on track</option>
+              <option value="Yellow">Yellow - at risk</option>
+              <option value="Red">Red - off track</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="summary">Summary (one line)</label>
+            <textarea id="summary" rows="2" placeholder="Where things stand in one sentence."></textarea>
+          </div>
+          <div class="field">
+            <label>Accomplishments</label>
+            <div id="list-accomplishments"></div>
+            <button type="button" class="list-add" data-key="accomplishments">+ Add accomplishment</button>
+          </div>
+          <div class="field">
+            <label>Next steps</label>
+            <div id="list-nextSteps"></div>
+            <button type="button" class="list-add" data-key="nextSteps">+ Add next step</button>
+          </div>
+          <div class="field">
+            <label>Risks &amp; blockers</label>
+            <div id="list-risks"></div>
+            <button type="button" class="list-add" data-key="risks">+ Add risk or blocker</button>
+          </div>
+          <div class="field">
+            <label>Decisions needed</label>
+            <div id="list-decisions"></div>
+            <button type="button" class="list-add" data-key="decisions">+ Add decision needed</button>
+          </div>
+        </div>
+
+        <div class="preview-panel" id="preview"></div>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How to write a status report executives actually read</h2>
+        <p>The job of a status report is to move information to the people who can act on it, in the time they will actually spend reading. That means a health signal they can see at a glance, a single summary line that tells them whether to relax or lean in, and short lists under the rest. The decisions section is the part most reports drop, and it is the only part an executive is scanning for.</p>
+        <p>Honesty about color is what makes the report trusted. A status that is green every week until the week it is red trains people to ignore it. Yellow is not failure, it is an early flag with a recovery plan, and it is the most useful color you have. Keep the format identical every period so readers learn where to look and stop reading the words they already know.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>No decisions section. If you never ask for anything, the reader has no reason to engage. Name the calls you need made and by when.</li>
+          <li>Burying the risk. The point of yellow is to surface a concern while it is still cheap. Hiding it to keep the report green is how programs go from green to red overnight.</li>
+          <li>Writing a novel. Detail belongs in the plan. The report is the signal layer.</li>
+          <li>Changing the format every week. Consistency is what lets a busy reader find the one thing they care about in five seconds.</li>
+        </ul>
+        <p>For the full version of this thinking, read <a href="../insights/status-report-executives-actually-read.html">the status report executives actually read</a> in the Insights.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script>
+    var STORAGE_KEY = "status_report_v1";
+    var LISTS = ["accomplishments", "nextSteps", "risks", "decisions"];
+    var state = load() || sampleData();
+
+    function sampleData() {
+      return {
+        progName: "Payments Platform Migration",
+        period: "Week of June 8, 2026",
+        health: "Yellow",
+        summary: "On track for the July launch, with one dependency on legal sign-off that needs to land this week to protect the date.",
+        accomplishments: [
+          "Completed the adapter layer that isolates the deprecated vendor API",
+          "Closed integration testing for the checkout path with zero blockers",
+          "Onboarded a second engineer to the payments service to remove the single-owner risk"
+        ],
+        nextSteps: [
+          "Run the production-parity load test before the readiness review",
+          "Finalize localized strings with the vendor by the content freeze",
+          "Dry-run the launch runbook with on-call"
+        ],
+        risks: [
+          "Legal sign-off on data handling not yet scheduled, putting the launch date at risk",
+          "Staging environment does not match production scale, blocking a clean load test"
+        ],
+        decisions: [
+          "Approve pulling the compliance review forward by four weeks",
+          "Confirm the launch date or accept a one-week buffer"
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function bindField(id, key) {
+      var el = document.getElementById(id);
+      el.value = state[key] || "";
+      el.addEventListener("input", function () { state[key] = el.value; save(); renderPreview(); });
+      el.addEventListener("change", function () { state[key] = el.value; save(); renderPreview(); });
+    }
+
+    function renderList(key) {
+      var holder = document.getElementById("list-" + key);
+      holder.innerHTML = "";
+      (state[key] || []).forEach(function (item, i) {
+        var row = document.createElement("div");
+        row.className = "list-row";
+        var inp = document.createElement("input");
+        inp.type = "text";
+        inp.value = item;
+        inp.setAttribute("aria-label", key + " item");
+        inp.addEventListener("input", function () { state[key][i] = inp.value; save(); renderPreview(); });
+        row.appendChild(inp);
+        var del = document.createElement("button");
+        del.type = "button";
+        del.className = "list-del";
+        del.innerHTML = "&times;";
+        del.title = "Remove";
+        del.addEventListener("click", function () { state[key].splice(i, 1); save(); renderList(key); renderPreview(); });
+        row.appendChild(del);
+        holder.appendChild(row);
+      });
+    }
+
+    function renderAllLists() {
+      LISTS.forEach(renderList);
+    }
+
+    function sectionPreview(title, items) {
+      var html = '<div class="rep-section"><h3>' + title + '</h3>';
+      var real = (items || []).filter(function (x) { return x && x.replace(/^\s+|\s+$/g, ""); });
+      if (real.length === 0) {
+        html += '<p class="rep-empty">None listed</p>';
+      } else {
+        html += '<ul>' + real.map(function (x) { return '<li>' + escapeHtml(x) + '</li>'; }).join("") + '</ul>';
+      }
+      return html + '</div>';
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function renderPreview() {
+      var p = document.getElementById("preview");
+      var name = state.progName || "Untitled Program";
+      var html = '';
+      html += '<div class="rep-head"><h2>' + escapeHtml(name) + '</h2>';
+      html += '<span class="health-badge health-' + state.health + '">' + state.health + '</span></div>';
+      if (state.period) html += '<p class="rep-period">' + escapeHtml(state.period) + '</p>';
+      if (state.summary) html += '<p class="rep-summary">' + escapeHtml(state.summary) + '</p>';
+      html += sectionPreview("Accomplishments", state.accomplishments);
+      html += sectionPreview("Next Steps", state.nextSteps);
+      html += sectionPreview("Risks &amp; Blockers", state.risks);
+      html += sectionPreview("Decisions Needed", state.decisions);
+      p.innerHTML = html;
+    }
+
+    function plainText() {
+      var lines = [];
+      lines.push((state.progName || "Untitled Program") + " - Status: " + state.health);
+      if (state.period) lines.push(state.period);
+      if (state.summary) { lines.push(""); lines.push(state.summary); }
+      function block(title, items) {
+        var real = (items || []).filter(function (x) { return x && x.replace(/^\s+|\s+$/g, ""); });
+        lines.push("");
+        lines.push(title.toUpperCase());
+        if (real.length === 0) { lines.push("- None listed"); }
+        else { real.forEach(function (x) { lines.push("- " + x); }); }
+      }
+      block("Accomplishments", state.accomplishments);
+      block("Next Steps", state.nextSteps);
+      block("Risks & Blockers", state.risks);
+      block("Decisions Needed", state.decisions);
+      return lines.join("\n");
+    }
+
+    function initFields() {
+      bindField("progName", "progName");
+      bindField("period", "period");
+      bindField("health", "health");
+      bindField("summary", "summary");
+      renderAllLists();
+      renderPreview();
+    }
+
+    var addBtns = document.querySelectorAll(".list-add");
+    Array.prototype.forEach.call(addBtns, function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-key");
+        if (!state[key]) state[key] = [];
+        state[key].push("");
+        save(); renderList(key); renderPreview();
+      });
+    });
+
+    document.getElementById("copyBtn").addEventListener("click", function () {
+      var text = plainText();
+      var btn = document.getElementById("copyBtn");
+      function done() { var old = btn.textContent; btn.textContent = "Copied"; setTimeout(function () { btn.textContent = old; }, 1400); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); initFields();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the report and start blank?")) {
+        state = { progName: "", period: "", health: "Green", summary: "", accomplishments: [], nextSteps: [], risks: [], decisions: [] };
+        save(); initFields();
+      }
+    });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [];
+      rows.push(["Field", "Value"]);
+      rows.push(["Program", state.progName]);
+      rows.push(["Reporting period", state.period]);
+      rows.push(["Health", state.health]);
+      rows.push(["Summary", state.summary]);
+      function addList(label, items) {
+        (items || []).forEach(function (x) { if (x && x.replace(/^\s+|\s+$/g, "")) rows.push([label, x]); });
+      }
+      addList("Accomplishment", state.accomplishments);
+      addList("Next step", state.nextSteps);
+      addList("Risk / blocker", state.risks);
+      addList("Decision needed", state.decisions);
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "status-report.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    initFields();
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

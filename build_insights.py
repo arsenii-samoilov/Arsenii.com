@@ -39,6 +39,13 @@ CORE_PAGES = [
     ("/tools/raci-matrix-generator.html", "0.85", "monthly"),
     ("/tools/risk-register.html", "0.8", "monthly"),
     ("/tools/stakeholder-matrix.html", "0.8", "monthly"),
+    ("/tools/raid-log.html", "0.8", "monthly"),
+    ("/tools/decision-matrix.html", "0.8", "monthly"),
+    ("/tools/status-report-generator.html", "0.8", "monthly"),
+    ("/tools/prioritization-matrix.html", "0.8", "monthly"),
+    ("/tools/project-charter-generator.html", "0.8", "monthly"),
+    ("/tools/pre-mortem-worksheet.html", "0.8", "monthly"),
+    ("/tools/okr-tracker.html", "0.8", "monthly"),
     ("/contact.html", "0.85", "monthly"),
     ("/photography.html", "0.7", "monthly"),
     ("/culinary.html", "0.7", "monthly"),
@@ -55,6 +62,7 @@ NAV = (
     '        <a href="{home}culinary.html">Culinary</a>\n'
     '        <a href="{home}photography.html">Photography</a>\n'
     '        <a href="{home}insights.html">Insights</a>\n'
+    '        <a href="{home}tools/index.html">Tools</a>\n'
     '        <a href="{home}contact.html">Contact</a>\n'
     '      </nav>\n'
     '    </div>\n'

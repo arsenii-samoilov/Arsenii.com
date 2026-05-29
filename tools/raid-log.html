@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free RAID Log Template | Track Risks, Assumptions, Issues, Dependencies</title>
+  <meta name="description" content="A free RAID log for program and project managers. Track risks, assumptions, issues, and dependencies in one place, assign owners and due dates, then export to CSV or print. No signup.">
+  <meta name="keywords" content="RAID log template, RAID log example, risks assumptions issues dependencies, RAID log, project management RAID, program management tools, RAID register, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/raid-log.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/raid-log.html">
+  <meta property="og:title" content="Free RAID Log Template | Track Risks, Assumptions, Issues, Dependencies">
+  <meta property="og:description" content="Track risks, assumptions, issues, and dependencies in one place, assign owners and due dates, then export to CSV or print. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free RAID Log Template">
+  <meta name="twitter:description" content="Track risks, assumptions, issues, and dependencies, then export to CSV or print. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "RAID Log",
+    "url": "https://arsenii.com/tools/raid-log.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free RAID log for program and project managers. Track risks, assumptions, issues, and dependencies in one place, assign owners and due dates, then export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a RAID log?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A RAID log is a single tracker that captures four kinds of program entries: Risks (things that might go wrong), Assumptions (things you are treating as true without proof), Issues (problems happening right now), and Dependencies (things you need from someone else). Each entry has an owner, a due date, and a status, so nothing important lives only in someone's head."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a RAID log and a RACI matrix?",
+        "acceptedAnswer": {"@type": "Answer", "text": "They answer different questions. A RACI matrix maps who is Responsible, Accountable, Consulted, and Informed for each task, so it is about ownership of work. A RAID log tracks risks, assumptions, issues, and dependencies, so it is about what could derail the program and what you are doing about it. Most programs run both at once."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should you use a RAID log?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Start one at kickoff and keep it open for the life of the program. Review it at every status meeting. It is most valuable on cross-functional work where dependencies and assumptions pile up faster than any single person can hold in memory. The moment you hear yourself say I assumed someone had that, you needed a RAID log."}
+      },
+      {
+        "@type": "Question",
+        "name": "What goes in each RAID category?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Risk: something that has not happened yet but could hurt the program, so you plan a mitigation. Assumption: something you are taking as true to move forward, which becomes a risk if it turns out false. Issue: a problem that is already real and needs action now. Dependency: an input, decision, or deliverable you need from another team to keep moving."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .matrix-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 8px; }
+    table.raid { border-collapse: collapse; width: 100%; min-width: 900px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.raid th, table.raid td { border: 1px solid var(--accent-light); padding: 0.5rem 0.55rem; text-align: center; vertical-align: middle; }
+    table.raid thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.raid th.desc-col, table.raid td.desc-col { text-align: left; min-width: 240px; }
+    .raid-text { font-family: var(--font-sans); font-size: 0.88rem; border: none; background: transparent; width: 100%; text-align: left; color: var(--text); padding: 0.35rem 0.3rem; resize: vertical; line-height: 1.45; min-height: 2.2rem; }
+    .raid-text:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .raid-select { font-family: var(--font-sans); font-weight: 600; font-size: 0.86rem; border: none; background: transparent; cursor: pointer; width: 100%; text-align: center; text-align-last: center; color: var(--text); padding: 0.35rem 0; border-radius: 4px; }
+    .raid-select:focus { outline: 2px solid var(--accent); }
+    .raid-input { font-family: var(--font-sans); font-size: 0.86rem; border: none; background: transparent; width: 100%; text-align: center; color: var(--text); padding: 0.35rem 0.2rem; }
+    .raid-input:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .type-Risk { background: #fee2e2; color: #991b1b; }
+    .type-Assumption { background: #fef9c3; color: #854d0e; }
+    .type-Issue { background: #ffedd5; color: #9a3412; }
+    .type-Dependency { background: #dbeafe; color: #1e40af; }
+    .status-pill { font-family: var(--font-sans); font-size: 0.82rem; border: none; cursor: pointer; width: 100%; text-align: center; text-align-last: center; padding: 0.35rem 0; border-radius: 4px; color: var(--text); background: transparent; }
+    .status-pill:focus { outline: 2px solid var(--accent); }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .row-del:hover { color: var(--accent-red); background: #fef2f2; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0 0; font-family: var(--font-sans); font-size: 0.82rem; color: var(--text-muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .legend b { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 4px; font-weight: 700; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
+      .raid-select, .status-pill { -webkit-appearance: none; appearance: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>RAID Log</h1>
+        <p>Track Risks, Assumptions, Issues, and Dependencies in one place. Tag each entry by type, assign an owner and a due date, and set a status. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary" id="addRow">+ Add Entry</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="matrix-scroll">
+        <table class="raid" id="raidTable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th class="desc-col">Description</th>
+              <th>Owner</th>
+              <th>Due</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <div class="legend">
+        <span><b class="type-Risk">Risk</b> might go wrong</span>
+        <span><b class="type-Assumption">Assumption</b> taken as true</span>
+        <span><b class="type-Issue">Issue</b> already real</span>
+        <span><b class="type-Dependency">Dependency</b> needed from others</span>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How to use a RAID log</h2>
+        <p>A RAID log is the running memory of a program. It holds the four things that derail work but rarely fit anywhere else: the risks you are watching, the assumptions you are betting on, the issues already in front of you, and the dependencies you owe or are owed. One tracker, one owner per line, one status you can scan.</p>
+        <p>The value is in the discipline of writing things down before they bite. An assumption named out loud becomes a risk you can test. A dependency logged with a due date becomes a conversation you can have early instead of a surprise at launch. Review the log at every status meeting, close what no longer applies, and add new entries the moment they surface.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>Logging risks but never assumptions. The assumptions are the ones that quietly turn into the issues that sink a program.</li>
+          <li>No owner on a line. An entry owned by everyone is owned by no one. Name one person per row.</li>
+          <li>Letting dependencies sit without a date. A dependency without a due date is a wish, not a commitment.</li>
+          <li>Treating it as a setup artifact. A RAID log built once and forgotten is worse than none, because it looks like control without being it.</li>
+        </ul>
+        <p>For more on running programs across many teams, see the <a href="../insights.html">Insights</a> notes on dependency management, decision logs, and escalation paths.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script>
+    var STORAGE_KEY = "raid_log_v1";
+    var TYPES = ["Risk", "Assumption", "Issue", "Dependency"];
+    var STATUSES = ["Open", "In Progress", "Closed"];
+    var state = load() || sampleData();
+
+    function sampleData() {
+      return {
+        entries: [
+          { type: "Risk", desc: "Vendor API migration path is not yet committed for the new quarter", owner: "Program Manager", due: "2026-07-15", status: "In Progress" },
+          { type: "Assumption", desc: "Localization vendor can turn around final strings within five business days", owner: "Design", due: "2026-06-30", status: "Open" },
+          { type: "Issue", desc: "Staging environment does not match production scale, blocking load tests", owner: "Infra Lead", due: "2026-06-10", status: "Open" },
+          { type: "Dependency", desc: "Legal sign-off on data handling required before launch readiness review", owner: "Compliance PM", due: "2026-07-01", status: "In Progress" },
+          { type: "Dependency", desc: "Payments team to deliver the sandbox credentials for integration testing", owner: "Engineering Lead", due: "2026-06-20", status: "Open" },
+          { type: "Assumption", desc: "Executive sponsor stays available for weekly steering through launch", owner: "Program Manager", due: "", status: "Open" },
+          { type: "Risk", desc: "Single engineer owns the payments service with no backup", owner: "Engineering Lead", due: "2026-06-25", status: "Closed" }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function makeSelect(values, current, cls) {
+      var sel = document.createElement("select");
+      sel.className = cls;
+      values.forEach(function (v) {
+        var opt = document.createElement("option");
+        opt.value = v; opt.textContent = v;
+        sel.appendChild(opt);
+      });
+      sel.value = current;
+      return sel;
+    }
+
+    function applyTypeClass(sel) {
+      sel.className = "raid-select type-" + sel.value;
+    }
+
+    function render() {
+      var body = document.getElementById("bodyRows");
+      body.innerHTML = "";
+      state.entries.forEach(function (entry, ei) {
+        var tr = document.createElement("tr");
+
+        var tdType = document.createElement("td");
+        var typeSel = makeSelect(TYPES, entry.type, "raid-select");
+        applyTypeClass(typeSel);
+        typeSel.setAttribute("aria-label", "Type");
+        typeSel.addEventListener("change", function () {
+          state.entries[ei].type = typeSel.value;
+          applyTypeClass(typeSel);
+          save();
+        });
+        tdType.appendChild(typeSel);
+        tr.appendChild(tdType);
+
+        var tdDesc = document.createElement("td");
+        tdDesc.className = "desc-col";
+        var desc = document.createElement("textarea");
+        desc.className = "raid-text";
+        desc.rows = 2;
+        desc.value = entry.desc;
+        desc.setAttribute("aria-label", "Description");
+        desc.addEventListener("input", function () { state.entries[ei].desc = desc.value; save(); });
+        tdDesc.appendChild(desc);
+        tr.appendChild(tdDesc);
+
+        var tdOwner = document.createElement("td");
+        var owner = document.createElement("input");
+        owner.className = "raid-input";
+        owner.value = entry.owner;
+        owner.setAttribute("aria-label", "Owner");
+        owner.addEventListener("input", function () { state.entries[ei].owner = owner.value; save(); });
+        tdOwner.appendChild(owner);
+        tr.appendChild(tdOwner);
+
+        var tdDue = document.createElement("td");
+        var due = document.createElement("input");
+        due.className = "raid-input";
+        due.type = "date";
+        due.value = entry.due || "";
+        due.setAttribute("aria-label", "Due date");
+        due.addEventListener("input", function () { state.entries[ei].due = due.value; save(); });
+        tdDue.appendChild(due);
+        tr.appendChild(tdDue);
+
+        var tdStatus = document.createElement("td");
+        var status = makeSelect(STATUSES, entry.status, "status-pill");
+        status.setAttribute("aria-label", "Status");
+        status.addEventListener("change", function () { state.entries[ei].status = status.value; save(); });
+        tdStatus.appendChild(status);
+        tr.appendChild(tdStatus);
+
+        var tdDel = document.createElement("td");
+        var del = document.createElement("button");
+        del.className = "row-del";
+        del.innerHTML = "&times;";
+        del.title = "Remove entry";
+        del.addEventListener("click", function () { state.entries.splice(ei, 1); save(); render(); });
+        tdDel.appendChild(del);
+        tr.appendChild(tdDel);
+
+        body.appendChild(tr);
+      });
+    }
+
+    document.getElementById("addRow").addEventListener("click", function () {
+      state.entries.push({ type: "Risk", desc: "New entry", owner: "", due: "", status: "Open" });
+      save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the whole RAID log and start blank?")) {
+        state = { entries: [{ type: "Risk", desc: "New entry", owner: "", due: "", status: "Open" }] };
+        save(); render();
+      }
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [];
+      rows.push(["Type", "Description", "Owner", "Due", "Status"]);
+      state.entries.forEach(function (e) {
+        rows.push([e.type, e.desc, e.owner, e.due, e.status]);
+      });
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "raid-log.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    render();
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>
