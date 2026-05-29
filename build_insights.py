@@ -187,11 +187,15 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <meta property="og:title" content="' + esc(title) + '">\n'
         '  <meta property="og:description" content="' + esc(description) + '">\n'
         '  <meta property="og:image" content="' + SITE + '/images/headshot-share.jpg">\n'
+        '  <meta property="og:image:width" content="1200">\n'
+        '  <meta property="og:image:height" content="799">\n'
+        '  <meta property="og:image:alt" content="Arsenii Samoilov - Senior Technical Program Manager">\n'
         '  <meta property="og:site_name" content="Arsenii Samoilov">\n'
         '  <meta name="twitter:card" content="summary_large_image">\n'
         '  <meta name="twitter:title" content="' + esc(title) + '">\n'
         '  <meta name="twitter:description" content="' + esc(description) + '">\n'
         '  <meta name="twitter:image" content="' + SITE + '/images/headshot-share.jpg">\n'
+        '  <meta name="twitter:image:alt" content="Arsenii Samoilov - Senior Technical Program Manager">\n'
         '  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="' + SITE + '/feed.xml">\n'
         + extra_ld +
         '  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -323,7 +327,16 @@ def build_index(published):
             for a in published
         ],
     }
-    extra_ld = '  <script type="application/ld+json">' + json.dumps(blog_ld) + '</script>\n'
+    crumbs = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Insights", "item": canonical},
+        ],
+    }
+    extra_ld = ('  <script type="application/ld+json">' + json.dumps(blog_ld) + '</script>\n'
+                '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
 
     html = page_head(
         "TPM Insights | Arsenii Samoilov | Senior Technical Program Manager",

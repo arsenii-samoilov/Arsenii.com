@@ -180,7 +180,7 @@
       <div class="hero-photo">
         <picture>
           <source srcset="images/headshot.webp" type="image/webp">
-          <img src="images/headshot.png" alt="Arsenii Samoilov — Senior Technical Program Manager, Bay Area" class="hero-headshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="images/headshot.png" alt="Arsenii Samoilov — Senior Technical Program Manager, Bay Area" class="hero-headshot" width="200" height="200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         </picture>
         <span class="hero-initial" style="display:none">A</span>
       </div>
@@ -218,8 +218,11 @@
       </article>
       <article class="preview-card preview-culinary" style="padding:0;overflow:hidden;">
         <a href="culinary.html" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
-        <img src="embroidered-name.png" alt="Arsenii Samoilov embroidery"
+        <picture>
+          <source srcset="embroidered-name.webp" type="image/webp">
+          <img src="embroidered-name.png" alt="Arsenii Samoilov embroidery" width="1200" height="669"
             style="width:100%;display:block;border-radius:var(--radius) var(--radius) 0 0;aspect-ratio:16/9;object-fit:cover;object-position:center;flex-shrink:0;" loading="lazy">
+        </picture>
           <div class="preview-card-inner">
             <h2 style="font-family:var(--font-serif);font-size:var(--text-lg);margin:0 0 0.75rem;font-weight:600;text-align:center;display:none;">Culinary Adventures</h2>
             <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Tasting Menu of flavors, seasons, and memories</p>
