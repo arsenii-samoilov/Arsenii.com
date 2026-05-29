@@ -98,25 +98,38 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <meta property="og:description" content="' + esc(description) + '">\n'
         '  <meta property="og:image" content="' + SITE + '/images/headshot-share.jpg">\n'
         '  <meta property="og:site_name" content="Arsenii Samoilov">\n'
-        '  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov &mdash; TPM Insights" href="' + SITE + '/feed.xml">\n'
+        '  <meta name="twitter:card" content="summary_large_image">\n'
+        '  <meta name="twitter:title" content="' + esc(title) + '">\n'
+        '  <meta name="twitter:description" content="' + esc(description) + '">\n'
+        '  <meta name="twitter:image" content="' + SITE + '/images/headshot-share.jpg">\n'
+        '  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="' + SITE + '/feed.xml">\n'
         + extra_ld +
         '  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n'
         '  <link rel="stylesheet" href="' + css_prefix + 'styles.css?v=34">\n'
-        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=1">\n'
+        '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=2">\n'
         '</head>\n<body>\n  '
     )
 
 
-def build_article_page(a):
+def related_articles(a, published, limit=3):
+    others = [x for x in published if x["slug"] != a["slug"]]
+    same_cat = [x for x in others if x["category"] == a["category"]]
+    rest = [x for x in others if x["category"] != a["category"]]
+    return (same_cat + rest)[:limit]
+
+
+def build_article_page(a, published):
     canonical = SITE + "/insights/" + a["slug"] + ".html"
+    modified = a.get("modified", a["date"])
     ld = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": a["title"],
         "description": a["description"],
         "datePublished": a["date"],
+        "dateModified": modified,
         "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": SITE},
         "publisher": {"@type": "Person", "name": "Arsenii Samoilov"},
         "mainEntityOfPage": canonical,
@@ -133,10 +146,34 @@ def build_article_page(a):
             {"@type": "ListItem", "position": 3, "name": a["title"], "item": canonical},
         ],
     }
-    extra_ld = ('  <script type="application/ld+json">' + json.dumps(ld) + '</script>\n'
-                '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
+    extra_ld = (
+        '  <meta property="article:published_time" content="' + a["date"] + '">\n'
+        '  <meta property="article:modified_time" content="' + modified + '">\n'
+        '  <meta property="article:author" content="Arsenii Samoilov">\n'
+        '  <meta property="article:section" content="' + esc(a["category"]) + '">\n'
+        + "".join('  <meta property="article:tag" content="' + esc(t) + '">\n' for t in a["tags"]) +
+        '  <script type="application/ld+json">' + json.dumps(ld) + '</script>\n'
+        '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
 
     tags_html = "".join('<span class="insight-tag">' + esc(t) + '</span>' for t in a["tags"])
+
+    related = related_articles(a, published)
+    related_html = ""
+    if related:
+        rows = ""
+        for r in related:
+            rows += (
+                '        <a class="related-row" href="' + r["slug"] + '.html">\n'
+                '          <span class="related-meta">' + esc(r["category"]) + '</span>\n'
+                '          <span class="related-title">' + esc(r["title"]) + '</span>\n'
+                '        </a>\n'
+            )
+        related_html = (
+            '      <aside class="related-insights" aria-label="Related insights">\n'
+            '        <h2 class="related-heading">Related Insights</h2>\n'
+            + rows +
+            '      </aside>\n'
+        )
 
     html = page_head(a["title"] + " | Arsenii Samoilov", a["description"], canonical,
                      "../", "../", extra_ld)
@@ -148,6 +185,7 @@ def build_article_page(a):
         '      <h1>' + esc(a["title"]) + '</h1>\n'
         '      <div class="article-body">' + a["body"] + '</div>\n'
         '      <div class="insight-tags">' + tags_html + '</div>\n'
+        + related_html +
         '      <div class="article-footer-nav"><a href="../insights.html" class="btn btn-ghost">&larr; All Insights</a> <a href="../contact.html" class="btn btn-secondary">Work with me &rarr;</a></div>\n'
         '    </article>\n'
         '  </main>\n  '
@@ -274,7 +312,7 @@ def main():
     for a in published:
         path = os.path.join(ARTICLES_DIR, a["slug"] + ".html")
         with open(path, "w", encoding="utf-8") as f:
-            f.write(build_article_page(a))
+            f.write(build_article_page(a, published))
 
     with open(os.path.join(BASE_DIR, "insights.html"), "w", encoding="utf-8") as f:
         f.write(build_index(published))
