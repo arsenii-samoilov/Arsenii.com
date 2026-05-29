@@ -35,7 +35,10 @@ CORE_PAGES = [
     ("/", "1.0", "weekly"),
     ("/career.html", "0.95", "monthly"),
     ("/insights.html", "0.9", "weekly"),
+    ("/tools/index.html", "0.8", "monthly"),
     ("/tools/raci-matrix-generator.html", "0.85", "monthly"),
+    ("/tools/risk-register.html", "0.8", "monthly"),
+    ("/tools/stakeholder-matrix.html", "0.8", "monthly"),
     ("/contact.html", "0.85", "monthly"),
     ("/photography.html", "0.7", "monthly"),
     ("/culinary.html", "0.7", "monthly"),
@@ -293,7 +296,7 @@ def build_index(published):
         '    </div>\n'
         '    <div style="max-width:760px;margin:0 auto;padding:3rem 1.5rem 1rem;border-top:2px solid var(--accent-light);">\n'
         '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Free Tools</p>\n'
-        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 2rem;">Need to sort out who owns what on a program? Use the free <a href="tools/raci-matrix-generator.html" style="color:var(--accent);font-weight:500;">RACI Matrix Generator</a> to map tasks to Responsible, Accountable, Consulted, and Informed, then export to CSV or print.</p>\n'
+        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 2rem;">A small set of <a href="tools/index.html" style="color:var(--accent);font-weight:500;">free program management tools</a> that run in your browser with no signup: the RACI Matrix Generator for who owns what, the Program Risk Register for scoring and tracking risk, and the Stakeholder Power/Interest Grid for deciding who to keep close. Each one exports to CSV or print.</p>\n'
         '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Advisory &amp; Consulting</p>\n'
         '      <h2 style="font-family:var(--font-serif);font-size:clamp(1.3rem,3vw,1.7rem);font-weight:600;color:var(--accent-dark);margin:0 0 1rem;">Available for TPM Advisory Engagements</h2>\n'
         '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">Beyond full-time roles, I take selective advisory engagements where a senior technical program manager can accelerate a specific outcome: standing up a compliance framework, unblocking an AI adoption initiative, or restructuring a growth program that has stalled.</p>\n'

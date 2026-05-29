@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free Program Risk Register | Build &amp; Export a Risk Matrix Online</title>
+  <meta name="description" content="A free program risk register and risk matrix generator for program and project managers. Score risks by likelihood and impact, assign owners and mitigations, then export to CSV or print. No signup.">
+  <meta name="keywords" content="risk register template, project risk register, program risk register, risk matrix generator, risk register excel free, risk assessment tool, likelihood impact matrix, program management tools, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/risk-register.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/risk-register.html">
+  <meta property="og:title" content="Free Program Risk Register | Build &amp; Export a Risk Matrix Online">
+  <meta property="og:description" content="Score risks by likelihood and impact, assign owners and mitigations, then export to CSV or print. Free, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Program Risk Register">
+  <meta name="twitter:description" content="Score risks by likelihood and impact, then export to CSV or print. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Program Risk Register",
+    "url": "https://arsenii.com/tools/risk-register.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free program risk register and risk matrix generator. Score risks by likelihood and impact, assign owners and mitigations, then export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a risk register?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A risk register is a living list of everything that could derail a program, captured in one place. Each entry names the risk, a category, how likely it is, how bad the impact would be, a single owner, and the planned mitigation. It turns vague worry into a tracked list you can review, assign, and close."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate a risk score?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Multiply likelihood by impact. Most teams rate each on a 1 to 5 scale, so the score runs from 1 to 25. A risk that is very likely (5) and very damaging (5) scores 25 and goes to the top. A low-likelihood, low-impact risk scores 1 to 4 and can usually be monitored rather than actively worked. Color coding the score helps the eye go straight to what matters."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between likelihood and impact?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Likelihood is the probability that the risk actually happens. Impact is how much damage it does if it does happen. They are independent. A data center fire is high impact but low likelihood. A late design review is moderate on both. Scoring them separately keeps you from treating a rare catastrophe and a frequent annoyance the same way."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should you update a risk register?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Review it on the same cadence as your program status, usually weekly or biweekly. Re-score risks as conditions change, close the ones that no longer apply, and add new ones the moment they surface. A register that is updated once and forgotten is worse than none, because it gives false confidence that risk is being managed."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .tool-toggle { display: flex; align-items: center; gap: 0.45rem; font-family: var(--font-sans); font-size: 0.82rem; color: var(--text-muted); margin: 0 0 1.25rem; justify-content: center; }
+    .matrix-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 8px; }
+    table.risk { border-collapse: collapse; width: 100%; min-width: 920px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.risk th, table.risk td { border: 1px solid var(--accent-light); padding: 0.5rem 0.55rem; text-align: center; vertical-align: middle; }
+    table.risk thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.risk th.desc-col, table.risk td.desc-col { text-align: left; min-width: 200px; }
+    table.risk td.mit-col, table.risk th.mit-col { text-align: left; min-width: 180px; }
+    .risk-text { font-family: var(--font-sans); font-size: 0.88rem; border: none; background: transparent; width: 100%; text-align: left; color: var(--text); padding: 0.35rem 0.3rem; resize: vertical; line-height: 1.45; min-height: 2.2rem; }
+    .risk-text:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .risk-select { font-family: var(--font-sans); font-size: 0.86rem; border: none; background: transparent; cursor: pointer; width: 100%; text-align: center; text-align-last: center; color: var(--text); padding: 0.35rem 0; border-radius: 4px; }
+    .risk-select:focus { outline: 2px solid var(--accent); }
+    .num-select { min-width: 52px; }
+    .score-cell { font-weight: 700; font-size: 0.95rem; border-radius: 4px; }
+    .score-low { background: #dcfce7; color: #166534; }
+    .score-med { background: #fef9c3; color: #854d0e; }
+    .score-high { background: #fee2e2; color: #991b1b; }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .row-del:hover { color: var(--accent-red); background: #fef2f2; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0 0; font-family: var(--font-sans); font-size: 0.82rem; color: var(--text-muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .legend b { display: inline-block; width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; border-radius: 4px; font-weight: 700; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-toggle, .tool-explainer, .tool-cta, .site-footer, .row-del, .add-row-btn { display: none !important; }
+      .risk-select { -webkit-appearance: none; appearance: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>Program Risk Register</h1>
+        <p>Track every risk that could derail your program in one place. Score each by likelihood and impact, assign an owner and a mitigation, then export to CSV or print. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary add-row-btn" id="addRisk">+ Add Risk</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <label class="tool-toggle"><input type="checkbox" id="sortToggle"> Auto-sort by score (highest first)</label>
+
+      <div class="matrix-scroll">
+        <table class="risk" id="riskTable">
+          <thead>
+            <tr>
+              <th class="desc-col">Risk</th>
+              <th>Category</th>
+              <th>Likelihood</th>
+              <th>Impact</th>
+              <th>Score</th>
+              <th>Owner</th>
+              <th class="mit-col">Mitigation</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <div class="legend">
+        <span><b class="score-low">1-6</b> Low - monitor</span>
+        <span><b class="score-med">7-12</b> Medium - actively manage</span>
+        <span><b class="score-high">13-25</b> High - mitigate or escalate now</span>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How to use a risk register</h2>
+        <p>A risk register is the difference between managing risk and hoping for the best. You list everything that could go wrong, score each one, give it a single owner, and write down what you are doing about it. The act of writing a risk down forces you to decide whether it is real and who is on the hook for it.</p>
+        <p>Score is just likelihood times impact. Rate each on a 1 to 5 scale and the product tells you where to spend attention. A risk that is both likely and damaging scores high and gets worked this week. A rare, low-damage risk scores low and gets a glance at review. The color coding exists so an executive can scan the register in ten seconds and see where the program is exposed.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>No owner, or a team as the owner. A risk owned by everyone is owned by no one. Name one person.</li>
+          <li>Confusing likelihood and impact. A data center fire is high impact but low likelihood. Score them separately or you will overreact to rare events and ignore frequent ones.</li>
+          <li>Writing mitigations you never do. A mitigation is a commitment, not a wish. If no one is acting on it, the risk is still live.</li>
+          <li>Building it once and never updating it. Re-score at every status review, close what no longer applies, and add new risks the moment they surface.</li>
+          <li>Treating the register as a place to hide bad news. The point is to surface exposure early so it can be managed, not to bury it in a spreadsheet.</li>
+        </ul>
+        <p>For more on running programs across many teams, see the <a href="../insights.html">Insights</a> notes on dependency management, decision logs, and escalation paths.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script>
+    var STORAGE_KEY = "risk_register_v1";
+    var CATEGORIES = ["Technical", "Schedule", "Resource", "External", "Compliance", "Other"];
+    var STATUSES = ["Open", "Mitigating", "Closed"];
+    var SCORES = [1, 2, 3, 4, 5];
+    var state = load() || sampleData();
+
+    function sampleData() {
+      return {
+        sort: false,
+        risks: [
+          { desc: "Key vendor API deprecated mid-program with no committed migration path", category: "External", likelihood: 4, impact: 5, owner: "Program Manager", mitigation: "Lock migration timeline in vendor contract. Build adapter layer to isolate dependency.", status: "Mitigating" },
+          { desc: "Lead backend engineer is the only person who understands the payments service", category: "Resource", likelihood: 3, impact: 5, owner: "Engineering Lead", mitigation: "Pair a second engineer on the service. Document the runbook before launch.", status: "Open" },
+          { desc: "Compliance review for data handling not scheduled until after planned launch", category: "Compliance", likelihood: 4, impact: 4, owner: "Compliance PM", mitigation: "Pull review forward four weeks. Pre-share the data flow diagram with legal.", status: "Mitigating" },
+          { desc: "Third-party integration testing slips past the freeze window", category: "Schedule", likelihood: 3, impact: 3, owner: "QA Lead", mitigation: "Reserve a dedicated test environment. Start integration testing two sprints early.", status: "Open" },
+          { desc: "Scope creep from a late executive feature request", category: "Schedule", likelihood: 3, impact: 2, owner: "Product", mitigation: "Route all new requests through change control. Defer non-launch features to fast-follow.", status: "Open" },
+          { desc: "Load test environment does not match production scale", category: "Technical", likelihood: 2, impact: 4, owner: "Infra Lead", mitigation: "Provision a production-parity staging tier two weeks before launch readiness.", status: "Open" },
+          { desc: "Minor UI copy not finalized for localized markets", category: "Other", likelihood: 2, impact: 1, owner: "Design", mitigation: "Hand off final strings to localization vendor by the content freeze.", status: "Closed" }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function scoreOf(r) {
+      return (parseInt(r.likelihood, 10) || 0) * (parseInt(r.impact, 10) || 0);
+    }
+    function scoreClass(s) {
+      if (s >= 13) return "score-high";
+      if (s >= 7) return "score-med";
+      return "score-low";
+    }
+
+    function orderedRisks() {
+      if (!state.sort) return state.risks.map(function (r, i) { return { r: r, i: i }; });
+      var idx = state.risks.map(function (r, i) { return { r: r, i: i }; });
+      idx.sort(function (a, b) { return scoreOf(b.r) - scoreOf(a.r); });
+      return idx;
+    }
+
+    function makeSelect(values, current, cls, render) {
+      var sel = document.createElement("select");
+      sel.className = cls;
+      values.forEach(function (v) {
+        var opt = document.createElement("option");
+        opt.value = v; opt.textContent = v;
+        sel.appendChild(opt);
+      });
+      sel.value = current;
+      return sel;
+    }
+
+    function render() {
+      var body = document.getElementById("bodyRows");
+      body.innerHTML = "";
+      orderedRisks().forEach(function (entry) {
+        var risk = entry.r;
+        var ri = entry.i;
+        var tr = document.createElement("tr");
+
+        var tdDesc = document.createElement("td");
+        tdDesc.className = "desc-col";
+        var desc = document.createElement("textarea");
+        desc.className = "risk-text";
+        desc.rows = 2;
+        desc.value = risk.desc;
+        desc.setAttribute("aria-label", "Risk description");
+        desc.addEventListener("input", function () { state.risks[ri].desc = desc.value; save(); });
+        tdDesc.appendChild(desc);
+        tr.appendChild(tdDesc);
+
+        var tdCat = document.createElement("td");
+        var cat = makeSelect(CATEGORIES, risk.category, "risk-select");
+        cat.setAttribute("aria-label", "Category");
+        cat.addEventListener("change", function () { state.risks[ri].category = cat.value; save(); });
+        tdCat.appendChild(cat);
+        tr.appendChild(tdCat);
+
+        var tdLik = document.createElement("td");
+        var lik = makeSelect(SCORES, risk.likelihood, "risk-select num-select");
+        lik.setAttribute("aria-label", "Likelihood 1 to 5");
+        lik.addEventListener("change", function () { state.risks[ri].likelihood = parseInt(lik.value, 10); save(); render(); });
+        tdLik.appendChild(lik);
+        tr.appendChild(tdLik);
+
+        var tdImp = document.createElement("td");
+        var imp = makeSelect(SCORES, risk.impact, "risk-select num-select");
+        imp.setAttribute("aria-label", "Impact 1 to 5");
+        imp.addEventListener("change", function () { state.risks[ri].impact = parseInt(imp.value, 10); save(); render(); });
+        tdImp.appendChild(imp);
+        tr.appendChild(tdImp);
+
+        var tdScore = document.createElement("td");
+        var s = scoreOf(risk);
+        tdScore.className = "score-cell " + scoreClass(s);
+        tdScore.textContent = s;
+        tr.appendChild(tdScore);
+
+        var tdOwner = document.createElement("td");
+        var owner = document.createElement("input");
+        owner.className = "risk-text";
+        owner.style.textAlign = "center";
+        owner.value = risk.owner;
+        owner.setAttribute("aria-label", "Owner");
+        owner.addEventListener("input", function () { state.risks[ri].owner = owner.value; save(); });
+        tdOwner.appendChild(owner);
+        tr.appendChild(tdOwner);
+
+        var tdMit = document.createElement("td");
+        tdMit.className = "mit-col";
+        var mit = document.createElement("textarea");
+        mit.className = "risk-text";
+        mit.rows = 2;
+        mit.value = risk.mitigation;
+        mit.setAttribute("aria-label", "Mitigation");
+        mit.addEventListener("input", function () { state.risks[ri].mitigation = mit.value; save(); });
+        tdMit.appendChild(mit);
+        tr.appendChild(tdMit);
+
+        var tdStatus = document.createElement("td");
+        var status = makeSelect(STATUSES, risk.status, "risk-select");
+        status.setAttribute("aria-label", "Status");
+        status.addEventListener("change", function () { state.risks[ri].status = status.value; save(); });
+        tdStatus.appendChild(status);
+        tr.appendChild(tdStatus);
+
+        var tdDel = document.createElement("td");
+        var del = document.createElement("button");
+        del.className = "row-del";
+        del.innerHTML = "&times;";
+        del.title = "Remove risk";
+        del.addEventListener("click", function () { state.risks.splice(ri, 1); save(); render(); });
+        tdDel.appendChild(del);
+        tr.appendChild(tdDel);
+
+        body.appendChild(tr);
+      });
+      document.getElementById("sortToggle").checked = !!state.sort;
+    }
+
+    document.getElementById("addRisk").addEventListener("click", function () {
+      state.risks.push({ desc: "New risk", category: "Technical", likelihood: 3, impact: 3, owner: "", mitigation: "", status: "Open" });
+      save(); render();
+    });
+    document.getElementById("sortToggle").addEventListener("change", function () {
+      state.sort = document.getElementById("sortToggle").checked; save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the whole register and start blank?")) {
+        state = { sort: false, risks: [{ desc: "New risk", category: "Technical", likelihood: 3, impact: 3, owner: "", mitigation: "", status: "Open" }] };
+        save(); render();
+      }
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [];
+      rows.push(["Risk", "Category", "Likelihood", "Impact", "Score", "Owner", "Mitigation", "Status"]);
+      orderedRisks().forEach(function (entry) {
+        var r = entry.r;
+        rows.push([r.desc, r.category, r.likelihood, r.impact, scoreOf(r), r.owner, r.mitigation, r.status]);
+      });
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "risk-register.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    render();
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>
