@@ -2,7 +2,7 @@
 
 Practical, skimmable list for earning backlinks to the free tools and syndicating a few Insights articles. Nothing here is pushed automatically. Work top to bottom, one or two submissions a week, and keep the tone helpful rather than promotional.
 
-Primary tools hub to promote: https://arsenii.com/tools/index.html
+Primary tools hub to promote: https://arsenii.com/tools/
 
 ---
 

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Migration Program: A TPM Guide to Cloud &amp; Platform Moves</title>
+  <meta name="description" content="What a migration program is, when to run one, the 6 Rs, wave planning, roles, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="keywords" content="migration program, cloud migration program management, data migration, platform migration, 6 Rs of migration, migration wave plan, technical program manager migration, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/program-type-migration.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arsenii.com/program-type-migration.html">
+  <meta property="og:title" content="Migration Program: A TPM Guide to Cloud &amp; Platform Moves">
+  <meta property="og:description" content="What a migration program is, when to run one, the 6 Rs, wave planning, roles, risks, and success metrics. A reference guide for technical program managers.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Migration Program: A TPM Guide to Cloud &amp; Platform Moves">
+  <meta name="twitter:description" content="What a migration program is, when to run one, the 6 Rs, wave planning, roles, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Migration Program: A TPM Guide to Cloud & Platform Moves",
+  "description": "What a migration program is, when to run one, the 6 Rs, wave planning, roles, risks, and success metrics. A reference guide for technical program managers.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov",
+    "url": "https://arsenii.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/arseniisamoilov/",
+      "https://www.wikidata.org/wiki/Q139972269",
+      "https://github.com/arsenii-samoilov"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov"
+  },
+  "mainEntityOfPage": "https://arsenii.com/program-type-migration.html",
+  "url": "https://arsenii.com/program-type-migration.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://arsenii.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arsenii.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Programs & Project Types",
+      "item": "https://arsenii.com/program-and-project-types.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Migration Program",
+      "item": "https://arsenii.com/program-type-migration.html"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <style>
+    .doc-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .doc-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .doc-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .doc-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 660px; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
+    .toc h2 { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0; padding: 0; }
+    .toc a { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dark); text-decoration: underline; }
+    .doc-body h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2.5rem 0 0.75rem; scroll-margin-top: 90px; }
+    .doc-body h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 1.5rem 0 0.5rem; }
+    .doc-body p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .doc-body ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .doc-body a { color: var(--accent); font-weight: 500; }
+    .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.cmp th, table.cmp td { border: 1px solid var(--accent-light); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; }
+    table.cmp thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.cmp td:first-child { font-weight: 600; color: var(--accent-dark); }
+    .callout { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--bg-warm); }
+    .callout p { margin: 0 0 0.5rem; }
+    .callout p:last-child { margin: 0; }
+    .doc-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .doc-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .doc-cta a.btn-inline { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; text-decoration: none; display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 0.55rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
+        <a href="insights.html">Insights</a>
+        <a href="tools/">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="doc-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="program-and-project-types.html">Programs &amp; Project Types</a> / <span>Migration Program</span></nav>
+      <div class="doc-hero">
+        <h1>Migration Program</h1>
+        <p>Moving applications, data, or infrastructure from one environment to another without breaking the business that depends on it. A reference on how migration programs are scoped, sequenced, and landed, and where they go wrong.</p>
+      </div>
+      <div class="doc-body">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#when">When to run one</a></li>
+          <li><a href="#characteristics">How it differs</a></li>
+          <li><a href="#lifecycle">Phases</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#artifacts">Artifacts &amp; tools</a></li>
+          <li><a href="#risks">Risks &amp; pitfalls</a></li>
+          <li><a href="#metrics">Success metrics</a></li>
+          <li><a href="#related">Related reading</a></li>
+        </ul>
+      </nav>
+
+        <h2 id="what">What a migration program is</h2>
+        <p>A migration program moves a body of applications, data, or infrastructure from one environment to another. The destination is usually the cloud, a new data platform, a different data center, or a consolidated stack after an acquisition. It is a program rather than a project because the work spans many systems and teams that each own a piece, and the benefit, lower cost, more elasticity, a retired legacy platform, only lands when the portfolio moves together. The hard part is almost never the single move. It is sequencing dozens of interdependent moves so the business keeps running through every one of them.</p>
+        <p>The defining trait of a migration is that the target outcome is known and the value is mostly defensive. You are not inventing a new product. You are relocating something that already works, and the bar is that customers should not notice. That makes correctness, reversibility, and proof of parity more important than speed.</p>
+
+        <h2 id="when">When you would run one</h2>
+        <p>Migration programs get triggered by a forcing event more often than by ambition. The common ones are a data center lease ending, a vendor end-of-life or end-of-support date, a cost mandate to leave expensive hardware, a regulatory or data-residency requirement, or the integration of an acquired company onto the parent stack. The clearest signal that you need a program and not a project is that no single team can finish the move alone, and a slip in one team cascades into others.</p>
+
+        <h2 id="characteristics">Key characteristics and how it differs</h2>
+        <p>The framework most teams anchor on is the 6 Rs, popularized by AWS, which assigns every application a disposition rather than treating the whole estate the same way.</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp">
+            <thead><tr><th>Strategy</th><th>What it means</th><th>When to use it</th></tr></thead>
+            <tbody>
+              <tr><td>Rehost</td><td>Lift and shift with no code changes</td><td>Deadline pressure, low-value or stable apps</td></tr>
+              <tr><td>Replatform</td><td>Lift, tinker, and shift (for example, to a managed database)</td><td>Sound architecture that benefits from managed services</td></tr>
+              <tr><td>Rearchitect</td><td>Redesign for cloud-native patterns</td><td>Strategic, high-scale apps worth the investment</td></tr>
+              <tr><td>Repurchase</td><td>Replace with a SaaS product</td><td>Commodity systems like CRM, HR, or email</td></tr>
+              <tr><td>Retire</td><td>Decommission</td><td>Unused or redundant applications</td></tr>
+              <tr><td>Retain</td><td>Leave in place for now</td><td>Regulatory, latency, or dependency constraints</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>What separates a migration from a build program is reversibility. Every wave needs a documented and tested rollback before its cutover window opens, because the failure mode is not a missed feature, it is an outage on a system that worked yesterday. It also differs from a pure infrastructure program in that the unit of work is the application and its data, not the platform, which is why dependency mapping is the central planning artifact.</p>
+
+        <h2 id="lifecycle">Typical phases</h2>
+        <p>Most migration programs move through a recognizable sequence:</p>
+        <ul>
+          <li><strong>Discovery and inventory.</strong> Catalog every application, its data, and its dependencies. The dependency map you build here decides the order of everything that follows.</li>
+          <li><strong>Assessment and disposition.</strong> Score each workload against business value and technical fit and assign it one of the 6 Rs.</li>
+          <li><strong>Wave planning.</strong> Group applications into waves by dependency cluster so systems that talk to each other move together. Each wave runs assess, migrate, test, cut over, optimize.</li>
+          <li><strong>Migration execution.</strong> Run the waves, often with parallel tracks for rehost (fastest), replatform (medium), and rearchitect (a separate, longer timeline).</li>
+          <li><strong>Validation and cutover.</strong> Prove parity, run the go or no-go, open the cutover window with a rollback ready.</li>
+          <li><strong>Optimization and decommission.</strong> Rightsize and tune after the move, then retire the old environment so you actually capture the savings.</li>
+        </ul>
+
+        <h2 id="roles">Core roles and stakeholders</h2>
+        <p>A migration program leans on a migration or cloud architect for disposition and target design, application and service owners who know their systems and own the cutover decisions, infrastructure and platform engineers, a data engineering team for the data moves and reconciliation, security and compliance for the new environment, and finance, who care about the cost case and the date the old environment can be switched off. The program manager owns the wave plan, the dependency map, the cutover calendar, and the running risk picture. The decommission date is the one stakeholders forget, and it is where the financial benefit lives.</p>
+
+        <h2 id="artifacts">Common artifacts and tools</h2>
+        <p>The program runs on a small set of living documents. A <a href="tools/project-charter-generator.html">charter</a> sets the scope, the in-scope and out-of-scope estates, and the decommission target. A <a href="tools/roadmap-builder.html">wave roadmap</a> sequences the moves so dependency clusters travel together. A <a href="tools/raid-log.html">RAID log</a> tracks the assumptions and cross-team dependencies that migrations generate constantly, and a <a href="tools/risk-register.html">risk register</a> scores the things that could cause an outage. A <a href="tools/raci-matrix-generator.html">RACI matrix</a> settles who actually owns each cutover decision, and a <a href="tools/status-report-generator.html">status report</a> keeps executives current on waves complete versus waves remaining. Before the first wave, a <a href="tools/pre-mortem-worksheet.html">pre-mortem</a> surfaces the cutover failures people are quietly worried about.</p>
+
+        <h2 id="risks">Common risks and pitfalls</h2>
+        <ul>
+          <li><strong>Incomplete dependency mapping.</strong> The single most common cause of a failed cutover. A hidden integration that nobody documented takes down an unrelated system.</li>
+          <li><strong>Rollback as a slide, not a tested procedure.</strong> A rollback plan that has never been exercised is a hope, not a control.</li>
+          <li><strong>Lift and shift everything.</strong> Rehosting the whole estate is fast but captures almost none of the cloud benefit, so the cost case never materializes.</li>
+          <li><strong>Never decommissioning.</strong> Running old and new in parallel forever doubles cost and erases the business case.</li>
+          <li><strong>Data integrity gaps.</strong> Without reconciliation, you discover after cutover that records were dropped or duplicated.</li>
+        </ul>
+
+        <h2 id="metrics">Success metrics and what done looks like</h2>
+        <p>A migration is done when the workloads run in the target environment at parity, the old environment is switched off, and the savings or capability the program was funded for is real. Useful measures include percentage of the estate migrated and decommissioned, cutover success rate and number of rollbacks, unplanned downtime during cutovers, data reconciliation accuracy, and run-rate cost before and after. The trap is declaring victory at migrated rather than at decommissioned. Until the old thing is off, you have added cost, not removed it.</p>
+
+        <h2 id="related">Related reading</h2>
+        <p>For the discipline underneath every program type, see the <a href="complete-guide-to-program-management.html">complete guide to program management</a>. Migrations live and die on cross-team coordination, which is the subject of <a href="insights/managing-dependencies-eight-teams.html">Managing Dependencies Across Eight Engineering Teams</a>, and when a cutover slips you will need <a href="insights/escalation-paths-with-teeth.html">escalation paths with teeth</a>. Compare this with the related <a href="program-type-infrastructure.html">infrastructure and platform program</a>, and for the vocabulary, the <a href="glossary.html">program management glossary</a>.</p>
+      </div>
+      <div class="doc-cta">
+        <p>Written by Arsenii Samoilov, a <a href="career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Standing up a program like this? <a href="contact.html">Get in touch</a>.</p>
+        <a href="program-and-project-types.html" class="btn-inline">Browse all program &amp; project types &rarr;</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+  <script src="main.js?v=2"></script>
+</body>
+</html>

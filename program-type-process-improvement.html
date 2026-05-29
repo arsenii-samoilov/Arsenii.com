@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Process Improvement Program: Operational Excellence Guide</title>
+  <meta name="description" content="What process improvement and operational excellence programs are: DMAIC, Lean, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="keywords" content="process improvement program, operational excellence, Lean Six Sigma, DMAIC, continuous improvement, kaizen, technical program manager process, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/program-type-process-improvement.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arsenii.com/program-type-process-improvement.html">
+  <meta property="og:title" content="Process Improvement Program: Operational Excellence Guide">
+  <meta property="og:description" content="What process improvement and operational excellence programs are: DMAIC, Lean, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Process Improvement Program: Operational Excellence Guide">
+  <meta name="twitter:description" content="What process improvement and operational excellence programs are: DMAIC, Lean, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Process Improvement Program: Operational Excellence Guide",
+  "description": "What process improvement and operational excellence programs are: DMAIC, Lean, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov",
+    "url": "https://arsenii.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/arseniisamoilov/",
+      "https://www.wikidata.org/wiki/Q139972269",
+      "https://github.com/arsenii-samoilov"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov"
+  },
+  "mainEntityOfPage": "https://arsenii.com/program-type-process-improvement.html",
+  "url": "https://arsenii.com/program-type-process-improvement.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://arsenii.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arsenii.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Programs & Project Types",
+      "item": "https://arsenii.com/program-and-project-types.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Process Improvement Program",
+      "item": "https://arsenii.com/program-type-process-improvement.html"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <style>
+    .doc-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .doc-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .doc-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .doc-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 660px; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
+    .toc h2 { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0; padding: 0; }
+    .toc a { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dark); text-decoration: underline; }
+    .doc-body h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2.5rem 0 0.75rem; scroll-margin-top: 90px; }
+    .doc-body h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 1.5rem 0 0.5rem; }
+    .doc-body p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .doc-body ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .doc-body a { color: var(--accent); font-weight: 500; }
+    .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.cmp th, table.cmp td { border: 1px solid var(--accent-light); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; }
+    table.cmp thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.cmp td:first-child { font-weight: 600; color: var(--accent-dark); }
+    .callout { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--bg-warm); }
+    .callout p { margin: 0 0 0.5rem; }
+    .callout p:last-child { margin: 0; }
+    .doc-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .doc-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .doc-cta a.btn-inline { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; text-decoration: none; display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 0.55rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
+        <a href="insights.html">Insights</a>
+        <a href="tools/">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="doc-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="program-and-project-types.html">Programs &amp; Project Types</a> / <span>Process Improvement Program</span></nav>
+      <div class="doc-hero">
+        <h1>Process Improvement &amp; Operational Excellence Program</h1>
+        <p>Making how the organization works measurably better by removing waste, variation, and friction from its processes. A reference on the data-driven program type rooted in Lean and Six Sigma.</p>
+      </div>
+      <div class="doc-body">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#when">When to run one</a></li>
+          <li><a href="#characteristics">How it differs</a></li>
+          <li><a href="#lifecycle">Phases</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#artifacts">Artifacts &amp; tools</a></li>
+          <li><a href="#risks">Risks &amp; pitfalls</a></li>
+          <li><a href="#metrics">Success metrics</a></li>
+          <li><a href="#related">Related reading</a></li>
+        </ul>
+      </nav>
+
+        <h2 id="what">What a process improvement program is</h2>
+        <p>A process improvement or operational excellence program makes how the organization works measurably better by removing waste, reducing variation, and cutting friction out of its processes. It is rooted in Lean, which targets waste and flow, and Six Sigma, which targets variation and defects, and it is fundamentally data-driven: you measure the current process, find where the value leaks out, change the process, and prove the improvement held. The deliverable is a better, more reliable process and the numbers to show it, not a new product.</p>
+        <p>Unlike a one-time fix, operational excellence is usually a sustained program with a culture of continuous improvement behind it, where small, owned improvements compound over time.</p>
+
+        <h2 id="when">When you would run one</h2>
+        <p>The triggers are cost pressure, quality problems, slow cycle times, rising customer complaints, or a process that has grown organically into something nobody fully controls. You also see these programs spun up after a transformation or a period of fast growth, when the processes that worked at small scale start breaking at large scale. The signal that you need a program rather than a one-off project is that the problem spans handoffs between teams, so no single team can fix the end-to-end flow.</p>
+
+        <h2 id="characteristics">Key characteristics and how it differs</h2>
+        <p>The defining trait is rigor about measurement. The most common backbone is DMAIC, Define, Measure, Analyze, Improve, Control, which insists you quantify the problem and the baseline before changing anything and then prove the change with data. That discipline distinguishes it from a transformation, which redesigns the operating model wholesale, and from a reliability program, which targets technical incidents specifically. Process improvement is incremental and evidence-led: it improves an existing flow rather than replacing it, and it puts a control in place so the gains do not erode. The hardest part is usually not finding the improvement but making it stick after the team that drove it moves on.</p>
+
+        <h2 id="lifecycle">Typical phases (DMAIC)</h2>
+        <ul>
+          <li><strong>Define.</strong> Frame the problem, the scope, the customer, and the goal in measurable terms.</li>
+          <li><strong>Measure.</strong> Map the current process and capture a baseline so improvement can be proven, not asserted.</li>
+          <li><strong>Analyze.</strong> Find the root causes of the waste, variation, or delay, using the data rather than opinion.</li>
+          <li><strong>Improve.</strong> Design, pilot, and roll out the changes that address the root causes.</li>
+          <li><strong>Control.</strong> Lock in the gains with monitoring, standard work, and ownership so the process does not drift back.</li>
+        </ul>
+
+        <h2 id="roles">Core roles and stakeholders</h2>
+        <p>Operational excellence brings its own role vocabulary: a program sponsor or champion who removes barriers, practitioners often titled green and black belts who lead the analysis, and process owners who own the flow being improved and have to live with the result. The people who do the work daily are essential stakeholders, because they know where the friction actually is and they decide whether a change survives. The program manager coordinates the improvement projects, keeps the measurement honest, and manages the change so the new process is adopted rather than quietly bypassed.</p>
+
+        <h2 id="artifacts">Common artifacts and tools</h2>
+        <p>The discipline-specific artifacts are process maps, value stream maps, and control charts, but the program management layer uses familiar tools. A <a href="tools/prioritization-matrix.html">prioritization matrix</a> picks which improvements to chase first by effort and impact, a <a href="tools/decision-matrix.html">weighted decision matrix</a> chooses between competing solutions, and an <a href="tools/okr-tracker.html">OKR tracker</a> ties improvements to the operational outcomes that matter. A <a href="tools/raid-log.html">RAID log</a> and <a href="tools/status-report-generator.html">status report</a> keep the portfolio of improvements visible, and a <a href="tools/retrospective-board.html">retrospective board</a> fits naturally into a continuous improvement culture. A <a href="tools/meeting-cost-calculator.html">meeting cost calculator</a> is a pointed way to attack one of the most common forms of organizational waste.</p>
+
+        <h2 id="risks">Common risks and pitfalls</h2>
+        <ul>
+          <li><strong>Improving without a baseline.</strong> Without a measured starting point, you cannot prove the change worked, and the gains get debated away.</li>
+          <li><strong>Skipping control.</strong> The improvement lands, the team moves on, and the process drifts back within months.</li>
+          <li><strong>Solving the wrong problem.</strong> Jumping to a solution before the analyze phase fixes a symptom, not the root cause.</li>
+          <li><strong>Ignoring the people who do the work.</strong> Top-down process changes that the frontline did not shape get quietly bypassed.</li>
+          <li><strong>Local optimization.</strong> Improving one step in a way that makes the end-to-end flow worse.</li>
+        </ul>
+
+        <h2 id="metrics">Success metrics and what done looks like</h2>
+        <p>Done, for a given improvement, is a process operating at the new level with a control in place that holds it there. The measures are the operational metrics the program targeted: cycle time, defect or error rate, cost per transaction, throughput, and customer satisfaction, each compared against the baseline. For the program overall, success is a sustained trend of improvements that stick, plus a growing capability in the organization to run improvements without the central team.</p>
+
+        <h2 id="related">Related reading</h2>
+        <p>The underlying discipline is in the <a href="complete-guide-to-program-management.html">complete guide to program management</a>, and the outcome focus connects to <a href="okr-vs-kpi.html">OKRs vs KPIs</a>. Process improvement is often a workstream inside a <a href="program-type-digital-transformation.html">digital transformation program</a> and shares the measurement mindset of the <a href="program-type-reliability.html">reliability program</a>. For terms, see the <a href="glossary.html">glossary</a>.</p>
+      </div>
+      <div class="doc-cta">
+        <p>Written by Arsenii Samoilov, a <a href="career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Standing up a program like this? <a href="contact.html">Get in touch</a>.</p>
+        <a href="program-and-project-types.html" class="btn-inline">Browse all program &amp; project types &rarr;</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+  <script src="main.js?v=2"></script>
+</body>
+</html>

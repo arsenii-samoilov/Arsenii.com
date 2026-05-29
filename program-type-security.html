@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Security Program: A TPM Guide to Cyber Risk &amp; NIST CSF</title>
+  <meta name="description" content="What a security program is, when to run one, NIST CSF 2.0, the lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="keywords" content="security program, cybersecurity program management, NIST CSF 2.0, vulnerability management, security risk, security program manager, technical program manager security, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/program-type-security.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arsenii.com/program-type-security.html">
+  <meta property="og:title" content="Security Program: A TPM Guide to Cyber Risk &amp; NIST CSF">
+  <meta property="og:description" content="What a security program is, when to run one, NIST CSF 2.0, the lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security Program: A TPM Guide to Cyber Risk &amp; NIST CSF">
+  <meta name="twitter:description" content="What a security program is, when to run one, NIST CSF 2.0, the lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Security Program: A TPM Guide to Cyber Risk & NIST CSF",
+  "description": "What a security program is, when to run one, NIST CSF 2.0, the lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov",
+    "url": "https://arsenii.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/arseniisamoilov/",
+      "https://www.wikidata.org/wiki/Q139972269",
+      "https://github.com/arsenii-samoilov"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov"
+  },
+  "mainEntityOfPage": "https://arsenii.com/program-type-security.html",
+  "url": "https://arsenii.com/program-type-security.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://arsenii.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arsenii.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Programs & Project Types",
+      "item": "https://arsenii.com/program-and-project-types.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Security Program",
+      "item": "https://arsenii.com/program-type-security.html"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <style>
+    .doc-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .doc-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .doc-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .doc-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 660px; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
+    .toc h2 { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0; padding: 0; }
+    .toc a { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dark); text-decoration: underline; }
+    .doc-body h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2.5rem 0 0.75rem; scroll-margin-top: 90px; }
+    .doc-body h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 1.5rem 0 0.5rem; }
+    .doc-body p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .doc-body ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .doc-body a { color: var(--accent); font-weight: 500; }
+    .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.cmp th, table.cmp td { border: 1px solid var(--accent-light); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; }
+    table.cmp thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.cmp td:first-child { font-weight: 600; color: var(--accent-dark); }
+    .callout { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--bg-warm); }
+    .callout p { margin: 0 0 0.5rem; }
+    .callout p:last-child { margin: 0; }
+    .doc-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .doc-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .doc-cta a.btn-inline { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; text-decoration: none; display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 0.55rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
+        <a href="insights.html">Insights</a>
+        <a href="tools/">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="doc-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="program-and-project-types.html">Programs &amp; Project Types</a> / <span>Security Program</span></nav>
+      <div class="doc-hero">
+        <h1>Security Program</h1>
+        <p>Protecting an organization's systems and data against threats, and managing cyber risk as an ongoing discipline rather than a one-time hardening. A reference grounded in NIST CSF 2.0 and the realities of a security program.</p>
+      </div>
+      <div class="doc-body">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#when">When to run one</a></li>
+          <li><a href="#characteristics">How it differs</a></li>
+          <li><a href="#lifecycle">Phases</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#artifacts">Artifacts &amp; tools</a></li>
+          <li><a href="#risks">Risks &amp; pitfalls</a></li>
+          <li><a href="#metrics">Success metrics</a></li>
+          <li><a href="#related">Related reading</a></li>
+        </ul>
+      </nav>
+
+        <h2 id="what">What a security program is</h2>
+        <p>A security program protects an organization's systems, data, and people against cyber threats, and manages cyber risk as a continuous discipline. It is broad by nature, spanning governance and policy, identity and access, vulnerability management, threat detection, incident response, and recovery. The program exists because security is not a project you finish. It is a posture you maintain against an adversary who keeps moving, which means the work is ongoing risk management more than a fixed deliverable.</p>
+        <p>Many organizations give the program a backbone using NIST CSF 2.0, released in 2024, which organizes security outcomes into six functions: Govern, Identify, Protect, Detect, Respond, and Recover. Govern, the newest, sits at the foundation and recognizes that accountability and risk strategy are as load-bearing as the technical controls.</p>
+
+        <h2 id="when">When you would run one</h2>
+        <p>Drivers include a breach or near miss, a customer or regulatory requirement, entry into a market with higher security expectations, rapid growth that outpaced informal security practices, or a board that has decided cyber risk needs to be managed deliberately. In practice many security programs are stood up reactively after an incident and then matured into a steady-state function. The need for a program rather than scattered fixes is clear once security work spans every team and someone has to own the overall risk picture.</p>
+
+        <h2 id="characteristics">Key characteristics and how it differs</h2>
+        <p>Three traits define it. First, it is risk-based: you cannot protect everything equally, so the program prioritizes by likelihood and impact and accepts some residual risk explicitly. Second, it is adversarial and never finished, which is why detection and response matter as much as prevention. Third, it is outcome-driven when run against a framework like CSF, where you set a defensible target profile reflecting your regulatory environment and risk appetite rather than chasing a maximum you cannot fund. Compared with a compliance program, which proves alignment to an external standard, a security program manages actual risk, though the two overlap heavily and a good control architecture serves both. Programs that skip the Govern layer tend to plateau, because nobody is accountable for the trade-offs.</p>
+
+        <h2 id="lifecycle">Typical phases</h2>
+        <ul>
+          <li><strong>Govern and assess.</strong> Establish accountability, risk appetite, and policy, then assess the current state against the framework to set current and target profiles.</li>
+          <li><strong>Identify.</strong> Inventory assets, data, and dependencies, and run the risk assessment that prioritizes everything downstream.</li>
+          <li><strong>Protect.</strong> Implement the controls that prevent or limit incidents, from access management to vulnerability remediation.</li>
+          <li><strong>Detect and respond.</strong> Stand up monitoring, detection, and an incident response capability with clear roles.</li>
+          <li><strong>Recover and improve.</strong> Build recovery capability and feed lessons from incidents back into the program continuously.</li>
+        </ul>
+
+        <h2 id="roles">Core roles and stakeholders</h2>
+        <p>A CISO or security leader owns the program and the risk posture. Security engineers and analysts run the controls and detection, a vulnerability management function owns remediation, and an incident response team owns the reactive side. Crucially, much of the actual work lands on engineering, IT, and other teams who implement and operate controls in their areas, which makes security a deeply cross-functional program. An executive sponsor and often the board accept residual risk. The program manager coordinates the framework-driven roadmap, drives remediation across teams that do not report to security, and keeps the risk picture and the program's progress visible to leadership.</p>
+
+        <h2 id="artifacts">Common artifacts and tools</h2>
+        <p>The domain artifacts are the risk register, the asset inventory, and the current and target profiles, but the program management craft is in coordinating across teams. A <a href="tools/risk-register.html">risk register</a> is literally the heart of a security program, scoring each risk by likelihood and impact with an owner and a mitigation. A <a href="tools/raci-matrix-generator.html">RACI matrix</a> sorts out who owns which control across security, engineering, and IT, a <a href="tools/roadmap-builder.html">roadmap</a> sequences the multi-month implementation across the six functions, and a <a href="tools/status-report-generator.html">status report</a> keeps leadership and the board current on risk and progress. A <a href="tools/pre-mortem-worksheet.html">pre-mortem</a> is a useful way to reason about how an attacker would succeed before they try.</p>
+
+        <h2 id="risks">Common risks and pitfalls</h2>
+        <ul>
+          <li><strong>Skipping governance.</strong> Technical controls without an accountable risk owner plateau and drift.</li>
+          <li><strong>Aiming at an unfundable maximum.</strong> A target profile set at the top across all functions produces a permanent gap report, not a roadmap.</li>
+          <li><strong>Prevention without detection.</strong> Assuming controls will hold, with no ability to spot or respond when they do not.</li>
+          <li><strong>Security as the security team's job alone.</strong> The work that matters lands on other teams, and ignoring that stalls remediation.</li>
+          <li><strong>Duplicating compliance effort.</strong> Maintaining separate controls for security and for each certification instead of one architecture serving many.</li>
+        </ul>
+
+        <h2 id="metrics">Success metrics and what done looks like</h2>
+        <p>A security program does not finish, so it is judged on maturity and risk reduction over time. Useful measures include movement of the maturity tier against the target profile, time to detect and time to remediate vulnerabilities by severity, percentage of critical assets covered by controls, residual risk against appetite, and incident frequency and impact. The honest measure is whether the organization's exposure is shrinking on the risks it decided to care about, not whether it bought the most tools.</p>
+
+        <h2 id="related">Related reading</h2>
+        <p>The discipline is in the <a href="complete-guide-to-program-management.html">complete guide to program management</a>, and security overlaps tightly with the <a href="program-type-compliance.html">compliance and regulatory program</a> and the response side of the <a href="program-type-reliability.html">reliability and incident management program</a>. It runs on clear ownership, covered in <a href="raci-vs-raid.html">RACI vs RAID</a>, and on <a href="insights/escalation-paths-with-teeth.html">escalation paths with teeth</a>. For terms, see the <a href="glossary.html">glossary</a>.</p>
+      </div>
+      <div class="doc-cta">
+        <p>Written by Arsenii Samoilov, a <a href="career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Standing up a program like this? <a href="contact.html">Get in touch</a>.</p>
+        <a href="program-and-project-types.html" class="btn-inline">Browse all program &amp; project types &rarr;</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+  <script src="main.js?v=2"></script>
+</body>
+</html>

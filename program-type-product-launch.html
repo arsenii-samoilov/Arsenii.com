@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Product Launch Program: Release &amp; GTM Readiness Guide</title>
+  <meta name="description" content="How product launch and release programs work: launch tiers, readiness reviews, go/no-go gates, GTM coordination, roles, risks, and metrics for TPMs.">
+  <meta name="keywords" content="product launch program, release program management, launch readiness review, go to market coordination, go no go gate, launch tiers, GTM program manager, technical program manager launch, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/program-type-product-launch.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arsenii.com/program-type-product-launch.html">
+  <meta property="og:title" content="Product Launch Program: Release &amp; GTM Readiness Guide">
+  <meta property="og:description" content="How product launch and release programs work: launch tiers, readiness reviews, go/no-go gates, GTM coordination, roles, risks, and metrics for TPMs.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Product Launch Program: Release &amp; GTM Readiness Guide">
+  <meta name="twitter:description" content="How product launch and release programs work: launch tiers, readiness reviews, go/no-go gates, GTM coordination, roles, risks, and metrics for TPMs.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Product Launch Program: Release & GTM Readiness Guide",
+  "description": "How product launch and release programs work: launch tiers, readiness reviews, go/no-go gates, GTM coordination, roles, risks, and metrics for TPMs.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov",
+    "url": "https://arsenii.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/arseniisamoilov/",
+      "https://www.wikidata.org/wiki/Q139972269",
+      "https://github.com/arsenii-samoilov"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov"
+  },
+  "mainEntityOfPage": "https://arsenii.com/program-type-product-launch.html",
+  "url": "https://arsenii.com/program-type-product-launch.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://arsenii.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arsenii.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Programs & Project Types",
+      "item": "https://arsenii.com/program-and-project-types.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Product Launch Program",
+      "item": "https://arsenii.com/program-type-product-launch.html"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <style>
+    .doc-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .doc-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .doc-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .doc-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 660px; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
+    .toc h2 { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0; padding: 0; }
+    .toc a { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dark); text-decoration: underline; }
+    .doc-body h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2.5rem 0 0.75rem; scroll-margin-top: 90px; }
+    .doc-body h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 1.5rem 0 0.5rem; }
+    .doc-body p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .doc-body ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .doc-body a { color: var(--accent); font-weight: 500; }
+    .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.cmp th, table.cmp td { border: 1px solid var(--accent-light); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; }
+    table.cmp thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.cmp td:first-child { font-weight: 600; color: var(--accent-dark); }
+    .callout { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--bg-warm); }
+    .callout p { margin: 0 0 0.5rem; }
+    .callout p:last-child { margin: 0; }
+    .doc-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .doc-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .doc-cta a.btn-inline { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; text-decoration: none; display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 0.55rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
+        <a href="insights.html">Insights</a>
+        <a href="tools/">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="doc-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="program-and-project-types.html">Programs &amp; Project Types</a> / <span>Product Launch Program</span></nav>
+      <div class="doc-hero">
+        <h1>Product Launch &amp; Release Program</h1>
+        <p>Coordinating engineering, marketing, sales, support, and operations so a product reaches customers cleanly on a date everyone has committed to. A reference on launch tiers, readiness gates, and the cross-functional choreography of a release.</p>
+      </div>
+      <div class="doc-body">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#when">When to run one</a></li>
+          <li><a href="#characteristics">How it differs</a></li>
+          <li><a href="#lifecycle">Phases</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#artifacts">Artifacts &amp; tools</a></li>
+          <li><a href="#risks">Risks &amp; pitfalls</a></li>
+          <li><a href="#metrics">Success metrics</a></li>
+          <li><a href="#related">Related reading</a></li>
+        </ul>
+      </nav>
+
+        <h2 id="what">What a product launch program is</h2>
+        <p>A product launch or release program coordinates everything that has to be true for a product to reach customers on a date. That includes the engineering work, but the program exists because of everything around it: the messaging and campaign, sales enablement, support documentation and training, legal and pricing, analytics instrumentation, and the operational readiness to run the thing once it is live. Engineering ships the code. The launch program makes sure the rest of the company is ready to sell, support, and operate it the moment it goes out.</p>
+        <p>The connective work is the job. A launch lead is the person who turns a dozen functional plans into one timeline with one set of dependencies and one go or no-go decision, without becoming the bottleneck every message has to pass through.</p>
+
+        <h2 id="when">When you would run one</h2>
+        <p>You run a launch program when a release is significant enough that an uncoordinated ship would damage the outcome. A new product, a new market, a major repositioning, or a feature that sales and support need to be trained on all qualify. A bug fix or a minor UI change does not. The practical way to decide how much program to apply is to assign a launch tier.</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp">
+            <thead><tr><th>Tier</th><th>Scope</th><th>Typical lead time</th><th>Teams involved</th></tr></thead>
+            <tbody>
+              <tr><td>Tier 1 (major)</td><td>New product, new market, major repositioning</td><td>8 to 12 weeks</td><td>All, including exec and PR</td></tr>
+              <tr><td>Tier 2 (moderate)</td><td>Significant feature or integration</td><td>4 to 6 weeks</td><td>Product, sales, marketing, support</td></tr>
+              <tr><td>Tier 3 (minor)</td><td>Small enhancement, UI change, fix</td><td>1 to 2 weeks</td><td>Product, support, docs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="characteristics">Key characteristics and how it differs</h2>
+        <p>A launch program is gated and time-boxed. Unlike an open-ended platform program, it converges on a single, immovable-feeling date and then largely ends. It differs from a pure engineering project in that most of the critical path runs through non-engineering teams, and the program manager has influence rather than authority over all of them. The signature artifact is the go or no-go gate, a structured readiness review held a few days to a week before launch where every functional lead reports status against a checklist and the group decides explicitly to go, go with conditions, or hold. A delayed launch beats a broken one, and the gate is where that call gets made honestly.</p>
+
+        <h2 id="lifecycle">Typical phases</h2>
+        <ul>
+          <li><strong>Pre-launch.</strong> Validate the product, lock positioning and pricing, write the launch brief that lists every deliverable, owner, and date, and run a kickoff.</li>
+          <li><strong>Launch readiness.</strong> Finish QA, train support and sales, stage the assets, and verify analytics and on-call coverage.</li>
+          <li><strong>Go or no-go.</strong> Run the readiness review against the checklist and make the explicit decision. Any open item is either accepted with eyes open or remediated first.</li>
+          <li><strong>Launch.</strong> Execute the playbook, staff the war room, watch the dashboards, and respond to early signals.</li>
+          <li><strong>Post-launch.</strong> Collect feedback, measure against the launch goals, and run a retrospective to improve the next one.</li>
+        </ul>
+
+        <h2 id="roles">Core roles and stakeholders</h2>
+        <p>The launch lead, often a TPM or product marketing manager, owns the brief, the timeline, and the gate. Around them sit product management for scope and the rollout decision, an engineering lead for code readiness and the rollback plan, product marketing for messaging and campaign, sales enablement, support and documentation, and operations for monitoring and on-call. For Tier 1 launches an executive sponsor and PR are in the room. The rule that prevents most launch chaos is that no item on the brief is unowned.</p>
+
+        <h2 id="artifacts">Common artifacts and tools</h2>
+        <p>The launch brief is the spine, and a <a href="tools/raci-matrix-generator.html">RACI matrix</a> makes ownership unambiguous across the functions. A <a href="tools/roadmap-builder.html">timeline</a> works the dates backward from launch day, and a <a href="tools/status-report-generator.html">status report</a> with a clear health color keeps leadership current through the run-up. A <a href="tools/risk-register.html">risk register</a> and a pre-launch <a href="tools/pre-mortem-worksheet.html">pre-mortem</a> surface what could go wrong while there is still time to fix it, and a <a href="tools/retrospective-board.html">retrospective board</a> captures what to change for the next launch. The go or no-go scorecard itself is the gate that ties them together.</p>
+
+        <h2 id="risks">Common risks and pitfalls</h2>
+        <ul>
+          <li><strong>Date-driven denial.</strong> Holding the date when the product is not ready, because the gate became a formality instead of a real decision.</li>
+          <li><strong>Engineering-only readiness.</strong> The code ships but support has no documentation and sales has no story, so the launch lands flat or generates a support spike.</li>
+          <li><strong>No rollback or kill switch.</strong> A staged rollout behind a flag turns one risky moment into a series of recoverable ones. Skipping it makes launch day binary.</li>
+          <li><strong>Unowned items.</strong> A deliverable with no name attached is the one that is missing at the gate.</li>
+          <li><strong>No post-launch loop.</strong> Without measurement and a retro, the same mistakes repeat at the next launch.</li>
+        </ul>
+
+        <h2 id="metrics">Success metrics and what done looks like</h2>
+        <p>Done means the product is live, the launch ran without a customer-visible incident, and the teams that have to sell and support it are equipped to do so. Useful measures split into launch execution (on-date delivery, launch-day incidents, time to first response on issues), adoption (activations, usage, conversion against the launch goal), and readiness (support ticket volume versus forecast, sales enablement completion). A launch that hit its date but spiked support and missed its adoption goal did not succeed, it just shipped.</p>
+
+        <h2 id="related">Related reading</h2>
+        <p>Launch programs are a focused slice of the broader discipline in the <a href="complete-guide-to-program-management.html">complete guide to program management</a>. The readiness review depends on a <a href="insights/status-report-executives-actually-read.html">status report executives actually read</a> and on <a href="insights/decision-logs-underrated-tpm-tool.html">decision logs</a> so the go or no-go call is on the record. For where this role sits relative to others, see <a href="tpm-vs-product-manager.html">TPM vs product manager</a>, and for terms, the <a href="glossary.html">glossary</a>.</p>
+      </div>
+      <div class="doc-cta">
+        <p>Written by Arsenii Samoilov, a <a href="career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Standing up a program like this? <a href="contact.html">Get in touch</a>.</p>
+        <a href="program-and-project-types.html" class="btn-inline">Browse all program &amp; project types &rarr;</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+  <script src="main.js?v=2"></script>
+</body>
+</html>

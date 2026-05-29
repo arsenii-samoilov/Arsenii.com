@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Infrastructure &amp; Platform Program: A TPM Reference Guide</title>
+  <meta name="description" content="What infrastructure and platform programs are, when to run one, lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="keywords" content="infrastructure program, platform program management, internal developer platform, platform engineering program, capacity planning, technical program manager infrastructure, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/program-type-infrastructure.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arsenii.com/program-type-infrastructure.html">
+  <meta property="og:title" content="Infrastructure &amp; Platform Program: A TPM Reference Guide">
+  <meta property="og:description" content="What infrastructure and platform programs are, when to run one, lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Infrastructure &amp; Platform Program: A TPM Reference Guide">
+  <meta name="twitter:description" content="What infrastructure and platform programs are, when to run one, lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Infrastructure & Platform Program: A TPM Reference Guide",
+  "description": "What infrastructure and platform programs are, when to run one, lifecycle, roles, artifacts, risks, and success metrics. A reference guide for technical program managers.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov",
+    "url": "https://arsenii.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/arseniisamoilov/",
+      "https://www.wikidata.org/wiki/Q139972269",
+      "https://github.com/arsenii-samoilov"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Arsenii Samoilov"
+  },
+  "mainEntityOfPage": "https://arsenii.com/program-type-infrastructure.html",
+  "url": "https://arsenii.com/program-type-infrastructure.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://arsenii.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arsenii.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Programs & Project Types",
+      "item": "https://arsenii.com/program-and-project-types.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Infrastructure & Platform Program",
+      "item": "https://arsenii.com/program-type-infrastructure.html"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <style>
+    .doc-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .doc-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .doc-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .doc-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 660px; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); }
+    .toc h2 { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0; padding: 0; }
+    .toc a { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dark); text-decoration: underline; }
+    .doc-body h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2.5rem 0 0.75rem; scroll-margin-top: 90px; }
+    .doc-body h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 1.5rem 0 0.5rem; }
+    .doc-body p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .doc-body ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .doc-body a { color: var(--accent); font-weight: 500; }
+    .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-family: var(--font-sans); font-size: 0.88rem; }
+    table.cmp th, table.cmp td { border: 1px solid var(--accent-light); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; }
+    table.cmp thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.cmp td:first-child { font-weight: 600; color: var(--accent-dark); }
+    .callout { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--bg-warm); }
+    .callout p { margin: 0 0 0.5rem; }
+    .callout p:last-child { margin: 0; }
+    .doc-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .doc-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .doc-cta a.btn-inline { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; text-decoration: none; display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 0.55rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="culinary.html">Culinary</a>
+        <a href="photography.html">Photography</a>
+        <a href="insights.html">Insights</a>
+        <a href="tools/">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="doc-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="program-and-project-types.html">Programs &amp; Project Types</a> / <span>Infrastructure &amp; Platform Program</span></nav>
+      <div class="doc-hero">
+        <h1>Infrastructure &amp; Platform Program</h1>
+        <p>Building and scaling the shared foundations that other teams depend on: compute, networking, CI/CD, observability, and internal developer platforms. A reference on programs where your customers are other engineers.</p>
+      </div>
+      <div class="doc-body">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#when">When to run one</a></li>
+          <li><a href="#characteristics">How it differs</a></li>
+          <li><a href="#lifecycle">Phases</a></li>
+          <li><a href="#roles">Roles</a></li>
+          <li><a href="#artifacts">Artifacts &amp; tools</a></li>
+          <li><a href="#risks">Risks &amp; pitfalls</a></li>
+          <li><a href="#metrics">Success metrics</a></li>
+          <li><a href="#related">Related reading</a></li>
+        </ul>
+      </nav>
+
+        <h2 id="what">What an infrastructure or platform program is</h2>
+        <p>An infrastructure or platform program builds and scales the shared technical foundations that many other teams build on top of. That covers compute and networking, storage, CI/CD pipelines, observability, identity, and increasingly an internal developer platform that packages all of it into self-service paved roads. The distinguishing feature is that the customers are other engineering teams, not end users. Success is measured in adoption, reliability, and the leverage the platform gives everyone else, not in a feature a customer sees.</p>
+        <p>Because the output is a capability rather than a one-time deliverable, these programs are usually ongoing and roadmap-driven. They behave more like running a product for an internal audience than like delivering a fixed project.</p>
+
+        <h2 id="when">When you would run one</h2>
+        <p>You stand one up when shared needs outgrow what individual teams can solve well on their own: every team is reinventing deployment, reliability is inconsistent because each team rolls its own patterns, scaling limits are appearing, or the organization wants to reduce cost and cognitive load by paving common roads. The trigger is often pain felt broadly, such as slow or fragile deploys, repeated outages from the same class of mistake, or engineers spending more time on undifferentiated plumbing than on product.</p>
+
+        <h2 id="characteristics">Key characteristics and how it differs</h2>
+        <p>Three traits set platform programs apart. First, the product is internal and adoption is voluntary or semi-voluntary, so a platform nobody adopts is a failure even if it works. Second, the work is largely about migrating consumers onto new foundations while the old ones stay live, which makes backward compatibility and graceful deprecation central. Third, reliability is non-negotiable, because an outage in a shared platform is an outage for everyone who depends on it. Compared with a migration program, which has a defined end and a decommission date, a platform program is continuous and is judged by the experience it gives its internal customers over time.</p>
+
+        <h2 id="lifecycle">Typical phases</h2>
+        <ul>
+          <li><strong>Demand and discovery.</strong> Understand what consuming teams actually need, where the pain is, and what good would look like for them.</li>
+          <li><strong>Architecture and golden path.</strong> Design the platform and the paved road, with strong defaults that make the right thing the easy thing.</li>
+          <li><strong>Build and harden.</strong> Implement the capability and the reliability, security, and observability it must carry as shared infrastructure.</li>
+          <li><strong>Onboarding and migration.</strong> Move consuming teams onto the platform, usually the longest and most coordination-heavy phase.</li>
+          <li><strong>Operate and iterate.</strong> Run it as a service with SLAs, gather feedback, and evolve the roadmap. Deprecate old paths deliberately.</li>
+        </ul>
+
+        <h2 id="roles">Core roles and stakeholders</h2>
+        <p>The core team includes platform and infrastructure engineers, an architect for the shared design, SRE for the reliability bar, and security for the controls baked into the paved road. The critical external stakeholders are the consuming engineering teams, whose adoption is the whole point, plus engineering leadership who fund the leverage argument and finance who watch the infrastructure spend. The program manager coordinates the migration of consumers, manages the deprecation timeline, and keeps the platform roadmap honest against real demand rather than internal preference.</p>
+
+        <h2 id="artifacts">Common artifacts and tools</h2>
+        <p>A <a href="tools/roadmap-builder.html">roadmap</a> communicates what is paved now and what is coming, which is how consuming teams plan around the platform. A <a href="tools/raci-matrix-generator.html">RACI matrix</a> clarifies what the platform team owns versus what consumers own, a perennial source of friction. A <a href="tools/risk-register.html">risk register</a> and <a href="tools/raid-log.html">RAID log</a> track reliability and dependency risk, and a <a href="tools/prioritization-matrix.html">prioritization matrix</a> or <a href="tools/wsjf-calculator.html">WSJF</a> ranking helps decide which capabilities to pave first when demand exceeds capacity. A <a href="tools/decision-matrix.html">weighted decision matrix</a> is useful for the recurring build-versus-buy calls these programs face.</p>
+
+        <h2 id="risks">Common risks and pitfalls</h2>
+        <ul>
+          <li><strong>Build it and they will not come.</strong> A platform designed without its consumers ships and sits unused.</li>
+          <li><strong>Forced migration without support.</strong> Mandating adoption without making the new path genuinely easier breeds resentment and shadow workarounds.</li>
+          <li><strong>Never deprecating the old path.</strong> Supporting old and new forever doubles the maintenance burden and dilutes the leverage.</li>
+          <li><strong>Reliability as an afterthought.</strong> A shared platform that is not engineered for reliability turns one team's mistake into everyone's outage.</li>
+          <li><strong>Roadmap driven by preference, not demand.</strong> Building what the platform team finds interesting rather than what consumers need.</li>
+        </ul>
+
+        <h2 id="metrics">Success metrics and what done looks like</h2>
+        <p>Platform programs rarely have a single done, so they are judged on trends: adoption (percentage of teams or workloads on the paved road), reliability (uptime and SLO attainment of the platform), developer experience (time to first deploy, lead time, satisfaction), and the leverage created (toil removed, incidents avoided, cost per unit of capacity). A healthy platform program shows adoption climbing while the old paths shrink and the consuming teams move faster than they did before.</p>
+
+        <h2 id="related">Related reading</h2>
+        <p>For the underlying discipline, see the <a href="complete-guide-to-program-management.html">complete guide to program management</a>. Platform work is dependency management at scale, covered in <a href="insights/managing-dependencies-eight-teams.html">Managing Dependencies Across Eight Engineering Teams</a>. It pairs closely with the <a href="program-type-reliability.html">reliability and incident management program</a> and the <a href="program-type-migration.html">migration program</a>. For terms, see the <a href="glossary.html">glossary</a>.</p>
+      </div>
+      <div class="doc-cta">
+        <p>Written by Arsenii Samoilov, a <a href="career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Standing up a program like this? <a href="contact.html">Get in touch</a>.</p>
+        <a href="program-and-project-types.html" class="btn-inline">Browse all program &amp; project types &rarr;</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+  <script src="main.js?v=2"></script>
+</body>
+</html>
