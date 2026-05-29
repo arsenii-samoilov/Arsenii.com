@@ -70,7 +70,8 @@ def load_articles():
     return out
 
 
-def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""):
+def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld="", keywords=""):
+    kw_tag = ('  <meta name="keywords" content="' + esc(keywords) + '">\n') if keywords else ""
     return (
         '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
         '  <meta charset="UTF-8">\n'
@@ -89,6 +90,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <link rel="icon" type="image/x-icon" href="' + css_prefix + 'favicon.ico">\n'
         '  <title>' + esc(title) + '</title>\n'
         '  <meta name="description" content="' + esc(description) + '">\n'
+        + kw_tag +
         '  <meta name="author" content="Arsenii Samoilov">\n'
         '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n'
         '  <link rel="canonical" href="' + canonical + '">\n'
@@ -175,15 +177,18 @@ def build_article_page(a, published):
             '      </aside>\n'
         )
 
+    article_kw = ", ".join(a["tags"]) + ", Technical Program Manager, Arsenii Samoilov"
     html = page_head(a["title"] + " | Arsenii Samoilov", a["description"], canonical,
-                     "../", "../", extra_ld)
+                     "../", "../", extra_ld, article_kw)
     html += NAV.format(home="../")
     html += (
         '\n  <main>\n'
         '    <article class="article-page">\n'
         '      <p class="eyebrow"><a href="../insights.html" style="color:inherit;">Insights</a> &middot; ' + esc(a["category"]) + ' &middot; ' + fmt_date(a["_date"]) + '</p>\n'
         '      <h1>' + esc(a["title"]) + '</h1>\n'
-        '      <div class="article-body">' + a["body"] + '</div>\n'
+        '      <div class="article-body">' + a["body"] + '\n'
+        '        <p class="article-author-note">Arsenii Samoilov is a <a href="../career.html" style="color:var(--accent);font-weight:500;">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.</p>\n'
+        '      </div>\n'
         '      <div class="insight-tags">' + tags_html + '</div>\n'
         + related_html +
         '      <div class="article-footer-nav"><a href="../insights.html" class="btn btn-ghost">&larr; All Insights</a> <a href="../contact.html" class="btn btn-secondary">Work with me &rarr;</a></div>\n'
@@ -217,7 +222,8 @@ def build_index(published):
     html = page_head(
         "TPM Insights | Arsenii Samoilov | Senior Technical Program Manager",
         "Program management insights from Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. AI program management, compliance governance, and enterprise growth.",
-        canonical, "", "", extra_ld)
+        canonical, "", "", extra_ld,
+        "Technical Program Manager, Senior TPM, AI Program Management, Compliance Program Manager, Engineering Program Manager, program management insights, TPM blog, Arsenii Samoilov, enterprise program management, Bay Area")
     html += NAV.format(home="")
     html += (
         '\n  <main>\n'
