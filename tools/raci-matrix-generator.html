@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Free RACI Matrix Generator | Build &amp; Export a RACI Chart Online</title>
+  <meta name="description" content="A free RACI matrix generator for program and project managers. Add tasks and roles, assign Responsible, Accountable, Consulted, and Informed, then export to CSV or print. No signup.">
+  <meta name="keywords" content="RACI matrix generator, RACI chart template, RACI matrix online, responsibility assignment matrix, RACI template free, program management tools, project management RACI, RACI chart maker, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/raci-matrix-generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/raci-matrix-generator.html">
+  <meta property="og:title" content="Free RACI Matrix Generator | Build &amp; Export a RACI Chart Online">
+  <meta property="og:description" content="A free RACI matrix generator for program and project managers. Add tasks and roles, assign R, A, C, I, then export to CSV or print. No signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free RACI Matrix Generator">
+  <meta name="twitter:description" content="Build a RACI chart online and export to CSV or print. Free, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "RACI Matrix Generator",
+    "url": "https://arsenii.com/tools/raci-matrix-generator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A free RACI matrix generator for program and project managers. Add tasks and roles, assign Responsible, Accountable, Consulted, and Informed, then export to CSV or print.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a RACI matrix?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A RACI matrix is a responsibility assignment chart that maps every task or deliverable in a program to four roles: Responsible (does the work), Accountable (owns the outcome, one person), Consulted (gives input before the work), and Informed (kept up to date). It removes ambiguity about who does what on cross-functional programs."}
+      },
+      {
+        "@type": "Question",
+        "name": "What do R, A, C, and I stand for in a RACI chart?",
+        "acceptedAnswer": {"@type": "Answer", "text": "R is Responsible, the person or people doing the work. A is Accountable, the single owner answerable for the result. C is Consulted, those whose input is sought before a decision. I is Informed, those who are told after the fact. Each task should have exactly one Accountable and at least one Responsible."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is this RACI matrix generator free?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The RACI matrix generator is completely free with no signup. Your matrix is saved in your browser, and you can export it to CSV or print it to PDF at any time."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many people should be Accountable for a task?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Exactly one. The most common RACI mistake is assigning Accountable to more than one person, which splits ownership and creates gaps. If two people feel accountable for the same task, the program has an unresolved decision, not a staffing question."}
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .matrix-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 8px; }
+    table.raci { border-collapse: collapse; width: 100%; min-width: 600px; font-family: var(--font-sans); font-size: 0.9rem; }
+    table.raci th, table.raci td { border: 1px solid var(--accent-light); padding: 0.5rem 0.6rem; text-align: center; vertical-align: middle; }
+    table.raci thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.raci th.task-col, table.raci td.task-col { text-align: left; min-width: 200px; position: sticky; left: 0; background: var(--bg); z-index: 1; }
+    table.raci thead th.task-col { background: var(--bg-warm); }
+    .cell-input, .role-input, .task-input { font-family: var(--font-sans); font-size: 0.9rem; border: none; background: transparent; width: 100%; text-align: center; color: var(--text); padding: 0.35rem 0.2rem; }
+    .task-input { text-align: left; }
+    .cell-input:focus, .role-input:focus, .task-input:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .raci-select { font-family: var(--font-sans); font-weight: 600; font-size: 0.9rem; border: none; background: transparent; cursor: pointer; width: 100%; text-align: center; text-align-last: center; color: var(--text-muted); padding: 0.35rem 0; border-radius: 4px; }
+    .raci-select:focus { outline: 2px solid var(--accent); }
+    .raci-R { background: #dbeafe; color: #1e40af; }
+    .raci-A { background: #dcfce7; color: #166534; }
+    .raci-C { background: #fef9c3; color: #854d0e; }
+    .raci-I { background: #f3e8ff; color: #6b21a8; }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .row-del:hover { color: var(--accent-red); background: #fef2f2; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0 0; font-family: var(--font-sans); font-size: 0.82rem; color: var(--text-muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .legend b { display: inline-block; width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; border-radius: 4px; font-weight: 700; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del, .add-row-btn { display: none !important; }
+      .raci-select { -webkit-appearance: none; appearance: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <div class="tool-hero">
+        <h1>RACI Matrix Generator</h1>
+        <p>Map every task to who is Responsible, Accountable, Consulted, and Informed. Add your tasks and roles below, then export to CSV or print. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary add-row-btn" id="addTask">+ Add Task</button>
+        <button class="tool-btn add-row-btn" id="addRole">+ Add Role</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="matrix-scroll">
+        <table class="raci" id="raciTable">
+          <thead><tr id="headRow"></tr></thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <div class="legend">
+        <span><b class="raci-R">R</b> Responsible — does the work</span>
+        <span><b class="raci-A">A</b> Accountable — owns the outcome</span>
+        <span><b class="raci-C">C</b> Consulted — gives input first</span>
+        <span><b class="raci-I">I</b> Informed — kept up to date</span>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How to use a RACI matrix</h2>
+        <p>A RACI matrix is the fastest way to kill the "I thought you had it" problem on a cross-functional program. You list every task or deliverable down the left, every role across the top, and in each cell you mark who is Responsible, Accountable, Consulted, or Informed.</p>
+        <p>The discipline is in two rules. Every task gets exactly one <b>A</b>, because shared accountability is no accountability. And every task gets at least one <b>R</b>, because a task no one is responsible for is a task that will not happen. When you cannot agree on the single A for a row, you have found a real decision the program has been avoiding.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>More than one Accountable on a row. Pick one owner or escalate the disagreement.</li>
+          <li>Everyone marked Consulted. If half the org has to weigh in before a decision, the decision will not get made. Reserve C for people whose input genuinely changes the outcome.</li>
+          <li>A row with only I's. Nobody is doing the work. That is a gap, not a plan.</li>
+          <li>Building it once and never revisiting. A RACI is a living artifact. Revisit it when the program changes shape.</li>
+        </ul>
+        <p>For more on running programs across many teams, see the <a href="../insights.html">Insights</a> notes on dependency management, decision logs, and escalation paths.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script>
+    var STORAGE_KEY = "raci_matrix_v1";
+    var OPTIONS = ["", "R", "A", "C", "I"];
+    var state = load() || sampleData();
+
+    function sampleData() {
+      return {
+        roles: ["Program Manager", "Engineering Lead", "Product", "Design", "Executive Sponsor"],
+        tasks: [
+          { name: "Define program scope", cells: ["A", "C", "R", "C", "I"] },
+          { name: "Technical design review", cells: ["C", "A", "C", "I", "I"] },
+          { name: "Dependency mapping", cells: ["A", "R", "C", "I", "I"] },
+          { name: "Launch readiness sign-off", cells: ["R", "C", "C", "C", "A"] },
+          { name: "Executive status report", cells: ["A", "I", "C", "I", "I"] }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function normalizeCells() {
+      state.tasks.forEach(function (t) {
+        while (t.cells.length < state.roles.length) t.cells.push("");
+        t.cells.length = state.roles.length;
+      });
+    }
+
+    function render() {
+      normalizeCells();
+      var head = document.getElementById("headRow");
+      head.innerHTML = "";
+      var th0 = document.createElement("th");
+      th0.className = "task-col";
+      th0.textContent = "Task / Deliverable";
+      head.appendChild(th0);
+      state.roles.forEach(function (role, ri) {
+        var th = document.createElement("th");
+        var inp = document.createElement("input");
+        inp.className = "role-input";
+        inp.value = role;
+        inp.setAttribute("aria-label", "Role name");
+        inp.addEventListener("input", function () { state.roles[ri] = inp.value; save(); });
+        th.appendChild(inp);
+        var del = document.createElement("button");
+        del.className = "row-del";
+        del.innerHTML = "&times;";
+        del.title = "Remove role";
+        del.addEventListener("click", function () {
+          state.roles.splice(ri, 1);
+          state.tasks.forEach(function (t) { t.cells.splice(ri, 1); });
+          save(); render();
+        });
+        th.appendChild(del);
+        head.appendChild(th);
+      });
+
+      var body = document.getElementById("bodyRows");
+      body.innerHTML = "";
+      state.tasks.forEach(function (task, ti) {
+        var tr = document.createElement("tr");
+        var tdName = document.createElement("td");
+        tdName.className = "task-col";
+        var tname = document.createElement("input");
+        tname.className = "task-input";
+        tname.value = task.name;
+        tname.setAttribute("aria-label", "Task name");
+        tname.addEventListener("input", function () { state.tasks[ti].name = tname.value; save(); });
+        tdName.appendChild(tname);
+        var del = document.createElement("button");
+        del.className = "row-del";
+        del.innerHTML = "&times;";
+        del.title = "Remove task";
+        del.addEventListener("click", function () { state.tasks.splice(ti, 1); save(); render(); });
+        tdName.appendChild(del);
+        tr.appendChild(tdName);
+
+        state.roles.forEach(function (role, ri) {
+          var td = document.createElement("td");
+          var sel = document.createElement("select");
+          sel.className = "raci-select";
+          OPTIONS.forEach(function (o) {
+            var opt = document.createElement("option");
+            opt.value = o; opt.textContent = o || "-";
+            sel.appendChild(opt);
+          });
+          sel.value = task.cells[ri] || "";
+          applyCellClass(sel);
+          sel.addEventListener("change", function () {
+            state.tasks[ti].cells[ri] = sel.value;
+            applyCellClass(sel);
+            save();
+          });
+          td.appendChild(sel);
+          tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    }
+
+    function applyCellClass(sel) {
+      sel.className = "raci-select";
+      if (sel.value) sel.classList.add("raci-" + sel.value);
+    }
+
+    document.getElementById("addTask").addEventListener("click", function () {
+      state.tasks.push({ name: "New task", cells: state.roles.map(function () { return ""; }) });
+      save(); render();
+    });
+    document.getElementById("addRole").addEventListener("click", function () {
+      state.roles.push("New role");
+      state.tasks.forEach(function (t) { t.cells.push(""); });
+      save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear the whole matrix and start blank?")) {
+        state = { roles: ["Role 1", "Role 2", "Role 3"], tasks: [{ name: "New task", cells: ["", "", ""] }] };
+        save(); render();
+      }
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var rows = [];
+      rows.push(["Task / Deliverable"].concat(state.roles));
+      state.tasks.forEach(function (t) { rows.push([t.name].concat(t.cells)); });
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = "raci-matrix.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    render();
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>
