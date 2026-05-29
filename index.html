@@ -86,9 +86,8 @@
         "description": "Senior Technical Program Manager based in the San Francisco Bay Area.",
         "knowsAbout": ["Technical Program Management", "AI Integration", "Compliance Governance", "Youth Hockey Coaching"],
         "worksFor": [{"@type": "Organization", "name": "Intuit"}, {"@type": "Organization", "name": "Atlassian"}, {"@type": "Organization", "name": "Adobe"}, {"@type": "Organization", "name": "Salesforce"}, {"@type": "Organization", "name": "Roku"}, {"@type": "Organization", "name": "Apple"}],
-        "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/"],
+        "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://chefarsenii.com/"],
         "email": "samoilov.arsenii@gmail.com",
-        "areaServed": "San Francisco Bay Area"
       }
     ]
   }
@@ -97,7 +96,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=30">
+  <link rel="stylesheet" href="styles.css?v=33">
   <script src="api-config.js"></script>
   <script src="track.js?v=2"></script>
 </head>
@@ -180,6 +179,20 @@
       </article>
     </section>
 
+    <section class="home-preview-follow" aria-label="Cooking site">
+      <article class="preview-card preview-chef-external" style="padding:0;overflow:hidden;">
+        <a href="https://chefarsenii.com/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
+          <div class="chef-external-tile-visual">
+            <img src="images/chef-arsenii-logo.jpg" alt="ARSENII — Chef Arsenii wordmark with fork and knife" width="1024" height="682" loading="lazy">
+          </div>
+          <div class="preview-card-inner">
+            <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Food Stories on my cooking site</p>
+            <div style="text-align:center;font-size:var(--text-md);margin-top:auto;">Visit the website -></div>
+          </div>
+        </a>
+      </article>
+    </section>
+
     <section class="connect">
       <h2>Connect with me:</h2>
       <div class="connect-links">
@@ -217,6 +230,9 @@
     });
     document.querySelectorAll('a[href="photography.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Photography' }));
+    });
+    document.querySelectorAll('a[href*="chefarsenii.com"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Cooking site' }));
     });
     document.querySelectorAll('a[href="contact.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));

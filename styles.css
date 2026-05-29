@@ -485,6 +485,43 @@ main {
   font-size: 0.875rem;
 }
 
+/* Fourth tile row — external chef site, width matches one column of the grid above */
+.home-preview-follow {
+  max-width: 1200px;
+  margin: -1rem auto 0;
+  padding: 0 2rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.home-preview-follow .preview-card {
+  width: 100%;
+  max-width: min(380px, 100%);
+}
+
+.chef-external-tile-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.35rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border);
+}
+
+.chef-external-tile-visual img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .profile-icons {
   display: flex;
   align-items: center;
@@ -1188,6 +1225,11 @@ main {
     gap: 1.25rem;
   }
 
+  .home-preview-follow {
+    margin-top: -0.5rem;
+    padding: 0 1.25rem 2rem;
+  }
+
   .preview-card {
     padding: 1.5rem;
   }
@@ -1360,6 +1402,10 @@ main {
   .dual-preview {
     padding: 1.5rem 1rem;
     gap: 1rem;
+  }
+
+  .home-preview-follow {
+    padding: 0 1rem 1.5rem;
   }
 
   .preview-card {

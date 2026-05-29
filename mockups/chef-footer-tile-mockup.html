@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup — Chef tile at bottom (arsenii.com)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0a0a0a;
+      --text-muted: #64748b;
+      --accent: #1e3a5f;
+      --accent-red: #b91c1c;
+      --border: #cbd5e1;
+      --radius: 8px;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 58, 95, 0.06), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(185, 28, 28, 0.03), transparent),
+        #fff;
+      min-height: 100vh;
+      padding: 0 1.5rem 3rem;
+    }
+    .mock-banner {
+      max-width: 720px;
+      margin: 1rem auto 0;
+      padding: 0.5rem 0.75rem;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      color: #92400e;
+      text-align: center;
+    }
+    .page-shell {
+      max-width: 900px;
+      margin: 2rem auto 0;
+    }
+    .fake-hero {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .fake-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+    }
+    .fake-hero p {
+      color: var(--text-muted);
+      margin: 0;
+      max-width: 36rem;
+      margin-inline: auto;
+    }
+    .connect {
+      margin-bottom: 2.5rem;
+    }
+    .connect h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+    }
+    .connect-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+    }
+    .connect-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .connect-link:hover {
+      color: var(--accent-red);
+    }
+    .more-sites h2 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+    }
+    .more-sites > p.sub {
+      margin: 0 0 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+    .tile-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .site-tile {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      background: var(--bg);
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .site-tile:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(30, 58, 95, 0.08);
+    }
+    .site-tile-visual {
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .site-tile-visual.chef {
+      background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 45%, #ea580c 100%);
+    }
+    .site-tile-body {
+      padding: 1rem 1.1rem 1.15rem;
+    }
+    .site-tile-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+    }
+    .site-tile-body .url {
+      font-size: 0.8125rem;
+      color: var(--accent);
+      word-break: break-all;
+    }
+    .site-tile-body .blurb {
+      margin: 0.5rem 0 0;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    .site-footer-mock {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-banner">Design mockup only — Chef Arsenii as a separate bottom tile (not wired to production).</div>
+
+  <div class="page-shell">
+    <div class="fake-hero">
+      <h1>Homepage body (abbreviated)</h1>
+      <p>Your real page would show hero, accomplishments, and the Career / Culinary / Photography cards above this area.</p>
+    </div>
+
+    <section class="connect" aria-label="Connect">
+      <h2>Connect with me:</h2>
+      <div class="connect-links">
+        <a href="#" class="connect-link">LinkedIn</a>
+        <a href="#" class="connect-link">Email</a>
+        <a href="#" class="connect-link">Phone</a>
+      </div>
+    </section>
+
+    <section class="more-sites" aria-label="Other sites">
+      <h2>Also visit</h2>
+      <p class="sub">Separate site — keeps your TPM story clean while still surfacing cooking.</p>
+      <div class="tile-row">
+        <a class="site-tile" href="https://chefarsenii.com" target="_blank" rel="noopener noreferrer">
+          <div class="site-tile-visual chef" aria-hidden="true">🍳</div>
+          <div class="site-tile-body">
+            <h3>Chef Arsenii</h3>
+            <div class="url">chefarsenii.com</div>
+            <p class="blurb">Cooking site — recipes, menus, and food storytelling.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer-mock">
+      <p>© 2026 Arsenii Samoilov — footer mockup</p>
+    </footer>
+  </div>
+</body>
+</html>
