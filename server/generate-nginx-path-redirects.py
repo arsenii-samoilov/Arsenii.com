@@ -37,7 +37,7 @@ lines = [
     "if ($request_uri = /index.html) { return 301 https://arsenii.com/; }",
     "location = /insights { return 301 https://arsenii.com/insights.html; }",
     "location = /insights/ { return 301 https://arsenii.com/insights.html; }",
-    "location = /tools/index.html { return 301 https://arsenii.com/tools/; }",
+    "if ($request_uri = /tools/index.html) { return 301 https://arsenii.com/tools/; }",
 ]
 for p in pages:
     slug = p[1:-5]
