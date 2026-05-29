@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "ai-adoption",
-      "title": "How I Scaled AI Feature Adoption to 60% Across an Enterprise Platform",
+      "title": "Enterprise AI Adoption at 60% Scale",
       "date": "2026-01-15",
       "category": "AI Program Management",
       "description": "What it actually takes to move AI adoption numbers at enterprise scale, from instrumenting telemetry to navigating the politics of feature rollouts.",
@@ -16,7 +16,7 @@
     },
     {
       "slug": "compliance-playbook",
-      "title": "The Compliance Program Manager Playbook: Closing Regulatory Issues at Scale",
+      "title": "Compliance PM Playbook: Closing Regulatory Issues",
       "date": "2026-02-10",
       "category": "Compliance",
       "description": "How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.",
@@ -30,7 +30,7 @@
     },
     {
       "slug": "growth-pm",
-      "title": "From $3M to $13M: What Growth Program Management Actually Looks Like",
+      "title": "Growth PM: $3M to $13M in Practice",
       "date": "2026-03-05",
       "category": "Growth",
       "description": "The mechanics behind scaling a funded account portfolio 4x: what changed, what broke, and what a TPM actually controls in a growth motion.",
@@ -44,16 +44,17 @@
     },
     {
       "slug": "project-manager-vs-technical-program-manager",
-      "title": "Project Manager vs. Technical Program Manager: The Difference That Actually Matters",
+      "title": "From Project Manager to TPM: What Actually Changes",
       "date": "2025-07-15",
       "category": "Program Management",
-      "description": "A project manager owns a plan. A technical program manager owns an outcome that crosses teams, systems, and quarters. Here is where the line really falls.",
+      "description": "Moving from project manager to technical program manager? Scope, skills, and day-to-day work shift more than the title. A practitioner's view.",
       "tags": [
         "Technical Program Manager",
         "Career",
+        "Career Transition",
         "Program Management"
       ],
-      "body": "<p>People use the two titles like they mean the same thing. They don't. The gap shows up the first time something breaks across a team boundary.</p><p>A project manager owns a plan: scope, schedule, the status of known tasks. That work matters. But it assumes the work is already defined and lives mostly in one place. A technical program manager owns an outcome that no single team controls. The plan is an input, not the job.</p><p>Here's the test I use. If the hardest part of the work is keeping a known set of tasks on track, that's project management. If the hardest part is getting three teams with different roadmaps, different incentives, and different definitions of \"done\" to converge on one result, that's a program. The second one is where I spend my time.</p><p>The technical part isn't optional either. You can't sequence work you don't understand. When the data pipeline team says a change takes two sprints, I need to know whether that's real or padding, and the only way to know is to understand the system. A TPM who can't read the architecture is just relaying messages.</p><p>So when a recruiter asks what I do, the short version is this: I'm the person accountable for the outcome when no one team can deliver it alone. The plan is the easy part.</p>"
+      "body": "<p class=\"article-callout\" style=\"padding:1rem 1.25rem;border-left:3px solid var(--accent);background:var(--bg-warm);margin:0 0 1.25rem;\">For a side-by-side role comparison with tables and FAQs, see <a href=\"../tpm-vs-project-manager.html\">TPM vs project manager</a>.</p><p>People use the two titles like they mean the same thing. They don't. The gap shows up the first time something breaks across a team boundary.</p><p>A project manager owns a plan: scope, schedule, the status of known tasks. That work matters. But it assumes the work is already defined and lives mostly in one place. A technical program manager owns an outcome that no single team controls. The plan is an input, not the job.</p><p>Here's the test I use. If the hardest part of the work is keeping a known set of tasks on track, that's project management. If the hardest part is getting three teams with different roadmaps, different incentives, and different definitions of \"done\" to converge on one result, that's a program. The second one is where I spend my time.</p><p>The technical part isn't optional either. You can't sequence work you don't understand. When the data pipeline team says a change takes two sprints, I need to know whether that's real or padding, and the only way to know is to understand the system. A TPM who can't read the architecture is just relaying messages.</p><p>So when a recruiter asks what I do, the short version is this: I'm the person accountable for the outcome when no one team can deliver it alone. The plan is the easy part.</p>"
     },
     {
       "slug": "first-30-days-on-a-new-program",
@@ -92,7 +93,7 @@
     },
     {
       "slug": "status-report-executives-actually-read",
-      "title": "How to Write a Status Report Executives Actually Read",
+      "title": "Status Reports Executives Actually Read",
       "date": "2025-10-21",
       "category": "Communication",
       "description": "Most status updates are written to cover the writer, not inform the reader. Flip that, and a VP will actually read your update.",
@@ -162,7 +163,7 @@
     },
     {
       "slug": "decision-logs-underrated-tpm-tool",
-      "title": "Decision Logs: The Most Underrated Tool in Program Management",
+      "title": "Decision Logs: Underrated TPM Tool",
       "date": "2026-02-17",
       "category": "Governance",
       "description": "Half the meetings on a program re-litigate decisions that were already made. A decision log ends that for almost no cost.",
@@ -197,7 +198,7 @@
     },
     {
       "slug": "managing-dependencies-eight-teams",
-      "title": "Managing Dependencies Across Eight Engineering Teams",
+      "title": "Dependencies Across Eight Engineering Teams",
       "date": "2026-04-28",
       "category": "Program Management",
       "description": "Lessons from running the Einstein AI portfolio at Salesforce across eight research and engineering teams on different clocks.",

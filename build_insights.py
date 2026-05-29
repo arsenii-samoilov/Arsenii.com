@@ -120,7 +120,8 @@ FOOTER_NAV = (
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">Engineering Program Manager</a> &middot;\n'
     '    <a href="{home}insights.html" style="color:#aaa;margin:0 0.4rem;">TPM Insights</a> &middot;\n'
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">AI Program Management</a> &middot;\n'
-    '    <a href="{home}contact.html" style="color:#aaa;margin:0 0.4rem;">Hire a Program Manager</a>\n'
+    '    <a href="{home}contact.html" style="color:#aaa;margin:0 0.4rem;">Hire a Program Manager</a> &middot;\n'
+    '    <a href="{home}program-and-project-types.html" style="color:#aaa;margin:0 0.4rem;">Program Types</a>\n'
     '  </nav>'
 )
 
@@ -340,7 +341,7 @@ def build_index(published):
 
     html = page_head(
         "TPM Insights | Arsenii Samoilov | Senior Technical Program Manager",
-        "Program management insights from Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. AI program management, compliance governance, and enterprise growth.",
+        "TPM insights from a Senior Technical Program Manager: AI adoption, compliance, growth programs, and enterprise delivery after 19+ years in tech.",
         canonical, "", "", extra_ld,
         "Technical Program Manager, Senior TPM, AI Program Management, Compliance Program Manager, Engineering Program Manager, program management insights, TPM blog, Arsenii Samoilov, enterprise program management, Bay Area")
     html += NAV.format(home="")
