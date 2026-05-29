@@ -1,0 +1,26 @@
+name: Deploy to arsenii.com
+
+on:
+  push:
+    branches: [main, master]   # auto-deploy on every push
+  schedule:
+    - cron: "0 6 * * *"        # also runs daily at 6 AM UTC (11 PM PT)
+  workflow_dispatch:            # lets you trigger manually from GitHub UI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ${{ secrets.DEPLOY_PATH }}
+            git fetch origin
+            git reset --hard origin/main
+            echo "Deployed at $(date)"
