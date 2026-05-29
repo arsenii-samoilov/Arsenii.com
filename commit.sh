@@ -23,4 +23,4 @@ git commit -m "$MSG"
 git push origin main
 
 echo ""
-echo "Done. Server will pull within 30 minutes."
+echo "Done. Server will pull within 5 minutes."

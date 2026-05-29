@@ -118,7 +118,7 @@ FOOTER_NAV = (
     '<nav aria-label="Site topics" style="max-width:760px;margin:2rem auto 0;padding:1.5rem 1.5rem 0.5rem;text-align:center;font-size:0.78rem;color:#aaa;line-height:2.4;border-top:1px solid #f0f0f0;">\n'
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">Senior Technical Program Manager</a> &middot;\n'
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">Engineering Program Manager</a> &middot;\n'
-    '    <a href="{home}insights.html" style="color:#aaa;margin:0 0.4rem;">TPM Insights</a> &middot;\n'
+    '    <a href="{home}insights.html" style="color:#aaa;margin:0 0.4rem;">Program Management Insights</a> &middot;\n'
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">AI Program Management</a> &middot;\n'
     '    <a href="{home}contact.html" style="color:#aaa;margin:0 0.4rem;">Hire a Program Manager</a> &middot;\n'
     '    <a href="{home}program-and-project-types.html" style="color:#aaa;margin:0 0.4rem;">Program Types</a>\n'
@@ -197,7 +197,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <meta name="twitter:description" content="' + esc(description) + '">\n'
         '  <meta name="twitter:image" content="' + SITE + '/images/headshot-share.jpg">\n'
         '  <meta name="twitter:image:alt" content="Arsenii Samoilov - Senior Technical Program Manager">\n'
-        '  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - TPM Insights" href="' + SITE + '/feed.xml">\n'
+        '  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - Program Management Insights" href="' + SITE + '/feed.xml">\n'
         + extra_ld +
         '  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -317,7 +317,7 @@ def build_index(published):
     blog_ld = {
         "@context": "https://schema.org",
         "@type": "Blog",
-        "name": "TPM Insights by Arsenii Samoilov",
+        "name": "Program Management Insights by Arsenii Samoilov",
         "url": canonical,
         "description": "Program management insights from a Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.",
         "author": {"@type": "Person", "name": "Arsenii Samoilov", "jobTitle": "Senior Technical Program Manager", "url": SITE, "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]},
@@ -340,15 +340,15 @@ def build_index(published):
                 '  <script type="application/ld+json">' + json.dumps(crumbs) + '</script>\n')
 
     html = page_head(
-        "TPM Insights | Arsenii Samoilov",
-        "TPM insights from a Senior Technical Program Manager: AI adoption, compliance, growth programs, and enterprise delivery after 19+ years in tech.",
+        "Program Management Insights | Arsenii Samoilov",
+        "Program management insights from a Senior Technical Program Manager: AI adoption, compliance, growth programs, and enterprise delivery after 19+ years in tech.",
         canonical, "", "", extra_ld,
         "Technical Program Manager, Senior TPM, AI Program Management, Compliance Program Manager, Engineering Program Manager, program management insights, TPM blog, Arsenii Samoilov, enterprise program management, Bay Area")
     html += NAV.format(home="")
     html += (
         '\n  <main>\n'
         '    <div class="insights-hero">\n'
-        '      <h1>TPM Insights</h1>\n'
+        '      <h1>Program Management Insights</h1>\n'
         '      <p>Notes on program management from 19+ years leading enterprise programs at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. AI adoption, compliance governance, and growth strategy.</p>\n'
         '    </div>\n'
         '    <div class="insights-index">\n'
@@ -371,8 +371,8 @@ def build_index(published):
     html += (
         '    </div>\n'
         '    <div style="max-width:760px;margin:0 auto;padding:3rem 1.5rem 1rem;border-top:2px solid var(--accent-light);">\n'
-        '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Free Tools</p>\n'
-        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">A small set of <a href="tools/" style="color:var(--accent);font-weight:500;">free program management tools</a> that run in your browser with no signup: the RACI Matrix Generator for who owns what, the Program Risk Register for scoring and tracking risk, and the Stakeholder Power/Interest Grid for deciding who to keep close. Each one exports to CSV or print.</p>\n'
+        '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Program Management Tools</p>\n'
+        '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">A small set of <a href="tools/" style="color:var(--accent);font-weight:500;">program management tools</a> I offer to the TPM community. They run in your browser with no signup: the RACI Matrix Generator for who owns what, the Program Risk Register for scoring and tracking risk, and the Stakeholder Power/Interest Grid for deciding who to keep close. Each one exports to CSV or print.</p>\n'
         '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 1rem;">For the TPM career path, see the <a href="salary-guide.html" style="color:var(--accent);font-weight:500;">Technical Program Manager salary guide</a>, a set of real <a href="interview-questions.html" style="color:var(--accent);font-weight:500;">TPM interview questions</a>, and a plain-English <a href="glossary.html" style="color:var(--accent);font-weight:500;">program management glossary</a>.</p>\n'
         '      <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:0 0 0.75rem;">Guides</p>\n'
         '      <p style="font-size:var(--text-sm);line-height:1.85;color:var(--text);margin:0 0 2rem;">New to the discipline? Start with the <a href="complete-guide-to-program-management.html" style="color:var(--accent);font-weight:500;">complete guide to program management</a> or <a href="how-to-become-a-technical-program-manager.html" style="color:var(--accent);font-weight:500;">how to become a technical program manager</a>. Browse the <a href="program-and-project-types.html" style="color:var(--accent);font-weight:500;">types of programs and projects</a> for migration, launch, compliance, security, and more. For quick role distinctions, see <a href="tpm-vs-project-manager.html" style="color:var(--accent);font-weight:500;">TPM vs project manager</a> and <a href="tpm-vs-product-manager.html" style="color:var(--accent);font-weight:500;">TPM vs product manager</a>.</p>\n'
@@ -428,7 +428,7 @@ def build_feed(published):
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
         '  <channel>\n'
-        '    <title>Arsenii Samoilov - TPM Insights</title>\n'
+        '    <title>Arsenii Samoilov - Program Management Insights</title>\n'
         '    <link>' + SITE + '/insights.html</link>\n'
         '    <atom:link href="' + SITE + '/feed.xml" rel="self" type="application/rss+xml"/>\n'
         '    <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager.</description>\n'

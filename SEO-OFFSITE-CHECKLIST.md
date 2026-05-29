@@ -12,10 +12,10 @@ Submit the tools hub or a specific tool. Lead with the genuine value (free, no s
 
 | # | Site | Submit URL | One-line note |
 |---|------|-----------|---------------|
-| 1 | Product Hunt | https://www.producthunt.com/posts/new | Launch the tools hub as "Free Program Management Tools." Pick a Tuesday, line up a few early upvotes, reply to every comment. |
+| 1 | Product Hunt | https://www.producthunt.com/posts/new | Launch the tools hub as "Program Management Tools." Pick a Tuesday, line up a few early upvotes, reply to every comment. |
 | 2 | AlternativeTo | https://alternativeto.net/manage-app/ | Add each tool as a free alternative to paid PM software (e.g. RACI tool vs. Smartsheet). Strong, durable backlink. |
 | 3 | SaaSHub | https://www.saashub.com/submit | List the tools hub; tag it as free PM tooling. SaaSHub pages rank and pass link equity. |
-| 4 | Hacker News (Show HN) | https://news.ycombinator.com/submit | "Show HN: Free program management tools, no signup." Post once, be ready to answer technical questions honestly. |
+| 4 | Hacker News (Show HN) | https://news.ycombinator.com/submit | "Show HN: Program management tools, no signup." Post once, be ready to answer technical questions honestly. |
 | 5 | Reddit r/projectmanagement | https://www.reddit.com/r/projectmanagement/submit | Share a single most-useful tool in a relevant thread or as a resource. Read the rules first; flair as a resource, not an ad. |
 | 6 | Reddit r/prodmgmt | https://www.reddit.com/r/prodmgmt/submit | Same approach; the OKR tracker and prioritization tools fit this audience best. |
 | 7 | Reddit r/agile | https://www.reddit.com/r/agile/submit | Lead with the WSJF calculator and retrospective board; both map cleanly to agile practice. |
