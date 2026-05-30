@@ -32,23 +32,31 @@
     "@graph": [
       {
         "@type": "ContactPage",
+        "@id": "https://arsenii.com/contact.html#webpage",
         "name": "Hire a Senior Technical Program Manager | Arsenii Samoilov",
-        "description": "Hire Arsenii Samoilov — Senior Technical Program Manager and Engineering PM with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.",
+        "description": "Hire Arsenii Samoilov, Senior Technical Program Manager and Engineering PM with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.",
         "url": "https://arsenii.com/contact.html",
-        "isPartOf": {"@type": "WebSite", "url": "https://arsenii.com"},
-        "mainEntity": {
-          "@type": "Person",
-          "name": "Arsenii Samoilov",
-          "jobTitle": ["Senior Technical Program Manager", "Engineering Program Manager", "Senior Program Manager"],
-          "email": "samoilov.arsenii@gmail.com",
-          "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://arsenii.com"],
-          "availableForHire": true,
-          "seeks": {
-            "@type": "JobPosting",
-            "title": "Senior Technical Program Manager",
-            "description": "Seeking Senior Technical Program Manager, Engineering Program Manager, or Senior Program Manager roles at enterprise technology companies."
-          }
-        }
+        "isPartOf": {"@id": "https://arsenii.com/#website"},
+        "about": {"@id": "https://arsenii.com/#person"}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://arsenii.com/#website",
+        "url": "https://arsenii.com/",
+        "name": "Arsenii Samoilov"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://arsenii.com/#person",
+        "name": "Arsenii Samoilov",
+        "url": "https://arsenii.com/",
+        "jobTitle": ["Senior Technical Program Manager", "Engineering Program Manager", "Senior Program Manager"],
+        "email": "mailto:samoilov.arsenii@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/arseniisamoilov/",
+          "https://www.wikidata.org/wiki/Q139972269",
+          "https://github.com/arsenii-samoilov"
+        ]
       },
       {
         "@type": "BreadcrumbList",
