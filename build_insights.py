@@ -12,6 +12,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "insights-data.json")
 ARTICLES_DIR = os.path.join(BASE_DIR, "insights")
 SITE = "https://arsenii.com"
+MAX_SEO_TITLE = 60
+TITLE_SUFFIX_FULL = " | Arsenii Samoilov"
+TITLE_SUFFIX_SHORT = " | Arsenii"
 
 # Cohesive monoline icon set. Each value is the inner markup of a 24x24 SVG
 # (stroke="currentColor", fill="none"). category_icon() wraps it. Color is set
@@ -142,6 +145,21 @@ def category_icon(category):
 
 def fmt_date(d):
     return d.strftime("%B %-d, %Y") if os.name != "nt" else d.strftime("%B %d, %Y")
+
+
+def seo_page_title(headline, override=None):
+    """Build a <=60 char browser title; prefer full suffix, then short, then trim."""
+    if override:
+        return override
+    for suffix in (TITLE_SUFFIX_FULL, TITLE_SUFFIX_SHORT):
+        candidate = headline + suffix
+        if len(candidate) <= MAX_SEO_TITLE:
+            return candidate
+    max_head = MAX_SEO_TITLE - len(TITLE_SUFFIX_SHORT)
+    head = headline[:max_head]
+    if " " in head:
+        head = head.rsplit(" ", 1)[0]
+    return head + TITLE_SUFFIX_SHORT
 
 
 def load_articles():
@@ -289,7 +307,8 @@ def build_article_page(a, published):
 
     article_kw = ", ".join(a["tags"]) + ", Technical Program Manager, Arsenii Samoilov"
     icon = category_icon(a["category"])
-    html = page_head(a["title"] + " | Arsenii Samoilov", a["description"], canonical,
+    page_title = seo_page_title(a["title"], a.get("seoTitle"))
+    html = page_head(page_title, a["description"], canonical,
                      "../", "../", extra_ld, article_kw)
     html += NAV.format(home="../")
     html += (
@@ -459,6 +478,13 @@ def main():
         f.write(build_feed(published))
 
     scheduled = len(articles) - len(published)
+    over = []
+    for a in articles:
+        title = seo_page_title(a["title"], a.get("seoTitle"))
+        if len(title) > MAX_SEO_TITLE:
+            over.append(a["slug"])
+    if over:
+        raise SystemExit("SEO titles exceed {0} chars: {1}".format(MAX_SEO_TITLE, ", ".join(over)))
     print("Published: {0}  Scheduled: {1}  Total: {2}".format(
         len(published), scheduled, len(articles)))
 
