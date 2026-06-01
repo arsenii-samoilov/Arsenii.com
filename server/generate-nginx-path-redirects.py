@@ -5,7 +5,7 @@ import os
 OUT = os.path.join(os.path.dirname(__file__), "nginx-path-redirects.conf")
 
 pages = [
-    "/career.html", "/contact.html", "/culinary.html", "/photography.html",
+    "/about.html", "/career.html", "/contact.html", "/culinary.html", "/photography.html",
     "/glossary.html", "/salary-guide.html", "/interview-questions.html",
     "/complete-guide-to-program-management.html",
     "/how-to-become-a-technical-program-manager.html",
@@ -35,6 +35,10 @@ tools = [
 lines = [
     "# Path canonicalization for arsenii.com",
     "if ($request_uri = /index.html) { return 301 https://arsenii.com/; }",
+    "if ($args ~* \"^source=\") { return 301 https://arsenii.com/; }",
+    "location = /about { return 301 https://arsenii.com/about.html; }",
+    "location = /pricing { return 301 https://arsenii.com/contact.html; }",
+    "location = /pricing.html { return 301 https://arsenii.com/contact.html; }",
     "location = /insights { return 301 https://arsenii.com/insights.html; }",
     "location = /insights/ { return 301 https://arsenii.com/insights.html; }",
     "if ($request_uri = /tools/index.html) { return 301 https://arsenii.com/tools/; }",

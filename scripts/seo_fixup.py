@@ -8,6 +8,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DESCRIPTIONS = {
     "index.html": "Senior TPM with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. AI programs, enterprise delivery, and compliance. Bay Area.",
+    "about.html": "About Arsenii Samoilov, Senior Technical Program Manager with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. Bay Area.",
     "career.html": "Senior Technical Program Manager resume: Intuit, Atlassian, Adobe, Salesforce, Roku, Apple. AI program management, compliance, and enterprise delivery.",
     "insights.html": "Program management insights from a Senior Technical Program Manager: AI adoption, compliance, growth programs, and enterprise delivery after 19+ years in tech.",
     "contact.html": "Contact Arsenii Samoilov, Senior Technical Program Manager, for TPM roles, advisory, or program leadership. Bay Area, open to remote.",
@@ -50,6 +51,7 @@ DESCRIPTIONS = {
 
 TITLES = {
     "index.html": "Arsenii Samoilov | Senior Technical Program Manager",
+    "about.html": "About Arsenii Samoilov | Senior TPM",
     "career.html": "Senior TPM Resume | Arsenii Samoilov | Intuit, Apple",
     "insights.html": "Program Management Insights | Arsenii Samoilov",
     "contact.html": "Hire a Senior TPM | Arsenii Samoilov",

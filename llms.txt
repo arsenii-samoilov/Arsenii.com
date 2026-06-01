@@ -35,10 +35,16 @@ Arsenii Samoilov is a Senior Technical Program Manager (TPM) and Engineering Pro
 ## Pages
 
 - [Home](https://arsenii.com/): Overview and key accomplishments
+- [About](https://arsenii.com/about.html): Bio, background, and education
 - [Career](https://arsenii.com/career.html): Full resume, experience, certifications
 - [Contact](https://arsenii.com/contact.html): Available for Senior TPM and Engineering PM roles
+- [Insights](https://arsenii.com/insights.html): Program management articles and field notes
+- [Tools](https://arsenii.com/tools/): Free browser-based PM tools (RACI, risk register, RAID, OKR, and more)
 - [Culinary](https://arsenii.com/culinary.html): Culinary work and food photography
 - [Photography](https://arsenii.com/photography.html): Automotive and fine art photography
+- [TPM Salary Guide](https://arsenii.com/salary-guide.html): Compensation ranges and calculator
+- [TPM Interview Questions](https://arsenii.com/interview-questions.html): Interview prep by category
+- [Program Management Glossary](https://arsenii.com/glossary.html): Plain-language PM terms
 
 ## Other Projects
 
