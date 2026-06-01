@@ -235,7 +235,7 @@
     {
       "slug": "ma-integration-governance-adobe-pmo",
       "title": "M&A Integration Governance: What I Learned in Adobe's PMO",
-      "date": "2026-06-09",
+      "date": "2026-04-08",
       "category": "Governance",
       "description": "Acquisitions don't fail at the deal. They fail at integration. Notes from running a reconciliation track inside Adobe's M&A PMO.",
       "tags": [
@@ -249,7 +249,7 @@
     {
       "slug": "why-okrs-fail-and-the-fix",
       "title": "Why Most OKRs Fail, and the Fix",
-      "date": "2026-06-21",
+      "date": "2026-04-09",
       "category": "Strategy",
       "description": "OKRs don't fail because the framework is bad. They fail because teams write aspirations and call them outcomes.",
       "tags": [
@@ -262,7 +262,7 @@
     {
       "slug": "pre-mortem-find-the-failure-first",
       "title": "The Pre-Mortem: Finding the Failure Before It Finds You",
-      "date": "2026-07-03",
+      "date": "2026-04-10",
       "category": "Risk",
       "description": "A postmortem explains a failure after it costs you. A pre-mortem catches it while it's still cheap. The format takes one hour.",
       "tags": [
@@ -297,7 +297,7 @@
     {
       "slug": "cutting-partner-inbound-90-percent-roku",
       "title": "Cutting Partner Inbound by 90 Percent: Process Design at Roku Pay",
-      "date": "2026-07-15",
+      "date": "2026-04-11",
       "category": "Operations",
       "description": "When partners flood you with the same requests, the volume isn't the problem. The process that generates it is.",
       "tags": [
@@ -310,7 +310,7 @@
     {
       "slug": "six-hour-migration-fifteen-minutes-apple",
       "title": "A Six-Hour Migration in Fifteen Minutes",
-      "date": "2026-07-27",
+      "date": "2026-04-12",
       "category": "Operations",
       "description": "Modernizing a forecast system at Apple turned a six-hour migration into fifteen minutes. The win wasn't speed. It was what speed unlocked.",
       "tags": [
@@ -323,7 +323,7 @@
     {
       "slug": "experiment-program-that-doesnt-lie",
       "title": "How to Run an Experiment Program That Doesn't Lie to You",
-      "date": "2026-08-08",
+      "date": "2026-04-13",
       "category": "Growth",
       "description": "Most experimentation programs generate confident, wrong conclusions. Here's how to build one whose results you can trust.",
       "tags": [
@@ -336,7 +336,7 @@
     {
       "slug": "stakeholder-mapping-cross-functional-programs",
       "title": "Stakeholder Mapping for Cross-Functional Programs",
-      "date": "2026-08-20",
+      "date": "2026-04-14",
       "category": "Program Management",
       "description": "Knowing the org chart isn't knowing your stakeholders. The map that matters tracks influence, interest, and who can kill your program.",
       "tags": [
@@ -349,7 +349,7 @@
     {
       "slug": "ai-governance-iso-soc2-hipaa",
       "title": "AI Governance: Making Compliance Real for ISO, SOC2, and HIPAA",
-      "date": "2026-09-01",
+      "date": "2026-04-15",
       "category": "Compliance",
       "description": "AI features ship fast. Compliance frameworks move slow. The TPM's job is to make them move together without faking either one.",
       "tags": [
@@ -362,7 +362,7 @@
     {
       "slug": "managing-200m-discount-allocation",
       "title": "Managing $200M in Discount Allocation",
-      "date": "2026-09-13",
+      "date": "2026-04-16",
       "category": "Monetization",
       "description": "A large discount budget is a system with leverage points. Manage it like one and small changes move large numbers.",
       "tags": [
@@ -375,7 +375,7 @@
     {
       "slug": "when-to-kill-a-program",
       "title": "When to Kill a Program",
-      "date": "2026-09-25",
+      "date": "2026-04-17",
       "category": "Strategy",
       "description": "Knowing when to stop is a core program management skill and almost nobody trains for it. Here's how I make the call.",
       "tags": [
@@ -388,7 +388,7 @@
     {
       "slug": "bundling-strategy-program-lens",
       "title": "Bundling Strategy Through a Program Lens",
-      "date": "2026-10-07",
+      "date": "2026-04-18",
       "category": "Monetization",
       "description": "A bundle looks like a pricing decision. Delivering one is a cross-functional program that touches engineering, billing, and GTM at once.",
       "tags": [
@@ -401,7 +401,7 @@
     {
       "slug": "metrics-that-matter-vs-vanity",
       "title": "Metrics That Matter Versus Vanity Metrics",
-      "date": "2026-10-19",
+      "date": "2026-04-19",
       "category": "Data",
       "description": "A number that always goes up and never forces a decision is decoration. Here's how to tell a real metric from a comfortable one.",
       "tags": [
@@ -414,7 +414,7 @@
     {
       "slug": "real-time-data-off-the-nightly-batch",
       "title": "Real-Time Data: Moving 100+ Attributes Off the Nightly Batch",
-      "date": "2026-10-31",
+      "date": "2026-04-20",
       "category": "Operations",
       "description": "Batch processing quietly caps what a product can do. Moving tax attributes to real-time publishing at Intuit removed that cap.",
       "tags": [
@@ -427,7 +427,7 @@
     {
       "slug": "scaling-candidate-matching-platform",
       "title": "Scaling a Candidate-Matching Platform to 65 Million Records",
-      "date": "2026-11-12",
+      "date": "2026-04-21",
       "category": "Engineering",
       "description": "Founding TPM lessons from building a recruiting platform that scored 65M candidates in under ten seconds across 50,000 clients.",
       "tags": [
@@ -440,7 +440,7 @@
     {
       "slug": "aligning-two-ai-roadmaps-rovo-gemini",
       "title": "Aligning Two AI Roadmaps: Rovo and Gemini",
-      "date": "2026-11-24",
+      "date": "2026-04-22",
       "category": "AI Program Management",
       "description": "Integrating with another company's AI framework is a program problem wearing a technical disguise. Notes from aligning Rovo with Gemini.",
       "tags": [
@@ -453,7 +453,7 @@
     {
       "slug": "onboarding-compliance-portfolio-fast",
       "title": "Onboarding Onto a Compliance Portfolio Without Slowing Engineering",
-      "date": "2026-12-06",
+      "date": "2026-04-23",
       "category": "Compliance",
       "description": "Taking over a regulatory portfolio means getting fluent fast without becoming the bottleneck you were hired to remove.",
       "tags": [
@@ -466,7 +466,7 @@
     {
       "slug": "weekly-operating-rhythm-that-scales",
       "title": "The Weekly Operating Rhythm That Scales",
-      "date": "2026-12-18",
+      "date": "2026-04-24",
       "category": "Operations",
       "description": "Programs don't fall apart in the planning. They fall apart in the weeks between. Here's the cadence that holds them together.",
       "tags": [
@@ -479,7 +479,7 @@
     {
       "slug": "managing-up-c-level-sponsor",
       "title": "Managing Up: How to Partner With a C-Level Sponsor",
-      "date": "2026-12-30",
+      "date": "2026-04-25",
       "category": "Communication",
       "description": "A senior sponsor is the most powerful lever a program has, and the most commonly wasted. Here's how to use one well.",
       "tags": [
@@ -492,7 +492,7 @@
     {
       "slug": "risk-registers-people-actually-use",
       "title": "Risk Registers People Actually Use",
-      "date": "2027-01-11",
+      "date": "2026-04-26",
       "category": "Risk",
       "description": "Most risk registers are written once and never opened again. A living one looks different and does real work.",
       "tags": [
@@ -505,7 +505,7 @@
     {
       "slug": "scoping-an-ambiguous-executive-ask",
       "title": "How to Scope an Ambiguous Executive Ask",
-      "date": "2027-01-23",
+      "date": "2026-04-27",
       "category": "Strategy",
       "description": "\"Make us faster\" isn't a program. Turning a vague executive ask into something deliverable is half the job.",
       "tags": [
@@ -518,7 +518,7 @@
     {
       "slug": "program-health-dashboards",
       "title": "Program Health Dashboards: What Belongs on Them",
-      "date": "2027-02-04",
+      "date": "2026-04-28",
       "category": "Communication",
       "description": "A dashboard that shows everything shows nothing. Here's what earns a spot and what should be cut.",
       "tags": [
@@ -531,7 +531,7 @@
     {
       "slug": "critical-path-is-a-people-problem",
       "title": "The Critical Path Is a People Problem",
-      "date": "2027-02-16",
+      "date": "2026-04-29",
       "category": "Program Management",
       "description": "The textbook critical path is about task sequencing. The real one runs through which people can actually decide and deliver.",
       "tags": [
@@ -544,7 +544,7 @@
     {
       "slug": "saying-no-scope-control",
       "title": "Saying No: Scope Control as a Core Skill",
-      "date": "2027-02-28",
+      "date": "2026-04-30",
       "category": "Program Management",
       "description": "Every program accumulates scope it never agreed to. Protecting the outcome means saying no well, and often.",
       "tags": [
@@ -557,7 +557,7 @@
     {
       "slug": "19-years-seven-companies-lessons",
       "title": "What 19 Years Across Seven Companies Taught Me About Programs",
-      "date": "2027-03-12",
+      "date": "2026-05-01",
       "category": "Career",
       "description": "Intuit, Atlassian, Adobe, Salesforce, Roku, Apple, and a startup. The patterns that held true everywhere, and the one that surprised me.",
       "tags": [
@@ -570,7 +570,7 @@
     {
       "slug": "program-kickoff-that-works",
       "title": "How to Run a Program Kickoff That Actually Works",
-      "date": "2027-03-24",
+      "date": "2026-05-02",
       "category": "Program Management",
       "description": "Most program kickoffs produce a shared calendar invite and little else. Here is how to run one that produces shared understanding.",
       "tags": [
@@ -584,7 +584,7 @@
     {
       "slug": "workback-plan-done-right",
       "title": "The Workback Plan Done Right",
-      "date": "2027-04-05",
+      "date": "2026-05-03",
       "category": "Program Management",
       "description": "A workback plan built from a launch date backward tells you whether the date is real. Most TPMs build them forward and miss what the plan is trying to tell them.",
       "tags": [
@@ -598,7 +598,7 @@
     {
       "slug": "building-a-tiger-team",
       "title": "Building a Tiger Team",
-      "date": "2027-04-17",
+      "date": "2026-05-04",
       "category": "Program Management",
       "description": "A tiger team is not a task force. It is a small, named group with a specific problem, a deadline, and authority to decide. Here is how to stand one up and wind it down.",
       "tags": [
@@ -612,7 +612,7 @@
     {
       "slug": "writing-executive-brief",
       "title": "How to Write an Executive Brief",
-      "date": "2027-04-29",
+      "date": "2026-05-05",
       "category": "Communication",
       "description": "An executive brief is not a summary. It is a decision document. The distinction changes how you write it and what it produces.",
       "tags": [
@@ -626,7 +626,7 @@
     {
       "slug": "cross-functional-alignment-without-authority",
       "title": "Cross-Functional Alignment Without Authority",
-      "date": "2027-05-11",
+      "date": "2026-05-06",
       "category": "Program Management",
       "description": "TPMs get things done through people they do not manage. The influence toolkit that actually works looks nothing like what they teach in leadership courses.",
       "tags": [
@@ -640,7 +640,7 @@
     {
       "slug": "tpm-and-the-rfc-process",
       "title": "How a TPM Uses the RFC Process",
-      "date": "2027-05-23",
+      "date": "2026-05-07",
       "category": "Program Management",
       "description": "Most TPMs sit outside the RFC process and wait for the output. The ones who influence technical direction are inside it, asking the right questions at the right time.",
       "tags": [
@@ -654,7 +654,7 @@
     {
       "slug": "managing-program-through-reorg",
       "title": "Managing a Program Through a Reorg",
-      "date": "2027-06-04",
+      "date": "2026-05-08",
       "category": "Program Management",
       "description": "A reorg mid-program is not an exception. It is a recurring condition. The programs that survive them have a few things in common.",
       "tags": [
@@ -668,7 +668,7 @@
     {
       "slug": "retrospectives-that-drive-change",
       "title": "Retrospectives That Actually Drive Change",
-      "date": "2027-06-16",
+      "date": "2026-05-09",
       "category": "Program Management",
       "description": "Most retrospectives produce a list of things to do differently and change nothing. The format is not the problem. The follow-through is.",
       "tags": [
@@ -682,7 +682,7 @@
     {
       "slug": "vendor-management-for-tpms",
       "title": "Vendor Management for Technical Programs",
-      "date": "2027-06-28",
+      "date": "2026-05-10",
       "category": "Program Management",
       "description": "Vendors are not internal teams and cannot be managed the same way. The patterns that work for internal dependencies fail with external partners for structural reasons.",
       "tags": [
@@ -696,7 +696,7 @@
     {
       "slug": "multi-region-launch-management",
       "title": "Multi-Region Launch Management",
-      "date": "2027-07-10",
+      "date": "2026-05-11",
       "category": "Execution",
       "description": "Launching in multiple regions is not launching once and repeating. The complexity is in the differences, and the differences are almost never obvious until you're in them.",
       "tags": [
@@ -710,7 +710,7 @@
     {
       "slug": "handling-a-missed-deadline",
       "title": "How to Handle a Missed Deadline",
-      "date": "2027-07-22",
+      "date": "2026-05-12",
       "category": "Communication",
       "description": "Missing a deadline is a recoverable event. How you handle it in the first 48 hours determines whether it stays recoverable.",
       "tags": [
@@ -724,7 +724,7 @@
     {
       "slug": "building-trust-with-engineering-leads",
       "title": "Building Trust With Engineering Leads",
-      "date": "2027-08-03",
+      "date": "2026-05-13",
       "category": "Leadership",
       "description": "Engineering leads extend trust to TPMs who understand the technical constraints and protect the team from noise. Everything else is secondary.",
       "tags": [
@@ -738,7 +738,7 @@
     {
       "slug": "program-office-setup-from-scratch",
       "title": "Setting Up a Program Office From Scratch",
-      "date": "2027-08-15",
+      "date": "2026-05-14",
       "category": "Program Management",
       "description": "A new program office is a blank sheet and a political minefield simultaneously. The first 90 days determine whether it becomes infrastructure or overhead.",
       "tags": [
@@ -752,7 +752,7 @@
     {
       "slug": "data-driven-program-reporting",
       "title": "Data-Driven Program Reporting",
-      "date": "2027-08-27",
+      "date": "2026-05-15",
       "category": "Communication",
       "description": "Status reporting based on vibes and verbal updates tells leadership what the team believes. Reporting anchored in data tells them what is actually happening.",
       "tags": [
@@ -766,7 +766,7 @@
     {
       "slug": "portfolio-review-leadership-decisions",
       "title": "The Portfolio Review That Helps Leadership Decide",
-      "date": "2027-09-08",
+      "date": "2026-05-16",
       "category": "Communication",
       "description": "Most portfolio reviews are program status reports stacked on top of each other. A review that helps leadership decide something looks completely different.",
       "tags": [
@@ -780,7 +780,7 @@
     {
       "slug": "privacy-engineering-programs",
       "title": "Running a Privacy Engineering Program",
-      "date": "2027-09-20",
+      "date": "2026-05-17",
       "category": "Compliance Program Manager",
       "description": "Privacy engineering is not a legal exercise. It is a program management problem: getting engineering teams to design for data minimization before the feature is built, not after the audit.",
       "tags": [
@@ -794,7 +794,7 @@
     {
       "slug": "security-program-management",
       "title": "Security Program Management",
-      "date": "2027-10-02",
+      "date": "2026-05-18",
       "category": "Compliance Program Manager",
       "description": "Security programs fail not because the security requirements are wrong but because they are treated as a track separate from the engineering program. Integration is the job.",
       "tags": [
@@ -808,7 +808,7 @@
     {
       "slug": "onboarding-team-mid-program",
       "title": "Onboarding a New Team Mid-Program",
-      "date": "2027-10-14",
+      "date": "2026-05-19",
       "category": "Program Management",
       "description": "Adding a new team to an active program is one of the more disruptive things that can happen to a timeline. Done well, it accelerates. Done poorly, it costs more than the capacity it adds.",
       "tags": [
@@ -822,7 +822,7 @@
     {
       "slug": "scoping-multi-year-roadmap",
       "title": "How to Scope a Multi-Year Roadmap",
-      "date": "2027-10-26",
+      "date": "2026-05-20",
       "category": "Strategy",
       "description": "A multi-year roadmap is not a twelve-month plan extended. The further out the horizon, the more the document is about principles and bets, not milestones.",
       "tags": [
@@ -836,7 +836,7 @@
     {
       "slug": "technical-debt-as-program",
       "title": "Managing Technical Debt as a Program",
-      "date": "2027-11-07",
+      "date": "2026-05-21",
       "category": "Program Management",
       "description": "Technical debt managed as a list of tickets goes nowhere. Technical debt managed as a program with scope, milestones, and executive visibility gets funded and resolved.",
       "tags": [
@@ -850,7 +850,7 @@
     {
       "slug": "running-pilot-before-rollout",
       "title": "Running a Pilot Before Full Rollout",
-      "date": "2027-11-19",
+      "date": "2026-05-22",
       "category": "Execution",
       "description": "A pilot is not a soft launch. It is a structured experiment designed to answer specific questions before the answers become expensive to change.",
       "tags": [
@@ -864,7 +864,7 @@
     {
       "slug": "program-charter-document",
       "title": "The Program Charter: What Belongs In It",
-      "date": "2027-12-01",
+      "date": "2026-05-23",
       "category": "Program Management",
       "description": "A program charter is not a scope document or a project plan. It is the contract between the program and its stakeholders about what is being built, why, and how success is defined.",
       "tags": [
@@ -878,7 +878,7 @@
     {
       "slug": "tpm-career-growth-to-staff",
       "title": "Growing From Senior to Staff TPM",
-      "date": "2027-12-13",
+      "date": "2026-05-24",
       "category": "Career",
       "description": "The jump from senior to staff is not about doing more of the same work faster. It is about a fundamentally different relationship to scope, ambiguity, and organizational influence.",
       "tags": [
@@ -892,7 +892,7 @@
     {
       "slug": "building-institutional-knowledge",
       "title": "Building Institutional Knowledge as a TPM",
-      "date": "2027-12-25",
+      "date": "2026-05-25",
       "category": "Program Management",
       "description": "The programs that survive turnover have their knowledge written down. The ones that don't restart from scratch every time someone leaves.",
       "tags": [
@@ -906,7 +906,7 @@
     {
       "slug": "influencing-without-authority-senior-levels",
       "title": "Influencing Without Authority at Senior Levels",
-      "date": "2028-01-06",
+      "date": "2026-05-26",
       "category": "Leadership",
       "description": "Influencing a VP or a C-level sponsor without a direct reporting relationship requires a different toolkit than influencing a peer team. The stakes and the dynamics are different.",
       "tags": [
@@ -920,7 +920,7 @@
     {
       "slug": "payment-systems-program-lessons",
       "title": "What Running a Payment System Migration Taught Me",
-      "date": "2028-01-18",
+      "date": "2026-05-27",
       "category": "Execution",
       "description": "The Roku payment gateway migration to Adyen was the hardest program I have run. The lessons are specific enough to be useful beyond payments.",
       "tags": [
@@ -934,7 +934,7 @@
     {
       "slug": "responsible-ai-governance-programs",
       "title": "Running a Responsible AI Governance Program",
-      "date": "2028-01-30",
+      "date": "2026-05-28",
       "category": "AI Program Management",
       "description": "Responsible AI is not an ethics exercise. It is a program management problem: getting AI products through internal review, external audit, and regulatory scrutiny without slowing the teams building them.",
       "tags": [
@@ -948,7 +948,7 @@
     {
       "slug": "working-with-legal-on-technical-programs",
       "title": "Working With Legal on Technical Programs",
-      "date": "2028-02-11",
+      "date": "2026-05-29",
       "category": "Compliance Program Manager",
       "description": "Legal reviews that happen at the end of a program are a tax on bad planning. The TPMs who get clean launches involve legal at the right points earlier in the process.",
       "tags": [
@@ -962,7 +962,7 @@
     {
       "slug": "program-health-vs-project-health",
       "title": "Program Health Versus Project Health",
-      "date": "2028-02-23",
+      "date": "2026-05-30",
       "category": "Program Management",
       "description": "A program can be on time and still be unhealthy. The difference is in what you are measuring and at what level.",
       "tags": [
@@ -976,7 +976,7 @@
     {
       "slug": "what-good-looks-like-staff-tpm",
       "title": "What Good Looks Like at the Staff TPM Level",
-      "date": "2028-03-06",
+      "date": "2026-05-31",
       "category": "Career",
       "description": "Staff TPM is not a title. It is a set of behaviors that are visible before the promotion happens and that continue to compound afterward.",
       "tags": [

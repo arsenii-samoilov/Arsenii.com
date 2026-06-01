@@ -6,69 +6,146 @@
     <atom:link href="https://arsenii.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 22:06:02 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 22:10:37 -0800</lastBuildDate>
     <item>
-      <title>Dependencies Across Eight Engineering Teams</title>
-      <link>https://arsenii.com/insights/managing-dependencies-eight-teams.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/managing-dependencies-eight-teams.html</guid>
-      <pubDate>Tue, 28 Apr 2026 09:00:00 -0800</pubDate>
-      <description>Lessons from running the Einstein AI portfolio at Salesforce across eight research and engineering teams on different clocks.</description>
+      <title>What Good Looks Like at the Staff TPM Level</title>
+      <link>https://arsenii.com/insights/what-good-looks-like-staff-tpm.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/what-good-looks-like-staff-tpm.html</guid>
+      <pubDate>Sun, 31 May 2026 09:00:00 -0800</pubDate>
+      <description>Staff TPM is not a title. It is a set of behaviors that are visible before the promotion happens and that continue to compound afterward.</description>
     </item>
     <item>
-      <title>Growth PM in Practice</title>
-      <link>https://arsenii.com/insights/growth-pm.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/growth-pm.html</guid>
-      <pubDate>Thu, 05 Mar 2026 09:00:00 -0800</pubDate>
-      <description>The mechanics behind scaling a funded account portfolio 4x: what changed, what broke, and what a TPM actually controls in a growth motion.</description>
+      <title>Program Health Versus Project Health</title>
+      <link>https://arsenii.com/insights/program-health-vs-project-health.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/program-health-vs-project-health.html</guid>
+      <pubDate>Sat, 30 May 2026 09:00:00 -0800</pubDate>
+      <description>A program can be on time and still be unhealthy. The difference is in what you are measuring and at what level.</description>
     </item>
     <item>
-      <title>Decision Logs: Underrated TPM Tool</title>
-      <link>https://arsenii.com/insights/decision-logs-underrated-tpm-tool.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/decision-logs-underrated-tpm-tool.html</guid>
-      <pubDate>Tue, 17 Feb 2026 09:00:00 -0800</pubDate>
-      <description>Half the meetings on a program re-litigate decisions that were already made. A decision log ends that for almost no cost.</description>
+      <title>Working With Legal on Technical Programs</title>
+      <link>https://arsenii.com/insights/working-with-legal-on-technical-programs.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/working-with-legal-on-technical-programs.html</guid>
+      <pubDate>Fri, 29 May 2026 09:00:00 -0800</pubDate>
+      <description>Legal reviews that happen at the end of a program are a tax on bad planning. The TPMs who get clean launches involve legal at the right points earlier in the process.</description>
     </item>
     <item>
-      <title>Compliance PM Playbook</title>
-      <link>https://arsenii.com/insights/compliance-playbook.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/compliance-playbook.html</guid>
-      <pubDate>Tue, 10 Feb 2026 09:00:00 -0800</pubDate>
-      <description>How to build a regulatory issue lifecycle framework that sticks, from triage to CCO reporting to 96%+ on-time closure.</description>
+      <title>Running a Responsible AI Governance Program</title>
+      <link>https://arsenii.com/insights/responsible-ai-governance-programs.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/responsible-ai-governance-programs.html</guid>
+      <pubDate>Thu, 28 May 2026 09:00:00 -0800</pubDate>
+      <description>Responsible AI is not an ethics exercise. It is a program management problem: getting AI products through internal review, external audit, and regulatory scrutiny without slowing the teams building them.</description>
     </item>
     <item>
-      <title>Enterprise AI Adoption at Scale</title>
-      <link>https://arsenii.com/insights/ai-adoption.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/ai-adoption.html</guid>
-      <pubDate>Thu, 15 Jan 2026 09:00:00 -0800</pubDate>
-      <description>What it actually takes to move AI adoption numbers at enterprise scale, from instrumenting telemetry to navigating the politics of feature rollouts.</description>
+      <title>What Running a Payment System Migration Taught Me</title>
+      <link>https://arsenii.com/insights/payment-systems-program-lessons.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/payment-systems-program-lessons.html</guid>
+      <pubDate>Wed, 27 May 2026 09:00:00 -0800</pubDate>
+      <description>The Roku payment gateway migration to Adyen was the hardest program I have run. The lessons are specific enough to be useful beyond payments.</description>
     </item>
     <item>
-      <title>Building Escalation Paths With Teeth</title>
-      <link>https://arsenii.com/insights/escalation-paths-with-teeth.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/escalation-paths-with-teeth.html</guid>
-      <pubDate>Tue, 09 Dec 2025 09:00:00 -0800</pubDate>
-      <description>An escalation path nobody fears is decoration. Here is how to design one teams actually respond to.</description>
+      <title>Influencing Without Authority at Senior Levels</title>
+      <link>https://arsenii.com/insights/influencing-without-authority-senior-levels.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/influencing-without-authority-senior-levels.html</guid>
+      <pubDate>Tue, 26 May 2026 09:00:00 -0800</pubDate>
+      <description>Influencing a VP or a C-level sponsor without a direct reporting relationship requires a different toolkit than influencing a peer team. The stakes and the dynamics are different.</description>
     </item>
     <item>
-      <title>Status Reports Executives Actually Read</title>
-      <link>https://arsenii.com/insights/status-report-executives-actually-read.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/status-report-executives-actually-read.html</guid>
-      <pubDate>Tue, 21 Oct 2025 09:00:00 -0800</pubDate>
-      <description>Most status updates are written to cover the writer, not inform the reader. Flip that, and a VP will actually read your update.</description>
+      <title>Building Institutional Knowledge as a TPM</title>
+      <link>https://arsenii.com/insights/building-institutional-knowledge.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/building-institutional-knowledge.html</guid>
+      <pubDate>Mon, 25 May 2026 09:00:00 -0800</pubDate>
+      <description>The programs that survive turnover have their knowledge written down. The ones that don't restart from scratch every time someone leaves.</description>
     </item>
     <item>
-      <title>My First 30 Days on a New Program</title>
-      <link>https://arsenii.com/insights/first-30-days-on-a-new-program.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/first-30-days-on-a-new-program.html</guid>
-      <pubDate>Tue, 02 Sep 2025 09:00:00 -0800</pubDate>
-      <description>A field guide to the first month on an unfamiliar program: what to map, who to meet, and the trap most people fall into.</description>
+      <title>Growing From Senior to Staff TPM</title>
+      <link>https://arsenii.com/insights/tpm-career-growth-to-staff.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/tpm-career-growth-to-staff.html</guid>
+      <pubDate>Sun, 24 May 2026 09:00:00 -0800</pubDate>
+      <description>The jump from senior to staff is not about doing more of the same work faster. It is about a fundamentally different relationship to scope, ambiguity, and organizational influence.</description>
     </item>
     <item>
-      <title>PM to TPM: What Actually Changes</title>
-      <link>https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/project-manager-vs-technical-program-manager.html</guid>
-      <pubDate>Tue, 15 Jul 2025 09:00:00 -0800</pubDate>
-      <description>Moving from project manager to technical program manager? Scope, skills, and day-to-day work shift more than the title. A practitioner's view.</description>
+      <title>The Program Charter: What Belongs In It</title>
+      <link>https://arsenii.com/insights/program-charter-document.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/program-charter-document.html</guid>
+      <pubDate>Sat, 23 May 2026 09:00:00 -0800</pubDate>
+      <description>A program charter is not a scope document or a project plan. It is the contract between the program and its stakeholders about what is being built, why, and how success is defined.</description>
+    </item>
+    <item>
+      <title>Running a Pilot Before Full Rollout</title>
+      <link>https://arsenii.com/insights/running-pilot-before-rollout.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/running-pilot-before-rollout.html</guid>
+      <pubDate>Fri, 22 May 2026 09:00:00 -0800</pubDate>
+      <description>A pilot is not a soft launch. It is a structured experiment designed to answer specific questions before the answers become expensive to change.</description>
+    </item>
+    <item>
+      <title>Managing Technical Debt as a Program</title>
+      <link>https://arsenii.com/insights/technical-debt-as-program.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/technical-debt-as-program.html</guid>
+      <pubDate>Thu, 21 May 2026 09:00:00 -0800</pubDate>
+      <description>Technical debt managed as a list of tickets goes nowhere. Technical debt managed as a program with scope, milestones, and executive visibility gets funded and resolved.</description>
+    </item>
+    <item>
+      <title>How to Scope a Multi-Year Roadmap</title>
+      <link>https://arsenii.com/insights/scoping-multi-year-roadmap.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/scoping-multi-year-roadmap.html</guid>
+      <pubDate>Wed, 20 May 2026 09:00:00 -0800</pubDate>
+      <description>A multi-year roadmap is not a twelve-month plan extended. The further out the horizon, the more the document is about principles and bets, not milestones.</description>
+    </item>
+    <item>
+      <title>Onboarding a New Team Mid-Program</title>
+      <link>https://arsenii.com/insights/onboarding-team-mid-program.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/onboarding-team-mid-program.html</guid>
+      <pubDate>Tue, 19 May 2026 09:00:00 -0800</pubDate>
+      <description>Adding a new team to an active program is one of the more disruptive things that can happen to a timeline. Done well, it accelerates. Done poorly, it costs more than the capacity it adds.</description>
+    </item>
+    <item>
+      <title>Security Program Management</title>
+      <link>https://arsenii.com/insights/security-program-management.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/security-program-management.html</guid>
+      <pubDate>Mon, 18 May 2026 09:00:00 -0800</pubDate>
+      <description>Security programs fail not because the security requirements are wrong but because they are treated as a track separate from the engineering program. Integration is the job.</description>
+    </item>
+    <item>
+      <title>Running a Privacy Engineering Program</title>
+      <link>https://arsenii.com/insights/privacy-engineering-programs.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/privacy-engineering-programs.html</guid>
+      <pubDate>Sun, 17 May 2026 09:00:00 -0800</pubDate>
+      <description>Privacy engineering is not a legal exercise. It is a program management problem: getting engineering teams to design for data minimization before the feature is built, not after the audit.</description>
+    </item>
+    <item>
+      <title>The Portfolio Review That Helps Leadership Decide</title>
+      <link>https://arsenii.com/insights/portfolio-review-leadership-decisions.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/portfolio-review-leadership-decisions.html</guid>
+      <pubDate>Sat, 16 May 2026 09:00:00 -0800</pubDate>
+      <description>Most portfolio reviews are program status reports stacked on top of each other. A review that helps leadership decide something looks completely different.</description>
+    </item>
+    <item>
+      <title>Data-Driven Program Reporting</title>
+      <link>https://arsenii.com/insights/data-driven-program-reporting.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/data-driven-program-reporting.html</guid>
+      <pubDate>Fri, 15 May 2026 09:00:00 -0800</pubDate>
+      <description>Status reporting based on vibes and verbal updates tells leadership what the team believes. Reporting anchored in data tells them what is actually happening.</description>
+    </item>
+    <item>
+      <title>Setting Up a Program Office From Scratch</title>
+      <link>https://arsenii.com/insights/program-office-setup-from-scratch.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/program-office-setup-from-scratch.html</guid>
+      <pubDate>Thu, 14 May 2026 09:00:00 -0800</pubDate>
+      <description>A new program office is a blank sheet and a political minefield simultaneously. The first 90 days determine whether it becomes infrastructure or overhead.</description>
+    </item>
+    <item>
+      <title>Building Trust With Engineering Leads</title>
+      <link>https://arsenii.com/insights/building-trust-with-engineering-leads.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/building-trust-with-engineering-leads.html</guid>
+      <pubDate>Wed, 13 May 2026 09:00:00 -0800</pubDate>
+      <description>Engineering leads extend trust to TPMs who understand the technical constraints and protect the team from noise. Everything else is secondary.</description>
+    </item>
+    <item>
+      <title>How to Handle a Missed Deadline</title>
+      <link>https://arsenii.com/insights/handling-a-missed-deadline.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/handling-a-missed-deadline.html</guid>
+      <pubDate>Tue, 12 May 2026 09:00:00 -0800</pubDate>
+      <description>Missing a deadline is a recoverable event. How you handle it in the first 48 hours determines whether it stays recoverable.</description>
     </item>
   </channel>
 </rss>
