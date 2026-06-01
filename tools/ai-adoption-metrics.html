@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>AI Adoption Metrics Calculator</title>
+  <meta name="description" content="AI adoption metrics calculator: trial rate, activation, sustained usage, and gap to target. Browser-based, no signup.">
+  <meta name="keywords" content="AI adoption metrics, enterprise AI adoption calculator, AI rollout metrics, AI feature adoption, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/ai-adoption-metrics.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/ai-adoption-metrics.html">
+  <meta property="og:title" content="AI Adoption Metrics Calculator">
+  <meta property="og:description" content="AI adoption metrics calculator: trial rate, activation, sustained usage, and gap to target. Browser-based, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="799">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Adoption Metrics Calculator">
+  <meta name="twitter:description" content="AI adoption metrics calculator: trial rate, activation, sustained usage, and gap to target. Browser-based, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Adoption Metrics Calculator",
+    "url": "https://arsenii.com/tools/ai-adoption-metrics.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A browser-based tool for the TPM community. An AI adoption metrics calculator. Enter eligible users, trial counts, repeat value users, and an optional weekly active target to see trial rate, activation rate, sustained adoption, and gap to goal.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are AI adoption metrics?",
+        "acceptedAnswer": {"@type": "Answer", "text": "AI adoption metrics track how many eligible users try an AI feature, how many get real value from it, and how many keep using it. Trial rate is users who tried divided by eligible users. Activation rate is users who got repeat value divided by those who tried. Sustained adoption is repeat value users divided by all eligible users."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure enterprise AI adoption?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Start with a clear eligible population, then count who tried the feature at least once, who came back for meaningful repeat use, and who hits your weekly active target. Raw login counts are not enough. Define repeat value as an action that maps to the job the feature is supposed to do."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good AI feature trial rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Trial rate depends on rollout stage and how visible the feature is. Early internal pilots might target 30 to 50 percent trial among eligible users. Broad launches often aim higher. The more useful signal is activation rate among triers, because a high trial rate with low repeat use usually means onboarding or value delivery needs work."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Adoption Metrics Calculator",
+        "item": "https://arsenii.com/tools/ai-adoption-metrics.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the AI Adoption Metrics Calculator",
+    "description": "Measure trial, activation, and sustained adoption for an AI feature rollout.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Define eligible users",
+        "text": "Enter the number of users who could access the AI feature."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Count triers",
+        "text": "Enter how many tried the feature at least once."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Count repeat value users",
+        "text": "Enter how many came back for meaningful repeat use."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set an optional target",
+        "text": "Optionally set a weekly active user target to see the gap."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Read the funnel",
+        "text": "Review trial rate, activation rate, sustained adoption, and gap to target."
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - Program Management Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .calc { max-width: 760px; margin: 0 auto; border: 1px solid var(--accent-light); border-radius: 12px; padding: 1.75rem; background: var(--bg); }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+    @media (max-width: 560px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-field label { display: block; font-family: var(--font-sans); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.4rem; }
+    .calc-field input { width: 100%; font-family: var(--font-sans); font-size: 0.95rem; padding: 0.6rem 0.65rem; border: 1px solid var(--accent-light); border-radius: 6px; background: var(--bg); color: var(--text); box-sizing: border-box; }
+    .calc-field input:focus { outline: 2px solid var(--accent); }
+    .calc-field .hint { font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-muted); margin: 0.35rem 0 0; line-height: 1.4; }
+    .calc-out { margin: 1.75rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 560px) { .calc-out { grid-template-columns: 1fr; } }
+    .out-card { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.4rem; background: var(--bg-warm); text-align: center; }
+    .out-card .out-label { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.4rem; }
+    .out-card .out-val { font-family: var(--font-serif); font-size: clamp(1.7rem, 5vw, 2.4rem); font-weight: 600; color: var(--accent-dark); margin: 0; }
+    .out-card.gap .out-val { color: var(--accent-red); }
+    .out-card.gap.positive .out-val { color: #166534; }
+    .calc-quip { text-align: center; font-family: var(--font-sans); font-size: 0.9rem; color: var(--text); margin: 1.5rem 0 0; line-height: 1.6; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer { display: none !important; }
+    }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>AI Adoption Metrics Calculator</span></nav>
+      <div class="tool-hero">
+        <h1>AI Adoption Metrics Calculator</h1>
+        <p>Measure how an AI feature is actually landing. Enter eligible users, who tried it, who came back for repeat value, and an optional weekly active target, and see trial rate, activation rate, sustained adoption, and gap to goal. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="calc">
+        <div class="calc-grid">
+          <div class="calc-field">
+            <label for="eligible">Eligible users</label>
+            <input type="number" id="eligible" min="0" step="1">
+            <p class="hint">Users who could access the AI feature</p>
+          </div>
+          <div class="calc-field">
+            <label for="tried">Tried the feature</label>
+            <input type="number" id="tried" min="0" step="1">
+            <p class="hint">Used it at least once</p>
+          </div>
+          <div class="calc-field">
+            <label for="repeat">Repeat value users</label>
+            <input type="number" id="repeat" min="0" step="1">
+            <p class="hint">Came back for meaningful repeat use</p>
+          </div>
+          <div class="calc-field">
+            <label for="target">Weekly active target (optional)</label>
+            <input type="number" id="target" min="0" step="1">
+            <p class="hint">Leave blank if you have no target yet</p>
+          </div>
+        </div>
+
+        <div class="calc-out">
+          <div class="out-card">
+            <p class="out-label">Trial rate</p>
+            <p class="out-val" id="trialRate">&mdash;</p>
+          </div>
+          <div class="out-card">
+            <p class="out-label">Activation rate</p>
+            <p class="out-val" id="activationRate">&mdash;</p>
+          </div>
+          <div class="out-card">
+            <p class="out-label">Sustained adoption</p>
+            <p class="out-val" id="sustained">&mdash;</p>
+          </div>
+          <div class="out-card gap" id="gapCard">
+            <p class="out-label">Gap to target</p>
+            <p class="out-val" id="gapTarget">&mdash;</p>
+          </div>
+        </div>
+
+        <p class="calc-quip" id="quip"></p>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How I read AI adoption metrics</h2>
+        <p>Launching an AI feature is easy. Proving people use it for real work is the hard part. I track a simple funnel: eligible users, triers, repeat value users. Trial rate tells me whether discovery and onboarding are working. Activation rate tells me whether triers actually got value. Sustained adoption is repeat value users over the whole eligible population, which is the number executives care about.</p>
+        <p>Define repeat value before you ship, not after. For a summarization tool it might mean three summaries accepted in a week. For a copilot it might mean five sessions with a thumbs-up. Raw clicks lie. The optional weekly active target lets me show gap to goal in the same view I use for status reviews.</p>
+        <h2>What to do when numbers stall</h2>
+        <ul>
+          <li>Low trial rate: improve discoverability, default-on where safe, or run office hours.</li>
+          <li>Low activation among triers: fix the first-run experience and tighten the job-to-be-done.</li>
+          <li>Low sustained adoption: revisit whether the feature saves enough time to change habits.</li>
+          <li>Gap to target: break the goal into cohort milestones instead of one big launch number.</li>
+        </ul>
+        <p>Pair this with the <a href="ai-use-case-prioritizer.html">AI use case prioritizer</a> when deciding what to build next.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "ai_adoption_metrics_v1";
+    var state = TK.decodeState() || load() || sampleData();
+
+    function sampleData() {
+      return { eligible: 500, tried: 210, repeat: 84, target: 100 };
+    }
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function pct(num, denom) {
+      if (!denom || denom <= 0) return null;
+      return (num / denom) * 100;
+    }
+    function fmtPct(n) {
+      if (n == null || !isFinite(n)) return "\u2014";
+      return n.toFixed(1) + "%";
+    }
+
+    function compute() {
+      var eligible = parseFloat(state.eligible) || 0;
+      var tried = parseFloat(state.tried) || 0;
+      var repeat = parseFloat(state.repeat) || 0;
+      var target = state.target === "" || state.target == null ? null : (parseFloat(state.target) || 0);
+
+      var trialRate = pct(tried, eligible);
+      var activationRate = pct(repeat, tried);
+      var sustained = pct(repeat, eligible);
+
+      document.getElementById("trialRate").textContent = fmtPct(trialRate);
+      document.getElementById("activationRate").textContent = fmtPct(activationRate);
+      document.getElementById("sustained").textContent = fmtPct(sustained);
+
+      var gapEl = document.getElementById("gapTarget");
+      var gapCard = document.getElementById("gapCard");
+      gapCard.className = "out-card gap";
+      if (target == null || target === 0) {
+        gapEl.textContent = "\u2014";
+      } else {
+        var gap = repeat - target;
+        if (gap >= 0) {
+          gapEl.textContent = "+" + gap.toLocaleString("en-US") + " users";
+          gapCard.className = "out-card gap positive";
+        } else {
+          gapEl.textContent = gap.toLocaleString("en-US") + " users";
+        }
+      }
+
+      var quip = document.getElementById("quip");
+      if (eligible <= 0) {
+        quip.textContent = "";
+      } else if (trialRate != null && trialRate < 20) {
+        quip.textContent = "Trial rate is low. Most eligible users have not tried the feature yet.";
+      } else if (activationRate != null && activationRate < 30 && tried > 0) {
+        quip.textContent = "Many triers are not coming back. Focus on first-run value and habit formation.";
+      } else if (sustained != null && sustained >= 15) {
+        quip.textContent = "Sustained adoption is building. Keep measuring repeat value, not vanity logins.";
+      } else if (tried > 0) {
+        quip.textContent = "Early signal. Watch activation rate week over week as onboarding improves.";
+      } else {
+        quip.textContent = "";
+      }
+    }
+
+    function bind(id, key, isNum) {
+      var el = document.getElementById(id);
+      el.value = state[key] == null ? "" : state[key];
+      el.addEventListener("input", function () {
+        if (isNum) {
+          state[key] = el.value === "" ? (key === "target" ? "" : 0) : parseFloat(el.value);
+        } else {
+          state[key] = el.value;
+        }
+        save(); compute();
+      });
+    }
+
+    function renderAll() {
+      document.getElementById("eligible").value = state.eligible;
+      document.getElementById("tried").value = state.tried;
+      document.getElementById("repeat").value = state.repeat;
+      document.getElementById("target").value = state.target == null ? "" : state.target;
+      compute();
+    }
+
+    bind("eligible", "eligible", true);
+    bind("tried", "tried", true);
+    bind("repeat", "repeat", true);
+    bind("target", "target", true);
+
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); renderAll();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Reset the calculator?")) {
+        state = { eligible: 0, tried: 0, repeat: 0, target: "" };
+        save(); renderAll();
+      }
+    });
+
+    renderAll();
+
+    TK.setup({
+      toolName: "AI Adoption Metrics Calculator",
+      getState: function () { return state; }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

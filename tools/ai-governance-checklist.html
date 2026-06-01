@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>AI Governance Checklist | Launch Review</title>
+  <meta name="description" content="AI governance checklist: data, model output, security, human review, and launch readiness. Browser-based, no signup.">
+  <meta name="keywords" content="AI governance checklist, responsible AI review, AI launch readiness, enterprise AI compliance, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/ai-governance-checklist.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/ai-governance-checklist.html">
+  <meta property="og:title" content="AI Governance Checklist | Launch Review">
+  <meta property="og:description" content="AI governance checklist: data, model output, security, human review, and launch readiness. Browser-based, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="799">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Governance Checklist | Launch Review">
+  <meta name="twitter:description" content="AI governance checklist: data, model output, security, human review, and launch readiness. Browser-based, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Governance Checklist",
+    "url": "https://arsenii.com/tools/ai-governance-checklist.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A browser-based tool for the TPM community. An AI governance checklist covering data and privacy, model and output, security, human review, and launch readiness with progress tracking and CSV export.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI governance checklist?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An AI governance checklist is a structured review of risks and controls before shipping an AI feature. It covers data and privacy, model behavior and output quality, security, human oversight, and launch readiness so teams do not discover gaps in production."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should you run an AI governance review?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Run a governance review before any customer-facing launch, before processing sensitive or regulated data, and again when the model, data sources, or use case changes materially. Treat it as a gate in the release process, not a one-time paperwork exercise."}
+      },
+      {
+        "@type": "Question",
+        "name": "What belongs in responsible AI launch readiness?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Launch readiness includes documented owners, rollback plans, monitoring for quality and safety drift, user disclosure where required, and a path for humans to override or escalate bad outputs. If you cannot explain what happens when the model fails, you are not ready to ship."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Governance Checklist",
+        "item": "https://arsenii.com/tools/ai-governance-checklist.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the AI Governance Checklist",
+    "description": "Work through data, model, security, human review, and launch readiness before shipping AI.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Review each section",
+        "text": "Walk through data and privacy, model and output, security, human review, and launch readiness."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Check off completed items",
+        "text": "Mark items complete as owners confirm controls are in place."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Track progress",
+        "text": "Use overall and per-section progress to see what still blocks launch."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Export for records",
+        "text": "Export CSV for audit trails or steering committee reviews."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Re-run on changes",
+        "text": "Re-run the checklist when the model, data, or scope changes."
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - Program Management Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 640px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .progress-overall { max-width: 760px; margin: 0 auto 2rem; border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--bg-warm); text-align: center; }
+    .progress-overall .prog-label { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.35rem; }
+    .progress-overall .prog-val { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .prog-bar { height: 10px; background: var(--accent-light); border-radius: 999px; overflow: hidden; }
+    .prog-bar-fill { height: 100%; background: var(--accent); border-radius: 999px; transition: width 0.2s ease; }
+    .checklist { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+    .check-section { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--bg); }
+    .check-section h2 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: var(--accent-dark); margin: 0 0 0.35rem; }
+    .section-prog { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1rem; }
+    .check-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.55rem 0; border-bottom: 1px solid var(--bg-warm); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--text); }
+    .check-item:last-child { border-bottom: none; }
+    .check-item input[type="checkbox"] { margin-top: 0.2rem; width: 1rem; height: 1rem; accent-color: var(--accent); flex-shrink: 0; cursor: pointer; }
+    .check-item label { cursor: pointer; flex: 1; }
+    .check-item.done label { color: var(--text-muted); text-decoration: line-through; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer { display: none !important; }
+    }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>AI Governance Checklist</span></nav>
+      <div class="tool-hero">
+        <h1>AI Governance Checklist</h1>
+        <p>Run a responsible AI review before you ship. Work through data and privacy, model behavior, security, human oversight, and launch readiness, track progress by section, and export a CSV for your records. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="progress-overall">
+        <p class="prog-label">Overall progress</p>
+        <p class="prog-val" id="overallPct">0%</p>
+        <div class="prog-bar"><div class="prog-bar-fill" id="overallBar" style="width:0%"></div></div>
+      </div>
+
+      <div class="checklist" id="checklistRoot"></div>
+
+      <div class="tool-explainer">
+        <h2>How I use this checklist before launch</h2>
+        <p>I treat this as a release gate, not a checkbox exercise. Data and privacy covers consent, retention, PII handling, and whether training or inference data crosses policy lines. Model and output covers evals, hallucination risk, bias testing, and disclosure when users are talking to AI. Security covers access control, prompt injection, secrets in context, and vendor subprocessors. Human review covers escalation paths, override UX, and who owns incidents when the model fails.</p>
+        <p>Launch readiness is where program management earns its keep: named owners, rollback plan, monitoring dashboards, support runbooks, and executive sign-off where the blast radius is high. I export CSV after each review so audit and legal have a timestamped snapshot. Re-run the whole list when the model version, data source, or user population changes.</p>
+        <h2>When to block the launch</h2>
+        <ul>
+          <li>Any unchecked item in data and privacy for regulated or customer PII workflows.</li>
+          <li>No human escalation path for high-stakes outputs.</li>
+          <li>No rollback plan or on-call owner for production incidents.</li>
+          <li>Eval coverage does not match the real prompts users will send.</li>
+        </ul>
+        <p>Pair this with the <a href="ai-use-case-prioritizer.html">AI use case prioritizer</a> when scoping what to build next.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "ai_governance_checklist_v1";
+
+    var SECTIONS = [
+      {
+        id: "data",
+        title: "Data & Privacy",
+        items: [
+          { id: "data_consent", text: "Data use is covered by consent, contract, or internal policy" },
+          { id: "data_pii", text: "PII is identified, minimized, and masked where possible" },
+          { id: "data_retention", text: "Retention and deletion rules are documented and enforced" },
+          { id: "data_crossborder", text: "Cross-border or vendor data flows are approved" }
+        ]
+      },
+      {
+        id: "model",
+        title: "Model & Output",
+        items: [
+          { id: "model_eval", text: "Eval suite covers real user prompts and edge cases" },
+          { id: "model_hallucination", text: "Hallucination and grounding risks are documented with mitigations" },
+          { id: "model_bias", text: "Bias and fairness testing completed for affected populations" },
+          { id: "model_disclosure", text: "Users are informed when output is AI-generated where required" }
+        ]
+      },
+      {
+        id: "security",
+        title: "Security",
+        items: [
+          { id: "sec_access", text: "Access control and least-privilege enforced for model and data" },
+          { id: "sec_injection", text: "Prompt injection and jailbreak mitigations reviewed" },
+          { id: "sec_secrets", text: "Secrets and credentials cannot leak through context or logs" },
+          { id: "sec_vendor", text: "Vendor subprocessors and API terms reviewed" }
+        ]
+      },
+      {
+        id: "human",
+        title: "Human Review",
+        items: [
+          { id: "human_escalation", text: "Escalation path exists for incorrect or harmful outputs" },
+          { id: "human_override", text: "Users can override, edit, or reject AI suggestions" },
+          { id: "human_owner", text: "Named owner for quality and safety incidents" },
+          { id: "human_training", text: "Support and ops trained on known failure modes" }
+        ]
+      },
+      {
+        id: "launch",
+        title: "Launch Readiness",
+        items: [
+          { id: "launch_rollback", text: "Rollback or kill-switch plan documented and tested" },
+          { id: "launch_monitor", text: "Production monitoring for quality, latency, and safety drift" },
+          { id: "launch_runbook", text: "Support runbook and FAQ published" },
+          { id: "launch_signoff", text: "Stakeholder sign-off recorded for intended blast radius" }
+        ]
+      }
+    ];
+
+    function defaultChecked() {
+      var c = {};
+      var i, j, sec, it;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        for (j = 0; j < sec.items.length; j++) {
+          c[sec.items[j].id] = false;
+        }
+      }
+      return c;
+    }
+
+    function sampleChecked() {
+      return {
+        data_consent: true, data_pii: true, data_retention: true, data_crossborder: false,
+        model_eval: true, model_hallucination: true, model_bias: false, model_disclosure: true,
+        sec_access: true, sec_injection: false, sec_secrets: true, sec_vendor: true,
+        human_escalation: true, human_override: true, human_owner: true, human_training: false,
+        launch_rollback: true, launch_monitor: false, launch_runbook: true, launch_signoff: false
+      };
+    }
+
+    function sampleData() {
+      return { checked: sampleChecked() };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    var state = TK.decodeState() || load() || { checked: defaultChecked() };
+    if (!state.checked) state.checked = defaultChecked();
+
+    function sectionProgress(sec) {
+      var done = 0;
+      var total = sec.items.length;
+      var j;
+      for (j = 0; j < sec.items.length; j++) {
+        if (state.checked[sec.items[j].id]) done++;
+      }
+      return { done: done, total: total, pct: total ? Math.round((done / total) * 100) : 0 };
+    }
+
+    function overallProgress() {
+      var done = 0;
+      var total = 0;
+      var i, j, sec, sp;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        sp = sectionProgress(sec);
+        done += sp.done;
+        total += sp.total;
+      }
+      return { done: done, total: total, pct: total ? Math.round((done / total) * 100) : 0 };
+    }
+
+    function render() {
+      var root = document.getElementById("checklistRoot");
+      root.innerHTML = "";
+      var i, j, sec, sp, block, h2, prog, ul, li, cb, lbl;
+
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        sp = sectionProgress(sec);
+
+        block = document.createElement("section");
+        block.className = "check-section";
+
+        h2 = document.createElement("h2");
+        h2.textContent = sec.title;
+        block.appendChild(h2);
+
+        prog = document.createElement("p");
+        prog.className = "section-prog";
+        prog.textContent = sp.done + " of " + sp.total + " complete (" + sp.pct + "%)";
+        block.appendChild(prog);
+
+        ul = document.createElement("div");
+        for (j = 0; j < sec.items.length; j++) {
+          (function (item) {
+            li = document.createElement("div");
+            li.className = "check-item" + (state.checked[item.id] ? " done" : "");
+
+            cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.id = item.id;
+            cb.checked = !!state.checked[item.id];
+            cb.addEventListener("change", function () {
+              state.checked[item.id] = cb.checked;
+              save();
+              render();
+            });
+
+            lbl = document.createElement("label");
+            lbl.setAttribute("for", item.id);
+            lbl.textContent = item.text;
+
+            li.appendChild(cb);
+            li.appendChild(lbl);
+            ul.appendChild(li);
+          })(sec.items[j]);
+        }
+        block.appendChild(ul);
+        root.appendChild(block);
+      }
+
+      var ov = overallProgress();
+      document.getElementById("overallPct").textContent = ov.pct + "%";
+      document.getElementById("overallBar").style.width = ov.pct + "%";
+    }
+
+    function buildCsv() {
+      var rows = [["Section", "Item", "Checked"]];
+      var i, j, sec, val;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        for (j = 0; j < sec.items.length; j++) {
+          val = state.checked[sec.items[j].id] ? "yes" : "no";
+          rows.push([sec.title, sec.items[j].text, val]);
+        }
+      }
+      return rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+    }
+
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      TK.download("ai-governance-checklist.csv", buildCsv(), "text/csv;charset=utf-8;");
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear all checkboxes?")) {
+        state = { checked: defaultChecked() };
+        save(); render();
+      }
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "AI Governance Checklist",
+      getState: function () { return state; }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

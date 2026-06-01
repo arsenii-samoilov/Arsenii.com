@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>AI Assistant Prompt Builder | Setup Guide</title>
+  <meta name="description" content="AI assistant prompt builder: generate a system prompt and task template for a personal executive assistant. Browser-based, no signup.">
+  <meta name="keywords" content="AI executive assistant, AI prompt template, system prompt builder, getting started with AI, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/ai-assistant-prompt-builder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/ai-assistant-prompt-builder.html">
+  <meta property="og:title" content="AI Assistant Prompt Builder | Setup Guide">
+  <meta property="og:description" content="AI assistant prompt builder: generate a system prompt and task template for a personal executive assistant. Browser-based, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Assistant Prompt Builder | Setup Guide">
+  <meta name="twitter:description" content="AI assistant prompt builder: generate a system prompt and task template for a personal executive assistant. Browser-based, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Assistant Prompt Builder",
+    "url": "https://arsenii.com/tools/ai-assistant-prompt-builder.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A browser-based tool that generates a system prompt and task prompt skeleton for a personal AI executive assistant.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI executive assistant?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An AI executive assistant is a general model plus persistent context (your role, rules, and standards) and reusable prompt templates for recurring work like meeting prep, status updates, and email drafts. It is not autonomous. You stay accountable for output."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should a system prompt include?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Include your role, what you work on, voice and format preferences, hard rules (privacy, verification), and how you want answers structured. Keep it to one page so you can paste it into ChatGPT projects, Claude projects, or IDE rules."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good task prompt structure?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use six blocks in order: Role, Context, Task, Constraints, Output format, Quality bar. Role sets who the model should be for this request. Context is minimum background. Task is the single ask. Constraints say what to avoid. Output format defines length and shape. Quality bar defines success."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arsenii.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://arsenii.com/tools/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Assistant Prompt Builder", "item": "https://arsenii.com/tools/ai-assistant-prompt-builder.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Build an AI executive assistant prompt",
+    "description": "Fill in your role and preferences to generate a system prompt and task template you can paste into ChatGPT, Claude, or an IDE assistant.",
+    "step": [
+      {"@type": "HowToStep", "name": "Enter profile", "text": "Add your role, context, and recurring tasks."},
+      {"@type": "HowToStep", "name": "Set rules", "text": "Define voice, format, and privacy boundaries."},
+      {"@type": "HowToStep", "name": "Copy prompts", "text": "Copy the system prompt into a project and use the task template for daily work."}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .crumbs { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; text-align: center; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent-dark); padding: 0.55rem 1rem; border-radius: 6px; cursor: pointer; }
+    .tool-btn:hover { border-color: var(--accent); background: var(--bg-warm); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .builder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 980px; margin: 0 auto; }
+    @media (max-width: 860px) { .builder-grid { grid-template-columns: 1fr; } }
+    .panel { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem; background: var(--bg); }
+    .panel h2 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--accent-dark); margin: 0 0 1rem; }
+    .field { margin: 0 0 0.85rem; }
+    .field label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--accent-dark); margin: 0 0 0.35rem; }
+    .field input, .field textarea, .field select { width: 100%; font-family: var(--font-sans); font-size: 0.88rem; border: 1px solid var(--accent-light); border-radius: 6px; padding: 0.5rem 0.65rem; box-sizing: border-box; }
+    .field textarea { min-height: 72px; resize: vertical; line-height: 1.5; }
+    .prompt-out { width: 100%; min-height: 280px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; line-height: 1.55; border: 1px solid var(--accent-light); border-radius: 6px; padding: 0.75rem; box-sizing: border-box; background: var(--bg-warm); color: var(--text); }
+    .prompt-tabs { display: flex; gap: 0.5rem; margin: 0 0 0.75rem; flex-wrap: wrap; }
+    .tab-btn { font-size: 0.8rem; padding: 0.4rem 0.75rem; border-radius: 999px; border: 1px solid var(--accent-light); background: var(--bg); cursor: pointer; color: var(--text-muted); }
+    .tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-explainer { max-width: 760px; margin: 3rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p, .tool-explainer li { font-size: var(--text-sm); line-height: 1.8; color: var(--text); }
+    .tool-explainer ul { padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <p class="crumbs"><a href="../index.html">Home</a> &rsaquo; <a href="index.html">Tools</a> &rsaquo; AI Assistant Prompt Builder</p>
+      <div class="tool-hero">
+        <h1>AI Assistant Prompt Builder</h1>
+        <p>I use this shape every day: a one-page system prompt for who I am, plus a six-block task template for each request. Fill in the fields, copy the output into ChatGPT, Claude, or your IDE, and you have a working executive assistant setup in minutes.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button type="button" class="tool-btn" id="btnExample">Example</button>
+        <button type="button" class="tool-btn" id="btnReset">Reset</button>
+        <button type="button" class="tool-btn primary" id="btnCopy">Copy prompt</button>
+        <button type="button" class="tool-btn" id="btnPrint">Print</button>
+      </div>
+
+      <div class="builder-grid">
+        <div class="panel">
+          <h2>Your profile</h2>
+          <div class="field">
+            <label for="role">Role / title</label>
+            <input type="text" id="role" placeholder="Senior Technical Program Manager">
+          </div>
+          <div class="field">
+            <label for="context">Work context (company, scope, stakeholders)</label>
+            <textarea id="context" placeholder="I run cross-functional programs at a mid-size SaaS company. Stakeholders include product, engineering, legal, and a VP sponsor."></textarea>
+          </div>
+          <div class="field">
+            <label for="tasks">Recurring tasks you want help with</label>
+            <textarea id="tasks" placeholder="Weekly status for executives, meeting prep, stakeholder emails, decision memos."></textarea>
+          </div>
+          <div class="field">
+            <label for="voice">Voice and tone</label>
+            <input type="text" id="voice" placeholder="Direct, warm, professional. No filler. Lead with the answer.">
+          </div>
+          <div class="field">
+            <label for="rules">Hard rules</label>
+            <textarea id="rules" placeholder="Never invent numbers. Flag assumptions. Do not use em dashes. Ask before guessing on dates."></textarea>
+          </div>
+          <div class="field">
+            <label for="taskType">Starter task template</label>
+            <select id="taskType">
+              <option value="meeting">Meeting prep</option>
+              <option value="status">Executive status scrub</option>
+              <option value="email">Email draft</option>
+              <option value="decision">Decision memo</option>
+              <option value="blank">Blank task skeleton</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Generated prompt</h2>
+          <div class="prompt-tabs">
+            <button type="button" class="tab-btn active" data-tab="system">System prompt</button>
+            <button type="button" class="tab-btn" data-tab="task">Task template</button>
+          </div>
+          <textarea class="prompt-out" id="promptOut" readonly aria-label="Generated prompt"></textarea>
+        </div>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>How to set up your AI executive assistant</h2>
+        <ol style="font-size:var(--text-sm);line-height:1.8;color:var(--text);padding-left:1.2rem;">
+          <li>Copy the <strong>system prompt</strong> into a ChatGPT project, Claude project, or rules file in your IDE.</li>
+          <li>When you have real work, open the <strong>task template</strong>, paste your notes where indicated, and send it.</li>
+          <li>When output misses, fix the prompt (usually Context or Output format), not the model brand.</li>
+          <li>After a week, save your best variants. That library becomes your personal playbook.</li>
+        </ol>
+        <p>For the full walkthrough, read <a href="../insights/ai-executive-assistant-setup.html">Setting Up an AI Executive Assistant</a>. For enterprise rollout, see the <a href="../ai-program-management.html">AI program management hub</a>.</p>
+        <h2>The six-block task shape</h2>
+        <ul>
+          <li><strong>Role</strong> who the model should be for this request</li>
+          <li><strong>Context</strong> minimum background, paste notes here</li>
+          <li><strong>Task</strong> the single outcome you need</li>
+          <li><strong>Constraints</strong> what to avoid or never assume</li>
+          <li><strong>Output format</strong> length, bullets, table, or draft</li>
+          <li><strong>Quality bar</strong> how you will judge success</li>
+        </ul>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> who uses AI daily for program work. <a href="../contact.html">Get in touch</a> for Senior TPM roles or AI program advisory.</p>
+        <a href="../insights/ai-executive-assistant-setup.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the setup guide &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "ai_assistant_prompt_v1";
+    var activeTab = "system";
+    var state = TK.decodeState() || load() || sampleData();
+
+    var TASKS = {
+      meeting: {
+        task: "Prepare me for the meeting below.",
+        constraints: "Do not invent attendees or decisions. If the agenda is unclear, list what you need from me.",
+        output: "Three sections: (1) Decisions needed today, max 3 bullets. (2) Risks or tensions to surface, max 2 bullets. (3) One item to defer with a one-line reason.",
+        quality: "I can walk in and run the meeting from this page alone."
+      },
+      status: {
+        task: "Turn my rough notes into an executive status update.",
+        constraints: "Do not add accomplishments I did not mention. Keep risks factual.",
+        output: "Under 120 words. Lead with RAG health (Green/Yellow/Red) and why. Then: progress, next milestone, top risk, decision needed.",
+        quality: "A VP reads it in 90 seconds and knows whether to intervene."
+      },
+      email: {
+        task: "Draft an email from my bullet notes.",
+        constraints: "One clear ask. No canned openers like I hope you are well. Match my voice from the system prompt.",
+        output: "Subject line plus body under 150 words unless I asked for longer.",
+        quality: "I would send this with at most two edits."
+      },
+      decision: {
+        task: "Write a short decision memo from the options below.",
+        constraints: "Name trade-offs honestly. Do not hide uncertainty.",
+        output: "Recommendation first, then options table (pro/con), then what would change the recommendation.",
+        quality: "A sponsor can approve or push back in one read."
+      },
+      blank: {
+        task: "[Describe the single outcome you need]",
+        constraints: "[What to avoid, what not to assume]",
+        output: "[Length, structure, format]",
+        quality: "[How you will know the answer is good enough]"
+      }
+    };
+
+    function sampleData() {
+      return {
+        role: "Senior Technical Program Manager",
+        context: "I lead enterprise programs at a SaaS company. Stakeholders include product, engineering, legal, and a VP sponsor. I write weekly status, run cross-team dependencies, and prep exec reviews.",
+        tasks: "Executive status updates, meeting prep, stakeholder emails, decision memos, interview prep.",
+        voice: "Direct, warm, professional. Lead with the answer. No filler or throat-clearing.",
+        rules: "Never invent numbers or dates. Flag assumptions. Do not paste or request secrets. Keep my wording tight.",
+        taskType: "meeting"
+      };
+    }
+
+    function load() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) { return null; }
+    }
+
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function val(id) {
+      var el = document.getElementById(id);
+      return el ? (el.value || "").trim() : "";
+    }
+
+    function setVal(id, v) {
+      var el = document.getElementById(id);
+      if (el) el.value = v || "";
+    }
+
+    function readForm() {
+      state.role = val("role");
+      state.context = val("context");
+      state.tasks = val("tasks");
+      state.voice = val("voice");
+      state.rules = val("rules");
+      state.taskType = val("taskType") || "meeting";
+      save();
+    }
+
+    function buildSystemPrompt() {
+      var lines = [];
+      lines.push("You are my AI executive assistant.");
+      if (state.role) lines.push("My role: " + state.role + ".");
+      if (state.context) lines.push("Context: " + state.context);
+      if (state.tasks) lines.push("Recurring work I need help with: " + state.tasks);
+      if (state.voice) lines.push("Voice and tone: " + state.voice);
+      if (state.rules) lines.push("Hard rules: " + state.rules);
+      lines.push("");
+      lines.push("Default behavior:");
+      lines.push("- Lead with the answer, then supporting detail.");
+      lines.push("- Ask one clarifying question if a critical fact is missing.");
+      lines.push("- Refer to this profile instead of asking me to re-explain my background.");
+      lines.push("- When numbers or dates are involved, show assumptions.");
+      return lines.join("\n");
+    }
+
+    function buildTaskPrompt() {
+      var t = TASKS[state.taskType] || TASKS.meeting;
+      var lines = [];
+      lines.push("Role: You are my executive assistant for this request.");
+      lines.push("");
+      lines.push("Context:");
+      lines.push("[Paste notes, agenda, rough draft, or background here]");
+      lines.push("");
+      lines.push("Task: " + t.task);
+      lines.push("");
+      lines.push("Constraints: " + t.constraints);
+      lines.push("");
+      lines.push("Output format: " + t.output);
+      lines.push("");
+      lines.push("Quality bar: " + t.quality);
+      return lines.join("\n");
+    }
+
+    function renderPrompt() {
+      var text = activeTab === "system" ? buildSystemPrompt() : buildTaskPrompt();
+      document.getElementById("promptOut").value = text;
+    }
+
+    function syncForm() {
+      setVal("role", state.role);
+      setVal("context", state.context);
+      setVal("tasks", state.tasks);
+      setVal("voice", state.voice);
+      setVal("rules", state.rules);
+      setVal("taskType", state.taskType || "meeting");
+      renderPrompt();
+    }
+
+    function setTab(tab) {
+      activeTab = tab;
+      var btns = document.querySelectorAll(".tab-btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.toggle("active", btns[i].getAttribute("data-tab") === tab);
+      }
+      renderPrompt();
+    }
+
+    function copyPrompt() {
+      var text = document.getElementById("promptOut").value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      } else {
+        var ta = document.getElementById("promptOut");
+        ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+      }
+    }
+
+    ["role", "context", "tasks", "voice", "rules", "taskType"].forEach(function(id) {
+      document.getElementById(id).addEventListener("input", function() {
+        readForm();
+        renderPrompt();
+      });
+      document.getElementById(id).addEventListener("change", function() {
+        readForm();
+        renderPrompt();
+      });
+    });
+
+    document.querySelectorAll(".tab-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        setTab(btn.getAttribute("data-tab"));
+      });
+    });
+
+    document.getElementById("btnExample").addEventListener("click", function() {
+      state = sampleData();
+      syncForm();
+      save();
+    });
+
+    document.getElementById("btnReset").addEventListener("click", function() {
+      if (!confirm("Clear all fields?")) return;
+      state = { role: "", context: "", tasks: "", voice: "", rules: "", taskType: "meeting" };
+      syncForm();
+      save();
+    });
+
+    document.getElementById("btnCopy").addEventListener("click", copyPrompt);
+    document.getElementById("btnPrint").addEventListener("click", function() { window.print(); });
+
+    syncForm();
+
+    TK.setup({
+      title: "AI Assistant Prompt Builder",
+      getState: function() { return state; },
+      applyState: function(s) {
+        if (!s) return;
+        state = s;
+        syncForm();
+      }
+    });
+  </script>
+</body>
+</html>

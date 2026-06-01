@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>AI Use Case Prioritizer | Rank Initiatives</title>
+  <meta name="description" content="AI use case prioritizer: score business value, data readiness, effort, and risk to rank what to build next. Browser-based, no signup.">
+  <meta name="keywords" content="AI use case prioritization, AI program management, enterprise AI roadmap, AI initiative scoring, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/ai-use-case-prioritizer.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/ai-use-case-prioritizer.html">
+  <meta property="og:title" content="AI Use Case Prioritizer | Rank Initiatives">
+  <meta property="og:description" content="AI use case prioritizer: score business value, data readiness, effort, and risk to rank what to build next. Browser-based, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="799">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Use Case Prioritizer | Rank Initiatives">
+  <meta name="twitter:description" content="AI use case prioritizer: score business value, data readiness, effort, and risk to rank what to build next. Browser-based, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Use Case Prioritizer",
+    "url": "https://arsenii.com/tools/ai-use-case-prioritizer.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A browser-based tool for the TPM community. An AI use case prioritizer. Score each initiative on business value, data readiness, integration effort, and risk, and auto-rank by priority score.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you prioritize AI use cases?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Prioritize AI use cases by weighing upside against readiness and cost. Score each initiative on business value and data readiness in the numerator, and integration effort plus risk or compliance burden in the denominator. Higher scores mean the use case delivers more value with less friction and should move up the roadmap."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the AI use case priority score formula?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Priority score equals business value plus data readiness, divided by integration effort plus risk or compliance. Score each factor on a 1 to 10 scale relative to other items on your list. The tool sorts use cases by this score descending so the best quick wins float to the top."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why include data readiness in AI prioritization?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Data readiness separates a demo from a production use case. A high-value idea with messy, inaccessible, or non-compliant data will stall in integration. Scoring readiness alongside business value keeps the roadmap honest about what can actually ship in the next quarter."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arsenii.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://arsenii.com/tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Use Case Prioritizer",
+        "item": "https://arsenii.com/tools/ai-use-case-prioritizer.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the AI Use Case Prioritizer",
+    "description": "Rank AI initiatives by value and readiness over effort and risk.",
+    "author": {
+      "@type": "Person",
+      "name": "Arsenii Samoilov",
+      "url": "https://arsenii.com"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "List your use cases",
+        "text": "Add each AI use case you are evaluating to the table."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Score value and readiness",
+        "text": "Score business value and data readiness on a 1 to 10 scale."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Score effort and risk",
+        "text": "Score integration effort and risk or compliance on a 1 to 10 scale."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Review the ranked list",
+        "text": "Let the tool compute priority score and sort the highest-value, lowest-friction work to the top."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Re-score as you learn",
+        "text": "Revisit scores as pilots finish and data quality improves."
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - Program Management Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 640px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .matrix-scroll { overflow-x: auto; border: 1px solid var(--accent-light); border-radius: 8px; }
+    table.prior { border-collapse: collapse; width: 100%; min-width: 900px; font-family: var(--font-sans); font-size: 0.9rem; }
+    table.prior th, table.prior td { border: 1px solid var(--accent-light); padding: 0.5rem 0.55rem; text-align: center; vertical-align: middle; }
+    table.prior thead th { background: var(--bg-warm); color: var(--accent-dark); font-weight: 600; }
+    table.prior th.item-col, table.prior td.item-col { text-align: left; min-width: 220px; }
+    .rank-cell { font-weight: 700; color: var(--accent-dark); width: 3rem; }
+    .item-input { font-family: var(--font-sans); font-size: 0.9rem; border: none; background: transparent; width: 100%; text-align: left; color: var(--text); padding: 0.35rem 0.2rem; }
+    .item-input:focus { outline: 2px solid var(--accent); border-radius: 4px; background: #fff; }
+    .num-input { width: 3.6rem; font-family: var(--font-sans); font-size: 0.9rem; text-align: center; border: 1px solid var(--accent-light); border-radius: 4px; padding: 0.3rem 0.2rem; color: var(--text); }
+    .num-input:focus { outline: 2px solid var(--accent); }
+    .score-cell { font-weight: 700; font-size: 1rem; color: #166534; background: #f0fdf4; }
+    tr.top-rank .score-cell { background: #dcfce7; }
+    .row-del { cursor: pointer; color: var(--text-muted); border: none; background: none; font-size: 1rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .row-del:hover { color: var(--accent-red); background: #fef2f2; }
+    .formula { text-align: center; font-family: var(--font-sans); font-size: 0.84rem; color: var(--text-muted); margin: 1.25rem 0 0; line-height: 1.6; }
+    .formula code { background: var(--bg-warm); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--accent-dark); font-weight: 600; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    @media print {
+      .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer, .row-del { display: none !important; }
+    }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>AI Use Case Prioritizer</span></nav>
+      <div class="tool-hero">
+        <h1>AI Use Case Prioritizer</h1>
+        <p>Rank AI initiatives by what they are worth versus what they cost to ship. Score each use case on business value, data readiness, integration effort, and risk, and the calculator computes a priority score and sorts the best bets to the top. Everything saves in your browser. No signup.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn primary" id="addItem">+ Add Use Case</button>
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="matrix-scroll">
+        <table class="prior" id="priorTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th class="item-col">Use Case</th>
+              <th>Business Value</th>
+              <th>Data Readiness</th>
+              <th>Integration Effort</th>
+              <th>Risk / Compliance</th>
+              <th>Priority Score</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <p class="formula">Priority Score = <code>(Business Value + Data Readiness) &divide; (Integration Effort + Risk / Compliance)</code>. Score each factor 1 to 10. Higher score means pursue sooner.</p>
+
+      <div class="tool-explainer">
+        <h2>How I use this to rank AI use cases</h2>
+        <p>Every AI program I have stood up starts with too many ideas and not enough capacity. This prioritizer forces a honest trade-off: upside and readiness in the numerator, effort and risk in the denominator. Business value is the outcome if the use case works. Data readiness is whether you can actually feed the model clean, accessible, compliant data today. Integration effort is the engineering and change-management cost. Risk and compliance covers privacy, bias, regulatory exposure, and reputational downside.</p>
+        <p>I score relatively, not absolutely. A 7 only means something compared to the other rows on the list. A copilot that saves an hour a week for five hundred people might score high on value but low on readiness if the knowledge base is a mess. A narrow classification task with labeled data might jump to the top because readiness and effort both look good. Re-score after every pilot because data quality and integration estimates change fast.</p>
+        <h2>Common mistakes to avoid</h2>
+        <ul>
+          <li>Chasing the flashiest demo instead of the use case with production-ready data.</li>
+          <li>Under-scoring compliance risk for customer-facing or regulated workflows.</li>
+          <li>Treating integration as only model work and ignoring workflow change and eval harnesses.</li>
+          <li>Never revisiting the list after the first quarter of pilots.</li>
+        </ul>
+        <p>For a general backlog lens, try the <a href="wsjf-calculator.html">WSJF calculator</a> or the <a href="prioritization-matrix.html">effort/impact matrix</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple. If your team needs help standing up program governance, <a href="../contact.html">get in touch</a>.</p>
+        <a href="../insights.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the Insights &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "ai_use_case_prioritizer_v1";
+    var state = TK.decodeState() || load() || sampleData();
+
+    function sampleData() {
+      return {
+        items: [
+          { name: "Support ticket summarization", value: 8, readiness: 7, effort: 4, risk: 3 },
+          { name: "Contract clause extraction", value: 9, readiness: 5, effort: 7, risk: 8 },
+          { name: "Internal code assistant", value: 7, readiness: 8, effort: 5, risk: 4 },
+          { name: "Customer-facing chatbot", value: 9, readiness: 4, effort: 8, risk: 9 },
+          { name: "Sales call prep briefs", value: 6, readiness: 6, effort: 3, risk: 2 }
+        ]
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function num(v) { var n = parseFloat(v); return isNaN(n) ? 0 : n; }
+    function scoreOf(it) {
+      var denom = num(it.effort) + num(it.risk);
+      if (denom <= 0) return 0;
+      return (num(it.value) + num(it.readiness)) / denom;
+    }
+
+    function ordered() {
+      var idx = state.items.map(function (it, i) { return { it: it, i: i }; });
+      idx.sort(function (a, b) { return scoreOf(b.it) - scoreOf(a.it); });
+      return idx;
+    }
+
+    function numInput(val, onChange, label) {
+      var inp = document.createElement("input");
+      inp.type = "number";
+      inp.className = "num-input";
+      inp.min = "1";
+      inp.max = "10";
+      inp.value = val;
+      inp.setAttribute("aria-label", label);
+      inp.addEventListener("input", function () { onChange(inp.value); save(); render(); });
+      return inp;
+    }
+
+    function render() {
+      var body = document.getElementById("bodyRows");
+      body.innerHTML = "";
+      ordered().forEach(function (entry, rank) {
+        var it = entry.it;
+        var ri = entry.i;
+        var tr = document.createElement("tr");
+        if (rank === 0 && scoreOf(it) > 0) tr.className = "top-rank";
+
+        var tdRank = document.createElement("td");
+        tdRank.className = "rank-cell";
+        tdRank.textContent = rank + 1;
+        tr.appendChild(tdRank);
+
+        var tdName = document.createElement("td");
+        tdName.className = "item-col";
+        var nm = document.createElement("input");
+        nm.className = "item-input";
+        nm.value = it.name;
+        nm.setAttribute("aria-label", "Use case name");
+        nm.addEventListener("input", function () { state.items[ri].name = nm.value; save(); });
+        tdName.appendChild(nm);
+        tr.appendChild(tdName);
+
+        var tdVal = document.createElement("td");
+        tdVal.appendChild(numInput(it.value, function (v) { state.items[ri].value = num(v); }, "Business value"));
+        tr.appendChild(tdVal);
+
+        var tdReady = document.createElement("td");
+        tdReady.appendChild(numInput(it.readiness, function (v) { state.items[ri].readiness = num(v); }, "Data readiness"));
+        tr.appendChild(tdReady);
+
+        var tdEffort = document.createElement("td");
+        tdEffort.appendChild(numInput(it.effort, function (v) { state.items[ri].effort = num(v); }, "Integration effort"));
+        tr.appendChild(tdEffort);
+
+        var tdRisk = document.createElement("td");
+        tdRisk.appendChild(numInput(it.risk, function (v) { state.items[ri].risk = num(v); }, "Risk or compliance"));
+        tr.appendChild(tdRisk);
+
+        var tdScore = document.createElement("td");
+        tdScore.className = "score-cell";
+        tdScore.textContent = scoreOf(it).toFixed(2);
+        tr.appendChild(tdScore);
+
+        var tdDel = document.createElement("td");
+        var del = document.createElement("button");
+        del.className = "row-del"; del.innerHTML = "&times;"; del.title = "Remove use case";
+        del.addEventListener("click", function () { state.items.splice(ri, 1); save(); render(); });
+        tdDel.appendChild(del);
+        tr.appendChild(tdDel);
+
+        body.appendChild(tr);
+      });
+    }
+
+    function buildExport() {
+      var header = ["Rank", "Use Case", "Business Value", "Data Readiness", "Integration Effort", "Risk / Compliance", "Priority Score"];
+      var rows = [];
+      ordered().forEach(function (entry, rank) {
+        var it = entry.it;
+        rows.push([rank + 1, it.name, it.value, it.readiness, it.effort, it.risk, scoreOf(it).toFixed(2)]);
+      });
+      return { header: header, rows: rows };
+    }
+
+    document.getElementById("addItem").addEventListener("click", function () {
+      state.items.push({ name: "New use case", value: 5, readiness: 5, effort: 5, risk: 5 });
+      save(); render();
+    });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = sampleData(); save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear all use cases and start blank?")) {
+        state = { items: [{ name: "New use case", value: 5, readiness: 5, effort: 5, risk: 5 }] };
+        save(); render();
+      }
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      var d = buildExport();
+      var rows = [d.header].concat(d.rows);
+      var csv = rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1 || c.indexOf("\n") > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+      TK.download("ai-use-case-prioritization.csv", csv, "text/csv;charset=utf-8;");
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "AI Use Case Prioritizer",
+      getState: function () { return state; },
+      excel: { filename: "ai-use-case-prioritization", build: buildExport }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

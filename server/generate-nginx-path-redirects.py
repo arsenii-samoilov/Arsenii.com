@@ -7,6 +7,7 @@ OUT = os.path.join(os.path.dirname(__file__), "nginx-path-redirects.conf")
 pages = [
     "/about.html", "/career.html", "/contact.html", "/culinary.html", "/photography.html",
     "/glossary.html", "/salary-guide.html", "/interview-questions.html",
+    "/ai-program-management.html",
     "/complete-guide-to-program-management.html",
     "/how-to-become-a-technical-program-manager.html",
     "/program-and-project-types.html", "/program-type-migration.html",
@@ -30,6 +31,9 @@ tools = [
     "decision-matrix", "status-report-generator", "prioritization-matrix",
     "project-charter-generator", "pre-mortem-worksheet", "okr-tracker",
     "meeting-cost-calculator", "roadmap-builder", "retrospective-board", "wsjf-calculator",
+    "ai-use-case-prioritizer", "ai-adoption-metrics", "ai-governance-checklist",
+    "ai-assistant-prompt-builder",
+    "ai-work-habits-checklist",
 ]
 
 lines = [

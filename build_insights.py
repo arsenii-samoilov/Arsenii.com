@@ -72,6 +72,12 @@ CORE_PAGES = [
     ("/tools/roadmap-builder.html", "0.8", "monthly"),
     ("/tools/retrospective-board.html", "0.8", "monthly"),
     ("/tools/wsjf-calculator.html", "0.8", "monthly"),
+    ("/tools/ai-use-case-prioritizer.html", "0.85", "monthly"),
+    ("/tools/ai-adoption-metrics.html", "0.85", "monthly"),
+    ("/tools/ai-governance-checklist.html", "0.85", "monthly"),
+    ("/tools/ai-assistant-prompt-builder.html", "0.85", "monthly"),
+    ("/tools/ai-work-habits-checklist.html", "0.85", "monthly"),
+    ("/ai-program-management.html", "0.9", "weekly"),
     ("/salary-guide.html", "0.85", "monthly"),
     ("/interview-questions.html", "0.85", "monthly"),
     ("/glossary.html", "0.8", "monthly"),
@@ -122,6 +128,7 @@ FOOTER_NAV = (
     '<nav aria-label="Site topics" style="max-width:760px;margin:2rem auto 0;padding:1.5rem 1.5rem 0.5rem;text-align:center;font-size:0.78rem;color:#aaa;line-height:2.4;border-top:1px solid #f0f0f0;">\n'
     '    <a href="{home}about.html" style="color:#aaa;margin:0 0.4rem;">About</a> &middot;\n'
     '    <a href="{home}career.html" style="color:#aaa;margin:0 0.4rem;">Senior Technical Program Manager</a> &middot;\n'
+    '    <a href="{home}ai-program-management.html" style="color:#aaa;margin:0 0.4rem;">AI Program Management</a> &middot;\n'
     '    <a href="{home}insights.html" style="color:#aaa;margin:0 0.4rem;">Program Management Insights</a> &middot;\n'
     '    <a href="{home}insights/compliance-playbook.html" style="color:#aaa;margin:0 0.4rem;">Compliance Playbook</a> &middot;\n'
     '    <a href="{home}insights/decision-logs-underrated-tpm-tool.html" style="color:#aaa;margin:0 0.4rem;">Decision Logs</a> &middot;\n'

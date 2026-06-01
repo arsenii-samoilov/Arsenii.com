@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>AI Work Habits Checklist | Self-Assessment</title>
+  <meta name="description" content="AI work habits checklist: self-assess setup, prompts, quality, measurement, and boundaries. See where to focus next. Browser-based, no signup.">
+  <meta name="keywords" content="AI productivity habits, AI skills assessment, measure AI success, personal AI maturity, Technical Program Manager tools, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/ai-work-habits-checklist.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/ai-work-habits-checklist.html">
+  <meta property="og:title" content="AI Work Habits Checklist | Self-Assessment">
+  <meta property="og:description" content="AI work habits checklist: self-assess setup, prompts, quality, measurement, and boundaries. See where to focus next. Browser-based, no signup.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Work Habits Checklist | Self-Assessment">
+  <meta name="twitter:description" content="AI work habits checklist: self-assess setup, prompts, quality, measurement, and boundaries. See where to focus next. Browser-based, no signup.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Work Habits Checklist",
+    "url": "https://arsenii.com/tools/ai-work-habits-checklist.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": "A browser-based self-assessment for personal AI work habits covering setup, prompt discipline, quality control, measurement, and boundaries.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you know if AI is actually helping your work?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Track edits to send, time to first usable draft on repeat tasks, reuse of saved prompts, and errors caught before ship. Do not track prompt count or word volume. Compare the same task type week over week."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are common signs you are using AI wrong?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Starting every session with no profile, accepting first drafts on judgment-heavy work, switching models instead of fixing prompts, skipping verification on facts, and measuring activity instead of outcomes."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should you focus on to improve AI skills?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Focus on one level at a time: saved templates, mandatory second-pass iteration, task decomposition, output evaluation, then persistent context systems. Fix the weakest habit area first rather than chasing new tools."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arsenii.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://arsenii.com/tools/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Work Habits Checklist", "item": "https://arsenii.com/tools/ai-work-habits-checklist.html"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 640px; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 1.5rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.danger:hover { background: var(--accent-red); border-color: var(--accent-red); }
+    .progress-overall { max-width: 760px; margin: 0 auto 1rem; border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--bg-warm); text-align: center; }
+    .progress-overall .prog-label { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.35rem; }
+    .progress-overall .prog-val { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .prog-bar { height: 10px; background: var(--accent-light); border-radius: 999px; overflow: hidden; }
+    .prog-bar-fill { height: 100%; background: var(--accent); border-radius: 999px; transition: width 0.2s ease; }
+    .focus-box { max-width: 760px; margin: 0 auto 2rem; border: 1px solid var(--accent); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--bg); }
+    .focus-box h2 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--accent-dark); margin: 0 0 0.5rem; }
+    .focus-box p { font-size: var(--text-sm); line-height: 1.75; color: var(--text); margin: 0; }
+    .checklist { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+    .check-section { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--bg); }
+    .check-section h2 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: var(--accent-dark); margin: 0 0 0.35rem; }
+    .section-prog { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1rem; }
+    .check-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.55rem 0; border-bottom: 1px solid var(--bg-warm); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--text); }
+    .check-item:last-child { border-bottom: none; }
+    .check-item input { margin-top: 0.2rem; width: 1rem; height: 1rem; accent-color: var(--accent); flex-shrink: 0; cursor: pointer; }
+    .check-item label { cursor: pointer; flex: 1; }
+    .check-item.done label { color: var(--text-muted); text-decoration: line-through; }
+    .tool-explainer { max-width: 760px; margin: 3.5rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p, .tool-explainer li { font-size: var(--text-sm); line-height: 1.8; color: var(--text); }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    @media print { .site-header, .tool-controls, .tool-explainer, .tool-cta, .site-footer { display: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>AI Work Habits Checklist</span></nav>
+      <div class="tool-hero">
+        <h1>AI Work Habits Checklist</h1>
+        <p>Already using AI but not sure it is paying off? Check off the habits that describe you today. The lowest section is where to focus next. I use this monthly to catch drift before bad habits cancel the time savings.</p>
+      </div>
+
+      <div class="tool-controls">
+        <button class="tool-btn" id="exportCsv">Export CSV</button>
+        <button class="tool-btn" id="printBtn">Print / PDF</button>
+        <button class="tool-btn" id="loadSample">Load Example</button>
+        <button class="tool-btn danger" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="progress-overall">
+        <p class="prog-label">Habit maturity</p>
+        <p class="prog-val" id="overallPct">0%</p>
+        <div class="prog-bar"><div class="prog-bar-fill" id="overallBar" style="width:0%"></div></div>
+      </div>
+
+      <div class="focus-box" id="focusBox">
+        <h2 id="focusTitle">Focus next</h2>
+        <p id="focusText">Check items above to see your weakest area and what to improve first.</p>
+      </div>
+
+      <div class="checklist" id="checklistRoot"></div>
+
+      <div class="tool-explainer">
+        <h2>How to read your score</h2>
+        <p>This is not a pass/fail test. It is a mirror. High maturity means you have systems that reduce review time and errors. Low maturity in one section usually explains why AI feels slower than doing the work yourself.</p>
+        <p><strong>Setup &amp; context:</strong> Without a profile and project folder, every session starts cold. Fix this before anything else.</p>
+        <p><strong>Prompt discipline:</strong> Templates, iteration, and decomposition separate power users from people who fight the model.</p>
+        <p><strong>Quality control:</strong> AI can sound right while being wrong. Verification habits are the difference between leverage and liability.</p>
+        <p><strong>Measurement:</strong> If you track word count, you optimize the wrong thing. Track edits to send and repeat prompt reuse.</p>
+        <p><strong>Boundaries:</strong> Know what you delegate (drafts, structure) and what you own (commitments, numbers, judgment).</p>
+        <p>Read the full playbook in <a href="../insights/leveling-up-personal-ai-work.html">Leveling Up When You Already Use AI</a>. New to AI? Start with <a href="../insights/ai-executive-assistant-setup.html">Setting Up an AI Executive Assistant</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> who uses AI daily. <a href="../contact.html">Get in touch</a> for Senior TPM roles or AI program advisory.</p>
+        <a href="../insights/leveling-up-personal-ai-work.html" class="tool-btn primary" style="text-decoration:none;display:inline-block;">Read the skills guide &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="tool-kit.js"></script>
+  <script>
+    var STORAGE_KEY = "ai_work_habits_v1";
+
+    var FOCUS = {
+      setup: "Build a one-page profile and a project or rules folder. Use the AI assistant prompt builder if you need a starting template.",
+      prompts: "Save three prompts for work you repeat weekly. Add a mandatory second pass: ask what is wrong, then revise.",
+      quality: "Verify every number, name, and date before send. Treat confident tone as a warning sign, not proof.",
+      measure: "Pick one repeat task and log minutes plus light/moderate/heavy edits for four weeks. Compare week one to week four.",
+      bounds: "List what you never delegate: commitments, sensitive data, final judgment calls. Drop AI on any task that stays slower after three tries."
+    };
+
+    var SECTIONS = [
+      {
+        id: "setup",
+        title: "Setup & Context",
+        items: [
+          { id: "setup_profile", text: "I have a one-page profile the model can read (role, stakeholders, standards)" },
+          { id: "setup_project", text: "I use a project, folder, or rules file so sessions do not reset daily" },
+          { id: "setup_rules", text: "I have written hard rules (voice, privacy, verification)" },
+          { id: "setup_reuse", text: "I refer to saved context instead of re-pasting my background each time" }
+        ]
+      },
+      {
+        id: "prompts",
+        title: "Prompt Discipline",
+        items: [
+          { id: "prompt_templates", text: "I use saved templates for at least three repeat tasks" },
+          { id: "prompt_structure", text: "My prompts include task, constraints, and output format" },
+          { id: "prompt_iterate", text: "I run a second pass to critique and revise, not just accept the first draft" },
+          { id: "prompt_decompose", text: "I break complex work into ordered steps instead of one mega prompt" }
+        ]
+      },
+      {
+        id: "quality",
+        title: "Quality Control",
+        items: [
+          { id: "qual_facts", text: "I verify facts, numbers, and names before anything external goes out" },
+          { id: "qual_tone", text: "I edit for tone and stakeholder fit, not just grammar" },
+          { id: "qual_errors", text: "I track when AI errors would have shipped if I had not checked" },
+          { id: "qual_drop", text: "I stop using AI on tasks where it consistently adds rework" }
+        ]
+      },
+      {
+        id: "measure",
+        title: "Measurement",
+        items: [
+          { id: "meas_edits", text: "I track how heavy edits are before send (light / moderate / heavy)" },
+          { id: "meas_time", text: "I compare time to first usable draft on the same task type over weeks" },
+          { id: "meas_reuse", text: "I reuse winning prompts instead of improvising every time" },
+          { id: "meas_vanity", text: "I do not count prompts, words, or sessions as success metrics" }
+        ]
+      },
+      {
+        id: "bounds",
+        title: "Boundaries & Judgment",
+        items: [
+          { id: "bound_data", text: "I follow employer policy on what data can go into AI tools" },
+          { id: "bound_decide", text: "I own final decisions and commitments, not the model" },
+          { id: "bound_junior", text: "I treat AI output like a junior draft that needs a senior edit" },
+          { id: "bound_stop", text: "I have dropped at least one workflow where AI net slowed me down" }
+        ]
+      }
+    ];
+
+    function defaultChecked() {
+      var c = {};
+      var i, j;
+      for (i = 0; i < SECTIONS.length; i++) {
+        for (j = 0; j < SECTIONS[i].items.length; j++) {
+          c[SECTIONS[i].items[j].id] = false;
+        }
+      }
+      return c;
+    }
+
+    function sampleChecked() {
+      return {
+        setup_profile: true, setup_project: true, setup_rules: false, setup_reuse: true,
+        prompt_templates: true, prompt_structure: true, prompt_iterate: false, prompt_decompose: false,
+        qual_facts: true, qual_tone: true, qual_errors: false, qual_drop: false,
+        meas_edits: false, meas_time: false, meas_reuse: true, meas_vanity: true,
+        bound_data: true, bound_decide: true, bound_junior: true, bound_stop: false
+      };
+    }
+
+    function load() {
+      try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+      catch (e) { return null; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    var state = TK.decodeState() || load() || { checked: defaultChecked() };
+    if (!state.checked) state.checked = defaultChecked();
+
+    function sectionProgress(sec) {
+      var done = 0, total = sec.items.length, j;
+      for (j = 0; j < sec.items.length; j++) {
+        if (state.checked[sec.items[j].id]) done++;
+      }
+      return { done: done, total: total, pct: total ? Math.round((done / total) * 100) : 0 };
+    }
+
+    function overallProgress() {
+      var done = 0, total = 0, i, sp;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sp = sectionProgress(SECTIONS[i]);
+        done += sp.done;
+        total += sp.total;
+      }
+      return { done: done, total: total, pct: total ? Math.round((done / total) * 100) : 0 };
+    }
+
+    function weakestSection() {
+      var worst = null, i, sp;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sp = sectionProgress(SECTIONS[i]);
+        if (!worst || sp.pct < worst.pct) {
+          worst = { sec: SECTIONS[i], pct: sp.pct };
+        }
+      }
+      return worst;
+    }
+
+    function render() {
+      var root = document.getElementById("checklistRoot");
+      root.innerHTML = "";
+      var i, j, sec, sp, block, h2, prog, ul, li, cb, lbl;
+
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        sp = sectionProgress(sec);
+        block = document.createElement("section");
+        block.className = "check-section";
+        h2 = document.createElement("h2");
+        h2.textContent = sec.title;
+        block.appendChild(h2);
+        prog = document.createElement("p");
+        prog.className = "section-prog";
+        prog.textContent = sp.done + " of " + sp.total + " (" + sp.pct + "%)";
+        block.appendChild(prog);
+        ul = document.createElement("div");
+        for (j = 0; j < sec.items.length; j++) {
+          (function (item) {
+            li = document.createElement("div");
+            li.className = "check-item" + (state.checked[item.id] ? " done" : "");
+            cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.id = item.id;
+            cb.checked = !!state.checked[item.id];
+            cb.addEventListener("change", function () {
+              state.checked[item.id] = cb.checked;
+              save();
+              render();
+            });
+            lbl = document.createElement("label");
+            lbl.setAttribute("for", item.id);
+            lbl.textContent = item.text;
+            li.appendChild(cb);
+            li.appendChild(lbl);
+            ul.appendChild(li);
+          })(sec.items[j]);
+        }
+        block.appendChild(ul);
+        root.appendChild(block);
+      }
+
+      var ov = overallProgress();
+      document.getElementById("overallPct").textContent = ov.pct + "%";
+      document.getElementById("overallBar").style.width = ov.pct + "%";
+
+      var w = weakestSection();
+      if (w && ov.done > 0) {
+        document.getElementById("focusTitle").textContent = "Focus next: " + w.sec.title + " (" + w.pct + "%)";
+        document.getElementById("focusText").textContent = FOCUS[w.sec.id] || "";
+      } else {
+        document.getElementById("focusTitle").textContent = "Focus next";
+        document.getElementById("focusText").textContent = "Check items above to see your weakest area and what to improve first.";
+      }
+    }
+
+    function buildCsv() {
+      var rows = [["Section", "Item", "Checked"]];
+      var i, j, sec;
+      for (i = 0; i < SECTIONS.length; i++) {
+        sec = SECTIONS[i];
+        for (j = 0; j < sec.items.length; j++) {
+          rows.push([sec.title, sec.items[j].text, state.checked[sec.items[j].id] ? "yes" : "no"]);
+        }
+      }
+      return rows.map(function (r) {
+        return r.map(function (c) {
+          c = (c == null ? "" : String(c));
+          if (c.indexOf(",") > -1 || c.indexOf('"') > -1) c = '"' + c.replace(/"/g, '""') + '"';
+          return c;
+        }).join(",");
+      }).join("\n");
+    }
+
+    document.getElementById("exportCsv").addEventListener("click", function () {
+      TK.download("ai-work-habits-checklist.csv", buildCsv(), "text/csv;charset=utf-8;");
+    });
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("loadSample").addEventListener("click", function () {
+      state = { checked: sampleChecked() }; save(); render();
+    });
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      if (confirm("Clear all checkboxes?")) {
+        state = { checked: defaultChecked() }; save(); render();
+      }
+    });
+
+    render();
+
+    TK.setup({
+      toolName: "AI Work Habits Checklist",
+      getState: function () { return state; }
+    });
+  </script>
+  <script src="../main.js?v=2"></script>
+</body>
+</html>
