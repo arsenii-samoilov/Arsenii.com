@@ -1,7 +1,13 @@
 name: Deploy to arsenii.com
 
 on:
-  workflow_dispatch:            # manual trigger only — server pulls via cron instead
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-arsenii-com
+  cancel-in-progress: true
 
 jobs:
   deploy:

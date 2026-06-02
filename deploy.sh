@@ -11,4 +11,5 @@ git commit -m "$MSG"
 git push origin main
 
 echo ""
-echo "Done! Live at: https://github.com/arsenii-samoilov/Arsenii.com"
+echo "Pushed to GitHub. Deploy to https://arsenii.com runs automatically (Actions → Deploy to arsenii.com)."
+echo "Usually live within a minute."
