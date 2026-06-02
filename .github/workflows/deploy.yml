@@ -19,16 +19,28 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           if [ -z "$SSH_PRIVATE_KEY" ]; then
-            echo "SSH_PRIVATE_KEY secret is missing. Add it at:"
-            echo "https://github.com/arsenii-samoilov/Arsenii.com/settings/secrets/actions"
+            echo "SSH_PRIVATE_KEY secret is missing."
             exit 1
           fi
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H arsenii.com >> ~/.ssh/known_hosts
+          ssh-keygen -y -f ~/.ssh/deploy_key > ~/.ssh/deploy_key.pub
+          echo "Deploy key fingerprint:"
+          ssh-keygen -lf ~/.ssh/deploy_key.pub
+          ssh-keyscan -p "${{ secrets.SSH_PORT || '22' }}" -H "${{ secrets.SSH_HOST || 'arsenii.com' }}" >> ~/.ssh/known_hosts
 
       - name: Deploy to server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
-          ssh -i ~/.ssh/deploy_key root@arsenii.com \
-            'cd /var/www/html && git fetch origin main && git reset --hard origin/main && echo "Deployed at $(date -u)"'
+          HOST="${SSH_HOST:-arsenii.com}"
+          USER="${SSH_USER:-root}"
+          PORT="${SSH_PORT:-22}"
+          PATH_ON_SERVER="${DEPLOY_PATH:-/var/www/html}"
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o PreferredAuthentications=publickey \
+            -p "$PORT" "${USER}@${HOST}" \
+            "cd '${PATH_ON_SERVER}' && git fetch origin main && git reset --hard origin/main && echo \"Deployed at \$(date -u)\""
