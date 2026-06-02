@@ -1,16 +1,14 @@
-# Resume downloads
+# Resume download
 
-- `Arsenii Samoilov.pdf` — for recruiters and ATS (primary)
-- `Arsenii Samoilov.docx` — editable Word format
+- `Arsenii Samoilov.pdf` — public resume (PDF only on the site)
 
-Source: `~/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.docx`  
-Last synced: 2026-06-01
+Source: export PDF from `~/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.docx`
 
-To refresh after editing the resume:
+To refresh:
 
 ```bash
-cp "/Users/arsenii/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.docx" documents/
-cp "/Users/arsenii/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.pdf" documents/
+cp "/Users/arsenii/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.pdf" \
+  ~/Documents/arsenii-website/documents/Arsenii\ Samoilov.pdf
 ```
 
-Then deploy the site (git commit + push, or your usual deploy).
+Then commit and deploy.
