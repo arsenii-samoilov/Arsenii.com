@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var link = e.target.closest('a');
     if (!link || !link.href) return;
     if (typeof gtag !== 'function') return;
-    if (link.hasAttribute('download') && link.href.indexOf('.pdf') !== -1) {
-      gtag('event', 'resume_download', { page_location: window.location.href, link_url: link.href });
+    if (link.hasAttribute('download') && /Arsenii%20Samoilov\.(pdf|docx)/i.test(link.href)) {
+      var fmt = link.href.indexOf('.docx') !== -1 ? 'docx' : 'pdf';
+      gtag('event', 'resume_download', { page_location: window.location.href, link_url: link.href, file_type: fmt });
     } else if (link.href.indexOf('linkedin.com/in/arseniisamoilov') !== -1) {
       gtag('event', 'linkedin_profile_click', { page_location: window.location.href, link_url: link.href });
     }

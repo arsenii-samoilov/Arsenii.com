@@ -1,5 +1,16 @@
-# Add your resume PDF here
+# Resume downloads
 
-Resume file: **Arsenii Samoilov.pdf**
+- `Arsenii Samoilov.pdf` — for recruiters and ATS (primary)
+- `Arsenii Samoilov.docx` — editable Word format
 
-The "Download PDF" button on the career page will link to this file.
+Source: `~/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.docx`  
+Last synced: 2026-06-01
+
+To refresh after editing the resume:
+
+```bash
+cp "/Users/arsenii/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.docx" documents/
+cp "/Users/arsenii/Desktop/Desktop/Arsenii Resume/Arsenii Samoilov Resume.pdf" documents/
+```
+
+Then deploy the site (git commit + push, or your usual deploy).
