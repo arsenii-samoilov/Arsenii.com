@@ -108,11 +108,11 @@ CORE_PAGES = [
 
 NAV = (
     '<header class="site-header">\n'
-    '    <a href="{home}index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>\n'
+    '    <a href="/" class="brand"><span class="logo">Arsenii Samoilov</span></a>\n'
     '    <div class="menu-wrapper">\n'
     '      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>\n'
     '      <nav class="nav-dropdown" aria-label="Main navigation">\n'
-    '        <a href="{home}index.html">Home</a>\n'
+    '        <a href="/">Home</a>\n'
     '        <a href="{home}career.html">Career</a>\n'
     '        <a href="{home}culinary.html">Culinary</a>\n'
     '        <a href="{home}photography.html">Photography</a>\n'
