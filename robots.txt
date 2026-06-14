@@ -4,10 +4,12 @@ Allow: /images/
 Allow: /food/
 Allow: /photos/
 
-# Block archive and server config files
+# Block archive, server config, and removed legacy URLs
 Disallow: /archive/
 Disallow: /sass/
 Disallow: /server/
+Disallow: /pricing
+Disallow: /pricing.html
 
 # Sitemaps
 Sitemap: https://arsenii.com/sitemap.xml
