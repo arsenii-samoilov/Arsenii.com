@@ -42,7 +42,7 @@ lines = [
     "if ($request_uri = /index.html) { return 301 https://arsenii.com/; }",
     "if ($request_uri = /tools/index.htm) { return 301 https://arsenii.com/tools/; }",
     'set $strip_home_args "";',
-    "if ($request_uri ~ ^/(index\\.html)?$) {",
+    "if ($uri ~ ^/(index\\.html)?$) {",
     '    set $strip_home_args "${strip_home_args}h";',
     "}",
     'if ($args != "") {',
