@@ -166,7 +166,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov — Program Management Insights" href="https://arsenii.com/feed.xml">
-  <link rel="stylesheet" href="styles.css?v=36">
+  <link rel="stylesheet" href="styles.css?v=37">
   <script src="api-config.js"></script>
   <script src="track.js?v=2"></script>
 </head>
@@ -280,8 +280,46 @@
       <article class="preview-card preview-game-external" style="padding:0;overflow:hidden;">
         <a href="https://games.arsenii.com/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
           <div class="game-external-tile-visual">
-            <img src="games/favicon.svg" alt="AREA FIFTY FIVE — browser game logo" width="64" height="64" loading="lazy">
-            <span class="game-external-tile-title">AREA FIFTY FIVE</span>
+            <svg viewBox="0 0 380 214" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;position:absolute;inset:0;">
+              <!-- Night sky -->
+              <defs>
+                <radialGradient id="glow" cx="50%" cy="42%" r="28%"><stop offset="0%" stop-color="#c8f044" stop-opacity=".22"/><stop offset="100%" stop-color="#c8f044" stop-opacity="0"/></radialGradient>
+                <radialGradient id="beam" cx="50%" cy="0%" r="100%"><stop offset="0%" stop-color="#c8f044" stop-opacity=".35"/><stop offset="100%" stop-color="#c8f044" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="380" height="214" fill="#080e1c"/>
+              <!-- Stars -->
+              <circle cx="18" cy="12" r="1" fill="#fff" opacity=".6"/><circle cx="55" cy="28" r=".8" fill="#fff" opacity=".5"/><circle cx="92" cy="9" r="1" fill="#fff" opacity=".7"/><circle cx="140" cy="22" r=".9" fill="#fff" opacity=".4"/><circle cx="198" cy="6" r="1" fill="#fff" opacity=".6"/><circle cx="245" cy="18" r=".8" fill="#fff" opacity=".5"/><circle cx="300" cy="10" r="1.1" fill="#fff" opacity=".7"/><circle cx="340" cy="25" r=".7" fill="#fff" opacity=".4"/><circle cx="365" cy="8" r="1" fill="#fff" opacity=".6"/><circle cx="72" cy="50" r=".7" fill="#fff" opacity=".4"/><circle cx="160" cy="44" r=".9" fill="#fff" opacity=".5"/><circle cx="280" cy="38" r=".8" fill="#fff" opacity=".4"/><circle cx="320" cy="52" r=".6" fill="#c8f044" opacity=".5"/>
+              <!-- Moon -->
+              <circle cx="318" cy="26" r="9" fill="#d4e8b0" opacity=".85"/>
+              <circle cx="322" cy="23" r="9" fill="#080e1c"/>
+              <!-- Tractor beam -->
+              <polygon points="190,95 168,180 212,180" fill="url(#beam)" opacity=".6"/>
+              <!-- Saucer glow -->
+              <ellipse cx="190" cy="95" rx="48" ry="10" fill="url(#glow)"/>
+              <!-- Saucer body -->
+              <ellipse cx="190" cy="95" rx="42" ry="9" fill="#1e293b"/>
+              <ellipse cx="190" cy="95" rx="42" ry="9" fill="none" stroke="#c8f044" stroke-width="1.2" opacity=".7"/>
+              <!-- Saucer dome -->
+              <ellipse cx="190" cy="90" rx="18" ry="10" fill="#0f1f3a"/>
+              <ellipse cx="190" cy="90" rx="18" ry="10" fill="none" stroke="#c8f044" stroke-width=".9" opacity=".5"/>
+              <!-- Dome window highlight -->
+              <ellipse cx="186" cy="88" rx="6" ry="4" fill="#c8f044" opacity=".12"/>
+              <!-- Rim lights -->
+              <circle cx="158" cy="95" r="2.2" fill="#c8f044" opacity=".9"/><circle cx="170" cy="97" r="1.8" fill="#00ffcc" opacity=".7"/><circle cx="182" cy="98" r="1.8" fill="#c8f044" opacity=".8"/><circle cx="198" cy="98" r="1.8" fill="#00ffcc" opacity=".7"/><circle cx="210" cy="97" r="1.8" fill="#c8f044" opacity=".8"/><circle cx="222" cy="95" r="2.2" fill="#c8f044" opacity=".9"/>
+              <!-- Desert ground -->
+              <path d="M0 180 Q60 165 120 178 Q180 190 240 172 Q300 158 380 175 L380 214 L0 214Z" fill="#1a1005"/>
+              <path d="M0 185 Q50 176 100 183 Q160 192 220 178 Q280 165 380 180 L380 214 L0 214Z" fill="#221608"/>
+              <!-- Sand ripples -->
+              <path d="M30 196 Q60 192 90 196" stroke="#2e1f0a" stroke-width="1" fill="none" opacity=".6"/>
+              <path d="M110 200 Q145 196 180 200" stroke="#2e1f0a" stroke-width="1" fill="none" opacity=".5"/>
+              <path d="M200 194 Q240 190 275 194" stroke="#2e1f0a" stroke-width="1" fill="none" opacity=".6"/>
+              <path d="M290 200 Q320 197 350 200" stroke="#2e1f0a" stroke-width="1" fill="none" opacity=".4"/>
+              <!-- Distant mesas -->
+              <path d="M-5 175 L20 148 L55 148 L75 175Z" fill="#12100a" opacity=".8"/>
+              <path d="M320 172 L345 150 L375 150 L395 172Z" fill="#12100a" opacity=".8"/>
+              <!-- Title overlay -->
+              <text x="190" y="134" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="13" font-weight="900" fill="#c8f044" letter-spacing="3" opacity=".95">AREA FIFTY FIVE</text>
+            </svg>
           </div>
           <div class="preview-card-inner">
             <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Fly a UFO, tractor-beam cargo, and blast through desert, jungle, and city levels</p>
@@ -289,25 +327,6 @@
           </div>
         </a>
       </article>
-    </section>
-
-    <section class="games-frame-section" aria-label="Games">
-      <a href="https://games.arsenii.com/" target="_blank" rel="noopener noreferrer" class="games-frame-link">
-        <div class="games-frame-inner">
-          <div class="games-frame-stars" aria-hidden="true"></div>
-          <div class="games-frame-content">
-            <div class="games-frame-icon">
-              <img src="games/favicon.svg" alt="AREA FIFTY FIVE" width="48" height="48">
-            </div>
-            <div class="games-frame-text">
-              <span class="games-frame-label">Now playing</span>
-              <h2 class="games-frame-title">AREA FIFTY FIVE</h2>
-              <p class="games-frame-desc">Fly a UFO, tractor-beam cargo, and take out targets across desert, jungle, and city levels. Runs in the browser — no install.</p>
-            </div>
-            <div class="games-frame-cta">Play →</div>
-          </div>
-        </div>
-      </a>
     </section>
 
     <section class="connect">
@@ -372,9 +391,6 @@
     });
     document.querySelectorAll('a[href*="games.arsenii.com"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'AREA FIFTY FIVE' }));
-    });
-    document.querySelectorAll('.games-frame-link').forEach(el => {
-      el.addEventListener('click', () => gaEvent('frame_click', { event_category: 'Home', event_label: 'Games Frame' }));
     });
     document.querySelectorAll('a[href="contact.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));
