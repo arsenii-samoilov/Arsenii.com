@@ -2614,11 +2614,11 @@ function addFrontLights(parent,sc,rimC){
   const coneM=new THREE.MeshBasicMaterial({color:0xfff8cc,transparent:true,opacity:.16,side:THREE.DoubleSide,depthWrite:false});
   const innerM=new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.22,side:THREE.DoubleSide,depthWrite:false});
   const cone=new THREE.Mesh(new THREE.ConeGeometry(2.2*sc,14*sc,14,1,true),coneM);
-  cone.rotation.x=-Math.PI/2; // single beam straight ahead along saucer forward (-Z)
+  cone.rotation.x=Math.PI/2; // tip at saucer, widens forward (small to large)
   cone.position.set(0,0,-7*sc);
   grp.add(cone);
   const inner=new THREE.Mesh(new THREE.ConeGeometry(.9*sc,14*sc,10,1,true),innerM);
-  inner.rotation.x=-Math.PI/2;
+  inner.rotation.x=Math.PI/2;
   inner.position.set(0,0,-7*sc);
   grp.add(inner);
   grp._beamCones=[cone,inner];
