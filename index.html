@@ -166,7 +166,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov — Program Management Insights" href="https://arsenii.com/feed.xml">
-  <link rel="stylesheet" href="styles.css?v=34">
+  <link rel="stylesheet" href="styles.css?v=35">
   <script src="api-config.js"></script>
   <script src="track.js?v=2"></script>
 </head>
@@ -184,6 +184,7 @@
         <a href="photography.html">Photography</a>
         <a href="insights.html">Insights</a>
         <a href="tools/">Tools</a>
+        <a href="https://games.arsenii.com/" target="_blank" rel="noopener noreferrer">AREA FIFTY FIVE</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -261,7 +262,7 @@
       </article>
     </section>
 
-    <section class="home-preview-follow" aria-label="Cooking site">
+    <section class="home-preview-follow" aria-label="More from Arsenii">
       <article class="preview-card preview-chef-external" style="padding:0;overflow:hidden;">
         <a href="https://chefarsenii.com/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
           <div class="chef-external-tile-visual">
@@ -272,7 +273,19 @@
           </div>
           <div class="preview-card-inner">
             <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Food Stories on my cooking site</p>
-            <div style="text-align:center;font-size:var(--text-md);margin-top:auto;">Visit the website -></div>
+            <div style="text-align:center;font-size:var(--text-md);margin-top:auto;">Visit the website →</div>
+          </div>
+        </a>
+      </article>
+      <article class="preview-card preview-game-external" style="padding:0;overflow:hidden;">
+        <a href="https://games.arsenii.com/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;">
+          <div class="game-external-tile-visual">
+            <img src="games/favicon.svg" alt="AREA FIFTY FIVE — browser game logo" width="64" height="64" loading="lazy">
+            <span class="game-external-tile-title">AREA FIFTY FIVE</span>
+          </div>
+          <div class="preview-card-inner">
+            <p style="color:var(--text);margin:0 0 1rem;font-size:var(--text-sm);line-height:1.6;text-align:center;flex:1;">Fly a UFO, tractor-beam cargo, and blast through desert, jungle, and city levels</p>
+            <div style="text-align:center;font-size:var(--text-md);margin-top:auto;">Play the game →</div>
           </div>
         </a>
       </article>
@@ -312,7 +325,8 @@
     <a href="tools/" style="color:#aaa;margin:0 0.4rem;">Program Management Tools</a> ·
     <a href="tools/ai-use-case-prioritizer.html" style="color:#aaa;margin:0 0.4rem;">AI Use Case Prioritizer</a> ·
     <a href="culinary.html" style="color:#aaa;margin:0 0.4rem;">Culinary Work</a> ·
-    <a href="photography.html" style="color:#aaa;margin:0 0.4rem;">Photography</a>
+    <a href="photography.html" style="color:#aaa;margin:0 0.4rem;">Photography</a> ·
+    <a href="https://games.arsenii.com/" style="color:#aaa;margin:0 0.4rem;">AREA FIFTY FIVE Game</a>
   </nav>
 
   <footer class="site-footer">
@@ -336,6 +350,9 @@
     });
     document.querySelectorAll('a[href*="chefarsenii.com"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'Cooking site' }));
+    });
+    document.querySelectorAll('a[href*="games.arsenii.com"]').forEach(el => {
+      el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'AREA FIFTY FIVE' }));
     });
     document.querySelectorAll('a[href="contact.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));
