@@ -166,7 +166,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov — Program Management Insights" href="https://arsenii.com/feed.xml">
-  <link rel="stylesheet" href="styles.css?v=35">
+  <link rel="stylesheet" href="styles.css?v=36">
   <script src="api-config.js"></script>
   <script src="track.js?v=2"></script>
 </head>
@@ -291,6 +291,25 @@
       </article>
     </section>
 
+    <section class="games-frame-section" aria-label="Games">
+      <a href="https://games.arsenii.com/" target="_blank" rel="noopener noreferrer" class="games-frame-link">
+        <div class="games-frame-inner">
+          <div class="games-frame-stars" aria-hidden="true"></div>
+          <div class="games-frame-content">
+            <div class="games-frame-icon">
+              <img src="games/favicon.svg" alt="AREA FIFTY FIVE" width="48" height="48">
+            </div>
+            <div class="games-frame-text">
+              <span class="games-frame-label">Now playing</span>
+              <h2 class="games-frame-title">AREA FIFTY FIVE</h2>
+              <p class="games-frame-desc">Fly a UFO, tractor-beam cargo, and take out targets across desert, jungle, and city levels. Runs in the browser — no install.</p>
+            </div>
+            <div class="games-frame-cta">Play →</div>
+          </div>
+        </div>
+      </a>
+    </section>
+
     <section class="connect">
       <h2>Connect with me:</h2>
       <div class="connect-links">
@@ -353,6 +372,9 @@
     });
     document.querySelectorAll('a[href*="games.arsenii.com"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('tile_click', { event_category: 'Home', event_label: 'AREA FIFTY FIVE' }));
+    });
+    document.querySelectorAll('.games-frame-link').forEach(el => {
+      el.addEventListener('click', () => gaEvent('frame_click', { event_category: 'Home', event_label: 'Games Frame' }));
     });
     document.querySelectorAll('a[href="contact.html"]').forEach(el => {
       el.addEventListener('click', () => gaEvent('nav_click', { event_category: 'Home', event_label: 'Contact' }));
