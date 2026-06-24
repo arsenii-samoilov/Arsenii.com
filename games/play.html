@@ -207,9 +207,13 @@ html,body { width:100%; height:100%; overflow:hidden; background:#000; font-fami
 .tc-dpad { position:absolute; bottom:72px; left:12px; display:grid; grid-template-columns:70px 70px; grid-template-rows:70px 70px; gap:8px; pointer-events:all; }
 .tc-btn { width:70px; height:70px; background:rgba(0,0,0,.55); border:2px solid rgba(200,240,68,.3); border-radius:14px; font:bold 26px Arial; color:#c8f044; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:none; transition:background .07s,border-color .07s; }
 .tc-btn.pressed { background:rgba(200,240,68,.2); border-color:rgba(200,240,68,.8); }
-.tc-turns { position:absolute; bottom:72px; right:12px; display:flex; flex-direction:row; gap:10px; pointer-events:all; }
-.tc-turn { width:82px; height:82px; background:rgba(0,0,0,.55); border:2px solid rgba(255,140,50,.3); border-radius:41px; font:bold 26px Arial; color:#ffaa44; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:none; transition:background .07s,border-color .07s; }
+.tc-right-pad { position:absolute; bottom:72px; right:12px; display:grid; grid-template-columns:82px 82px; grid-template-rows:82px 82px; gap:8px; pointer-events:all; }
+.tc-turn { width:82px; height:82px; background:rgba(0,0,0,.55); border:2px solid rgba(255,140,50,.3); border-radius:14px; font:bold 26px Arial; color:#ffaa44; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:none; transition:background .07s,border-color .07s; }
 .tc-turn.pressed { background:rgba(255,140,50,.22); border-color:rgba(255,140,50,.85); }
+.tc-fire-btn { width:82px; height:82px; background:rgba(120,10,10,.55); border:2px solid rgba(255,80,80,.35); border-radius:14px; font:bold 13px "Arial Black"; letter-spacing:1px; color:#ff8888; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:none; transition:background .07s,border-color .07s; }
+.tc-fire-btn.pressed { background:rgba(255,60,60,.28); border-color:rgba(255,80,80,.9); }
+.tc-beam-btn { width:82px; height:82px; background:rgba(0,60,35,.55); border:2px solid rgba(0,255,150,.35); border-radius:14px; font:bold 13px "Arial Black"; letter-spacing:1px; color:#00ffaa; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:none; transition:background .07s,border-color .07s; }
+.tc-beam-btn.pressed { background:rgba(0,220,120,.2); border-color:rgba(0,255,150,.9); }
 /* SETTINGS OVERLAY */
 #settings-overlay { position:fixed; inset:0; background:rgba(0,0,0,.88); display:none; flex-direction:column; align-items:center; justify-content:center; gap:20px; z-index:55; pointer-events:all; }
 #settings-overlay h2 { font:bold 36px "Arial Black"; color:#c8f044; letter-spacing:4px; text-shadow:0 0 18px #c8f044; margin-bottom:4px; }
@@ -424,7 +428,9 @@ window.onerror=function(msg,src,line){
     <div class="tc-btn" id="tc-left">←</div>
     <div class="tc-btn" id="tc-right">→</div>
   </div>
-  <div class="tc-turns">
+  <div class="tc-right-pad">
+    <div class="tc-fire-btn" id="tc-fire">FIRE</div>
+    <div class="tc-beam-btn" id="tc-beam">BEAM</div>
     <div class="tc-turn" id="tc-turnl">⟲</div>
     <div class="tc-turn" id="tc-turnr">⟳</div>
   </div>
@@ -5418,12 +5424,13 @@ function setupTouchControls(){
   const map=[
     ['tc-fwd','KeyW'],['tc-back','KeyS'],
     ['tc-left','KeyA'],['tc-right','KeyD'],
-    ['tc-turnl','KeyQ'],['tc-turnr','KeyE']
+    ['tc-turnl','KeyQ'],['tc-turnr','KeyE'],
+    ['tc-fire','KeyZ'],['tc-beam','Space']
   ];
   map.forEach(([id,code])=>{
     const el=document.getElementById(id);
     if(!el)return;
-    const dn=()=>{VK[code]=true;el.classList.add('pressed');initAudio();};
+    const dn=()=>{VK[code]=true;KP[code]=true;el.classList.add('pressed');initAudio();};
     const up=()=>{VK[code]=false;el.classList.remove('pressed');};
     el.addEventListener('mousedown',e=>{e.preventDefault();dn();});
     el.addEventListener('mouseup',up);
