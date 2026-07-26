@@ -12,8 +12,8 @@
   --accent-red-hover: #991b1b;
   --border: #cbd5e1;
   --radius: 8px;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
   /* Typography: max 3 sizes, 3 weights */
   --text-xl: 1.75rem;
   --text-lg: 1.5rem;
@@ -276,38 +276,88 @@ main {
   flex-wrap: wrap;
 }
 
+/* ── Buttons — inspired by stolen-buttons collection ───────────────── */
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: var(--text-md);
-  font-weight: var(--weight-bold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.72rem 1.55rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
   text-decoration: none;
-  border-radius: var(--radius);
-  transition: all 0.2s;
+  border-radius: 100px;           /* full pill — "→ get in touch" */
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.2s ease, color 0.2s ease,
+              box-shadow 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
 }
 
+/* Primary — navy pill, lifts on hover */
 .btn-primary {
   background: var(--accent);
-  color: white;
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(30,58,95,0.18);
 }
-
 .btn-primary:hover {
-  background: var(--accent-red);
+  background: var(--accent-dark);
+  box-shadow: 0 4px 18px rgba(30,58,95,0.30);
+  transform: translateY(-1px);
+  color: #fff;
 }
 
+/* Secondary — "→ get in touch" dark pill */
 .btn-secondary {
-  background: transparent;
-  color: var(--text);
-  border: 2px solid var(--border);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(30,58,95,0.18);
 }
-
 .btn-secondary:hover {
-  border-color: var(--accent-red);
-  color: var(--accent-red);
+  background: var(--accent-dark);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(30,58,95,0.28);
+  transform: translateY(-1px);
 }
 
-.btn-secondary.btn-hover-red {
-  border: none;
+/* Ghost — Vercel/GitHub shadow style (no hard border) */
+.btn-ghost,
+.btn-cta {
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.11), 0 1px 6px rgba(0,0,0,0.06);
+}
+.btn-ghost:hover,
+.btn-cta:hover {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.18), 0 2px 10px rgba(0,0,0,0.10);
+  transform: translateY(-1px);
+  color: var(--accent);
+}
+
+/* Second hero button — ghost on dark-pill siblings */
+.hero-cta .btn + .btn {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 0 1.5px var(--accent);
+}
+.hero-cta .btn + .btn:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(30,58,95,0.25);
+  transform: translateY(-1px);
+}
+
+/* Hover-red override — swaps to red on hover */
+.btn-hover-red:hover {
+  background: var(--accent-red) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(185,28,28,0.26) !important;
+}
+.hero-cta .btn + .btn.btn-hover-red:hover {
+  background: var(--accent-red) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1.5px var(--accent-red), 0 4px 14px rgba(185,28,28,0.22) !important;
 }
 
 .btn-secondary.btn-hover-red:focus-visible {
@@ -315,40 +365,21 @@ main {
   outline-offset: 2px;
 }
 
-.btn-secondary.btn-hover-red:hover {
-  background: var(--accent-red);
-  color: white;
-  border: none;
-  font-weight: var(--weight-bold);
-}
-
-
+/* Outline variant */
 .btn-outline {
   background: transparent;
   color: var(--accent);
-  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
 }
-
 .btn-outline:hover {
   background: var(--accent-red);
-  color: white;
+  color: #fff;
+  box-shadow: 0 0 0 2px var(--accent-red);
+  transform: translateY(-1px);
 }
 
-.btn-regular {
-  font-weight: var(--weight-regular);
-}
-
-.btn-cta {
-  background: white;
-  color: var(--text);
-  border: 2px solid var(--border);
-}
-
-.btn-cta:hover {
-  background: var(--accent-red);
-  color: white;
-  border-color: var(--accent-red);
-}
+/* Weight modifier */
+.btn-regular { font-weight: 400; }
 
 /* Summary section */
 .summary-section {
