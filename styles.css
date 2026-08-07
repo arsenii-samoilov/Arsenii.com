@@ -90,6 +90,18 @@ main {
   color: inherit;
 }
 
+.brand::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><clipPath id="gc"><circle cx="32" cy="32" r="29.5"/></clipPath></defs><circle cx="32" cy="32" r="30" fill="%231A4ED8"/><g clip-path="url(%23gc)" fill="none" stroke="%23ffffff" stroke-opacity=".35" stroke-width="1.1"><ellipse cx="32" cy="32" rx="9" ry="29.5"/><ellipse cx="32" cy="32" rx="20" ry="29.5"/><ellipse cx="32" cy="32" rx="29.5" ry="7"/><ellipse cx="32" cy="17" rx="25.5" ry="6"/><ellipse cx="32" cy="47" rx="25.5" ry="6"/></g><circle cx="32" cy="32" r="30" fill="none" stroke="%23ffffff" stroke-opacity=".75" stroke-width="1.8"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .header-headshot {
   width: 40px;
   height: 40px;
