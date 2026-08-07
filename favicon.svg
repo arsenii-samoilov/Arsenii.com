@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <defs>
-    <clipPath id="c">
-      <circle cx="32" cy="32" r="29.5"/>
-    </clipPath>
-  </defs>
-
+  <!-- Blue globe background -->
   <circle cx="32" cy="32" r="30" fill="#1A4ED8"/>
 
-  <g clip-path="url(#c)" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.1">
-    <ellipse cx="32" cy="32" rx="9"  ry="29.5"/>
-    <ellipse cx="32" cy="32" rx="20" ry="29.5"/>
-    <ellipse cx="32" cy="32" rx="29.5" ry="7"/>
-    <ellipse cx="32" cy="17" rx="25.5" ry="6"/>
-    <ellipse cx="32" cy="47" rx="25.5" ry="6"/>
-  </g>
+  <!-- Longitude meridians — vertical ellipses, always inside the circle -->
+  <ellipse cx="32" cy="32" rx="9"  ry="29" fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
+  <ellipse cx="32" cy="32" rx="20" ry="29" fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
 
-  <circle cx="32" cy="32" r="30" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="1.8"/>
+  <!-- Latitude parallels — horizontal ellipses, rx = chord width at that latitude -->
+  <!-- Equator (y=32): chord = 29 -->
+  <ellipse cx="32" cy="32" rx="29" ry="7"   fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
+  <!-- 30° N (y=17): chord = sqrt(29^2 - 15^2) = 25.2 -->
+  <ellipse cx="32" cy="17" rx="24" ry="5.5" fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
+  <!-- 30° S (y=47): same -->
+  <ellipse cx="32" cy="47" rx="24" ry="5.5" fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
+
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="2"/>
 </svg>
