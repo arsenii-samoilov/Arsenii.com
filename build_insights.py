@@ -77,6 +77,7 @@ CORE_PAGES = [
     ("/tools/ai-governance-checklist.html", "0.85", "monthly"),
     ("/tools/ai-assistant-prompt-builder.html", "0.85", "monthly"),
     ("/tools/ai-work-habits-checklist.html", "0.85", "monthly"),
+    ("/tools/worldwide-planning-intelligence.html", "0.85", "monthly"),
     ("/ai-program-management.html", "0.9", "weekly"),
     ("/salary-guide.html", "0.85", "monthly"),
     ("/interview-questions.html", "0.85", "monthly"),

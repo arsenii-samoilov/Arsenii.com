@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJE40VWDPW");
+    var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-LJE40VWDPW";document.head.appendChild(g);
+  </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>Worldwide Planning Intelligence (WPI) | Research Prototype</title>
+  <meta name="description" content="WPI is a research prototype I built for multi-program planning: scored risk register, dependency tracking, executive reporting, and local LLM triage. White paper, not a hosted product.">
+  <meta name="keywords" content="planning intelligence, program risk register, TPM tools, local LLM, risk scoring, executive reporting, Technical Program Manager, Arsenii Samoilov">
+  <meta name="author" content="Arsenii Samoilov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://arsenii.com/tools/worldwide-planning-intelligence.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsenii.com/tools/worldwide-planning-intelligence.html">
+  <meta property="og:title" content="Worldwide Planning Intelligence (WPI) | Research Prototype">
+  <meta property="og:description" content="A research prototype for program planning at scale. Scored risk register, dependency tracking, local LLM triage. White paper available.">
+  <meta property="og:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <meta property="og:site_name" content="Arsenii Samoilov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Worldwide Planning Intelligence (WPI)">
+  <meta name="twitter:description" content="Research prototype for multi-program planning. White paper, not a hosted product.">
+  <meta name="twitter:image" content="https://arsenii.com/images/headshot-share.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Worldwide Planning Intelligence (WPI)",
+    "url": "https://arsenii.com/tools/worldwide-planning-intelligence.html",
+    "description": "Research prototype for multi-program planning: scored risk register, dependency tracking, executive reporting, and local LLM triage. White paper, not a hosted product.",
+    "author": {"@type": "Person", "name": "Arsenii Samoilov", "url": "https://arsenii.com", "sameAs": ["https://www.linkedin.com/in/arseniisamoilov/", "https://www.wikidata.org/wiki/Q139972269", "https://github.com/arsenii-samoilov"]},
+    "version": "1.0.9",
+    "datePublished": "2026-07-24",
+    "isAccessibleForFree": true
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arsenii.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://arsenii.com/tools/"},
+      {"@type": "ListItem", "position": 3, "name": "Worldwide Planning Intelligence", "item": "https://arsenii.com/tools/worldwide-planning-intelligence.html"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Arsenii Samoilov - Program Management Insights" href="https://arsenii.com/feed.xml">
+  <link rel="stylesheet" href="../styles.css?v=34">
+  <style>
+    .tool-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .tool-hero { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .tool-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent-dark); margin: 0 0 0.75rem; }
+    .tool-hero p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin: 0 auto; max-width: 620px; }
+    .status-badge { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--accent-dark); background: var(--bg-warm); border: 1px solid var(--accent-light); border-radius: 20px; padding: 0.35rem 0.85rem; margin: 0 0 1.25rem; }
+    .tool-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0 0 2rem; }
+    .tool-btn { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--accent-light); background: var(--bg); color: var(--accent); padding: 0.55rem 1rem; border-radius: 6px; transition: all 0.15s ease; text-decoration: none; display: inline-block; }
+    .tool-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tool-btn.primary:hover { background: var(--accent-dark); }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; max-width: 980px; margin: 0 auto 2.5rem; }
+    .feature-card { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.25rem; background: var(--bg); }
+    .feature-card h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--accent-dark); margin: 0 0 0.45rem; }
+    .feature-card p { font-family: var(--font-sans); font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+    .stat-row .stat { border: 1px solid var(--accent-light); border-radius: 10px; padding: 1.1rem 0.75rem; background: var(--bg-warm); }
+    .stat-row .num { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 600; color: var(--accent-dark); display: block; margin: 0 0 0.25rem; }
+    .stat-row .lbl { font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+    .tool-explainer { max-width: 760px; margin: 3rem auto 0; }
+    .tool-explainer h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent-dark); margin: 2rem 0 0.75rem; }
+    .tool-explainer p { font-size: var(--text-sm); line-height: 1.8; color: var(--text); margin: 0 0 1rem; }
+    .tool-explainer ul { font-size: var(--text-sm); line-height: 1.8; color: var(--text); padding-left: 1.2rem; }
+    .tool-cta { max-width: 760px; margin: 3rem auto 0; padding: 2rem; border: 1px solid var(--accent-light); border-radius: 10px; background: var(--bg-warm); text-align: center; }
+    .tool-cta p { font-size: var(--text-sm); line-height: 1.7; color: var(--text); margin: 0 0 1.25rem; }
+    .crumbs { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .crumbs a { color: var(--accent); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand"><span class="logo">Arsenii Samoilov</span></a>
+    <div class="menu-wrapper">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav class="nav-dropdown" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="../culinary.html">Culinary</a>
+        <a href="../photography.html">Photography</a>
+        <a href="../insights.html">Insights</a>
+        <a href="index.html">Tools</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tool-wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Worldwide Planning Intelligence</span></nav>
+
+      <div class="tool-hero">
+        <span class="status-badge">Research prototype · v1.0.9</span>
+        <h1>Worldwide Planning Intelligence</h1>
+        <p>I built WPI for multi-program planning at scale: scored risk register, dependency tracking, executive reporting, and local LLM triage. Published as a white paper, not a hosted product.</p>
+      </div>
+
+      <div class="tool-controls">
+        <a class="tool-btn primary" href="../insights/worldwide-planning-intelligence.html">Read the white paper &rarr;</a>
+        <a class="tool-btn" href="../documents/WPI-White-Paper.docx">Download Word doc</a>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Risk Register</h3>
+          <p>Scored, tiered P0–P3 register. Filter by tier, category, or owner.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Guided Intake</h3>
+          <p>AI asks structured questions and produces a scored risk record from plain-language answers.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Dependency Log</h3>
+          <p>Capital, resource, and cross-program linkages tracked in one view with navigation between entries.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Executive Report</h3>
+          <p>Weekly report in pyramid format: decisions at the top, analysis below. Built for director review.</p>
+        </div>
+        <div class="feature-card">
+          <h3>LLM Benchmark</h3>
+          <p>Five local models evaluated on triage quality, speed, and rubric score before production selection.</p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><span class="num">76%</span><span class="lbl">Llama 3.1 rubric score</span></div>
+        <div class="stat"><span class="num">7.5s</span><span class="lbl">Avg response time (local)</span></div>
+        <div class="stat"><span class="num">$0</span><span class="lbl">Per-call cost (local LLM)</span></div>
+        <div class="stat"><span class="num">82</span><span class="lbl">Risks in benchmark</span></div>
+      </div>
+
+      <div class="tool-explainer">
+        <h2>Benchmark results</h2>
+        <p>I ran five local models against 82 risks with a structured rubric: tier accuracy, field completeness, mitigation quality. Llama 3.1 scored 76% at 7.5 seconds per call. Gemma 3 hit 73% at 46.7s. Mistral 66% at 26.2s. Qwen 2.5 56% at 38.6s. The white paper walks through how to reproduce this in your own environment.</p>
+
+        <h2>Local vs. cloud</h2>
+        <p>Local inference was $0 per call on hardware I already owned. Cloud API cost was about $0.009 per call. Cost matters, but privacy mattered more. Every cloud call sends program data off-premises. For companies with OEM commitments or competitive IP, that is a governance call.</p>
+
+        <h2>What held up in testing</h2>
+        <ul>
+          <li>Smaller 8B models beat larger 32B models on speed-adjusted triage quality</li>
+          <li>RAG with historical decisions improved grounding in manual review</li>
+          <li>Guided intake cut risk creation from about 15 minutes to about 3</li>
+          <li>One register with tier filtering replaced three separate tracking documents</li>
+        </ul>
+
+        <p>This is not a hosted product. If you want to walk through the setup, <a href="../contact.html">reach out</a>. For tools you can run in the browser today, see the <a href="risk-register.html">Program Risk Register</a>, <a href="roadmap-builder.html">Roadmap Builder</a>, and the full <a href="index.html">tools catalog</a>.</p>
+      </div>
+
+      <div class="tool-cta">
+        <p>Built by Arsenii Samoilov, a <a href="../career.html">Senior Technical Program Manager</a> with 19+ years at Intuit, Atlassian, Adobe, Salesforce, Roku, and Apple.</p>
+        <a href="../insights/worldwide-planning-intelligence.html" class="tool-btn primary">Read the white paper &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Arsenii Samoilov. Bay Area, California.</p></footer>
+
+  <script src="../main.js?v=2"></script>
+</body>
+</html>

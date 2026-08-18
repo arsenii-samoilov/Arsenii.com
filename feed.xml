@@ -6,7 +6,14 @@
     <atom:link href="https://arsenii.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Program management insights from Arsenii Samoilov, Senior Technical Program Manager.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 09:21:38 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 17:13:02 -0800</lastBuildDate>
+    <item>
+      <title>Worldwide Planning Intelligence: A Planning Platform for Scale</title>
+      <link>https://arsenii.com/insights/worldwide-planning-intelligence.html</link>
+      <guid isPermaLink="true">https://arsenii.com/insights/worldwide-planning-intelligence.html</guid>
+      <pubDate>Mon, 17 Aug 2026 09:00:00 -0800</pubDate>
+      <description>Research prototype for multi-program planning: what I built, how I benchmarked local LLMs, and what held up in testing. White paper for TPMs building planning infrastructure.</description>
+    </item>
     <item>
       <title>Leveling Up When You Already Use AI</title>
       <link>https://arsenii.com/insights/leveling-up-personal-ai-work.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://arsenii.com/insights/technical-debt-as-program.html</guid>
       <pubDate>Thu, 21 May 2026 09:00:00 -0800</pubDate>
       <description>Technical debt managed as a list of tickets goes nowhere. Technical debt managed as a program with scope, milestones, and executive visibility gets funded and resolved.</description>
-    </item>
-    <item>
-      <title>How to Scope a Multi-Year Roadmap</title>
-      <link>https://arsenii.com/insights/scoping-multi-year-roadmap.html</link>
-      <guid isPermaLink="true">https://arsenii.com/insights/scoping-multi-year-roadmap.html</guid>
-      <pubDate>Wed, 20 May 2026 09:00:00 -0800</pubDate>
-      <description>A multi-year roadmap is not a twelve-month plan extended. The further out the horizon, the more the document is about principles and bets, not milestones.</description>
     </item>
   </channel>
 </rss>
