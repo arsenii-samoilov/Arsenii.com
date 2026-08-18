@@ -90,18 +90,6 @@ main {
   color: inherit;
 }
 
-.brand::before {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  background-image: url('favicon.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .header-headshot {
   width: 40px;
   height: 40px;
