@@ -96,7 +96,7 @@ main {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
-  background-image: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><!-- Blue globe background --><circle cx='32' cy='32' r='30' fill='%231A4ED8'/><!-- Longitude meridians — vertical ellipses, always inside the circle --><ellipse cx='32' cy='32' rx='9'ry='29' fill='none' stroke='%23ffffff' stroke-opacity='0.38' stroke-width='1.2'/><ellipse cx='32' cy='32' rx='20' ry='29' fill='none' stroke='%23ffffff' stroke-opacity='0.38' stroke-width='1.2'/><!-- Latitude parallels — horizontal ellipses, rx = chord width at that latitude --><!-- Equator (y=32): chord = 29 --><ellipse cx='32' cy='32' rx='29' ry='7' fill='none' stroke='%23ffffff' stroke-opacity='0.38' stroke-width='1.2'/><!-- 30° N (y=17): chord = sqrt(29^2 - 15^2) = 25.2 --><ellipse cx='32' cy='17' rx='24' ry='5.5' fill='none' stroke='%23ffffff' stroke-opacity='0.38' stroke-width='1.2'/><!-- 30° S (y=47): same --><ellipse cx='32' cy='47' rx='24' ry='5.5' fill='none' stroke='%23ffffff' stroke-opacity='0.38' stroke-width='1.2'/><!-- Outer ring --><circle cx='32' cy='32' r='29' fill='none' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2'/></svg>');
+  background-image: url('favicon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
