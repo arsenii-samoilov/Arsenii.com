@@ -231,7 +231,7 @@ def page_head(title, description, canonical, css_prefix, rss_prefix, extra_ld=""
         '  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n'
-        '  <link rel="stylesheet" href="' + css_prefix + 'styles.css?v=34">\n'
+        '  <link rel="stylesheet" href="' + css_prefix + 'styles.css?v=35">\n'
         '  <link rel="stylesheet" href="' + css_prefix + 'insights.css?v=4">\n'
         '</head>\n<body>\n  '
     )
