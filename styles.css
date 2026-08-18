@@ -744,7 +744,8 @@ main {
 }
 
 .profile-icon-resume svg,
-.profile-icon-phone svg {
+.profile-icon-phone svg,
+.profile-icon-contact svg {
   width: 30px;
   height: 30px;
 }
@@ -1229,7 +1230,7 @@ main {
 .career-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 8px;
   align-items: center;
 }
 
@@ -1543,18 +1544,10 @@ main {
     margin-left: 0.25rem;
   }
 
-  /* Career action buttons: stack vertically */
+  /* Career action icons stay in a row */
   .career-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: stretch;
-  }
-
-  .career-actions .btn {
-    width: 100%;
-    text-align: center;
-    margin-left: 0 !important;
+    flex-direction: row;
+    align-items: center;
   }
 
   .site-footer {

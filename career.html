@@ -335,10 +335,16 @@
 
       <p style="font-size:var(--text-sm);line-height:1.8;color:var(--text);margin:2rem 0 0;">Reference material: <a href="program-and-project-types.html">types of programs and projects</a>, <a href="insights.html">program management insights</a>, and <a href="tools/">program management tools</a>.</p>
 
-      <div class="career-actions" style="margin-top: 2rem;">
-        <a href="https://www.linkedin.com/in/arseniisamoilov/" rel="noopener noreferrer" class="btn btn-secondary btn-hover-red btn-regular">LinkedIn</a>
-        <a href="contact.html" class="btn btn-secondary btn-hover-red btn-regular">Get in Touch</a>
-        <a href="documents/Arsenii%20Samoilov.pdf" download class="btn btn-secondary btn-hover-red btn-regular">Download Resume (PDF)</a>
+      <div class="career-actions profile-icons" style="margin-top: 2rem;">
+        <a href="https://www.linkedin.com/in/arseniisamoilov/" rel="noopener noreferrer" class="profile-icon profile-icon-linkedin" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="contact.html" class="profile-icon profile-icon-contact" aria-label="Get in touch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="documents/Arsenii%20Samoilov.pdf" download class="profile-icon profile-icon-resume" aria-label="Download resume (PDF)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </a>
       </div>
     </section>
   </main>
@@ -351,7 +357,10 @@
   <script>
     document.querySelectorAll('.career-actions a').forEach(function(el) {
       el.addEventListener('click', function() {
-        gtag('event', 'cta_click', { event_category: 'career', event_label: el.textContent.trim() });
+        gtag('event', 'cta_click', {
+          event_category: 'career',
+          event_label: el.getAttribute('aria-label') || el.getAttribute('href')
+        });
       });
     });
   </script>
